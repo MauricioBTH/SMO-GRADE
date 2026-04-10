@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Operador - Comando e Controle - CPChq{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- TELA DE UPLOAD -->
+<div id="upload-screen">
+  <h1>Brigada Militar - Comando de Pol&iacute;cia de Choque</h1>
+  <h2>Comando e Controle</h2>
+  <div class="upload-box" onclick="document.getElementById('file-input').click()">
+    <svg viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/>
+      <path d="M12 12l-4 4h2.5v3h3v-3H16l-4-4z"/>
+    </svg>
+    <p>Carregar planilha</p>
+    <span>dados.xlsx</span>
+  </div>
+  <input type="file" id="file-input" accept=".xlsx,.xls">
+  <div id="upload-status" class="upload-status"></div>
+</div>
+
+<!-- PAINEL PRINCIPAL -->
+<div id="panel-screen">
+  <div class="unit-selector" id="unit-selector"></div>
+  <div id="cards-container"></div>
+</div>
+
+<div id="btn-gerar-wrapper" style="display:none">
+  <button class="btn-gerar" id="btn-gerar">
+    <span id="btn-gerar-text">Gerar Cards</span>
+  </button>
+  <div class="progress-bar" id="progress-bar">
+    <div class="progress-bar-fill" id="progress-fill"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="{{ url_for('static', filename='js/constants.js') }}"></script>
+<script src="{{ url_for('static', filename='js/agrupamento.js') }}"></script>
+<script src="{{ url_for('static', filename='js/render_cards.js') }}"></script>
+<script src="{{ url_for('static', filename='js/export_png.js') }}"></script>
+<script src="{{ url_for('static', filename='js/operador.js') }}"></script>
+{% endblock %}

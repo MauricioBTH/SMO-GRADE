@@ -1,0 +1,26 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #000000;
+  --navy-light: #1a1a1a;
+  --gold: #F7B900;
+  --bg: #F2F2F2;
+  --white: #FFFFFF;
+  --text-dark: #000000;
+  --text-muted: #57575A;
+  --radius: 10px;
+
+  --cor-prontidao: #BA7517;
+  --cor-patres: #534AB7;
+  --cor-canil: #0F6E56;
+  --cor-batedores: #185FA5;
+  --cor-operacao: #993C1D;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+  min-height: 100vh;
+}

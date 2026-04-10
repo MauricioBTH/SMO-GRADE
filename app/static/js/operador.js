@@ -19,6 +19,7 @@
   document.getElementById('file-input').addEventListener('change', function (e) {
     var file = e.target.files[0];
     if (!file) return;
+    e.target.value = '';
 
     var statusEl = document.getElementById('upload-status');
     statusEl.className = 'upload-status loading';

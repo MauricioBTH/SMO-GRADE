@@ -77,32 +77,58 @@ Flask (hospedado no Render - tier gratuito)
 
 ## FASES DE DESENVOLVIMENTO
 
-### Fase 1 — Flask + Supabase (base)
-- Criar projeto Flask com estrutura de pastas
-- Configurar conexao com Supabase (PostgreSQL via psycopg2 ou supabase-py)
-- Criar tabelas no Supabase: `fracoes` e `cabecalho` (mesma estrutura do xlsx + campo `created_at`)
-- Migrar o `index.html` atual para template Flask em `/operador`
-- No upload do xlsx: alem de renderizar, inserir dados no Supabase
-- Manter toda a funcionalidade atual de geracao de cards
+### Fase 1 — Flask + Supabase (base) ✅ CONCLUIDA
+- Projeto Flask com estrutura de pastas (app/, routes/, services/, models/, validators/, templates/, static/)
+- Conexao com Supabase via psycopg2 (RealDictCursor)
+- Tabelas fracoes e cabecalho com UUID (gen_random_uuid), RLS ativado
+- Template operador em /operador, upload xlsx com persistencia no Supabase
+- Estrategia DELETE por unidade+data antes de INSERT (evita duplicacao em retificacoes)
+- IDs migrados de BIGSERIAL para UUID
+- Campo animais_tipo (VARCHAR) para preservar texto misto
+- Telefones ampliados de 30 para 80 chars
 
-### Fase 2 — Painel do Analista (leitura + filtros)
-- Rota `/analista` com painel proprio
-- Leitura do historico do Supabase
-- Filtros: por periodo (data inicio/fim), por unidade, mensal, semestral
-- Tabelas e resumos dos dados historicos
-- Mesma identidade visual (preto, laranja, branco, cinza)
+### Fase 2 — Painel do Analista (leitura + filtros) ✅ CONCLUIDA
+- Rota /analista com painel proprio (analista.js, analista.css)
+- Leitura do historico do Supabase com filtros por periodo e unidade
+- Tabelas de fracoes e cabecalho com totalizadores no rodape
+- Cards de resumo por unidade com logos e badge de dias
+- Tabs: Graficos, Fracoes, Cabecalho
+- Mesma identidade visual (preto #000, laranja #F7B900, branco #FFF, cinza #57575A)
 
-### Fase 3 — Cards analiticos formato slide
-- Layout 16:9 para apresentacoes
-- Graficos de evolucao (Chart.js ou similar): efetivo, VTRs, armamento por periodo
-- Cards comparativos entre unidades
-- Exportacao como PNG (mesmo conceito do operador)
+### Fase 3 — Cards analiticos formato slide ✅ CONCLUIDA
+- Layout 16:9 para apresentacoes (slides.css)
+- Graficos Chart.js: evolucao temporal (line) e comparativo entre unidades (bar)
+- Seletor de metrica (efetivo, vtrs, motos, armas, oficiais, sargentos, soldados)
+- Cores por unidade consistentes
+- Exportacao como PNG via html2canvas (slides individuais)
 
-### Fase 4 — Projecoes e comparativos
-- Media movel e tendencia por unidade (pandas/numpy)
-- Comparativo mesmo periodo do ano anterior
-- Sazonalidade (mes a mes)
-- Indicadores: crescimento/reducao de efetivo, cobertura por area
+### Fase 4 — Projecoes e comparativos ✅ CONCLUIDA
+**Backend (pandas 2.2.3 + numpy 2.2.4):**
+- `analytics_cabecalho.py`: media movel (janela configuravel), tendencia linear (polyfit), sazonalidade mensal, indicadores (media/ultimo/variacao%)
+- `analytics_fracoes.py`: ranking de missoes, frequencia de fracoes por unidade, cobertura horaria 0-23h, padroes por dia da semana, concentracao PMs/dia por missao e fracao
+- Suporta formato dd/mm/yyyy e yyyy-mm-dd (fallback)
+
+**API (2 endpoints):**
+- `GET /api/analista/projecoes` — media_movel, tendencia, sazonalidade, indicadores
+- `GET /api/analista/fracoes-analytics` — missoes, fracoes_freq, cobertura_horaria, padroes_diarios, concentracao
+
+**Frontend (2 novas abas no painel analista):**
+- Aba "Projecoes": indicadores por unidade (setas tendencia, variacao%), grafico media movel, grid tendencias, grafico sazonalidade
+- Aba "Analise Fracoes": ranking missoes, cobertura horaria (bar 0-23h), distribuicao por turno (doughnut), padroes dia da semana, concentracao por missao (horizontal bar), frequencia fracoes
+
+**Testes (86 testes, pytest):**
+- test_analytics_cabecalho.py (29 testes): media movel, tendencia, sazonalidade, indicadores + edge cases
+- test_analytics_fracoes.py (39 testes): missoes, fracoes, cobertura, padroes, concentracao + edge cases
+- test_api_fase4.py (18 testes): endpoints projecoes e fracoes-analytics (503, 400, 200, filtros)
+
+### Fase 5 — Entrada manual de dados (alternativa ao xlsx)
+- Formulario no app para o operador inserir dados diretamente, sem depender do xlsx
+- Contexto: o operador recebe os dados das unidades via WhatsApp e hoje precisa preencher a planilha antes de fazer upload
+- Campos com validacao em tempo real e dropdowns para tipo, unidade, etc.
+- Mobile-friendly (operador pode preencher pelo celular)
+- Manter upload xlsx como caminho alternativo para quem ja tem a planilha pronta
+- Ambos os caminhos (formulario e xlsx) gravam no mesmo banco
+- Tratamento para consistencia entre os dois meios de insercao: evitar duplicacoes e delecoes indevidas quando o operador usa formulario e xlsx no mesmo dia/unidade (ex: lock de edicao, confirmacao antes de sobrescrever, ou merge inteligente)
 
 ---
 

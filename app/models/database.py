@@ -23,12 +23,11 @@ def init_tables() -> None:
 
 _SQL_CREATE_FRACOES = """
 CREATE TABLE IF NOT EXISTS fracoes (
-    id            BIGSERIAL PRIMARY KEY,
+    id            UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     unidade       VARCHAR(50)  NOT NULL,
     data          VARCHAR(30)  NOT NULL,
     turno         VARCHAR(30),
     fracao        VARCHAR(100),
-    tipo          VARCHAR(30),
     comandante    VARCHAR(120),
     telefone      VARCHAR(30),
     equipes       INTEGER DEFAULT 0,
@@ -36,26 +35,25 @@ CREATE TABLE IF NOT EXISTS fracoes (
     horario_inicio VARCHAR(20),
     horario_fim   VARCHAR(20),
     missao        TEXT,
-    created_at    TIMESTAMPTZ  DEFAULT NOW(),
-    UNIQUE(unidade, data, fracao, comandante)
+    created_at    TIMESTAMPTZ  DEFAULT NOW()
 );
 """
 
 _SQL_CREATE_CABECALHO = """
 CREATE TABLE IF NOT EXISTS cabecalho (
-    id                BIGSERIAL PRIMARY KEY,
+    id                UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     unidade           VARCHAR(50)  NOT NULL,
     data              VARCHAR(30)  NOT NULL,
     turno             VARCHAR(30),
     oficial_superior  VARCHAR(120),
-    tel_oficial       VARCHAR(30),
-    tel_copom         VARCHAR(30),
+    tel_oficial       VARCHAR(80),
+    tel_copom         VARCHAR(80),
     operador_diurno   VARCHAR(120),
-    tel_op_diurno     VARCHAR(30),
-    horario_op_diurno VARCHAR(30),
+    tel_op_diurno     VARCHAR(80),
+    horario_op_diurno VARCHAR(50),
     operador_noturno  VARCHAR(120),
-    tel_op_noturno    VARCHAR(30),
-    horario_op_noturno VARCHAR(30),
+    tel_op_noturno    VARCHAR(80),
+    horario_op_noturno VARCHAR(50),
     efetivo_total     INTEGER DEFAULT 0,
     oficiais          INTEGER DEFAULT 0,
     sargentos         INTEGER DEFAULT 0,
@@ -67,9 +65,9 @@ CREATE TABLE IF NOT EXISTS cabecalho (
     armas_portateis   INTEGER DEFAULT 0,
     armas_longas      INTEGER DEFAULT 0,
     animais           INTEGER DEFAULT 0,
+    animais_tipo      VARCHAR(50),
     locais_atuacao    TEXT,
     missoes_osv       TEXT,
-    created_at        TIMESTAMPTZ  DEFAULT NOW(),
-    UNIQUE(unidade, data)
+    created_at        TIMESTAMPTZ  DEFAULT NOW()
 );
 """

@@ -105,7 +105,7 @@ function criarCardFracao(unidade, grupo, data, idx) {
     '</div></div><div class="card-body">';
 
   grupo.fracoes.forEach(function (f) {
-    var cor = CORES_TIPO[f.tipo] || grupo.cor || '#888';
+    var cor = CORES_TIPO[inferirTipo(f.fracao)] || grupo.cor || '#888';
     var horarioTexto = '';
     if (f.horario_inicio && f.horario_fim) {
       horarioTexto = escapeHtml(f.horario_inicio) + ' – ' + escapeHtml(f.horario_fim);
@@ -211,11 +211,13 @@ function criarCardResumo(unidade, cab, data, cardIndex) {
   if (cab.operador_diurno) {
     html += '<div class="resumo-info-row"><span class="resumo-info-label">Op. Diurno</span>' +
       '<span class="resumo-info-value">' + escapeHtml(cab.operador_diurno) +
+      (cab.tel_op_diurno ? ' <span class="resumo-info-sub">' + escapeHtml(cab.tel_op_diurno) + '</span>' : '') +
       ' <span class="resumo-info-sub">' + escapeHtml(cab.horario_op_diurno) + '</span></span></div>';
   }
   if (cab.operador_noturno) {
     html += '<div class="resumo-info-row"><span class="resumo-info-label">Op. Noturno</span>' +
       '<span class="resumo-info-value">' + escapeHtml(cab.operador_noturno) +
+      (cab.tel_op_noturno ? ' <span class="resumo-info-sub">' + escapeHtml(cab.tel_op_noturno) + '</span>' : '') +
       ' <span class="resumo-info-sub">' + escapeHtml(cab.horario_op_noturno) + '</span></span></div>';
   }
 

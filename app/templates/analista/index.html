@@ -4,15 +4,317 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/analista.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/slides.css') }}">
 {% endblock %}
 
 {% block content %}
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:#0d0d0d;color:#fff;text-align:center;padding:40px;">
-  <h1 style="color:#F7B900;font-size:1.2rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">
-    Painel do Analista
-  </h1>
-  <p style="color:#57575A;font-size:0.9rem;">
-    Em desenvolvimento — Fase 2
-  </p>
+<div class="analista-wrapper">
+
+  <!-- Header -->
+  <header class="analista-header">
+    <h1>Painel do Analista</h1>
+    <a href="/" class="voltar-link">Voltar ao Operador</a>
+  </header>
+
+  <!-- Filtros -->
+  <section class="filtros-container">
+    <div class="filtros-row">
+      <div class="filtro-grupo">
+        <label for="data-inicio">Data Inicio</label>
+        <input type="date" id="data-inicio">
+      </div>
+      <div class="filtro-grupo">
+        <label for="data-fim">Data Fim</label>
+        <input type="date" id="data-fim">
+      </div>
+      <div class="filtro-grupo">
+        <label>Unidades</label>
+        <div class="unidades-checkboxes" id="unidades-box"></div>
+      </div>
+      <button class="btn-consultar" id="btn-consultar" type="button">Consultar</button>
+    </div>
+  </section>
+
+  <!-- Status -->
+  <div class="status-msg" id="status-msg">Selecione o periodo e clique em Consultar.</div>
+
+  <!-- Conteudo -->
+  <div class="analista-content" id="analista-conteudo" style="display:none;">
+
+    <!-- Resumo por unidade -->
+    <section class="resumo-section">
+      <h2 class="section-title">Resumo por Unidade</h2>
+      <div class="resumo-cards" id="resumo-cards"></div>
+    </section>
+
+    <!-- Tabs -->
+    <div class="tabs-bar">
+      <button class="tab-btn ativo" data-tab="tab-graficos" type="button">
+        Graficos
+      </button>
+      <button class="tab-btn" data-tab="tab-projecoes" type="button">
+        Projecoes
+      </button>
+      <button class="tab-btn" data-tab="tab-fracoes-analytics" type="button">
+        Analise Fracoes
+      </button>
+      <button class="tab-btn" data-tab="tab-fracoes" type="button">
+        Fracoes <span id="total-fracoes">0</span>
+      </button>
+      <button class="tab-btn" data-tab="tab-cabecalho" type="button">
+        Cabecalho <span id="total-cab">0</span>
+      </button>
+    </div>
+
+    <!-- Tab Graficos -->
+    <div class="tab-content ativo" id="tab-graficos">
+      <section class="slides-section">
+        <div id="grafico-seletor" class="grafico-seletor"></div>
+
+        <div class="slides-grid">
+          <!-- Slide Evolucao -->
+          <div class="slide-card" id="slide-evolucao">
+            <div class="slide-card-header">
+              <img src="/static/logos/logo-CPChq.png" alt="">
+              <span class="slide-titulo" id="slide-evolucao-titulo">Evolucao — Efetivo Total</span>
+              <span class="slide-periodo" id="slide-evolucao-periodo"></span>
+            </div>
+            <div class="slide-card-body">
+              <canvas id="chart-evolucao"></canvas>
+            </div>
+            <div class="slide-card-footer">
+              <span class="slide-fonte">CPChq — Sistema C2</span>
+            </div>
+          </div>
+
+          <!-- Slide Comparativo -->
+          <div class="slide-card" id="slide-comparativo">
+            <div class="slide-card-header">
+              <img src="/static/logos/logo-CPChq.png" alt="">
+              <span class="slide-titulo" id="slide-comparativo-titulo">Comparativo — Efetivo Total</span>
+              <span class="slide-periodo" id="slide-comparativo-periodo"></span>
+            </div>
+            <div class="slide-card-body">
+              <canvas id="chart-comparativo"></canvas>
+            </div>
+            <div class="slide-card-footer">
+              <span class="slide-fonte">CPChq — Sistema C2</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-gerar-slides" id="btn-exportar-slides" type="button" onclick="exportarSlides()">
+          Exportar Slides PNG
+        </button>
+      </section>
+    </div>
+
+    <!-- Tab Projecoes (Fase 4) -->
+    <div class="tab-content" id="tab-projecoes">
+      <section class="projecoes-section">
+
+        <!-- Indicadores -->
+        <h2 class="section-title">Indicadores por Unidade</h2>
+        <div class="indicadores-grid" id="indicadores-grid"></div>
+
+        <!-- Media Movel -->
+        <h2 class="section-title">Media Movel — Efetivo</h2>
+        <div class="slide-card" id="slide-media-movel">
+          <div class="slide-card-header">
+            <img src="/static/logos/logo-CPChq.png" alt="">
+            <span class="slide-titulo">Media Movel — Efetivo Total</span>
+            <span class="slide-periodo" id="slide-mm-periodo"></span>
+          </div>
+          <div class="slide-card-body">
+            <canvas id="chart-media-movel"></canvas>
+          </div>
+          <div class="slide-card-footer">
+            <span class="slide-fonte">CPChq — Sistema C2</span>
+          </div>
+        </div>
+
+        <!-- Tendencia -->
+        <h2 class="section-title">Tendencia</h2>
+        <div class="tendencia-grid" id="tendencia-grid"></div>
+
+        <!-- Sazonalidade -->
+        <h2 class="section-title">Sazonalidade (Media por Mes)</h2>
+        <div class="slide-card" id="slide-sazonalidade">
+          <div class="slide-card-header">
+            <img src="/static/logos/logo-CPChq.png" alt="">
+            <span class="slide-titulo">Sazonalidade — Efetivo Total</span>
+            <span class="slide-periodo" id="slide-saz-periodo"></span>
+          </div>
+          <div class="slide-card-body">
+            <canvas id="chart-sazonalidade"></canvas>
+          </div>
+          <div class="slide-card-footer">
+            <span class="slide-fonte">CPChq — Sistema C2</span>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Tab Analise Fracoes (Fase 4) -->
+    <div class="tab-content" id="tab-fracoes-analytics">
+      <section class="projecoes-section">
+
+        <!-- Ranking Missoes -->
+        <h2 class="section-title">Ranking de Missoes</h2>
+        <div class="ranking-table-wrapper">
+          <table class="tabela-dados" id="tabela-missoes">
+            <thead>
+              <tr>
+                <th>#</th><th>Missao</th><th>Ocorrencias</th><th>PMs Total</th><th>Equipes Total</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-missoes-body"></tbody>
+          </table>
+        </div>
+
+        <!-- Cobertura Horaria -->
+        <h2 class="section-title">Cobertura Horaria (PMs medio por hora)</h2>
+        <div class="slide-card" id="slide-cobertura">
+          <div class="slide-card-header">
+            <img src="/static/logos/logo-CPChq.png" alt="">
+            <span class="slide-titulo">Cobertura Horaria — PMs</span>
+            <span class="slide-periodo" id="slide-cob-periodo"></span>
+          </div>
+          <div class="slide-card-body">
+            <canvas id="chart-cobertura"></canvas>
+          </div>
+          <div class="slide-card-footer">
+            <span class="slide-fonte">CPChq — Sistema C2</span>
+          </div>
+        </div>
+
+        <!-- Distribuicao por Turno -->
+        <h2 class="section-title">Distribuicao por Turno</h2>
+        <div class="slide-card" id="slide-turnos">
+          <div class="slide-card-header">
+            <img src="/static/logos/logo-CPChq.png" alt="">
+            <span class="slide-titulo">Distribuicao por Turno</span>
+            <span class="slide-periodo" id="slide-turno-periodo"></span>
+          </div>
+          <div class="slide-card-body">
+            <canvas id="chart-turnos"></canvas>
+          </div>
+          <div class="slide-card-footer">
+            <span class="slide-fonte">CPChq — Sistema C2</span>
+          </div>
+        </div>
+
+        <!-- Padroes por Dia da Semana -->
+        <h2 class="section-title">Padroes por Dia da Semana</h2>
+        <div class="slide-card" id="slide-dia-semana">
+          <div class="slide-card-header">
+            <img src="/static/logos/logo-CPChq.png" alt="">
+            <span class="slide-titulo">Emprego Medio por Dia da Semana</span>
+            <span class="slide-periodo" id="slide-dia-periodo"></span>
+          </div>
+          <div class="slide-card-body">
+            <canvas id="chart-dia-semana"></canvas>
+          </div>
+          <div class="slide-card-footer">
+            <span class="slide-fonte">CPChq — Sistema C2</span>
+          </div>
+        </div>
+
+        <!-- Concentracao por Missao -->
+        <h2 class="section-title">Concentracao de PMs por Missao</h2>
+        <div class="slide-card" id="slide-concentracao">
+          <div class="slide-card-header">
+            <img src="/static/logos/logo-CPChq.png" alt="">
+            <span class="slide-titulo">PMs Medio/Dia por Missao</span>
+            <span class="slide-periodo" id="slide-conc-periodo"></span>
+          </div>
+          <div class="slide-card-body">
+            <canvas id="chart-concentracao"></canvas>
+          </div>
+          <div class="slide-card-footer">
+            <span class="slide-fonte">CPChq — Sistema C2</span>
+          </div>
+        </div>
+
+        <!-- Frequencia de Fracoes -->
+        <h2 class="section-title">Frequencia de Fracoes (Geral)</h2>
+        <div class="ranking-table-wrapper">
+          <table class="tabela-dados" id="tabela-fracoes-freq">
+            <thead>
+              <tr>
+                <th>#</th><th>Fracao</th><th>Ocorrencias</th><th>PMs Total</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-fracoes-freq-body"></tbody>
+          </table>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Tab Fracoes -->
+    <div class="tab-content" id="tab-fracoes">
+      <section class="tabela-section">
+        <div class="tabela-wrapper">
+          <table class="tabela-dados">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Unidade</th>
+                <th>Fracao</th>
+                <th>Comandante</th>
+                <th>Equipes</th>
+                <th>PMs</th>
+                <th>Horario</th>
+                <th>Missao</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-fracoes-body"></tbody>
+            <tfoot id="tabela-fracoes-foot"></tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Cabecalho -->
+    <div class="tab-content" id="tab-cabecalho">
+      <section class="tabela-section">
+        <div class="tabela-wrapper">
+          <table class="tabela-dados">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Unidade</th>
+                <th>Efetivo</th>
+                <th>Oficiais</th>
+                <th>Sargentos</th>
+                <th>Soldados</th>
+                <th>Vtrs</th>
+                <th>Motos</th>
+                <th>Armas ACE</th>
+                <th>Armas Port.</th>
+                <th>Armas Longas</th>
+                <th>Oficial Superior</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-cab-body"></tbody>
+            <tfoot id="tabela-cab-foot"></tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+
+  </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="{{ url_for('static', filename='js/constants.js') }}"></script>
+<script src="{{ url_for('static', filename='js/graficos.js') }}"></script>
+<script src="{{ url_for('static', filename='js/projecoes.js') }}"></script>
+<script src="{{ url_for('static', filename='js/analista.js') }}"></script>
 {% endblock %}

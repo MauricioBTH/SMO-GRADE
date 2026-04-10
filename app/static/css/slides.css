@@ -1,0 +1,198 @@
+/* ===== FASE 3 — Cards Analiticos 16:9 ===== */
+
+/* --- Slide container --- */
+.slides-section {
+  margin-bottom: 32px;
+}
+
+.slides-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.slide-card {
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slide-card-header {
+  background: #000;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 3px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.slide-card-header img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.slide-card-header .slide-titulo {
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.slide-card-header .slide-periodo {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.slide-card-body {
+  flex: 1;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.slide-card-body canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.slide-card-footer {
+  background: #000;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #222;
+  flex-shrink: 0;
+}
+
+.slide-card-footer .slide-fonte {
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* --- Comparativo grid --- */
+.comparativo-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comparativo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.comparativo-row .comp-label {
+  width: 100px;
+  font-size: 0.72rem;
+  color: #ccc;
+  text-align: right;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.comparativo-row .comp-bar-wrap {
+  flex: 1;
+  background: #1a1a1a;
+  border-radius: 4px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.comparativo-row .comp-bar {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  min-width: 2px;
+}
+
+.comparativo-row .comp-valor {
+  width: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* --- Botao gerar slides --- */
+.btn-gerar-slides {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  margin-top: 16px;
+}
+
+.btn-gerar-slides:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn-gerar-slides:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- Seletor de grafico --- */
+.grafico-seletor {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.grafico-chip {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: #ccc;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.grafico-chip:hover {
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.grafico-chip.ativo {
+  background: var(--gold);
+  color: #000;
+  border-color: var(--gold);
+  font-weight: 700;
+}

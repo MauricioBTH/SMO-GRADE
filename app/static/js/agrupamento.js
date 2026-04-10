@@ -1,4 +1,18 @@
 /**
+ * Infere tipo da fracao pelo nome.
+ * @param {string} fracao
+ * @returns {string}
+ */
+function inferirTipo(fracao) {
+  var nome = String(fracao || '').toLowerCase();
+  if (nome.indexOf('patres') !== -1 || nome.indexOf('patrulhamento') !== -1) return 'patres';
+  if (nome.indexOf('canil') !== -1 || nome.indexOf('faro') !== -1) return 'canil';
+  if (nome.indexOf('batedor') !== -1) return 'batedores';
+  if (nome.indexOf('opera') !== -1) return 'operacao';
+  return 'prontidao';
+}
+
+/**
  * Converte string de horario para minutos desde meia-noite.
  * @param {string} h
  * @returns {number}
@@ -44,9 +58,12 @@ function agruparFracoes(unidade, dadosFracoes) {
     ordemTipos.forEach(function (tipo) {
       var items;
       if (tipo === 'canil_batedores') {
-        items = fracoes.filter(function (f) { return f.tipo === 'canil' || f.tipo === 'batedores'; });
+        items = fracoes.filter(function (f) {
+          var nome = inferirTipo(f.fracao);
+          return nome === 'canil' || nome === 'batedores';
+        });
       } else {
-        items = fracoes.filter(function (f) { return f.tipo === tipo; });
+        items = fracoes.filter(function (f) { return inferirTipo(f.fracao) === tipo; });
       }
       if (items.length === 0) return;
       items.sort(function (a, b) { return parseHorario(a.horario_inicio) - parseHorario(b.horario_inicio); });

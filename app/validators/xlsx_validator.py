@@ -7,7 +7,6 @@ class FracaoRow(TypedDict):
     data: str
     turno: str
     fracao: str
-    tipo: str
     comandante: str
     telefone: str
     equipes: int
@@ -41,6 +40,7 @@ class CabecalhoRow(TypedDict):
     armas_portateis: int
     armas_longas: int
     animais: int
+    animais_tipo: str
     locais_atuacao: str
     missoes_osv: str
 
@@ -55,12 +55,8 @@ UNIDADES_VALIDAS = frozenset({
     "4 RPMon", "4º RPMon",
 })
 
-TIPOS_VALIDOS = frozenset({
-    "prontidao", "patres", "canil", "batedores", "operacao",
-})
-
 COLUNAS_FRACOES = frozenset({
-    "unidade", "data", "turno", "fracao", "tipo", "comandante",
+    "unidade", "data", "turno", "fracao", "comandante",
     "telefone", "equipes", "pms", "horario_inicio", "horario_fim", "missao",
 })
 
@@ -90,6 +86,20 @@ def safe_int(value: object) -> int:
         return 0
 
 
+_DIGITOS = re.compile(r"(\d+)")
+
+
+def parse_animais(value: object) -> tuple[int, str]:
+    """Extrai quantidade e tipo de animal de textos como '03 caes' ou '16 cavalos'."""
+    texto = sanitize_text(str(value)) if value else ""
+    if not texto:
+        return 0, ""
+    match = _DIGITOS.search(texto)
+    qtd = int(match.group(1)) if match else 0
+    tipo = _DIGITOS.sub("", texto).strip()
+    return qtd, tipo
+
+
 def validate_fracoes(rows: list[dict]) -> list[FracaoRow]:
     if not rows:
         raise ValueError("Aba 'fracoes' vazia")
@@ -105,16 +115,11 @@ def validate_fracoes(rows: list[dict]) -> list[FracaoRow]:
         if not unidade:
             raise ValueError(f"Linha {idx + 2}: unidade vazia")
 
-        tipo = sanitize_text(row.get("tipo", "")).lower().strip()
-        if tipo and tipo not in TIPOS_VALIDOS:
-            raise ValueError(f"Linha {idx + 2}: tipo invalido '{tipo}'")
-
         validated.append(FracaoRow(
             unidade=unidade,
             data=sanitize_text(row.get("data", "")),
             turno=sanitize_text(row.get("turno", "")),
             fracao=sanitize_text(row.get("fracao", "")),
-            tipo=tipo,
             comandante=sanitize_text(row.get("comandante", "")),
             telefone=sanitize_text(row.get("telefone", "")),
             equipes=safe_int(row.get("equipes", 0)),
@@ -165,7 +170,8 @@ def validate_cabecalho(rows: list[dict]) -> list[CabecalhoRow]:
             armas_ace=safe_int(row.get("armas_ace", 0)),
             armas_portateis=safe_int(row.get("armas_portateis", 0)),
             armas_longas=safe_int(row.get("armas_longas", 0)),
-            animais=safe_int(row.get("animais", 0)),
+            animais=parse_animais(row.get("animais", ""))[0],
+            animais_tipo=parse_animais(row.get("animais", ""))[1],
             locais_atuacao=sanitize_text(row.get("locais_atuacao", "")),
             missoes_osv=sanitize_text(row.get("missoes_osv", "")),
         ))

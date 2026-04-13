@@ -18,6 +18,7 @@ from app.services.analytics_cabecalho import (
     calcular_sazonalidade,
     calcular_indicadores,
 )
+from app.services.whatsapp_parser import parse_texto_whatsapp
 from app.services.analytics_fracoes import (
     analisar_missoes,
     analisar_fracoes_freq,
@@ -84,6 +85,77 @@ def upload_xlsx() -> tuple:
         "sucesso": True,
         "fracoes": fracoes_serializable,
         "cabecalho": cabecalho_serializable,
+        "total_fracoes": len(fracoes),
+        "total_cabecalho": len(cabecalho),
+        "salvo_no_banco": salvo_no_banco,
+    }), 200
+
+
+@api_bp.route("/parse-texto", methods=["POST"])
+def parse_texto() -> tuple:
+    """Fase 5 — Parseia texto WhatsApp colado pelo operador."""
+    body = request.get_json(silent=True)
+    if not body or not body.get("texto", "").strip():
+        return jsonify({"erro": "Campo 'texto' vazio"}), 400
+
+    texto = body["texto"]
+    if len(texto) > 50_000:
+        return jsonify({"erro": "Texto excede 50 000 caracteres"}), 400
+
+    try:
+        resultado = parse_texto_whatsapp(texto)
+    except Exception as exc:
+        logger.error("Erro ao parsear texto WhatsApp: %s", exc)
+        return jsonify({"erro": "Erro ao interpretar texto"}), 422
+
+    fracoes = [dict(f) for f in resultado["fracoes"]]
+    cabecalho = dict(resultado["cabecalho"])
+
+    return jsonify({
+        "sucesso": True,
+        "fracoes": fracoes,
+        "cabecalho": cabecalho,
+        "avisos": resultado["avisos"],
+        "total_fracoes": len(fracoes),
+    }), 200
+
+
+@api_bp.route("/salvar-texto", methods=["POST"])
+def salvar_texto() -> tuple:
+    """Fase 5 — Salva fracoes/cabecalho editados do preview no Supabase."""
+    body = request.get_json(silent=True)
+    if not body:
+        return jsonify({"erro": "Body vazio"}), 400
+
+    fracoes_raw = body.get("fracoes", [])
+    cabecalho_raw = body.get("cabecalho")
+
+    if not fracoes_raw:
+        return jsonify({"erro": "Nenhuma fracao enviada"}), 400
+
+    from app.validators.xlsx_validator import validate_fracoes, validate_cabecalho
+
+    try:
+        fracoes = validate_fracoes(fracoes_raw)
+        cabecalho = validate_cabecalho([cabecalho_raw] if cabecalho_raw else [])
+    except ValueError as exc:
+        return jsonify({"erro": str(exc)}), 422
+
+    db_disponivel = bool(current_app.config.get("SUPABASE_DB_URL"))
+    salvo_no_banco = False
+
+    if db_disponivel:
+        try:
+            save_fracoes(fracoes)
+            save_cabecalho(cabecalho)
+            salvo_no_banco = True
+        except Exception as exc:
+            logger.warning("Erro ao salvar no Supabase: %s", exc)
+
+    return jsonify({
+        "sucesso": True,
+        "fracoes": [dict(f) for f in fracoes],
+        "cabecalho": [dict(c) for c in cabecalho],
         "total_fracoes": len(fracoes),
         "total_cabecalho": len(cabecalho),
         "salvo_no_banco": salvo_no_banco,

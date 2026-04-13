@@ -106,3 +106,264 @@
   color: var(--gold);
   border: 1px solid rgba(247, 185, 0, 0.3);
 }
+
+/* ===== BOTAO WHATSAPP ===== */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(247, 185, 0, 0.4);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-whatsapp:hover {
+  background: rgba(247, 185, 0, 0.1);
+  border-color: var(--gold);
+}
+
+/* ===== TELA COLA TEXTO ===== */
+#whatsapp-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px 20px 40px;
+  background: #0d0d0d;
+}
+
+#whatsapp-screen h1 {
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+#whatsapp-screen h2 {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#whatsapp-texto {
+  width: 100%;
+  max-width: 700px;
+  min-height: 280px;
+  padding: 16px;
+  background: #1a1a1a;
+  color: var(--white);
+  border: 1px solid rgba(247, 185, 0, 0.2);
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+#whatsapp-texto:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.whatsapp-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-primario,
+.btn-secundario {
+  padding: 10px 28px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  border: none;
+}
+
+.btn-primario {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn-primario:hover {
+  background: #e5ab00;
+}
+
+.btn-secundario {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid rgba(87, 87, 90, 0.4);
+}
+
+.btn-secundario:hover {
+  color: var(--white);
+  border-color: rgba(87, 87, 90, 0.8);
+}
+
+/* ===== TELA PREVIEW ===== */
+#preview-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px 20px 40px;
+  background: #0d0d0d;
+}
+
+#preview-screen h1 {
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+#preview-screen h2 {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#preview-avisos {
+  width: 100%;
+  max-width: 800px;
+}
+
+.aviso-item {
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  background: rgba(247, 185, 0, 0.1);
+  border: 1px solid rgba(247, 185, 0, 0.3);
+  border-radius: 8px;
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+.preview-section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 24px;
+}
+
+.preview-section h3 {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-mini {
+  padding: 4px 12px;
+  background: rgba(247, 185, 0, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(247, 185, 0, 0.3);
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-mini:hover {
+  background: rgba(247, 185, 0, 0.25);
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.preview-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.preview-field label {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.preview-field input,
+.preview-field select {
+  padding: 8px 10px;
+  background: #1a1a1a;
+  color: var(--white);
+  border: 1px solid rgba(87, 87, 90, 0.4);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-family: inherit;
+}
+
+.preview-field input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.fracao-form {
+  background: #141414;
+  border: 1px solid rgba(87, 87, 90, 0.3);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.fracao-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.fracao-form-title {
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.btn-remover {
+  background: none;
+  border: none;
+  color: #f87171;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: inherit;
+}
+
+.btn-remover:hover {
+  color: #ef4444;
+}
+
+.fracao-form .preview-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}

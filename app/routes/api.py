@@ -109,14 +109,15 @@ def parse_texto() -> tuple:
         return jsonify({"erro": "Erro ao interpretar texto"}), 422
 
     fracoes = [dict(f) for f in resultado["fracoes"]]
-    cabecalho = dict(resultado["cabecalho"])
+    cabecalhos = [dict(c) for c in resultado["cabecalhos"]]
 
     return jsonify({
         "sucesso": True,
         "fracoes": fracoes,
-        "cabecalho": cabecalho,
+        "cabecalhos": cabecalhos,
         "avisos": resultado["avisos"],
         "total_fracoes": len(fracoes),
+        "total_cabecalhos": len(cabecalhos),
     }), 200
 
 
@@ -128,7 +129,7 @@ def salvar_texto() -> tuple:
         return jsonify({"erro": "Body vazio"}), 400
 
     fracoes_raw = body.get("fracoes", [])
-    cabecalho_raw = body.get("cabecalho")
+    cabecalhos_raw = body.get("cabecalhos", [])
 
     if not fracoes_raw:
         return jsonify({"erro": "Nenhuma fracao enviada"}), 400
@@ -137,7 +138,7 @@ def salvar_texto() -> tuple:
 
     try:
         fracoes = validate_fracoes(fracoes_raw)
-        cabecalho = validate_cabecalho([cabecalho_raw] if cabecalho_raw else [])
+        cabecalho = validate_cabecalho(cabecalhos_raw)
     except ValueError as exc:
         return jsonify({"erro": str(exc)}), 422
 

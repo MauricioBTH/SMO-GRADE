@@ -93,6 +93,20 @@ def _extrair_unidade_data(texto: str) -> tuple[str, str]:
 
 
 # ---------------------------------------------------------------------------
+# Segmentacao multi-unidade
+# ---------------------------------------------------------------------------
+
+_RE_SEGMENTO = re.compile(r"(?=(?:^|\n)\*?DADOS\s+PARA\s+PLANILHA)", re.IGNORECASE)
+
+
+def _segmentar_texto(texto: str) -> list[str]:
+    """Divide texto em segmentos, 1 por unidade. Se nao encontra marcador, retorna [texto]."""
+    partes = _RE_SEGMENTO.split(texto)
+    partes = [p.strip() for p in partes if p.strip()]
+    return partes if partes else [texto]
+
+
+# ---------------------------------------------------------------------------
 # parse_cabecalho
 # ---------------------------------------------------------------------------
 
@@ -262,12 +276,39 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
             em_bloco_vtr = False
             continue
 
-        # Missao numerada ANTES do bloco numerico (6BPChq)
+        # Missao numerada (6BPChq com "1. MISSÃO:")
         m = RE_MISSAO_NUM.match(ln_s)
         if m:
             if bloco_atual:
                 blocos.append(bloco_atual)
+            em_bloco_numerico = False
             bloco_atual = _novo(missao=sanitize_text(m.group(1)))
+            continue
+
+        # Missao standalone como inicio de fracao (6BPChq sem numero)
+        m_ms = re.match(r"^\s*MISS[ÃA]O\s*:\s*(.+)", ln_s, re.IGNORECASE)
+        if m_ms:
+            # Nova fracao se nao ha bloco ou bloco ja tem cmt+missao
+            if bloco_atual is None or (
+                    bloco_atual.get("comandante") and bloco_atual.get("missao")):
+                if bloco_atual:
+                    blocos.append(bloco_atual)
+                em_bloco_numerico = False
+                bloco_atual = _novo(missao=sanitize_text(m_ms.group(1)))
+                continue
+
+        # Header de nova unidade (*...*) reseta contexto de bloco numerico
+        if ln_s.startswith("*") and ln_s.endswith("*"):
+            em_bloco_numerico = False
+            continue
+
+        # Header de nova unidade SEM asteriscos — reseta bloco numerico
+        if re.match(r"^DADOS\s+PARA\s+PLANILHA", ln_s, re.IGNORECASE):
+            em_bloco_numerico = False
+            if bloco_atual:
+                blocos.append(bloco_atual)
+                bloco_atual = None
+            nome_secao = ""
             continue
 
         if _e_linha_cabecalho_numerico(ln_s):
@@ -303,7 +344,9 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
             continue
         if re.match(r"^Efetivo\s+de\s+\d", ln_s, re.IGNORECASE):
             continue
-        if re.match(r"^\*\s*(DATA|OF\s+de\s+SV|Tel)\s*:", ln_s, re.IGNORECASE):
+        if re.match(r"^\*\s*(DATA|OF\s+de\s+SV)\s*:", ln_s, re.IGNORECASE):
+            continue
+        if re.match(r"^\*\s*Tel\s*:", ln_s, re.IGNORECASE) and bloco_atual is None:
             continue
 
         # Turno header
@@ -313,10 +356,25 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
                 blocos.append(bloco_atual)
                 bloco_atual = None
             turno_header = ln_s.strip()
+            # Turnos compostos com local (ex: "2°/3° T - SANTA MARIA") viram nome de secao
+            if re.search(r"\bT\b\s*[-–]\s*\w", ln_s):
+                nome_secao = sanitize_text(ln_s)
+            else:
+                nome_secao = ""
             continue
 
         # Esq/Pel header (4RPMon)
         if RE_ESQ_PEL.match(ln_s):
+            if bloco_atual:
+                blocos.append(bloco_atual)
+            nome_secao = sanitize_text(ln_s)
+            bloco_atual = None
+            continue
+
+        # Nome de fracao com ordinal (ex: "3ª CIA") — exclui nomes de unidade
+        if (re.match(r"^\d+[ªº°]\s+[A-ZÀ-ÚÇ]", ln_s) and len(ln_s) > 3
+                and not RE_SKIP.match(ln_s)
+                and not re.search(r"BATAL|RPMon|BPChq", ln_s, re.IGNORECASE)):
             if bloco_atual:
                 blocos.append(bloco_atual)
             nome_secao = sanitize_text(ln_s)
@@ -389,7 +447,7 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
         # Graduacao sozinha (ex: "Sd PM Jaime") — so apos turno/secao
         if (not bloco_atual and (turno_header or nome_secao)
                 and re.match(r"^(Sd|SD|Sgt|SGT|1[°º]?\s*Sgt|2[°º]?\s*Sgt|"
-                             r"Ten|TEN|Cap|CAP)\s+PME?\s+\w", ln_s, re.IGNORECASE)):
+                             r"Ten|TEN|Cap|CAP)\.?\s+PME?\s+\w", ln_s, re.IGNORECASE)):
             nome, tel = _extrair_telefone(ln_s)
             bloco_atual = _novo(fracao=nome_secao or turno_header or "",
                                 cmt=sanitize_text(nome), tel=sanitize_text(tel))
@@ -407,8 +465,12 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
 
         m = RE_EQUIPES.search(ln_s)
         if m:
-            bloco_atual["equipes"] = safe_int(m.group(1)) if m.group(1) else 0
-            bloco_atual["pms"] = safe_int(m.group(2))
+            if m.group(3):  # "Equipes: 50 PM's" (sem parenteses)
+                bloco_atual["equipes"] = 0
+                bloco_atual["pms"] = safe_int(m.group(3))
+            else:  # "Equipes: 06 (22 PM's)" (com parenteses)
+                bloco_atual["equipes"] = safe_int(m.group(1)) if m.group(1) else 0
+                bloco_atual["pms"] = safe_int(m.group(2))
             continue
 
         m = RE_MISSAO.search(ln_s)
@@ -453,7 +515,7 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
 # ---------------------------------------------------------------------------
 
 class ParseResult(TypedDict):
-    cabecalho: CabecalhoRow
+    cabecalhos: list[CabecalhoRow]
     fracoes: list[FracaoRow]
     avisos: list[str]
 
@@ -462,10 +524,19 @@ def parse_texto_whatsapp(texto: str) -> ParseResult:
     """Ponto de entrada principal: parseia texto WhatsApp completo."""
     texto = sanitize_text(texto) if len(texto) <= 500 else texto.replace("\x00", "")
 
-    cabecalho, avisos = parse_cabecalho(texto)
-    fracoes = parse_fracoes(texto)
+    segmentos = _segmentar_texto(texto)
+    cabecalhos: list[CabecalhoRow] = []
+    todas_fracoes: list[FracaoRow] = []
+    avisos: list[str] = []
 
-    if not fracoes:
+    for seg in segmentos:
+        cab, av = parse_cabecalho(seg)
+        fracoes = parse_fracoes(seg)
+        cabecalhos.append(cab)
+        todas_fracoes.extend(fracoes)
+        avisos.extend(av)
+
+    if not todas_fracoes:
         avisos.append("Nenhuma fracao identificada")
 
-    return ParseResult(cabecalho=cabecalho, fracoes=fracoes, avisos=avisos)
+    return ParseResult(cabecalhos=cabecalhos, fracoes=todas_fracoes, avisos=avisos)

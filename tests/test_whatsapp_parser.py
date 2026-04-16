@@ -1,6 +1,8 @@
 """Testes do parser WhatsApp com os 7 textos reais como fixtures."""
 import pytest
-from app.services.whatsapp_parser import parse_fracoes, parse_cabecalho
+from app.services.whatsapp_parser import (
+    parse_fracoes, parse_cabecalho, parse_texto_whatsapp,
+)
 
 
 TEXTO_1BPCHQ = """
@@ -534,3 +536,55 @@ class TestHorarios:
         assert len(souto) == 1
         assert souto[0]["horario_inicio"] == "09:00"
         assert souto[0]["horario_fim"] == "21:00"
+
+
+class TestMultiUnidade:
+    """Testes de segmentacao multi-unidade via parse_texto_whatsapp."""
+
+    def test_uma_unidade_retorna_1_cabecalho(self):
+        result = parse_texto_whatsapp(TEXTO_1BPCHQ)
+        assert len(result["cabecalhos"]) == 1
+        assert result["cabecalhos"][0]["unidade"] == "1 BPChq"
+        assert len(result["fracoes"]) == 11
+
+    def test_duas_unidades(self):
+        texto = TEXTO_1BPCHQ + "\n" + TEXTO_2BPCHQ
+        result = parse_texto_whatsapp(texto)
+        assert len(result["cabecalhos"]) == 2
+        unidades = [c["unidade"] for c in result["cabecalhos"]]
+        assert "1 BPChq" in unidades
+        assert "2 BPChq" in unidades
+        assert len(result["fracoes"]) == 11 + 1
+
+    def test_tres_unidades(self):
+        texto = TEXTO_1BPCHQ + "\n" + TEXTO_3BPCHQ + "\n" + TEXTO_4RPMON
+        result = parse_texto_whatsapp(texto)
+        assert len(result["cabecalhos"]) == 3
+        unidades = [c["unidade"] for c in result["cabecalhos"]]
+        assert "1 BPChq" in unidades
+        assert "3 BPChq" in unidades
+        assert "4 RPMon" in unidades
+        assert len(result["fracoes"]) == 11 + 3 + 10
+
+    def test_sete_unidades(self):
+        todos = [
+            TEXTO_1BPCHQ, TEXTO_2BPCHQ, TEXTO_3BPCHQ,
+            TEXTO_4BPCHQ, TEXTO_5BPCHQ, TEXTO_6BPCHQ, TEXTO_4RPMON,
+        ]
+        texto = "\n".join(todos)
+        result = parse_texto_whatsapp(texto)
+        assert len(result["cabecalhos"]) == 7
+        total_fracoes = 11 + 1 + 3 + 4 + 4 + 3 + 10
+        assert len(result["fracoes"]) == total_fracoes
+
+    def test_fracoes_preservam_unidade_do_segmento(self):
+        texto = TEXTO_1BPCHQ + "\n" + TEXTO_4RPMON
+        result = parse_texto_whatsapp(texto)
+        unidades_fracoes = set(f["unidade"] for f in result["fracoes"])
+        assert "1 BPChq" in unidades_fracoes
+        assert "4 RPMon" in unidades_fracoes
+
+    def test_texto_sem_marcador_retorna_1_cabecalho(self):
+        texto = "Cmt: TEN PM TESTE\nEquipes: 01 (03 PM's)\nMissao: Teste"
+        result = parse_texto_whatsapp(texto)
+        assert len(result["cabecalhos"]) == 1

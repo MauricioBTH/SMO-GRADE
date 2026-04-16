@@ -9,7 +9,7 @@
   var unidadeAtiva = null;
 
   // Estado do preview
-  var previewCabecalho = null;
+  var previewCabecalhos = [];
   var previewFracoes = [];
 
   /** Recalcula layout ao redimensionar */
@@ -104,11 +104,13 @@
           throw new Error('Nenhuma fracao identificada no texto.');
         }
 
-        previewCabecalho = result.data.cabecalho;
+        previewCabecalhos = result.data.cabecalhos;
         previewFracoes = result.data.fracoes;
 
         statusEl.className = 'upload-status success';
-        statusEl.textContent = result.data.total_fracoes + ' fracoes identificadas';
+        var cabMsg = result.data.total_cabecalhos > 1
+          ? result.data.total_cabecalhos + ' unidades, ' : '';
+        statusEl.textContent = cabMsg + result.data.total_fracoes + ' fracoes identificadas';
 
         montarPreview(result.data.avisos);
         mostrarTela('preview-screen');
@@ -182,11 +184,25 @@
       });
     }
 
-    // Cabecalho
-    var cabGrid = document.getElementById('preview-cabecalho');
-    cabGrid.innerHTML = '';
-    CAMPOS_CABECALHO.forEach(function (c) {
-      cabGrid.appendChild(criarCampo(c, previewCabecalho[c.key]));
+    // Cabecalhos — 1 bloco por unidade
+    var cabContainer = document.getElementById('preview-cabecalho');
+    cabContainer.innerHTML = '';
+    previewCabecalhos.forEach(function (cab, idx) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'cabecalho-unidade';
+      wrapper.setAttribute('data-cab-idx', idx);
+      if (previewCabecalhos.length > 1) {
+        var title = document.createElement('h4');
+        title.textContent = cab.unidade || ('Unidade ' + (idx + 1));
+        wrapper.appendChild(title);
+      }
+      var grid = document.createElement('div');
+      grid.className = 'preview-grid';
+      CAMPOS_CABECALHO.forEach(function (c) {
+        grid.appendChild(criarCampo(c, cab[c.key]));
+      });
+      wrapper.appendChild(grid);
+      cabContainer.appendChild(wrapper);
     });
 
     // Fracoes
@@ -229,7 +245,8 @@
   }
 
   document.getElementById('btn-add-fracao').addEventListener('click', function () {
-    var base = previewFracoes.length > 0 ? previewFracoes[0] : {};
+    var base = previewFracoes.length > 0 ? previewFracoes[0]
+             : previewCabecalhos.length > 0 ? previewCabecalhos[0] : {};
     previewFracoes.push({
       unidade: base.unidade || '',
       data: base.data || '',
@@ -251,30 +268,29 @@
   });
 
   function coletarPreview() {
-    // Cabecalho
-    var cabEl = document.getElementById('preview-cabecalho');
-    var cab = {};
-    cabEl.querySelectorAll('input').forEach(function (inp) {
-      var key = inp.getAttribute('data-key');
-      cab[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;
+    // Cabecalhos
+    var cabecalhos = [];
+    document.querySelectorAll('.cabecalho-unidade').forEach(function (wrapper) {
+      var cab = {};
+      wrapper.querySelectorAll('input').forEach(function (inp) {
+        var key = inp.getAttribute('data-key');
+        cab[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;
+      });
+      var idx = parseInt(wrapper.getAttribute('data-cab-idx'), 10);
+      var orig = previewCabecalhos[idx] || {};
+      cab.operador_diurno = orig.operador_diurno || '';
+      cab.tel_op_diurno = orig.tel_op_diurno || '';
+      cab.horario_op_diurno = orig.horario_op_diurno || '';
+      cab.operador_noturno = orig.operador_noturno || '';
+      cab.tel_op_noturno = orig.tel_op_noturno || '';
+      cab.horario_op_noturno = orig.horario_op_noturno || '';
+      cabecalhos.push(cab);
     });
-    // Campos extras do cabecalho que nao estao no form
-    cab.operador_diurno = previewCabecalho.operador_diurno || '';
-    cab.tel_op_diurno = previewCabecalho.tel_op_diurno || '';
-    cab.horario_op_diurno = previewCabecalho.horario_op_diurno || '';
-    cab.operador_noturno = previewCabecalho.operador_noturno || '';
-    cab.tel_op_noturno = previewCabecalho.tel_op_noturno || '';
-    cab.horario_op_noturno = previewCabecalho.horario_op_noturno || '';
 
     // Fracoes
-    var fracoesEl = document.querySelectorAll('.fracao-form');
     var fracoes = [];
-    fracoesEl.forEach(function (form, idx) {
-      var f = {
-        unidade: cab.unidade || '',
-        data: cab.data || '',
-        turno: cab.turno || '',
-      };
+    document.querySelectorAll('.fracao-form').forEach(function (form) {
+      var f = {};
       form.querySelectorAll('input').forEach(function (inp) {
         var key = inp.getAttribute('data-key');
         f[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;
@@ -282,7 +298,7 @@
       fracoes.push(f);
     });
 
-    return { cabecalho: cab, fracoes: fracoes };
+    return { cabecalhos: cabecalhos, fracoes: fracoes };
   }
 
   document.getElementById('btn-confirmar').addEventListener('click', function () {

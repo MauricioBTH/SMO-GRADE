@@ -9,8 +9,8 @@ import re
 # ---------------------------------------------------------------------------
 
 RE_UNIDADE = re.compile(
-    r"\*\s*(\d+[°º]?\s*(?:BATAL[HÃA]+O\s+DE\s+POLI[CÇ]IA\s+DE\s+CHOQUE"
-    r"|BPChq|RPMon|BATALHAO\s+DE\s+POLICIA\s+DE\s+CHOQUE))\s*\*",
+    r"\*?\s*(\d+[°º]?\s*(?:BATAL[HÃA]+O\s+DE\s+POLI[CÇ]IA\s+DE\s+CHOQUE"
+    r"|BPChq|RPMon|BATALHAO\s+DE\s+POLICIA\s+DE\s+CHOQUE))\s*\*?",
     re.IGNORECASE,
 )
 
@@ -22,7 +22,7 @@ RE_DATA = re.compile(
 RE_TURNO = re.compile(r"Turno\s*:\s*(.+)", re.IGNORECASE)
 
 RE_OF_SUPERIOR = re.compile(
-    r"Oficial\s+Superior\s+CPChq\s+(.+)", re.IGNORECASE
+    r"Oficial\s+(?:Superior|Supervisor)\s+CPChq\s+(.+)", re.IGNORECASE
 )
 
 RE_COPOM = re.compile(r"COPOM\s*:\s*(.+)", re.IGNORECASE)
@@ -32,7 +32,7 @@ RE_OFICIAL = re.compile(r"Oficial\s*(?:is)?\s*:\s*(\d+)", re.IGNORECASE)
 RE_SGT = re.compile(r"Sgt\s*:\s*(\d+)", re.IGNORECASE)
 RE_SD = re.compile(r"S[Dd]\s*:\s*(\d+)", re.IGNORECASE)
 RE_VTRS = re.compile(r"VTRs?\s*:\s*(\d+)", re.IGNORECASE)
-RE_MOTOS = re.compile(r"(\d+)\s*motocicletas?", re.IGNORECASE)
+RE_MOTOS = re.compile(r"(\d+)\s*(?:motocicletas?|motos?)", re.IGNORECASE)
 RE_EF_MOT = re.compile(r"Efetivo\s+Motorizado\s*:\s*(\d+)", re.IGNORECASE)
 RE_ACE = re.compile(
     r"Armas\s+de\s+Condu[çc][ãa]o\s+El[ée]trica\s+Empregadas?\s*:\s*(\d+)",
@@ -67,7 +67,7 @@ RE_AUX_SV_CMT = re.compile(
     r"^\s*\*?\s*Aux\.\s*de\s+SV\s*:\s*(.+)", re.IGNORECASE
 )
 RE_TURNO_HEADER = re.compile(
-    r"^\s*(\d+)[°º]\s*TURNO\s*$", re.IGNORECASE
+    r"^\s*(\d+)[°º](?:/\d+[°º])?\s*(?:TURNO|T\b).*$", re.IGNORECASE
 )
 RE_NOME_FRACAO = re.compile(
     r"^[A-ZÀ-ÚÇ][A-ZÀ-ÚÇ\s/\-]+(?:\s+[IVX]+)?$"
@@ -78,7 +78,7 @@ RE_MISSAO_NUM = re.compile(
 RE_ESQ_PEL = re.compile(r"^\s*\d+[°º]\s*Esq", re.IGNORECASE)
 
 RE_EQUIPES = re.compile(
-    r"(?:Equipes?|Efetivo)\s*:\s*(\d*)\s*(?:Equipes?\s*)?\(?\s*(\d+)\s*PM",
+    r"(?:Equipes?|Efetivo)\s*:\s*(?:(\d+)\s*(?:Equipes?\s*)?\(\s*(\d+)\s*PM|\(?\s*(\d+)\s*PM)",
     re.IGNORECASE,
 )
 RE_MISSAO = re.compile(r"Miss[ãa]o\s*:\s*(.+)", re.IGNORECASE)
@@ -105,7 +105,13 @@ RE_SKIP = re.compile(
     r"|MOT\s+OF\s+SV"
     r"|VTR\s*:\s*\*"
     r"|Local\s+de\s+atua"
+    r"|Oficial\s+Supervis\w+"
     r"|Oficial\s+Superior"
+    r"|DADOS\s+PARA\s+PLANILHA"
+    r"|BRIGADA\s+MILITAR$"
+    r"|^CPChq$"
+    r"|\d+[°º]?\s*(?:BATAL[HÃA]+O|BPChq|RPMon)"
+    r"|Previs[ãa]o\s+do\s+dia"
     r")",
     re.IGNORECASE,
 )
@@ -115,9 +121,9 @@ RE_INICIO_BLOCO_NUM = re.compile(
     r"^\s*\d*\.?\s*Efetivo\s+Total\s*:", re.IGNORECASE
 )
 
-RE_TELEFONE = re.compile(r"\(?\d{2}\)?\s*[\-]?\s*\d{4,5}\s*[\-]?\s*\d{3,4}")
+RE_TELEFONE = re.compile(r"\(?\d{2}\)?\s*[\-]?\s*\d?\s*\d{4,5}\s*[\-]?\s*\d{3,4}")
 
-RE_HHMM = re.compile(r"(\d{1,2})\s*[h:]\s*(\d{0,2})")
+RE_HHMM = re.compile(r"(\d{1,2})\s*[hH:]\s*(\d{0,2})")
 
 # ---------------------------------------------------------------------------
 # Normalizacao de unidade

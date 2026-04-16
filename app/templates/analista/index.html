@@ -181,7 +181,11 @@
       <section class="projecoes-section">
 
         <!-- Ranking Missoes -->
-        <h2 class="section-title">Ranking de Missoes</h2>
+        <h2 class="section-title">Ranking de Missoes
+          <span class="info-icon" data-tooltip="Missoes ordenadas por frequencia de emprego no periodo. Mostra quantas vezes cada missao foi designada, total de PMs e equipes alocados. Identifica onde o efetivo esta sendo mais consumido.">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </span>
+        </h2>
         <div class="ranking-table-wrapper">
           <table class="tabela-dados" id="tabela-missoes">
             <thead>
@@ -194,7 +198,11 @@
         </div>
 
         <!-- Cobertura Horaria -->
-        <h2 class="section-title">Cobertura Horaria (PMs medio por hora)</h2>
+        <h2 class="section-title">Cobertura Horaria
+          <span class="info-icon" data-tooltip="PMs medio empregados em cada hora do dia (0h-23h). Barras vermelhas indicam cobertura baixa, amarelas moderada e verdes adequada. Revela janelas horarias com deficit de efetivo.">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </span>
+        </h2>
         <div class="slide-card" id="slide-cobertura">
           <div class="slide-card-header">
             <img src="/static/logos/logo-CPChq.png" alt="">
@@ -209,24 +217,12 @@
           </div>
         </div>
 
-        <!-- Distribuicao por Turno -->
-        <h2 class="section-title">Distribuicao por Turno</h2>
-        <div class="slide-card" id="slide-turnos">
-          <div class="slide-card-header">
-            <img src="/static/logos/logo-CPChq.png" alt="">
-            <span class="slide-titulo">Distribuicao por Turno</span>
-            <span class="slide-periodo" id="slide-turno-periodo"></span>
-          </div>
-          <div class="slide-card-body">
-            <canvas id="chart-turnos"></canvas>
-          </div>
-          <div class="slide-card-footer">
-            <span class="slide-fonte">CPChq — Sistema C2</span>
-          </div>
-        </div>
-
         <!-- Padroes por Dia da Semana -->
-        <h2 class="section-title">Padroes por Dia da Semana</h2>
+        <h2 class="section-title">Padroes por Dia da Semana
+          <span class="info-icon" data-tooltip="Media de PMs e fracoes empregados por dia da semana. Permite identificar se finais de semana ou dias especificos possuem menos cobertura, auxiliando no planejamento de escalas.">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </span>
+        </h2>
         <div class="slide-card" id="slide-dia-semana">
           <div class="slide-card-header">
             <img src="/static/logos/logo-CPChq.png" alt="">
@@ -241,24 +237,12 @@
           </div>
         </div>
 
-        <!-- Concentracao por Missao -->
-        <h2 class="section-title">Concentracao de PMs por Missao</h2>
-        <div class="slide-card" id="slide-concentracao">
-          <div class="slide-card-header">
-            <img src="/static/logos/logo-CPChq.png" alt="">
-            <span class="slide-titulo">PMs Medio/Dia por Missao</span>
-            <span class="slide-periodo" id="slide-conc-periodo"></span>
-          </div>
-          <div class="slide-card-body">
-            <canvas id="chart-concentracao"></canvas>
-          </div>
-          <div class="slide-card-footer">
-            <span class="slide-fonte">CPChq — Sistema C2</span>
-          </div>
-        </div>
-
         <!-- Frequencia de Fracoes -->
-        <h2 class="section-title">Frequencia de Fracoes (Geral)</h2>
+        <h2 class="section-title">Frequencia de Fracoes
+          <span class="info-icon" data-tooltip="Fracoes (pelotoes, grupos, equipes) mais empregadas no periodo, ordenadas por frequencia. Mostra quais fracoes sao mais demandadas e o total de PMs alocados em cada uma.">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </span>
+        </h2>
         <div class="ranking-table-wrapper">
           <table class="tabela-dados" id="tabela-fracoes-freq">
             <thead>

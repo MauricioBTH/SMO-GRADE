@@ -12,13 +12,6 @@
     '4 RPMon': '#1ABC9C', '4\u00ba RPMon': '#1ABC9C',
   };
 
-  var CORES_TURNO = {
-    manha: '#F7B900',
-    tarde: '#E74C3C',
-    noite: '#3498DB',
-    indefinido: '#888',
-  };
-
   var chartInstances = {};
 
   /* ============================
@@ -55,9 +48,7 @@
 
     var periodo = di + ' a ' + df;
     setTexto('slide-cob-periodo', periodo);
-    setTexto('slide-turno-periodo', periodo);
     setTexto('slide-dia-periodo', periodo);
-    setTexto('slide-conc-periodo', periodo);
 
     fetch(url)
       .then(function (res) { return res.json(); })
@@ -65,9 +56,7 @@
         if (data.erro) return;
         renderizarTabelaMissoes(data.missoes);
         renderizarCobertura(data.cobertura_horaria);
-        renderizarTurnos(data.cobertura_horaria);
         renderizarDiaSemana(data.padroes_diarios);
-        renderizarConcentracao(data.concentracao);
         renderizarTabelaFracoesFreq(data.fracoes_freq);
       })
       .catch(function () {});
@@ -260,43 +249,6 @@
     });
   }
 
-  /* ---------- Distribuicao por Turno ---------- */
-  function renderizarTurnos(cobertura) {
-    var canvas = document.getElementById('chart-turnos');
-    if (!canvas) return;
-    destroyChart('turnos');
-
-    var turnos = cobertura.por_turno || [];
-    if (turnos.length === 0) return;
-
-    var labels = turnos.map(function (t) { return t.turno; });
-    var pms = turnos.map(function (t) { return t.pms_total; });
-    var cores = labels.map(function (l) { return CORES_TURNO[l] || '#888'; });
-
-    chartInstances.turnos = new Chart(canvas, {
-      type: 'doughnut',
-      data: {
-        labels: labels,
-        datasets: [{
-          data: pms,
-          backgroundColor: cores.map(function (c) { return c + 'CC'; }),
-          borderColor: cores,
-          borderWidth: 2,
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            position: 'right',
-            labels: { color: '#ccc', font: { size: 12 }, padding: 16, usePointStyle: true },
-          },
-        },
-      },
-    });
-  }
-
   /* ---------- Padroes por Dia da Semana ---------- */
   function renderizarDiaSemana(padroes) {
     var canvas = document.getElementById('chart-dia-semana');
@@ -334,35 +286,6 @@
         ],
       },
       options: chartOpcoes(),
-    });
-  }
-
-  /* ---------- Concentracao por Missao ---------- */
-  function renderizarConcentracao(concentracao) {
-    var canvas = document.getElementById('chart-concentracao');
-    if (!canvas) return;
-    destroyChart('concentracao');
-
-    var porMissao = concentracao.por_missao || [];
-    if (porMissao.length === 0) return;
-
-    var labels = porMissao.map(function (m) { return m.missao; });
-    var pms = porMissao.map(function (m) { return m.pms_medio_dia; });
-
-    chartInstances.concentracao = new Chart(canvas, {
-      type: 'bar',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'PMs medio/dia',
-          data: pms,
-          backgroundColor: '#F7B90088',
-          borderColor: '#F7B900',
-          borderWidth: 1,
-          borderRadius: 4,
-        }],
-      },
-      options: Object.assign({}, chartOpcoes(), { indexAxis: 'y' }),
     });
   }
 

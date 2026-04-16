@@ -18,7 +18,7 @@ from app.services.analytics_cabecalho import (
     calcular_sazonalidade,
     calcular_indicadores,
 )
-from app.services.whatsapp_parser import parse_texto_whatsapp
+from app.services.whatsapp_parser import parse_texto_whatsapp, calcular_horario_emprego
 from app.services.analytics_fracoes import (
     analisar_missoes,
     analisar_fracoes_freq,
@@ -80,6 +80,7 @@ def upload_xlsx() -> tuple:
 
     fracoes_serializable = [dict(row) for row in fracoes]
     cabecalho_serializable = [dict(row) for row in cabecalho]
+    calcular_horario_emprego(cabecalho_serializable, fracoes_serializable)
 
     return jsonify({
         "sucesso": True,
@@ -153,10 +154,14 @@ def salvar_texto() -> tuple:
         except Exception as exc:
             logger.warning("Erro ao salvar no Supabase: %s", exc)
 
+    fracoes_out = [dict(f) for f in fracoes]
+    cabecalho_out = [dict(c) for c in cabecalho]
+    calcular_horario_emprego(cabecalho_out, fracoes_out)
+
     return jsonify({
         "sucesso": True,
-        "fracoes": [dict(f) for f in fracoes],
-        "cabecalho": [dict(c) for c in cabecalho],
+        "fracoes": fracoes_out,
+        "cabecalho": cabecalho_out,
         "total_fracoes": len(fracoes),
         "total_cabecalho": len(cabecalho),
         "salvo_no_banco": salvo_no_banco,

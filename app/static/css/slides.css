@@ -16,7 +16,7 @@
   background: #111;
   border: 1px solid #222;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   max-width: 960px;
@@ -32,6 +32,10 @@
   gap: 12px;
   border-bottom: 3px solid var(--gold);
   flex-shrink: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px 10px 0 0;
 }
 
 .slide-card-header img {
@@ -77,6 +81,7 @@
   justify-content: space-between;
   border-top: 1px solid #222;
   flex-shrink: 0;
+  border-radius: 0 0 10px 10px;
 }
 
 .slide-card-footer .slide-fonte {
@@ -162,6 +167,12 @@
 .btn-gerar-slides:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+/* --- Info icon dentro de slide-card: tooltip para baixo --- */
+.slide-card-header .info-icon::after {
+  bottom: auto;
+  top: calc(100% + 8px);
 }
 
 /* --- Seletor de grafico --- */

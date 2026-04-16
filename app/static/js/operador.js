@@ -126,6 +126,7 @@
   var CAMPOS_CABECALHO = [
     { key: 'unidade', label: 'Unidade' },
     { key: 'data', label: 'Data' },
+    { key: 'horario_emprego', label: 'Horario Emprego' },
     { key: 'turno', label: 'Turno' },
     { key: 'oficial_superior', label: 'Of. Superior' },
     { key: 'tel_oficial', label: 'Tel Of.' },
@@ -142,8 +143,8 @@
     { key: 'armas_longas', label: 'Longas', tipo: 'number' },
     { key: 'animais', label: 'Animais', tipo: 'number' },
     { key: 'animais_tipo', label: 'Tipo Animal' },
-    { key: 'locais_atuacao', label: 'Locais' },
-    { key: 'missoes_osv', label: 'Missoes/OSV' },
+    { key: 'locais_atuacao', label: 'Locais', wide: true },
+    { key: 'missoes_osv', label: 'Missoes/OSV', wide: true },
   ];
 
   var CAMPOS_FRACAO = [
@@ -159,7 +160,7 @@
 
   function criarCampo(campo, valor) {
     var div = document.createElement('div');
-    div.className = 'preview-field';
+    div.className = 'preview-field' + (campo.wide ? ' preview-field-wide' : '');
     var lbl = document.createElement('label');
     lbl.textContent = campo.label;
     var inp = document.createElement('input');
@@ -170,6 +171,8 @@
     div.appendChild(inp);
     return div;
   }
+
+  var previewTabAtiva = 0;
 
   function montarPreview(avisos) {
     // Avisos
@@ -184,133 +187,196 @@
       });
     }
 
-    // Cabecalhos — 1 bloco por unidade
-    var cabContainer = document.getElementById('preview-cabecalho');
-    cabContainer.innerHTML = '';
+    // Tabs
+    var tabsEl = document.getElementById('preview-tabs');
+    tabsEl.innerHTML = '';
     previewCabecalhos.forEach(function (cab, idx) {
-      var wrapper = document.createElement('div');
-      wrapper.className = 'cabecalho-unidade';
-      wrapper.setAttribute('data-cab-idx', idx);
-      if (previewCabecalhos.length > 1) {
-        var title = document.createElement('h4');
-        title.textContent = cab.unidade || ('Unidade ' + (idx + 1));
-        wrapper.appendChild(title);
-      }
-      var grid = document.createElement('div');
-      grid.className = 'preview-grid';
-      CAMPOS_CABECALHO.forEach(function (c) {
-        grid.appendChild(criarCampo(c, cab[c.key]));
-      });
-      wrapper.appendChild(grid);
-      cabContainer.appendChild(wrapper);
+      var btn = document.createElement('button');
+      btn.className = 'unit-btn';
+      btn.textContent = cab.unidade || ('Unidade ' + (idx + 1));
+      btn.addEventListener('click', function () { selecionarPreviewTab(idx); });
+      tabsEl.appendChild(btn);
     });
 
-    // Fracoes
-    renderizarPreviewFracoes();
+    previewTabAtiva = 0;
+    renderizarPreviewTab(0);
   }
 
-  function renderizarPreviewFracoes() {
-    var container = document.getElementById('preview-fracoes');
+  function salvarTabAtual() {
+    var container = document.getElementById('preview-tab-content');
+    if (!container.children.length) return;
+
+    var wrapper = container.querySelector('.cabecalho-unidade');
+    if (wrapper) {
+      var cabIdx = parseInt(wrapper.getAttribute('data-cab-idx'), 10);
+      var cab = previewCabecalhos[cabIdx];
+      if (cab) {
+        wrapper.querySelectorAll('input').forEach(function (inp) {
+          var key = inp.getAttribute('data-key');
+          cab[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;
+        });
+      }
+    }
+
+    container.querySelectorAll('.fracao-form').forEach(function (form) {
+      var fIdx = parseInt(form.getAttribute('data-fracao-idx'), 10);
+      var f = previewFracoes[fIdx];
+      if (f) {
+        form.querySelectorAll('input').forEach(function (inp) {
+          var key = inp.getAttribute('data-key');
+          f[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;
+        });
+      }
+    });
+  }
+
+  function selecionarPreviewTab(idx) {
+    salvarTabAtual();
+    previewTabAtiva = idx;
+    renderizarPreviewTab(idx);
+  }
+
+  function renderizarPreviewTab(idx) {
+    // Atualizar botoes
+    var btns = document.querySelectorAll('#preview-tabs .unit-btn');
+    btns.forEach(function (b, i) { b.classList.toggle('active', i === idx); });
+
+    var container = document.getElementById('preview-tab-content');
     container.innerHTML = '';
 
-    previewFracoes.forEach(function (f, idx) {
+    var cab = previewCabecalhos[idx];
+    if (!cab) return;
+    var unidade = cab.unidade || '';
+
+    // Cabecalho
+    var secCab = document.createElement('div');
+    secCab.className = 'preview-section';
+    var hCab = document.createElement('h3');
+    hCab.textContent = 'Cabecalho';
+    secCab.appendChild(hCab);
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'cabecalho-unidade';
+    wrapper.setAttribute('data-cab-idx', idx);
+    var grid = document.createElement('div');
+    grid.className = 'preview-grid';
+    CAMPOS_CABECALHO.forEach(function (c) {
+      grid.appendChild(criarCampo(c, cab[c.key]));
+    });
+    wrapper.appendChild(grid);
+    secCab.appendChild(wrapper);
+    container.appendChild(secCab);
+
+    // Fracoes da unidade
+    var secFrac = document.createElement('div');
+    secFrac.className = 'preview-section';
+    var hFrac = document.createElement('h3');
+    hFrac.textContent = 'Fracoes ';
+    var btnAdd = document.createElement('button');
+    btnAdd.className = 'btn-mini';
+    btnAdd.textContent = '+ Adicionar';
+    btnAdd.addEventListener('click', function () {
+      previewFracoes.push({
+        unidade: unidade, data: cab.data || '', turno: cab.turno || '',
+        fracao: '', comandante: '', telefone: '',
+        equipes: 0, pms: 0, horario_inicio: '', horario_fim: '', missao: '',
+      });
+      renderizarPreviewTab(previewTabAtiva);
+    });
+    hFrac.appendChild(btnAdd);
+    secFrac.appendChild(hFrac);
+
+    var numFrac = 0;
+    previewFracoes.forEach(function (f, fIdx) {
+      if (f.unidade !== unidade) return;
+      numFrac++;
+
       var form = document.createElement('div');
       form.className = 'fracao-form';
-      form.setAttribute('data-fracao-idx', idx);
+      form.setAttribute('data-fracao-idx', fIdx);
 
       var header = document.createElement('div');
       header.className = 'fracao-form-header';
       var title = document.createElement('span');
       title.className = 'fracao-form-title';
-      title.textContent = 'Fracao ' + (idx + 1) + (f.fracao ? ' — ' + f.fracao : '');
+      title.textContent = 'Fracao ' + numFrac + (f.fracao ? ' — ' + f.fracao : '');
       var btnRem = document.createElement('button');
       btnRem.className = 'btn-remover';
       btnRem.textContent = 'Remover';
-      btnRem.addEventListener('click', function () {
-        previewFracoes.splice(idx, 1);
-        renderizarPreviewFracoes();
-      });
+      (function (removeIdx) {
+        btnRem.addEventListener('click', function () {
+          previewFracoes.splice(removeIdx, 1);
+          renderizarPreviewTab(previewTabAtiva);
+        });
+      })(fIdx);
       header.appendChild(title);
       header.appendChild(btnRem);
       form.appendChild(header);
 
-      var grid = document.createElement('div');
-      grid.className = 'preview-grid';
+      var fGrid = document.createElement('div');
+      fGrid.className = 'preview-grid';
       CAMPOS_FRACAO.forEach(function (c) {
-        grid.appendChild(criarCampo(c, f[c.key]));
+        fGrid.appendChild(criarCampo(c, f[c.key]));
       });
-      form.appendChild(grid);
-      container.appendChild(form);
+      form.appendChild(fGrid);
+      secFrac.appendChild(form);
     });
-  }
 
-  document.getElementById('btn-add-fracao').addEventListener('click', function () {
-    var base = previewFracoes.length > 0 ? previewFracoes[0]
-             : previewCabecalhos.length > 0 ? previewCabecalhos[0] : {};
-    previewFracoes.push({
-      unidade: base.unidade || '',
-      data: base.data || '',
-      turno: base.turno || '',
-      fracao: '',
-      comandante: '',
-      telefone: '',
-      equipes: 0,
-      pms: 0,
-      horario_inicio: '',
-      horario_fim: '',
-      missao: '',
-    });
-    renderizarPreviewFracoes();
-  });
+    container.appendChild(secFrac);
+  }
 
   document.getElementById('btn-voltar-texto').addEventListener('click', function () {
     mostrarTela('whatsapp-screen');
   });
 
   function coletarPreview() {
-    // Cabecalhos
-    var cabecalhos = [];
-    document.querySelectorAll('.cabecalho-unidade').forEach(function (wrapper) {
-      var cab = {};
-      wrapper.querySelectorAll('input').forEach(function (inp) {
-        var key = inp.getAttribute('data-key');
-        cab[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;
-      });
-      var idx = parseInt(wrapper.getAttribute('data-cab-idx'), 10);
-      var orig = previewCabecalhos[idx] || {};
-      cab.operador_diurno = orig.operador_diurno || '';
-      cab.tel_op_diurno = orig.tel_op_diurno || '';
-      cab.horario_op_diurno = orig.horario_op_diurno || '';
-      cab.operador_noturno = orig.operador_noturno || '';
-      cab.tel_op_noturno = orig.tel_op_noturno || '';
-      cab.horario_op_noturno = orig.horario_op_noturno || '';
-      cabecalhos.push(cab);
+    salvarTabAtual();
+
+    var cabecalhos = previewCabecalhos.map(function (cab) {
+      var c = {};
+      CAMPOS_CABECALHO.forEach(function (campo) { c[campo.key] = cab[campo.key]; });
+      c.operador_diurno = cab.operador_diurno || '';
+      c.tel_op_diurno = cab.tel_op_diurno || '';
+      c.horario_op_diurno = cab.horario_op_diurno || '';
+      c.operador_noturno = cab.operador_noturno || '';
+      c.tel_op_noturno = cab.tel_op_noturno || '';
+      c.horario_op_noturno = cab.horario_op_noturno || '';
+      return c;
     });
 
-    // Fracoes
-    var fracoes = [];
-    document.querySelectorAll('.fracao-form').forEach(function (form, idx) {
-      var orig = previewFracoes[idx] || {};
-      var f = {
-        unidade: orig.unidade || '',
-        data: orig.data || '',
-        turno: orig.turno || '',
-      };
-      form.querySelectorAll('input').forEach(function (inp) {
-        var key = inp.getAttribute('data-key');
-        f[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;
-      });
-      fracoes.push(f);
+    var fracoes = previewFracoes.map(function (f) {
+      var out = { unidade: f.unidade || '', data: f.data || '', turno: f.turno || '' };
+      CAMPOS_FRACAO.forEach(function (campo) { out[campo.key] = f[campo.key]; });
+      return out;
     });
 
     return { cabecalhos: cabecalhos, fracoes: fracoes };
   }
 
-  document.getElementById('btn-confirmar').addEventListener('click', function () {
+  var btnConfirmar = document.getElementById('btn-confirmar');
+  var btnConfirmarTexto = btnConfirmar.textContent;
+  var modalOverlay = document.getElementById('modal-overlay');
+  var modalBtnOk = document.getElementById('modal-confirmar');
+  var modalBtnCancel = document.getElementById('modal-cancelar');
+
+  function fecharModal() { modalOverlay.classList.remove('active'); }
+
+  btnConfirmar.addEventListener('click', function () {
+    modalOverlay.classList.add('active');
+  });
+
+  modalBtnCancel.addEventListener('click', fecharModal);
+  modalOverlay.addEventListener('click', function (e) {
+    if (e.target === modalOverlay) fecharModal();
+  });
+
+  modalBtnOk.addEventListener('click', function () {
+    fecharModal();
     var dados = coletarPreview();
-    var statusEl = document.getElementById('preview-status');
-    statusEl.className = 'upload-status loading';
-    statusEl.textContent = 'Salvando...';
+
+    btnConfirmar.disabled = true;
+    btnConfirmar.textContent = 'Salvando...';
+    btnConfirmar.classList.add('btn-loading');
 
     fetch('/api/salvar-texto', {
       method: 'POST',
@@ -326,15 +392,18 @@
         dadosFracoes = result.data.fracoes;
         dadosCabecalho = result.data.cabecalho;
 
-        var salvoMsg = result.data.salvo_no_banco ? ' | Salvo no banco' : ' | Modo offline';
-        statusEl.className = 'upload-status success';
-        statusEl.textContent = result.data.total_fracoes + ' fracoes salvas' + salvoMsg;
+        btnConfirmar.textContent = 'Salvo!';
+        btnConfirmar.classList.remove('btn-loading');
+        btnConfirmar.classList.add('btn-success');
 
         setTimeout(function () { irParaPainel(); }, 600);
       })
       .catch(function (err) {
-        statusEl.className = 'upload-status error';
-        statusEl.textContent = 'Erro: ' + err.message;
+        btnConfirmar.textContent = btnConfirmarTexto;
+        btnConfirmar.disabled = false;
+        btnConfirmar.classList.remove('btn-loading');
+        btnConfirmar.classList.add('btn-error');
+        setTimeout(function () { btnConfirmar.classList.remove('btn-error'); }, 2000);
       });
   });
 

@@ -46,19 +46,27 @@
   <h1>Brigada Militar - Comando de Pol&iacute;cia de Choque</h1>
   <h2>Preview &mdash; Revisar e Confirmar</h2>
   <div id="preview-avisos"></div>
-  <div class="preview-section">
-    <h3>Cabecalhos</h3>
-    <div id="preview-cabecalho"></div>
-  </div>
-  <div class="preview-section">
-    <h3>Fracoes <button class="btn-mini" id="btn-add-fracao">+ Adicionar</button></h3>
-    <div id="preview-fracoes"></div>
-  </div>
-  <div class="whatsapp-actions">
+  <div id="preview-tabs" class="preview-tabs"></div>
+  <div id="preview-tab-content"></div>
+  <div class="preview-action-bar">
     <button class="btn-secundario" id="btn-voltar-texto">Voltar ao Texto</button>
     <button class="btn-primario" id="btn-confirmar">Confirmar e Salvar</button>
   </div>
-  <div id="preview-status" class="upload-status"></div>
+</div>
+
+<!-- MODAL CONFIRMACAO -->
+<div id="modal-overlay" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-icon">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    </div>
+    <div class="modal-title" id="modal-title">Confirmar</div>
+    <div class="modal-msg" id="modal-msg">Deseja salvar os dados de todas as unidades?</div>
+    <div class="modal-actions">
+      <button class="btn-secundario" id="modal-cancelar">Cancelar</button>
+      <button class="btn-primario" id="modal-confirmar">Salvar</button>
+    </div>
+  </div>
 </div>
 
 <!-- PAINEL PRINCIPAL -->

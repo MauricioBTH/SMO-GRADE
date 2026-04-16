@@ -170,8 +170,8 @@ def validate_cabecalho(rows: list[dict]) -> list[CabecalhoRow]:
             armas_ace=safe_int(row.get("armas_ace", 0)),
             armas_portateis=safe_int(row.get("armas_portateis", 0)),
             armas_longas=safe_int(row.get("armas_longas", 0)),
-            animais=parse_animais(row.get("animais", ""))[0],
-            animais_tipo=parse_animais(row.get("animais", ""))[1],
+            animais=safe_int(row.get("animais", 0)) if isinstance(row.get("animais"), (int, float)) else parse_animais(row.get("animais", ""))[0],
+            animais_tipo=sanitize_text(row.get("animais_tipo", "")) or parse_animais(row.get("animais", ""))[1],
             locais_atuacao=sanitize_text(row.get("locais_atuacao", "")),
             missoes_osv=sanitize_text(row.get("missoes_osv", "")),
         ))

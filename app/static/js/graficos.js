@@ -16,13 +16,6 @@
   var METRICAS = [
     { chave: 'efetivo_total', label: 'Efetivo Total' },
     { chave: 'vtrs',          label: 'Viaturas' },
-    { chave: 'motos',         label: 'Motos' },
-    { chave: 'armas_ace',     label: 'Armas ACE' },
-    { chave: 'armas_portateis', label: 'Armas Portateis' },
-    { chave: 'armas_longas',  label: 'Armas Longas' },
-    { chave: 'oficiais',      label: 'Oficiais' },
-    { chave: 'sargentos',     label: 'Sargentos' },
-    { chave: 'soldados',      label: 'Soldados' },
   ];
 
   /* ---------- Estado ---------- */
@@ -100,8 +93,8 @@
       return m.chave === metricaSelecionada;
     });
 
-    document.getElementById('slide-evolucao-titulo').textContent =
-      'Evolucao — ' + (labelMetrica ? labelMetrica.label : metricaSelecionada);
+    atualizarTitulo('slide-evolucao-titulo',
+      'Evolucao — ' + (labelMetrica ? labelMetrica.label : metricaSelecionada));
 
     chartInstances.evolucao = new Chart(canvas, {
       type: 'line',
@@ -138,8 +131,8 @@
       return m.chave === metricaSelecionada;
     });
 
-    document.getElementById('slide-comparativo-titulo').textContent =
-      'Comparativo — ' + (labelMetrica ? labelMetrica.label : metricaSelecionada);
+    atualizarTitulo('slide-comparativo-titulo',
+      'Comparativo — ' + (labelMetrica ? labelMetrica.label : metricaSelecionada));
 
     chartInstances.comparativo = new Chart(canvas, {
       type: 'bar',
@@ -219,6 +212,15 @@
     }
     exportarProximo();
   };
+
+  /* ---------- Atualiza texto do titulo sem apagar info-icon ---------- */
+  function atualizarTitulo(id, texto) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var icon = el.querySelector('.info-icon');
+    el.textContent = texto + ' ';
+    if (icon) el.appendChild(icon);
+  }
 
   /* ---------- Helpers ---------- */
   function extrairUnidades(serie) {

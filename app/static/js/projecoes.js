@@ -32,7 +32,6 @@
 
     var periodo = di + ' a ' + df;
     setTexto('slide-mm-periodo', periodo);
-    setTexto('slide-saz-periodo', periodo);
 
     fetch(url)
       .then(function (res) { return res.json(); })
@@ -41,7 +40,6 @@
         renderizarIndicadores(data.indicadores, data.tendencia);
         renderizarMediaMovel(data.media_movel);
         renderizarTendenciaGrid(data.tendencia);
-        renderizarSazonalidade(data.sazonalidade);
       })
       .catch(function () {});
   };
@@ -93,8 +91,8 @@
         '</div>';
 
       var bodyHtml = '<div class="indicador-body">';
-      var campos = ['efetivo_total', 'vtrs', 'motos', 'armas_ace'];
-      var labels = { efetivo_total: 'Efetivo', vtrs: 'Vtrs', motos: 'Motos', armas_ace: 'Armas ACE' };
+      var campos = ['efetivo_total', 'vtrs'];
+      var labels = { efetivo_total: 'Efetivo', vtrs: 'Vtrs' };
 
       campos.forEach(function (campo) {
         var dados = ind[campo];
@@ -179,11 +177,8 @@
     container.innerHTML = '';
 
     var unidades = Object.keys(tendencia).sort();
-    var campos = ['efetivo_total', 'vtrs', 'motos', 'oficiais', 'sargentos', 'soldados'];
-    var labels = {
-      efetivo_total: 'Efetivo', vtrs: 'Vtrs', motos: 'Motos',
-      oficiais: 'Oficiais', sargentos: 'Sgts', soldados: 'Sds',
-    };
+    var campos = ['efetivo_total', 'vtrs'];
+    var labels = { efetivo_total: 'Efetivo', vtrs: 'Vtrs' };
 
     unidades.forEach(function (unidade) {
       var tend = tendencia[unidade];
@@ -208,47 +203,6 @@
       html += '</div>';
       card.innerHTML = html;
       container.appendChild(card);
-    });
-  }
-
-  /* ---------- Sazonalidade ---------- */
-  function renderizarSazonalidade(sazonalidade) {
-    var canvas = document.getElementById('chart-sazonalidade');
-    if (!canvas) return;
-    destroyChart('sazonalidade');
-
-    var unidades = Object.keys(sazonalidade).sort();
-    if (unidades.length === 0) return;
-
-    var mesesSet = {};
-    unidades.forEach(function (u) {
-      sazonalidade[u].forEach(function (r) { mesesSet[r.mes_label] = r.mes; });
-    });
-    var mesesLabels = Object.keys(mesesSet).sort(function (a, b) {
-      return mesesSet[a] - mesesSet[b];
-    });
-
-    var datasets = [];
-    unidades.forEach(function (u) {
-      var pontos = mesesLabels.map(function (ml) {
-        var reg = sazonalidade[u].find(function (r) { return r.mes_label === ml; });
-        return reg ? reg.efetivo_total_media : 0;
-      });
-      datasets.push({
-        label: u,
-        data: pontos,
-        borderColor: CORES_UNIDADE[u] || '#888',
-        backgroundColor: (CORES_UNIDADE[u] || '#888') + '55',
-        borderWidth: 2,
-        fill: true,
-        tension: 0.3,
-      });
-    });
-
-    chartInstances.sazonalidade = new Chart(canvas, {
-      type: 'line',
-      data: { labels: mesesLabels, datasets: datasets },
-      options: chartOpcoes(),
     });
   }
 

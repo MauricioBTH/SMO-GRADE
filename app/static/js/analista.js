@@ -50,31 +50,88 @@
       });
   }
 
+  var todasUnidades = [];
+  var elDropdownTrigger = document.getElementById('dropdown-trigger');
+  var elDropdownMenu = document.getElementById('dropdown-menu');
+  var elDropdownAll = document.getElementById('dropdown-all');
+  var cbAll = elDropdownAll.querySelector('input');
+
+  elDropdownTrigger.addEventListener('click', function () {
+    var open = elDropdownMenu.classList.toggle('open');
+    elDropdownTrigger.classList.toggle('open', open);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('#dropdown-unidades')) {
+      elDropdownMenu.classList.remove('open');
+      elDropdownTrigger.classList.remove('open');
+    }
+  });
+
+  function atualizarTriggerTexto() {
+    if (unidadesSelecionadas.size === 0 || unidadesSelecionadas.size === todasUnidades.length) {
+      elDropdownTrigger.innerHTML = 'Todas as unidades <span class="dropdown-arrow">&#9662;</span>';
+    } else if (unidadesSelecionadas.size <= 2) {
+      elDropdownTrigger.innerHTML = Array.from(unidadesSelecionadas).join(', ') +
+        ' <span class="dropdown-arrow">&#9662;</span>';
+    } else {
+      elDropdownTrigger.innerHTML = unidadesSelecionadas.size + ' unidades selecionadas' +
+        ' <span class="dropdown-arrow">&#9662;</span>';
+    }
+  }
+
+  function sincronizarSelectAll() {
+    cbAll.checked = unidadesSelecionadas.size === todasUnidades.length;
+    cbAll.indeterminate = unidadesSelecionadas.size > 0 &&
+      unidadesSelecionadas.size < todasUnidades.length;
+    atualizarTriggerTexto();
+  }
+
+  cbAll.addEventListener('change', function () {
+    var items = elUnidadesBox.querySelectorAll('input[type="checkbox"]');
+    if (cbAll.checked) {
+      todasUnidades.forEach(function (u) { unidadesSelecionadas.add(u); });
+      items.forEach(function (cb) { cb.checked = true; });
+    } else {
+      unidadesSelecionadas.clear();
+      items.forEach(function (cb) { cb.checked = false; });
+    }
+    atualizarTriggerTexto();
+  });
+
   function renderizarUnidades(unidades) {
     elUnidadesBox.innerHTML = '';
+    todasUnidades = unidades;
+    unidadesSelecionadas.clear();
+
     unidades.forEach(function (u) {
-      var chip = document.createElement('label');
-      chip.className = 'unidade-chip';
-      chip.textContent = u;
+      unidadesSelecionadas.add(u);
+
+      var item = document.createElement('label');
+      item.className = 'dropdown-item';
 
       var cb = document.createElement('input');
       cb.type = 'checkbox';
       cb.value = u;
+      cb.checked = true;
 
-      chip.prepend(cb);
-      chip.addEventListener('click', function (ev) {
-        ev.preventDefault();
-        if (unidadesSelecionadas.has(u)) {
-          unidadesSelecionadas.delete(u);
-          chip.classList.remove('ativo');
-        } else {
+      cb.addEventListener('change', function () {
+        if (cb.checked) {
           unidadesSelecionadas.add(u);
-          chip.classList.add('ativo');
+        } else {
+          unidadesSelecionadas.delete(u);
         }
+        sincronizarSelectAll();
       });
 
-      elUnidadesBox.appendChild(chip);
+      item.appendChild(cb);
+      item.appendChild(document.createTextNode(u));
+      elUnidadesBox.appendChild(item);
     });
+
+    cbAll.checked = true;
+    cbAll.indeterminate = false;
+    atualizarTriggerTexto();
   }
 
   function preencherDatasDefault(datas) {
@@ -82,12 +139,13 @@
       mostrarStatus('Nenhum dado encontrado no banco. Faca upload na aba Operador primeiro.', 'erro');
       return;
     }
-    /* Converte dd/mm/yyyy para yyyy-mm-dd se necessario */
-    var datasISO = datas.map(converterParaISO).filter(Boolean).sort();
-    if (datasISO.length > 0) {
-      elDataInicio.value = datasISO[0];
-      elDataFim.value = datasISO[datasISO.length - 1];
-    }
+    /* Usa data de hoje como default */
+    var hoje = new Date();
+    var hojeISO = hoje.getFullYear() + '-' +
+      String(hoje.getMonth() + 1).padStart(2, '0') + '-' +
+      String(hoje.getDate()).padStart(2, '0');
+    elDataInicio.value = hojeISO;
+    elDataFim.value = hojeISO;
   }
 
   function converterParaISO(data) {

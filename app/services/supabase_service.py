@@ -127,16 +127,16 @@ def fetch_fracoes_by_range(
             if unidades:
                 cur.execute(
                     """SELECT * FROM fracoes
-                       WHERE data >= %s AND data <= %s
+                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
                          AND unidade = ANY(%s)
-                       ORDER BY data, unidade, horario_inicio""",
+                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade, horario_inicio""",
                     (data_inicio, data_fim, unidades),
                 )
             else:
                 cur.execute(
                     """SELECT * FROM fracoes
-                       WHERE data >= %s AND data <= %s
-                       ORDER BY data, unidade, horario_inicio""",
+                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade, horario_inicio""",
                     (data_inicio, data_fim),
                 )
             return [dict(row) for row in cur.fetchall()]
@@ -153,16 +153,16 @@ def fetch_cabecalho_by_range(
             if unidades:
                 cur.execute(
                     """SELECT * FROM cabecalho
-                       WHERE data >= %s AND data <= %s
+                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
                          AND unidade = ANY(%s)
-                       ORDER BY data, unidade""",
+                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade""",
                     (data_inicio, data_fim, unidades),
                 )
             else:
                 cur.execute(
                     """SELECT * FROM cabecalho
-                       WHERE data >= %s AND data <= %s
-                       ORDER BY data, unidade""",
+                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade""",
                     (data_inicio, data_fim),
                 )
             return [dict(row) for row in cur.fetchall()]
@@ -175,7 +175,7 @@ def fetch_datas_disponiveis() -> list[str]:
     try:
         with conn.cursor() as cur:
             cur.execute(
-                "SELECT DISTINCT data FROM fracoes ORDER BY data DESC"
+                "SELECT DISTINCT data, TO_DATE(data, 'DD/MM/YYYY') AS dt FROM fracoes ORDER BY dt DESC"
             )
             return [row["data"] for row in cur.fetchall()]
     finally:
@@ -216,7 +216,7 @@ def fetch_resumo_por_unidade(
                          SUM(armas_longas) AS soma_armas_longas,
                          SUM(animais) AS soma_animais
                        FROM cabecalho
-                       WHERE data >= %s AND data <= %s
+                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
                          AND unidade = ANY(%s)
                        GROUP BY unidade
                        ORDER BY unidade""",
@@ -238,7 +238,7 @@ def fetch_resumo_por_unidade(
                          SUM(armas_longas) AS soma_armas_longas,
                          SUM(animais) AS soma_animais
                        FROM cabecalho
-                       WHERE data >= %s AND data <= %s
+                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
                        GROUP BY unidade
                        ORDER BY unidade""",
                     (data_inicio, data_fim),
@@ -262,9 +262,9 @@ def fetch_serie_temporal(
                          vtrs, motos, armas_ace, armas_portateis,
                          armas_longas, animais
                        FROM cabecalho
-                       WHERE data >= %s AND data <= %s
+                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
                          AND unidade = ANY(%s)
-                       ORDER BY data, unidade""",
+                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade""",
                     (data_inicio, data_fim, unidades),
                 )
             else:
@@ -275,8 +275,8 @@ def fetch_serie_temporal(
                          vtrs, motos, armas_ace, armas_portateis,
                          armas_longas, animais
                        FROM cabecalho
-                       WHERE data >= %s AND data <= %s
-                       ORDER BY data, unidade""",
+                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade""",
                     (data_inicio, data_fim),
                 )
             return [dict(row) for row in cur.fetchall()]

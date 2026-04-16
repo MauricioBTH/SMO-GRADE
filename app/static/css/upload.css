@@ -205,6 +205,26 @@
   background: #e5ab00;
 }
 
+.btn-primario:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.btn-primario.btn-loading {
+  background: rgba(247, 185, 0, 0.6);
+  pointer-events: none;
+}
+
+.btn-primario.btn-success {
+  background: #22c55e;
+  color: #000;
+}
+
+.btn-primario.btn-error {
+  background: #ef4444;
+  color: #fff;
+}
+
 .btn-secundario {
   background: transparent;
   color: var(--text-muted);
@@ -216,13 +236,88 @@
   border-color: rgba(87, 87, 90, 0.8);
 }
 
+/* ===== MODAL ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-box {
+  background: #1a1a1a;
+  border: 1px solid rgba(247, 185, 0, 0.25);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 380px;
+  width: 90%;
+  text-align: center;
+  animation: modalIn 0.2s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.modal-icon {
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.modal-title {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.modal-msg {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.modal-actions .btn-primario,
+.modal-actions .btn-secundario {
+  flex: 1;
+}
+
+.preview-action-bar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 14px 20px;
+  background: linear-gradient(transparent, #0d0d0d 30%);
+  width: 100%;
+  max-width: 800px;
+  z-index: 40;
+}
+
 /* ===== TELA PREVIEW ===== */
 #preview-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 60px 20px 40px;
+  padding: 60px 20px 80px;
   background: #0d0d0d;
 }
 
@@ -257,6 +352,21 @@
   border-radius: 8px;
   color: var(--gold);
   font-size: 0.8rem;
+}
+
+.preview-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+#preview-tab-content {
+  width: 100%;
+  max-width: 800px;
 }
 
 .preview-section {
@@ -321,6 +431,10 @@
   border-radius: 6px;
   font-size: 0.8rem;
   font-family: inherit;
+}
+
+.preview-field-wide {
+  grid-column: 1 / -1;
 }
 
 .preview-field input:focus {

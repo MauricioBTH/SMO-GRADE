@@ -62,6 +62,56 @@ def _parse_horario(texto: str) -> tuple[str, str]:
     return texto, ""
 
 
+def _horario_para_minutos(h: str) -> int | None:
+    """Converte string HH:MM para minutos desde meia-noite. None se nao parseavel."""
+    if not h or not any(c.isdigit() for c in h):
+        return None
+    m = RE_HHMM.search(h)
+    if not m:
+        return None
+    return int(m.group(1)) * 60 + int(m.group(2) or "0")
+
+
+def calcular_horario_emprego(
+    cabecalhos: list[dict], fracoes: list[dict]
+) -> None:
+    """Enriquece cada cabecalho com 'horario_emprego' derivado das fracoes da unidade."""
+    for cab in cabecalhos:
+        unidade = cab.get("unidade", "")
+        fracs = [f for f in fracoes if f.get("unidade") == unidade]
+
+        min_inicio: int | None = None
+        max_fim_adj: int | None = None
+
+        for f in fracs:
+            ini = _horario_para_minutos(f.get("horario_inicio", ""))
+            fim = _horario_para_minutos(f.get("horario_fim", ""))
+
+            if ini is not None:
+                if min_inicio is None or ini < min_inicio:
+                    min_inicio = ini
+
+            if fim is not None:
+                fim_adj = fim
+                if ini is not None and fim <= ini:
+                    fim_adj = fim + 1440  # dia seguinte
+                if max_fim_adj is None or fim_adj > max_fim_adj:
+                    max_fim_adj = fim_adj
+
+        if min_inicio is None:
+            cab["horario_emprego"] = ""
+            continue
+
+        h1 = f"{min_inicio // 60:02d}:{min_inicio % 60:02d}"
+        if max_fim_adj is None:
+            cab["horario_emprego"] = h1
+            continue
+
+        fim_real = max_fim_adj % 1440
+        h2 = f"{fim_real // 60:02d}:{fim_real % 60:02d}"
+        cab["horario_emprego"] = f"{h1} às {h2}"
+
+
 def _extrair_telefone(texto: str) -> tuple[str, str]:
     """Retorna (nome_limpo, telefone)."""
     m = RE_TELEFONE.search(texto)
@@ -394,7 +444,8 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
         # Cmt:
         m = RE_CMT.match(ln_s)
         if m:
-            nome, tel = _extrair_telefone(m.group(1).strip())
+            raw_cmt = re.sub(r"^Cmt\s*:\s*", "", m.group(1).strip(), flags=re.IGNORECASE)
+            nome, tel = _extrair_telefone(raw_cmt)
             if bloco_atual and not bloco_atual["comandante"]:
                 bloco_atual["comandante"] = sanitize_text(nome)
                 bloco_atual["telefone"] = sanitize_text(tel)
@@ -538,5 +589,7 @@ def parse_texto_whatsapp(texto: str) -> ParseResult:
 
     if not todas_fracoes:
         avisos.append("Nenhuma fracao identificada")
+
+    calcular_horario_emprego(cabecalhos, todas_fracoes)
 
     return ParseResult(cabecalhos=cabecalhos, fracoes=todas_fracoes, avisos=avisos)

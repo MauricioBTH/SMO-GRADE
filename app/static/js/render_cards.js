@@ -27,7 +27,7 @@ function logoHtml(unidade) {
  */
 function escapeHtml(str) {
   var div = document.createElement('div');
-  div.appendChild(document.createTextNode(String(str || '')));
+  div.appendChild(document.createTextNode(str != null ? String(str) : ''));
   return div.innerHTML;
 }
 
@@ -178,10 +178,10 @@ function criarCardResumo(unidade, cab, data, cardIndex) {
     { valor: cab.armas_ace, label: 'ACE' },
     { valor: cab.armas_portateis, label: 'Portateis' },
     { valor: cab.armas_longas, label: 'Longas' },
-    { valor: cab.animais || '0', label: 'Animais' },
+    { valor: cab.animais, label: 'Animais' },
   ];
 
-  var missoes = String(cab.missoes_osv || '').split(/[\/,;]+/).map(function (s) { return s.trim(); }).filter(Boolean);
+  var missoes = String(cab.missoes_osv || '').split(/[,;]+/).map(function (s) { return s.trim(); }).filter(Boolean);
   var locais = String(cab.locais_atuacao || '').split(/[\/,;]+/).map(function (s) { return s.trim(); }).filter(Boolean);
 
   var html = '<div class="card-header">' +
@@ -189,11 +189,14 @@ function criarCardResumo(unidade, cab, data, cardIndex) {
     '<div class="card-header-text">' +
     '<div class="card-header-org">BRIGADA MILITAR - CPChq</div>' +
     '<div class="card-header-title">' + escapeHtml(unidade) + ' — Resumo da Jornada</div>' +
-    '<div class="card-header-date">' + escapeHtml(data) + '</div>' +
+    '<div class="card-header-date">' + escapeHtml(data) +
+    (cab.horario_emprego ? ' | ' + escapeHtml(cab.horario_emprego) : '') +
+    '</div>' +
     '</div></div><div class="card-body"><div class="resumo-grid">';
 
   gridItems.forEach(function (item) {
-    html += '<div class="resumo-item"><div class="resumo-value">' + escapeHtml(item.valor) + '</div>' +
+    var v = (item.valor != null && item.valor !== '') ? item.valor : '0';
+    html += '<div class="resumo-item"><div class="resumo-value">' + escapeHtml(v) + '</div>' +
       '<div class="resumo-label">' + escapeHtml(item.label) + '</div></div>';
   });
 
@@ -233,7 +236,7 @@ function criarCardResumo(unidade, cab, data, cardIndex) {
   html += '<div class="card-footer"><div class="card-footer-stats">' +
     '<div class="card-footer-stat"><div class="stat-value">' + escapeHtml(cab.efetivo_total) + '</div><div class="stat-label">Efetivo</div></div>' +
     '<div class="card-footer-stat"><div class="stat-value">' + escapeHtml(cab.vtrs) + '</div><div class="stat-label">VTRs</div></div>' +
-    '</div><div class="card-footer-turno">' + escapeHtml(cab.turno) + '</div></div>';
+    '</div></div>';
 
   card.innerHTML = html;
   return card;

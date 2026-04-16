@@ -27,7 +27,7 @@ const CORES_TIPO = {
 
 /** Labels dos tipos */
 const LABELS_TIPO = {
-  prontidao: 'Prontidao',
+  prontidao: 'CHOQUE',
   patres:    'PATRES',
   canil:     'Canil',
   batedores: 'Batedores',

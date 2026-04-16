@@ -1,3 +1,11 @@
+/** Aliases de fracao que devem ser ocultados no card (nome real ja esta no titulo do grupo). */
+var ALIAS_FRACAO = { '3ª cia': '', '3a cia': '' };
+
+function normalizarNomeFracao(nome) {
+  var low = String(nome || '').toLowerCase().trim();
+  return low in ALIAS_FRACAO ? '' : nome;
+}
+
 /**
  * Gera HTML do logo da unidade.
  * @param {string} unidade
@@ -118,7 +126,7 @@ function criarCardFracao(unidade, grupo, data, idx) {
     html += '<div class="fracao-item">' +
       '<div class="fracao-stripe" style="background:' + cor + '"></div>' +
       '<div class="fracao-content">' +
-      '<div class="fracao-sublabel">' + escapeHtml(f.fracao) + '</div>' +
+      '<div class="fracao-sublabel">' + escapeHtml(normalizarNomeFracao(f.fracao)) + '</div>' +
       '<div class="fracao-comandante">' + escapeHtml(f.comandante) + '</div>' +
       '<div class="fracao-telefone"><a href="tel:' + escapeHtml(tel) + '">' + escapeHtml(f.telefone) + '</a></div>' +
       '<div class="fracao-badges">';
@@ -142,7 +150,7 @@ function criarCardFracao(unidade, grupo, data, idx) {
   html += '<div class="card-footer"><div class="card-footer-stats">' +
     '<div class="card-footer-stat"><div class="stat-value">' + totalPMs + '</div><div class="stat-label">PMs</div></div>' +
     '<div class="card-footer-stat"><div class="stat-value">' + totalEquipes + '</div><div class="stat-label">Equipes</div></div>' +
-    '</div><div class="card-footer-turno">' + escapeHtml(turno) + '</div></div>';
+    '</div></div>';
 
   card.innerHTML = html;
   return card;

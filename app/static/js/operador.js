@@ -289,8 +289,13 @@
 
     // Fracoes
     var fracoes = [];
-    document.querySelectorAll('.fracao-form').forEach(function (form) {
-      var f = {};
+    document.querySelectorAll('.fracao-form').forEach(function (form, idx) {
+      var orig = previewFracoes[idx] || {};
+      var f = {
+        unidade: orig.unidade || '',
+        data: orig.data || '',
+        turno: orig.turno || '',
+      };
       form.querySelectorAll('input').forEach(function (inp) {
         var key = inp.getAttribute('data-key');
         f[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;

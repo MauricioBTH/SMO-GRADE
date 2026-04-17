@@ -20,6 +20,7 @@ from app.services.whatsapp_patterns import (
     RE_NOME_FRACAO, RE_MISSAO_NUM, RE_ESQ_PEL, RE_EQUIPES, RE_MISSAO,
     RE_HORARIO, RE_HORA_EMPREGO, RE_SKIP, RE_VTR_EQUIPE,
     RE_INICIO_BLOCO_NUM, RE_TELEFONE, RE_HHMM, UNIDADE_MAP,
+    RE_DATA_EXTENSO, RE_DATA_SOLTA, _MESES_EXTENSO,
 )
 
 
@@ -132,12 +133,27 @@ def _extrair_unidade_data(texto: str) -> tuple[str, str]:
     data = ""
     m = RE_DATA.search(texto)
     if m:
-        data = m.group(1).strip()
-        partes = re.split(r"[/\-]", data)
-        if len(partes) == 3 and len(partes[2]) == 2:
-            data = f"{partes[0]}/{partes[1]}/20{partes[2]}"
-        elif len(partes) == 3:
-            data = f"{partes[0]}/{partes[1]}/{partes[2]}"
+        dia, mes, ano = m.group(1).strip(), m.group(2).strip(), m.group(3).strip()
+        if len(ano) == 2:
+            ano = f"20{ano}"
+        data = f"{dia}/{mes}/{ano}"
+    else:
+        m = RE_DATA_EXTENSO.search(texto)
+        if m:
+            dia = m.group(1).zfill(2)
+            mes = _MESES_EXTENSO.get(m.group(2).lower(), "")
+            ano = m.group(3)
+            if mes:
+                data = f"{dia}/{mes}/{ano}"
+        else:
+            m = RE_DATA_SOLTA.search(texto)
+            if m:
+                data = m.group(1).strip()
+                partes = re.split(r"[/\-]", data)
+                if len(partes) == 3 and len(partes[2]) == 2:
+                    data = f"{partes[0]}/{partes[1]}/20{partes[2]}"
+                elif len(partes) == 3:
+                    data = f"{partes[0]}/{partes[1]}/{partes[2]}"
 
     return unidade, data
 
@@ -163,6 +179,8 @@ def _segmentar_texto(texto: str) -> list[str]:
 def parse_cabecalho(texto: str) -> tuple[CabecalhoRow, list[str]]:
     """Extrai dados do cabecalho (bloco numerico + header) do texto."""
     avisos: list[str] = []
+    # Remover formatação WhatsApp (*negrito*)
+    texto = re.sub(r"\*([^*]+)\*", r"\1", texto)
     linhas = texto.splitlines()
 
     unidade, data = _extrair_unidade_data(texto)
@@ -325,6 +343,9 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
         if not ln_s:
             em_bloco_vtr = False
             continue
+
+        # Remover formatação WhatsApp (*negrito*)
+        ln_s = re.sub(r"\*([^*]+)\*", r"\1", ln_s).strip()
 
         # Missao numerada (6BPChq com "1. MISSÃO:")
         m = RE_MISSAO_NUM.match(ln_s)
@@ -562,6 +583,53 @@ def parse_fracoes(texto: str) -> list[FracaoRow]:
 
 
 # ---------------------------------------------------------------------------
+# Correcao automatica de ano inconsistente
+# ---------------------------------------------------------------------------
+
+def _corrigir_ano_inconsistente(
+    cabecalhos: list[CabecalhoRow],
+    fracoes: list[FracaoRow],
+    avisos: list[str],
+) -> None:
+    """Detecta o ano mais frequente e corrige datas com ano diferente."""
+    from collections import Counter
+
+    anos: list[str] = []
+    for c in cabecalhos:
+        d = c.get("data", "")
+        partes = d.split("/")
+        if len(partes) == 3 and len(partes[2]) == 4:
+            anos.append(partes[2])
+
+    if not anos:
+        return
+
+    contagem = Counter(anos)
+    ano_dominante = contagem.most_common(1)[0][0]
+    if contagem[ano_dominante] == len(anos):
+        return  # todos iguais, nada a corrigir
+
+    def _fix_data(d: str) -> str:
+        partes = d.split("/")
+        if len(partes) == 3 and len(partes[2]) == 4 and partes[2] != ano_dominante:
+            return f"{partes[0]}/{partes[1]}/{ano_dominante}"
+        return d
+
+    for c in cabecalhos:
+        old = c.get("data", "")
+        new = _fix_data(old)
+        if old != new:
+            avisos.append(f"Ano corrigido: {old} -> {new} (unidade={c.get('unidade','')})")
+            c["data"] = new
+
+    for f in fracoes:
+        old = f.get("data", "")
+        new = _fix_data(old)
+        if old != new:
+            f["data"] = new
+
+
+# ---------------------------------------------------------------------------
 # Funcao principal
 # ---------------------------------------------------------------------------
 
@@ -580,15 +648,31 @@ def parse_texto_whatsapp(texto: str) -> ParseResult:
     todas_fracoes: list[FracaoRow] = []
     avisos: list[str] = []
 
+    ultima_data = ""
     for seg in segmentos:
         cab, av = parse_cabecalho(seg)
         fracoes = parse_fracoes(seg)
+
+        # Inferir data de segmento sem data a partir do anterior
+        if cab.get("data"):
+            ultima_data = cab["data"]
+        elif ultima_data:
+            cab["data"] = ultima_data
+            for fr in fracoes:
+                fr["data"] = ultima_data
+            avisos.append(
+                f"Data inferida {ultima_data} para {cab.get('unidade', '?')}"
+            )
+
         cabecalhos.append(cab)
         todas_fracoes.extend(fracoes)
         avisos.extend(av)
 
     if not todas_fracoes:
         avisos.append("Nenhuma fracao identificada")
+
+    # Auto-corrigir ano inconsistente (ex: 2025 quando maioria é 2026)
+    _corrigir_ano_inconsistente(cabecalhos, todas_fracoes, avisos)
 
     calcular_horario_emprego(cabecalhos, todas_fracoes)
 

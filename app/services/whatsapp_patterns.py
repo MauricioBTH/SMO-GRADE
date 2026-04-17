@@ -10,13 +10,33 @@ import re
 
 RE_UNIDADE = re.compile(
     r"\*?\s*(\d+[°º]?\s*(?:BATAL[HÃA]+O\s+DE\s+POLI[CÇ]IA\s+DE\s+CHOQUE"
-    r"|BPChq|RPMon|BATALHAO\s+DE\s+POLICIA\s+DE\s+CHOQUE))\s*\*?",
+    r"|BPChq|RPMon|BATALHAO\s+DE\s+POLICIA\s+DE\s+CHOQUE"
+    r"|REGIMENTO\s+DE\s+POLI[CÇ]?[IA]*\s+MONTADA"
+    r"|Choque))\s*\*?",
     re.IGNORECASE,
 )
 
 RE_DATA = re.compile(
-    r"(?:Previs[ãa]o\s+do\s+dia|Data)\s*:?\s*(\d{1,2}[/\-]\d{1,2}[/\-]\d{2,4})",
+    r"(?:Previs[ãa]o\s+(?:do\s+dia|de\s+efetivo)|Data)\s*[\s:\-]+(\d{1,2})[°º]?\s*[/\-](\d{1,2})[/\-](\d{2,4})",
     re.IGNORECASE,
+)
+
+_MESES_EXTENSO = {
+    "janeiro": "01", "fevereiro": "02", "março": "03", "marco": "03",
+    "abril": "04", "maio": "05", "junho": "06", "julho": "07",
+    "agosto": "08", "setembro": "09", "outubro": "10",
+    "novembro": "11", "dezembro": "12",
+}
+
+RE_DATA_EXTENSO = re.compile(
+    r"(?:Previs[ãa]o\s+(?:do\s+dia|de\s+efetivo)|Data)\s*[\s:\-]+(\d{1,2})\s+de\s+(\w+)\s+de\s+(\d{4})",
+    re.IGNORECASE,
+)
+
+# Data solta numa linha (dd/mm/yyyy sem prefixo)
+RE_DATA_SOLTA = re.compile(
+    r"(?:^|\n)\s*(\d{1,2}/\d{1,2}/\d{2,4})\s*$",
+    re.MULTILINE,
 )
 
 RE_TURNO = re.compile(r"Turno\s*:\s*(.+)", re.IGNORECASE)
@@ -132,7 +152,7 @@ RE_HHMM = re.compile(r"(\d{1,2})\s*[hH:]\s*(\d{0,2})")
 UNIDADE_MAP: dict[str, str] = {}
 for _n in range(1, 7):
     for _suf in ("BATALHÃO DE POLICIA DE CHOQUE", "BATALHAO DE POLICIA DE CHOQUE",
-                 "BPChq"):
+                 "BPChq", "CHOQUE"):
         UNIDADE_MAP[f"{_n} {_suf}".upper()] = f"{_n} BPChq"
         UNIDADE_MAP[f"{_n}° {_suf}".upper()] = f"{_n} BPChq"
         UNIDADE_MAP[f"{_n}º {_suf}".upper()] = f"{_n} BPChq"
@@ -144,3 +164,10 @@ UNIDADE_MAP["4° RPMON"] = "4 RPMon"
 UNIDADE_MAP["4º RPMON"] = "4 RPMon"
 UNIDADE_MAP["4°RPMON"] = "4 RPMon"
 UNIDADE_MAP["4ºRPMON"] = "4 RPMon"
+for _var in ("REGIMENTO DE POLICA MONTADA", "REGIMENTO DE POLICIA MONTADA",
+             "REGIMENTO DE POLÍCIA MONTADA"):
+    UNIDADE_MAP[f"4 {_var}"] = "4 RPMon"
+    UNIDADE_MAP[f"4° {_var}"] = "4 RPMon"
+    UNIDADE_MAP[f"4º {_var}"] = "4 RPMon"
+    UNIDADE_MAP[f"4°{_var}"] = "4 RPMon"
+    UNIDADE_MAP[f"4º{_var}"] = "4 RPMon"

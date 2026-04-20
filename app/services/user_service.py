@@ -7,7 +7,7 @@ from typing import TypedDict, cast
 import bcrypt
 
 from app.models.database import get_connection
-from app.models.user import ROLES_VALIDOS, Role, User
+from app.models.user import ROLES_VALIDOS, UNIDADES_VALIDAS, Role, User
 
 SENHA_MIN_LEN: int = 10
 
@@ -61,6 +61,9 @@ def _validar_payload_create(payload: UsuarioCreate) -> None:
         raise ValueError(f"Role invalido: {payload['role']}")
     if payload["role"] == "operador_alei" and not payload.get("unidade"):
         raise ValueError("Operador ALEI exige unidade vinculada")
+    unidade = payload.get("unidade")
+    if unidade and unidade not in UNIDADES_VALIDAS:
+        raise ValueError(f"Unidade invalida: {unidade}")
 
 
 def get_by_id(user_id: str) -> User | None:
@@ -122,6 +125,10 @@ def create(payload: UsuarioCreate) -> User:
     senha: str = payload["senha"]
     _validar_senha(senha)
 
+    email_norm: str = payload["email"].strip().lower()
+    if get_by_email(email_norm) is not None:
+        raise ValueError(f"E-mail ja cadastrado: {email_norm}")
+
     unidade: str | None = payload.get("unidade")
     conn = get_connection()
     try:
@@ -132,7 +139,7 @@ def create(payload: UsuarioCreate) -> User:
                    RETURNING id, nome, email, role, unidade, totp_ativo, ativo""",
                 (
                     payload["nome"].strip(),
-                    payload["email"].strip().lower(),
+                    email_norm,
                     _hash_senha(senha),
                     payload["role"],
                     unidade.strip() if unidade else None,
@@ -168,6 +175,8 @@ def update(user_id: str, payload: UsuarioUpdate) -> User:
     unidade_final = payload.get("unidade") if "unidade" in payload else None
     if role_final == "operador_alei" and "unidade" in payload and not unidade_final:
         raise ValueError("Operador ALEI exige unidade vinculada")
+    if unidade_final and unidade_final not in UNIDADES_VALIDAS:
+        raise ValueError(f"Unidade invalida: {unidade_final}")
 
     valores.append(user_id)
     conn = get_connection()

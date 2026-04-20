@@ -13,7 +13,7 @@ from flask_login import login_required
 from werkzeug.wrappers.response import Response
 
 from app.auth.decorators import role_required
-from app.models.user import ROLES_VALIDOS, Role
+from app.models.user import ROLES_VALIDOS, UNIDADES_VALIDAS, Role
 from app.services import user_service
 from app.services.user_service import UsuarioCreate, UsuarioFiltro, UsuarioUpdate
 
@@ -46,6 +46,7 @@ def listar_usuarios() -> str:
         "admin/usuarios.html",
         usuarios=usuarios,
         roles=sorted(ROLES_VALIDOS),
+        unidades=sorted(UNIDADES_VALIDAS),
         filtro=filtro,
     )
 

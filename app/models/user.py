@@ -14,6 +14,10 @@ ROLES_COM_2FA_OBRIGATORIO: Final[frozenset[Role]] = frozenset(
     ("gestor", "operador_arei")
 )
 
+UNIDADES_VALIDAS: Final[frozenset[str]] = frozenset(
+    (f"{n} BPChq" for n in range(1, 7))
+)
+
 
 @dataclass(frozen=True)
 class User(UserMixin):

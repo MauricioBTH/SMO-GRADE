@@ -91,7 +91,12 @@
         <option value="{{ r }}" {% if filtro.get('role') == r %}selected{% endif %}>{{ r }}</option>
       {% endfor %}
     </select>
-    <input type="text" name="unidade" placeholder="Unidade" value="{{ filtro.get('unidade', '') }}">
+    <select name="unidade">
+      <option value="">Todas as unidades</option>
+      {% for u in unidades %}
+        <option value="{{ u }}" {% if filtro.get('unidade') == u %}selected{% endif %}>{{ u }}</option>
+      {% endfor %}
+    </select>
     <select name="ativo">
       <option value="">Ativos e inativos</option>
       <option value="1" {% if filtro.get('ativo') is true %}selected{% endif %}>Apenas ativos</option>
@@ -148,7 +153,12 @@
             <option value="{{ r }}">{{ r }}</option>
           {% endfor %}
         </select>
-        <input type="text" name="unidade" placeholder="Unidade (obrigatorio p/ ALEI)">
+        <select name="unidade">
+          <option value="">Unidade (obrigatoria p/ ALEI)</option>
+          {% for u in unidades %}
+            <option value="{{ u }}">{{ u }}</option>
+          {% endfor %}
+        </select>
       </div>
       <button type="submit">Criar</button>
     </form>

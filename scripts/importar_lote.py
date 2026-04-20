@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from app import create_app
 from app.services.whatsapp_parser import parse_texto_whatsapp
-from app.services.supabase_service import save_fracoes, save_cabecalho
+from app.services.db_service import save_fracoes, save_cabecalho
 
 
 def importar_arquivo(caminho: str) -> dict:

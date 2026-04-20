@@ -1,7 +1,10 @@
-"""Fixtures compartilhadas para testes da Fase 4."""
+"""Fixtures compartilhadas para testes."""
+from __future__ import annotations
 
 import pytest
+
 from app import create_app
+from app.models.user import User
 
 
 # ---------- Dados mock: cabecalho ----------
@@ -62,7 +65,6 @@ def _gerar_fracoes_mock() -> list[dict]:
                 "horario_fim": horarios[i][1], "missao": missoes[i],
             })
 
-    # Dia extra (segunda-feira 02/03/2026 e sexta 06/03/2026)
     registros.append({
         "unidade": "1 BPChq", "data": "06/03/2026", "turno": "noturno",
         "fracao": "Prontidao A", "comandante": "Sgt Extra",
@@ -86,19 +88,16 @@ def fracoes_mock() -> list[dict]:
 
 @pytest.fixture
 def cabecalho_uma_unidade() -> list[dict]:
-    """Apenas 1 BPChq."""
     return [r for r in _gerar_cabecalho_mock() if r["unidade"] == "1 BPChq"]
 
 
 @pytest.fixture
 def cabecalho_um_registro() -> list[dict]:
-    """Apenas 1 registro (edge case para tendencia)."""
     return [_gerar_cabecalho_mock()[0]]
 
 
 @pytest.fixture
 def fracoes_missao_vazia() -> list[dict]:
-    """Fracoes com missao vazia/None."""
     base = _gerar_fracoes_mock()[:2]
     base[0]["missao"] = ""
     base[1]["missao"] = None
@@ -107,7 +106,6 @@ def fracoes_missao_vazia() -> list[dict]:
 
 @pytest.fixture
 def fracoes_horario_invalido() -> list[dict]:
-    """Fracoes com horarios invalidos."""
     base = _gerar_fracoes_mock()[:2]
     base[0]["horario_inicio"] = "abc"
     base[0]["horario_fim"] = ""
@@ -118,7 +116,6 @@ def fracoes_horario_invalido() -> list[dict]:
 
 @pytest.fixture
 def cabecalho_formato_iso() -> list[dict]:
-    """Datas em formato yyyy-mm-dd (fallback)."""
     return [
         {
             "unidade": "3 BPChq", "data": "2026-03-01",
@@ -135,22 +132,56 @@ def cabecalho_formato_iso() -> list[dict]:
     ]
 
 
+# ---------- Usuario fake para autenticacao em testes ----------
+
+def _user_gestor_fake() -> User:
+    return User(
+        id="00000000-0000-0000-0000-000000000001",
+        nome="Gestor Teste",
+        email="gestor@teste.local",
+        role="gestor",
+        unidade=None,
+        totp_ativo=False,
+        ativo=True,
+    )
+
+
+def _login_como(client, monkeypatch, user: User) -> None:
+    monkeypatch.setattr(
+        "app.user_service.get_by_id",
+        lambda uid: user if uid == user.id else None,
+        raising=False,
+    )
+    monkeypatch.setattr(
+        "app.services.user_service.get_by_id",
+        lambda uid: user if uid == user.id else None,
+    )
+    with client.session_transaction() as sess:
+        sess["_user_id"] = user.id
+        sess["_fresh"] = True
+
+
 @pytest.fixture
-def app_client():
-    """Flask test client (sem banco, endpoints retornam 503)."""
+def app_client(monkeypatch):
+    """Flask test client autenticado como Gestor, sem banco."""
     app = create_app()
     app.config["TESTING"] = True
-    app.config["SUPABASE_DB_URL"] = ""
+    app.config["DATABASE_URL"] = ""
+    app.config["WTF_CSRF_ENABLED"] = False
+    app.config["SESSION_PROTECTION"] = None
     with app.test_client() as client:
+        _login_como(client, monkeypatch, _user_gestor_fake())
         yield client
 
 
 @pytest.fixture
 def app_client_com_db(monkeypatch):
-    """Flask test client com SUPABASE_DB_URL fake + mocks de fetch."""
+    """Flask test client autenticado como Gestor + DB fake + fetch mockados."""
     app = create_app()
     app.config["TESTING"] = True
-    app.config["SUPABASE_DB_URL"] = "postgresql://fake:fake@localhost/fake"
+    app.config["DATABASE_URL"] = "postgresql://fake:fake@localhost/fake"
+    app.config["WTF_CSRF_ENABLED"] = False
+    app.config["SESSION_PROTECTION"] = None
 
     mock_cab = _gerar_cabecalho_mock()
     mock_frac = _gerar_fracoes_mock()
@@ -165,4 +196,5 @@ def app_client_com_db(monkeypatch):
     )
 
     with app.test_client() as client:
+        _login_como(client, monkeypatch, _user_gestor_fake())
         yield client

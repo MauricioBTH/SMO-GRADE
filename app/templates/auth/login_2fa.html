@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Verificacao 2FA - SMO-GRADE{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="auth-wrap">
+  <form class="auth-card" method="POST" action="{{ url_for('auth.login_2fa') }}" novalidate>
+    <h1>Verificacao em dois fatores</h1>
+    <h2>Codigo do aplicativo</h2>
+
+    {% with mensagens = get_flashed_messages(with_categories=true) %}
+      {% for categoria, msg in mensagens %}
+        <div class="auth-flash {{ categoria }}">{{ msg }}</div>
+      {% endfor %}
+    {% endwith %}
+
+    <label for="codigo">Codigo de 6 digitos</label>
+    <input
+      id="codigo"
+      name="codigo"
+      type="text"
+      inputmode="numeric"
+      pattern="[0-9]{6}"
+      maxlength="6"
+      autocomplete="one-time-code"
+      class="auth-totp-code"
+      required
+      autofocus>
+
+    <button type="submit">Verificar</button>
+    <p class="auth-help">
+      Gerado pelo app autenticador (Google Authenticator, Authy, etc.).
+    </p>
+  </form>
+</div>
+{% endblock %}

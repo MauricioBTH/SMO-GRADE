@@ -1,4 +1,8 @@
+from __future__ import annotations
+
 import os
+from datetime import timedelta
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -10,4 +14,15 @@ class Config:
 
     SUPABASE_URL: str = os.environ.get("SUPABASE_URL", "")
     SUPABASE_KEY: str = os.environ.get("SUPABASE_KEY", "")
-    SUPABASE_DB_URL: str = os.environ.get("SUPABASE_DB_URL", "")
+    DATABASE_URL: str = os.environ.get("DATABASE_URL", "")
+
+    # Sessao
+    PERMANENT_SESSION_LIFETIME: timedelta = timedelta(hours=8)
+    SESSION_COOKIE_HTTPONLY: bool = True
+    SESSION_COOKIE_SAMESITE: str = "Lax"
+
+    # Flask-Limiter (rate limit em /login, /login/2fa)
+    RATELIMIT_STORAGE_URI: str = os.environ.get(
+        "RATELIMIT_STORAGE_URI", "memory://"
+    )
+    RATELIMIT_HEADERS_ENABLED: bool = True

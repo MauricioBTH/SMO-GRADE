@@ -1,28 +1,33 @@
+from __future__ import annotations
+
+from typing import cast
+
 import psycopg2
+
 from app.models.database import get_connection
-from app.validators.xlsx_validator import FracaoRow, CabecalhoRow
+from app.validators.xlsx_validator import CabecalhoRow, FracaoRow
 
 
 def save_fracoes(fracoes: list[FracaoRow]) -> int:
     if not fracoes:
         return 0
 
-    pares = {(r["unidade"], r["data"]) for r in fracoes}
+    pares: set[tuple[str, str]] = {(r["unidade"], r["data"]) for r in fracoes}
 
     conn = get_connection()
     try:
         with conn.cursor() as cur:
             for unidade, data in pares:
                 cur.execute(
-                    "DELETE FROM fracoes WHERE unidade = %s AND data = %s",
+                    "DELETE FROM smo.fracoes WHERE unidade = %s AND data = %s",
                     (unidade, data),
                 )
 
-            inserted = 0
+            inserted: int = 0
             for row in fracoes:
                 cur.execute(
                     """
-                    INSERT INTO fracoes (
+                    INSERT INTO smo.fracoes (
                         unidade, data, turno, fracao, comandante,
                         telefone, equipes, pms, horario_inicio, horario_fim, missao
                     ) VALUES (
@@ -47,22 +52,22 @@ def save_cabecalho(cabecalho: list[CabecalhoRow]) -> int:
     if not cabecalho:
         return 0
 
-    pares = {(r["unidade"], r["data"]) for r in cabecalho}
+    pares: set[tuple[str, str]] = {(r["unidade"], r["data"]) for r in cabecalho}
 
     conn = get_connection()
     try:
         with conn.cursor() as cur:
             for unidade, data in pares:
                 cur.execute(
-                    "DELETE FROM cabecalho WHERE unidade = %s AND data = %s",
+                    "DELETE FROM smo.cabecalho WHERE unidade = %s AND data = %s",
                     (unidade, data),
                 )
 
-            inserted = 0
+            inserted: int = 0
             for row in cabecalho:
                 cur.execute(
                     """
-                    INSERT INTO cabecalho (
+                    INSERT INTO smo.cabecalho (
                         unidade, data, turno, oficial_superior, tel_oficial,
                         tel_copom, operador_diurno, tel_op_diurno, horario_op_diurno,
                         operador_noturno, tel_op_noturno, horario_op_noturno,
@@ -97,7 +102,8 @@ def fetch_fracoes_by_date(data: str) -> list[dict]:
     try:
         with conn.cursor() as cur:
             cur.execute(
-                "SELECT * FROM fracoes WHERE data = %s ORDER BY unidade, horario_inicio",
+                "SELECT * FROM smo.fracoes WHERE data = %s "
+                "ORDER BY unidade, horario_inicio",
                 (data,),
             )
             return [dict(row) for row in cur.fetchall()]
@@ -110,7 +116,7 @@ def fetch_cabecalho_by_date(data: str) -> list[dict]:
     try:
         with conn.cursor() as cur:
             cur.execute(
-                "SELECT * FROM cabecalho WHERE data = %s ORDER BY unidade",
+                "SELECT * FROM smo.cabecalho WHERE data = %s ORDER BY unidade",
                 (data,),
             )
             return [dict(row) for row in cur.fetchall()]
@@ -126,17 +132,23 @@ def fetch_fracoes_by_range(
         with conn.cursor() as cur:
             if unidades:
                 cur.execute(
-                    """SELECT * FROM fracoes
-                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                    """SELECT * FROM smo.fracoes
+                       WHERE TO_DATE(data, 'DD/MM/YYYY')
+                             BETWEEN TO_DATE(%s, 'DD/MM/YYYY')
+                                 AND TO_DATE(%s, 'DD/MM/YYYY')
                          AND unidade = ANY(%s)
-                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade, horario_inicio""",
+                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'),
+                                unidade, horario_inicio""",
                     (data_inicio, data_fim, unidades),
                 )
             else:
                 cur.execute(
-                    """SELECT * FROM fracoes
-                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
-                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade, horario_inicio""",
+                    """SELECT * FROM smo.fracoes
+                       WHERE TO_DATE(data, 'DD/MM/YYYY')
+                             BETWEEN TO_DATE(%s, 'DD/MM/YYYY')
+                                 AND TO_DATE(%s, 'DD/MM/YYYY')
+                       ORDER BY TO_DATE(data, 'DD/MM/YYYY'),
+                                unidade, horario_inicio""",
                     (data_inicio, data_fim),
                 )
             return [dict(row) for row in cur.fetchall()]
@@ -152,16 +164,20 @@ def fetch_cabecalho_by_range(
         with conn.cursor() as cur:
             if unidades:
                 cur.execute(
-                    """SELECT * FROM cabecalho
-                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                    """SELECT * FROM smo.cabecalho
+                       WHERE TO_DATE(data, 'DD/MM/YYYY')
+                             BETWEEN TO_DATE(%s, 'DD/MM/YYYY')
+                                 AND TO_DATE(%s, 'DD/MM/YYYY')
                          AND unidade = ANY(%s)
                        ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade""",
                     (data_inicio, data_fim, unidades),
                 )
             else:
                 cur.execute(
-                    """SELECT * FROM cabecalho
-                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                    """SELECT * FROM smo.cabecalho
+                       WHERE TO_DATE(data, 'DD/MM/YYYY')
+                             BETWEEN TO_DATE(%s, 'DD/MM/YYYY')
+                                 AND TO_DATE(%s, 'DD/MM/YYYY')
                        ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade""",
                     (data_inicio, data_fim),
                 )
@@ -175,9 +191,10 @@ def fetch_datas_disponiveis() -> list[str]:
     try:
         with conn.cursor() as cur:
             cur.execute(
-                "SELECT DISTINCT data, TO_DATE(data, 'DD/MM/YYYY') AS dt FROM fracoes ORDER BY dt DESC"
+                "SELECT DISTINCT data, TO_DATE(data, 'DD/MM/YYYY') AS dt "
+                "FROM smo.fracoes ORDER BY dt DESC"
             )
-            return [row["data"] for row in cur.fetchall()]
+            return [cast(str, row["data"]) for row in cur.fetchall()]
     finally:
         conn.close()
 
@@ -187,9 +204,9 @@ def fetch_unidades_disponiveis() -> list[str]:
     try:
         with conn.cursor() as cur:
             cur.execute(
-                "SELECT DISTINCT unidade FROM fracoes ORDER BY unidade"
+                "SELECT DISTINCT unidade FROM smo.fracoes ORDER BY unidade"
             )
-            return [row["unidade"] for row in cur.fetchall()]
+            return [cast(str, row["unidade"]) for row in cur.fetchall()]
     finally:
         conn.close()
 
@@ -215,8 +232,10 @@ def fetch_resumo_por_unidade(
                          SUM(armas_portateis) AS soma_armas_portateis,
                          SUM(armas_longas) AS soma_armas_longas,
                          SUM(animais) AS soma_animais
-                       FROM cabecalho
-                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                       FROM smo.cabecalho
+                       WHERE TO_DATE(data, 'DD/MM/YYYY')
+                             BETWEEN TO_DATE(%s, 'DD/MM/YYYY')
+                                 AND TO_DATE(%s, 'DD/MM/YYYY')
                          AND unidade = ANY(%s)
                        GROUP BY unidade
                        ORDER BY unidade""",
@@ -237,8 +256,10 @@ def fetch_resumo_por_unidade(
                          SUM(armas_portateis) AS soma_armas_portateis,
                          SUM(armas_longas) AS soma_armas_longas,
                          SUM(animais) AS soma_animais
-                       FROM cabecalho
-                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                       FROM smo.cabecalho
+                       WHERE TO_DATE(data, 'DD/MM/YYYY')
+                             BETWEEN TO_DATE(%s, 'DD/MM/YYYY')
+                                 AND TO_DATE(%s, 'DD/MM/YYYY')
                        GROUP BY unidade
                        ORDER BY unidade""",
                     (data_inicio, data_fim),
@@ -261,8 +282,10 @@ def fetch_serie_temporal(
                          efetivo_total, oficiais, sargentos, soldados,
                          vtrs, motos, armas_ace, armas_portateis,
                          armas_longas, animais
-                       FROM cabecalho
-                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                       FROM smo.cabecalho
+                       WHERE TO_DATE(data, 'DD/MM/YYYY')
+                             BETWEEN TO_DATE(%s, 'DD/MM/YYYY')
+                                 AND TO_DATE(%s, 'DD/MM/YYYY')
                          AND unidade = ANY(%s)
                        ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade""",
                     (data_inicio, data_fim, unidades),
@@ -274,8 +297,10 @@ def fetch_serie_temporal(
                          efetivo_total, oficiais, sargentos, soldados,
                          vtrs, motos, armas_ace, armas_portateis,
                          armas_longas, animais
-                       FROM cabecalho
-                       WHERE TO_DATE(data, 'DD/MM/YYYY') BETWEEN TO_DATE(%s, 'DD/MM/YYYY') AND TO_DATE(%s, 'DD/MM/YYYY')
+                       FROM smo.cabecalho
+                       WHERE TO_DATE(data, 'DD/MM/YYYY')
+                             BETWEEN TO_DATE(%s, 'DD/MM/YYYY')
+                                 AND TO_DATE(%s, 'DD/MM/YYYY')
                        ORDER BY TO_DATE(data, 'DD/MM/YYYY'), unidade""",
                     (data_inicio, data_fim),
                 )

@@ -1,0 +1,134 @@
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+}
+
+.auth-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.auth-card h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.auth-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+.auth-card label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+.auth-card input[type="email"],
+.auth-card input[type="password"],
+.auth-card input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--white);
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.auth-card input:focus {
+  border-color: var(--gold);
+}
+
+.auth-card button[type="submit"] {
+  margin-top: 22px;
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--navy);
+  color: var(--white);
+  border: 0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.auth-card button[type="submit"]:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.auth-flash {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.auth-flash.error {
+  background: #fde8e8;
+  color: #9b1c1c;
+}
+
+.auth-flash.info {
+  background: #eef5ff;
+  color: #1c4b9b;
+}
+
+.auth-totp-code {
+  letter-spacing: 6px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Menlo', 'Consolas', monospace;
+}
+
+.auth-qr {
+  display: block;
+  margin: 18px auto 12px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.auth-secret-manual {
+  text-align: center;
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 8px 10px;
+  border-radius: 6px;
+  word-break: break-all;
+  margin-bottom: 8px;
+}
+
+.auth-help {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 1.5;
+}

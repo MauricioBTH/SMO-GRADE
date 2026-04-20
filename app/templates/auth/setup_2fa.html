@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Configurar 2FA - SMO-GRADE{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="auth-wrap">
+  <form class="auth-card" method="POST" action="{{ url_for('auth.setup_2fa') }}" novalidate>
+    <h1>Configuracao obrigatoria</h1>
+    <h2>Cadastrar 2FA</h2>
+
+    <p class="auth-help">
+      Escaneie o QR code abaixo com seu aplicativo autenticador
+      (Google Authenticator, Authy, Microsoft Authenticator, etc.) e
+      insira o codigo de 6 digitos gerado.
+    </p>
+
+    <img class="auth-qr" src="{{ qr_data }}" alt="QR code 2FA">
+    <div class="auth-secret-manual" aria-label="Chave manual">
+      Chave manual: {{ secret_manual }}
+    </div>
+
+    {% if erro %}
+      <div class="auth-flash error">{{ erro }}</div>
+    {% endif %}
+
+    <label for="codigo">Codigo de 6 digitos</label>
+    <input
+      id="codigo"
+      name="codigo"
+      type="text"
+      inputmode="numeric"
+      pattern="[0-9]{6}"
+      maxlength="6"
+      autocomplete="one-time-code"
+      class="auth-totp-code"
+      required
+      autofocus>
+
+    <button type="submit">Confirmar e entrar</button>
+  </form>
+</div>
+{% endblock %}

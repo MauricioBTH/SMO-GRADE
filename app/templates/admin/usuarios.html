@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Gestao de Usuarios - SMO-GRADE{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+<style>
+  .admin-wrap { max-width: 1080px; margin: 24px auto; padding: 0 16px; }
+  .admin-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 18px;
+  }
+  .admin-header h1 { font-size: 1.4rem; color: var(--navy); }
+  .admin-header form.logout { display: inline; }
+  .admin-header button.link {
+    background: none; border: 0; color: var(--text-muted); cursor: pointer;
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
+  }
+  .admin-filtros {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
+    background: var(--white); padding: 12px; border-radius: var(--radius);
+  }
+  .admin-filtros select, .admin-filtros input {
+    padding: 6px 10px; border: 1px solid #d9d9d9; border-radius: 6px;
+    font-family: inherit; font-size: 0.9rem;
+  }
+  .admin-filtros button {
+    padding: 6px 14px; background: var(--navy); color: var(--white);
+    border: 0; border-radius: 6px; cursor: pointer;
+  }
+  table.admin-table {
+    width: 100%; border-collapse: collapse; background: var(--white);
+    border-radius: var(--radius); overflow: hidden;
+  }
+  .admin-table th, .admin-table td {
+    padding: 10px 12px; text-align: left; font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+  }
+  .admin-table th {
+    background: var(--bg); font-weight: 600; color: var(--text-muted);
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.8px;
+  }
+  .admin-table .actions form { display: inline; margin-right: 4px; }
+  .admin-table .actions button {
+    padding: 4px 10px; font-size: 0.78rem; border: 1px solid #d9d9d9;
+    background: var(--white); border-radius: 5px; cursor: pointer;
+  }
+  .admin-table .actions button:hover { background: var(--bg); }
+  .admin-table .inactive { opacity: 0.5; }
+  .admin-create {
+    margin-top: 22px; background: var(--white); padding: 16px;
+    border-radius: var(--radius);
+  }
+  .admin-create h2 { font-size: 1rem; margin-bottom: 12px; color: var(--navy); }
+  .admin-create .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  }
+  .admin-create input, .admin-create select {
+    padding: 8px 10px; border: 1px solid #d9d9d9; border-radius: 6px;
+    font-family: inherit;
+  }
+  .admin-create button {
+    margin-top: 12px; padding: 9px 18px; background: var(--navy);
+    color: var(--white); border: 0; border-radius: 6px; cursor: pointer;
+  }
+  .flash { padding: 8px 12px; margin-bottom: 10px; border-radius: 6px; }
+  .flash.error { background: #fde8e8; color: #9b1c1c; }
+  .flash.info { background: #eef5ff; color: #1c4b9b; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-wrap">
+  <div class="admin-header">
+    <h1>Gestao de Usuarios</h1>
+    <form class="logout" method="POST" action="{{ url_for('auth.logout') }}">
+      <button class="link" type="submit">Sair</button>
+    </form>
+  </div>
+
+  {% with mensagens = get_flashed_messages(with_categories=true) %}
+    {% for categoria, msg in mensagens %}
+      <div class="flash {{ categoria }}">{{ msg }}</div>
+    {% endfor %}
+  {% endwith %}
+
+  <form class="admin-filtros" method="GET" action="{{ url_for('admin.listar_usuarios') }}">
+    <select name="role">
+      <option value="">Todos os roles</option>
+      {% for r in roles %}
+        <option value="{{ r }}" {% if filtro.get('role') == r %}selected{% endif %}>{{ r }}</option>
+      {% endfor %}
+    </select>
+    <input type="text" name="unidade" placeholder="Unidade" value="{{ filtro.get('unidade', '') }}">
+    <select name="ativo">
+      <option value="">Ativos e inativos</option>
+      <option value="1" {% if filtro.get('ativo') is true %}selected{% endif %}>Apenas ativos</option>
+      <option value="0" {% if filtro.get('ativo') is false %}selected{% endif %}>Apenas inativos</option>
+    </select>
+    <button type="submit">Filtrar</button>
+  </form>
+
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>Nome</th><th>E-mail</th><th>Role</th><th>Unidade</th>
+        <th>2FA</th><th>Ativo</th><th>Acoes</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for u in usuarios %}
+        <tr class="{{ '' if u.ativo else 'inactive' }}">
+          <td>{{ u.nome }}</td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.role }}</td>
+          <td>{{ u.unidade or '-' }}</td>
+          <td>{{ 'Sim' if u.totp_ativo else 'Nao' }}</td>
+          <td>{{ 'Sim' if u.ativo else 'Nao' }}</td>
+          <td class="actions">
+            <form method="POST" action="{{ url_for('admin.resetar_2fa', user_id=u.id) }}"
+                  onsubmit="return confirm('Resetar 2FA deste usuario?');">
+              <button type="submit">Reset 2FA</button>
+            </form>
+            {% if u.ativo %}
+              <form method="POST" action="{{ url_for('admin.desativar_usuario', user_id=u.id) }}"
+                    onsubmit="return confirm('Desativar este usuario?');">
+                <button type="submit">Desativar</button>
+              </form>
+            {% endif %}
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="7" style="text-align:center;color:var(--text-muted);">Nenhum usuario encontrado</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="admin-create">
+    <h2>Criar usuario</h2>
+    <form method="POST" action="{{ url_for('admin.criar_usuario') }}">
+      <div class="grid">
+        <input type="text"  name="nome"    placeholder="Nome completo" required>
+        <input type="email" name="email"   placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha (min 10)" required minlength="10">
+        <select name="role" required>
+          <option value="">Role</option>
+          {% for r in roles %}
+            <option value="{{ r }}">{{ r }}</option>
+          {% endfor %}
+        </select>
+        <input type="text" name="unidade" placeholder="Unidade (obrigatorio p/ ALEI)">
+      </div>
+      <button type="submit">Criar</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

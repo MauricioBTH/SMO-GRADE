@@ -1,0 +1,81 @@
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*COMANDO DE POLÍCIA DE CHOQUE*
+*1º BATALHÃO DE POLÍCIA DE CHOQUE*
+
+*Previsão do dia 13/04/2026*
+
+*Oficial Superior CPChq*
+CAP PM DALL’ AGNOL (54) 99931-4411
+
+*COPOM:* Qso Funcional (51) 98437-6940
+SD PM PAULO
+Horário: 06:00 às 18:00
+SD PM GLASENAP
+Horário: 18:00 às 06:00
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM TEN PM NISHIMURA (53) 984072808
+Equipes: 06 (24 PM’s)
+Missão: Prontidão, Reserva de OCD e Combate aos CVLIs – Área do 19º BPM 
+Horário: 20:00 às 02:00
+
+CANIL I
+Cmt: SGT PM SGT FREITAS (53) 999068661
+Equipes: 01 (03 PM’s)
+Missão: Prontidão
+Horário: 08:00 às 08:00
+Missão: Operação Fecha Quartel
+Horário: 06:00 às 18:00
+
+CANIL II
+Cmt: SGT PM SGT FREITAS (53) 999068661
+Equipes: 05 (17 PM’s)
+Missão: Combate aos CVLIs – Área do 9º BPM e Área do 11º BPM
+Horário: 18:00 às 00:00
+
+PELOTÃO DE MOTOS
+Cmt: SGT PM SGT LUIS (51) 980273630
+Equipes: 07 (07 PM’s)
+Missão: Prontidão
+Horário: 08:00 às 20:00
+
+PATRES I
+Cmt: SGT PM SGT MÉDRICK (51) 998195154
+Equipes: 04 (16 PM’s)
+Missão: Combate aos CVLIs – Área do 20º BPM
+Horário: 10:00 às 16:00
+
+PATRES II
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 05 (20 PM’s)
+Missão: Combate aos CVLIs – Área do 1º BPM
+Horário: 16:00 às 22:00
+
+PATRES HE
+Cmt: SGT PM SGT MÉDRICK (51) 998195154
+Equipes: 03 (12 PM’s)
+Missão: Combate aos CVLIs – Área do 11º BPM
+Horário: 17:00 às 21:00
+
+ESTADO MAIOR
+Cmt: SGT PM SEVERO (51) 98058-6342
+Equipes: 01 (3 PM’s)
+Missão: Operação Fecha Quartel
+Horário: 06:00 às 18:00
+
+Data: 13/04/2026
+Turno:2/3 e 4/1
+1. Efetivo Total: 102
+   1.1 Oficial: 02	
+1.2 Sgt: 23		
+   1.3 SD: 77
+2. VTRs:   26 + 07 motocicletas
+3. Efetivo Motorizado: 102
+4. Armas de Condução Elétrica Empregadas: 26
+5. Armas Portáteis Empregadas: 102
+6. Armas Longas Empregadas: 92
+7. Local de Atuação: CRPMC
+8. Missões/Osv:  RESERVA DE OCD/PRONTIDÃO/CVLI/PTM/OPERAÇÃO FECHA QUARTEL
+9. Animais Empregados: 20 cães

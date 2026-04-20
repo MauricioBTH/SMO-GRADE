@@ -1,0 +1,1000 @@
+f,CIDADE
+CAPITAL,Proto Alegre
+METROPOLITANO,Canoas
+METROPOLITANO, Esteio
+METROPOLITANO, Nova Santa Rita
+METROPOLITANO, Sapucaia do Sul
+VALE DO RIO DOS SINOS,Araricá
+VALE DO RIO DOS SINOS, Campo Bom
+VALE DO RIO DOS SINOS, Capela de Santana
+VALE DO RIO DOS SINOS, Dois Irmãos
+VALE DO RIO DOS SINOS, Estância Velha
+VALE DO RIO DOS SINOS, Ivoti
+VALE DO RIO DOS SINOS, Lindolfo Collor
+VALE DO RIO DOS SINOS, Morro Reuter
+VALE DO RIO DOS SINOS, Nova Hartz
+VALE DO RIO DOS SINOS, Novo Hamburgo
+VALE DO RIO DOS SINOS, Parobé
+VALE DO RIO DOS SINOS, Portão
+VALE DO RIO DOS SINOS, Presidente Lucena
+VALE DO RIO DOS SINOS, Santa Maria do Herval
+VALE DO RIO DOS SINOS, São Leopoldo 
+VALE DO RIO DOS SINOS,Sapiranga
+CENTRO SUL,Amaral Ferrador
+CENTRO SUL, Arambaré
+CENTRO SUL, Arroio dos Ratos
+CENTRO SUL, Barão do Triunfo
+CENTRO SUL, Barra do Ribeiro
+CENTRO SUL, Butiá
+CENTRO SUL, Camaquã
+CENTRO SUL, Cerro Grande do Sul
+CENTRO SUL, Charqueadas
+CENTRO SUL, Chuvisca
+CENTRO SUL, Cristal
+CENTRO SUL, Dom Feliciano
+CENTRO SUL, Eldorado do Sul
+CENTRO SUL, General Câmara
+CENTRO SUL, Guaíba
+CENTRO SUL, Mariana Pimentel
+CENTRO SUL, Minas do Leão
+CENTRO SUL, São Jerônimo
+CENTRO SUL, São Lourenço do Sul
+CENTRO SUL, Sentinela do Sul
+CENTRO SUL, Sertão Santana 
+CENTRO SUL,Tapes
+CENTRAL,Agudo
+CENTRAL, Caçapava do Sul
+CENTRAL, Cachoeira do Sul
+CENTRAL, Cerro Branco
+CENTRAL, Dilermando de Aguiar
+CENTRAL, Dona Francisca
+CENTRAL, Faxinal do Soturno
+CENTRAL, Formigueiro
+CENTRAL, Itaara
+CENTRAL, Ivorá
+CENTRAL, Jari
+CENTRAL, Júlio de Castilhos
+CENTRAL, Nova Palma
+CENTRAL, Novo Cabrais
+CENTRAL, Paraíso do Sul
+CENTRAL, Pinhal Grande
+CENTRAL, Quevedos
+CENTRAL, Restinga Seca
+CENTRAL, Santa Maria
+CENTRAL, Santana da Boa Vista
+CENTRAL, São João do Polesine
+CENTRAL, São Martinho da Serra
+CENTRAL, São Pedro do Sul
+CENTRAL, São Sepé
+CENTRAL, Silveira Martins
+CENTRAL, Toropi 
+CENTRAL,Tupanciretã
+SERRA,Antônio Prado
+SERRA, Bento Gonçalves
+SERRA, Boa Vista do Sul
+SERRA, Carlos Barbosa
+SERRA, Caxias do Sul
+SERRA, Coronel Pilar
+SERRA, Cotiporã
+SERRA, Fagundes Varela
+SERRA, Farroupilha
+SERRA, Flores da Cunha
+SERRA, Garibaldi
+SERRA, Monte Belo do Sul
+SERRA, Nova Pádua
+SERRA, Nova Roma do Sul
+SERRA, Pinto Bandeira
+SERRA, Santa Tereza
+SERRA, São Marcos
+SERRA, Veranópolis
+SERRA,Vila Flores
+PLANALTO,Água Santa
+PLANALTO, Almirante Tamadaré do Sul
+PLANALTO, Alto Alegre
+PLANALTO, Anta Gorda
+PLANALTO, Arvorezinha
+PLANALTO, Barra Funda
+PLANALTO, Barros Cassal
+PLANALTO, Camargo
+PLANALTO, Campos Borges
+PLANALTO, Carazinho
+PLANALTO, Casca
+PLANALTO, Chapada
+PLANALTO, Charrua
+PLANALTO, Ciríaco
+PLANALTO, Colorado
+PLANALTO, Constantina
+PLANALTO, Coqueiros do Sul
+PLANALTO, Coxilha
+PLANALTO, David Canabarro
+PLANALTO, Dois Lajeados
+PLANALTO, Engenho Velho
+PLANALTO, Ernestina
+PLANALTO, Espumoso
+PLANALTO, Fontoura Xavier
+PLANALTO, Gentil
+PLANALTO, Guaporé
+PLANALTO, Ibirapuitã
+PLANALTO, Ilópolis
+PLANALTO, Itapuca
+PLANALTO, Lagoa dos Três Cantos
+PLANALTO, Liberato Salzano
+PLANALTO, Marau
+PLANALTO, Mato Castelhano
+PLANALTO, Montauri
+PLANALTO, Mormaço
+PLANALTO, Muliterno
+PLANALTO, Não-Me-Toque
+PLANALTO, Nicolau Vergueiro
+PLANALTO, Nova Alvorada
+PLANALTO, Nova Boa Vista
+PLANALTO, Novo Xingú
+PLANALTO, Passo Fundo
+PLANALTO, Pontão
+PLANALTO, Putinga
+PLANALTO, Ronda Alta
+PLANALTO, Rondinha
+PLANALTO, Santa Cecília do Sul
+PLANALTO, Santo Antônio do Palma
+PLANALTO, Santo Antônio do Planalto
+PLANALTO, São Domingos do Sul
+PLANALTO, São José do Herval
+PLANALTO, São Valentim do Sul
+PLANALTO, Sarandi
+PLANALTO, Serafina Corrêa
+PLANALTO, Sertão
+PLANALTO, Soledade
+PLANALTO, Tapejara
+PLANALTO, Tapera
+PLANALTO, Tio Hugo
+PLANALTO, Três Palmeiras
+PLANALTO, União da Serra
+PLANALTO, Vanini
+PLANALTO, Victor Graeff
+PLANALTO, Vila Lângaro 
+PLANALTO,Vila Maria
+FRONTEIRA NOROESTE,Alecrim
+FRONTEIRA NOROESTE, Alegria
+FRONTEIRA NOROESTE, Barra do Guarita
+FRONTEIRA NOROESTE, Boa Vista do Buricá
+FRONTEIRA NOROESTE, Bom Progresso
+FRONTEIRA NOROESTE, Braga
+FRONTEIRA NOROESTE, Campina das Missões
+FRONTEIRA NOROESTE, Campo Novo
+FRONTEIRA NOROESTE, Cândido Godói
+FRONTEIRA NOROESTE, Chiapeta
+FRONTEIRA NOROESTE, Coronel Bicaco
+FRONTEIRA NOROESTE, Crissiumal
+FRONTEIRA NOROESTE, Derrubadas
+FRONTEIRA NOROESTE, Doutor Maurício Cardoso
+FRONTEIRA NOROESTE, Esperança do Sul
+FRONTEIRA NOROESTE, Horizontina
+FRONTEIRA NOROESTE, Humaitá
+FRONTEIRA NOROESTE, Independência
+FRONTEIRA NOROESTE, Inhacorá
+FRONTEIRA NOROESTE, Miraguaí
+FRONTEIRA NOROESTE, Nova Candelária
+FRONTEIRA NOROESTE, Novo Machado
+FRONTEIRA NOROESTE, Porto Lucena
+FRONTEIRA NOROESTE, Porto Mauá
+FRONTEIRA NOROESTE, Porto Vera Cruz
+FRONTEIRA NOROESTE, Redentora
+FRONTEIRA NOROESTE, Santa Rosa
+FRONTEIRA NOROESTE, Santo Augusto
+FRONTEIRA NOROESTE, Santo Cristo
+FRONTEIRA NOROESTE, São José do Inhacorá
+FRONTEIRA NOROESTE, São Martinho
+FRONTEIRA NOROESTE, São Valério do Sul
+FRONTEIRA NOROESTE, Sede Nova
+FRONTEIRA NOROESTE, Tenente Portela
+FRONTEIRA NOROESTE, Tiradentes do Sul
+FRONTEIRA NOROESTE, Três de Maio
+FRONTEIRA NOROESTE, Três Passos
+FRONTEIRA NOROESTE, Tucunduva
+FRONTEIRA NOROESTE, Tuparendi
+FRONTEIRA NOROESTE,Vista Gaúcha
+FRONTEIRA OESTE,Aceguá
+FRONTEIRA OESTE, Bagé
+FRONTEIRA OESTE, Cacequi
+FRONTEIRA OESTE, Candiota
+FRONTEIRA OESTE, Dom Pedrito
+FRONTEIRA OESTE, Hulha Negra
+FRONTEIRA OESTE, Lavras do Sul
+FRONTEIRA OESTE, Pedras Altas
+FRONTEIRA OESTE, Pinheiro Machado
+FRONTEIRA OESTE, Quaraí
+FRONTEIRA OESTE, Rosário do Sul
+FRONTEIRA OESTE, Santa Margarida do Sul
+FRONTEIRA OESTE, Santana do Livramento
+FRONTEIRA OESTE, São Gabriel 
+FRONTEIRA OESTE,Vila Nova do Sul
+SUL,Arroio do Padre
+SUL, Arroio Grande
+SUL, Canguçú
+SUL, Capão do Leão
+SUL, Cerrito
+SUL, Chuí
+SUL, Herval
+SUL, Jaguarão
+SUL, Morro Redondo
+SUL, Pedro Osório
+SUL, Pelotas
+SUL, Piratini
+SUL, Rio Grande
+SUL, Santa Vitória do Palmar
+SUL, São José do Norte 
+SUL,Turuçu
+NORTE,Aratiba
+NORTE, Áurea
+NORTE, Barão do Cotegipe
+NORTE, Barra do Rio Azul
+NORTE, Benjamin Constant do Sul
+NORTE, Campinas do Sul
+NORTE, Carlos Gomes
+NORTE, Centenário
+NORTE, Cruzaltense
+NORTE, Entre Rios do Sul
+NORTE, Erebango
+NORTE, Erechim
+NORTE, Erval Grande
+NORTE, Estação
+NORTE, Faxinalzinho
+NORTE, Floriano Peixoto
+NORTE, Gaurama
+NORTE, Getúlio Vargas
+NORTE, Gramado dos Loureiros
+NORTE, Ipiranga do Sul
+NORTE, Itatiba do Sul
+NORTE, Jacutinga
+NORTE, Machadinho
+NORTE, Marcelino Ramos
+NORTE, Mariano Moro
+NORTE, Maximiliano de Almeida
+NORTE, Nonoai
+NORTE, Paim Filho
+NORTE, Paulo Bento
+NORTE, Ponte Preta
+NORTE, Quatro Irmãos
+NORTE, Rio dos Índios
+NORTE, São Valentim
+NORTE, Severiano de Almeida
+NORTE, Três Arroios
+NORTE, Trindade do Sul 
+NORTE,Viadutos
+NORDESTE,André da Rocha
+NORDESTE, Barracão
+NORDESTE, Bom Jesus
+NORDESTE, Cacique Doble
+NORDESTE, Campestre da Serra
+NORDESTE, Capão Bonito do Sul
+NORDESTE, Caseiros
+NORDESTE, Esmeralda
+NORDESTE, Guabijú
+NORDESTE, Ibiaçá
+NORDESTE, Ibiraiaras
+NORDESTE, Ipê
+NORDESTE, Jaquirana
+NORDESTE, Lagoa Vermelha
+NORDESTE, Monte Alegre dos Campos
+NORDESTE, Muitos Capões
+NORDESTE, Nova Araçá
+NORDESTE, Nova Bassano
+NORDESTE, Nova Prata
+NORDESTE, Paraí
+NORDESTE, Pinhal da Serra
+NORDESTE, Protásio Alves
+NORDESTE, Sananduva
+NORDESTE, Santo Expedito do Sul
+NORDESTE, São João da Urtiga
+NORDESTE, São Jorge
+NORDESTE, São José do Ouro
+NORDESTE, São José dos Ausentes
+NORDESTE, Tupanci do Sul
+NORDESTE, Vacaria 
+NORDESTE,Vista Alegre do Prata
+LITORAL,Arroio do Sal
+LITORAL, Balneário Pinhal
+LITORAL, Capão da Canoa
+LITORAL, Capivari do Sul
+LITORAL, Caraá
+LITORAL, Cidreira
+LITORAL, Dom Pedro de Alcântara
+LITORAL, Imbé
+LITORAL, Itati
+LITORAL, Mampituba
+LITORAL, Maquiné
+LITORAL, Morrinhos do Sul
+LITORAL, Mostardas
+LITORAL, Osório
+LITORAL, Palmares do Sul
+LITORAL, Santo Antônio da Patrulha
+LITORAL, Tavares
+LITORAL, Terra de Areia
+LITORAL, Torres
+LITORAL, Tramandaí
+LITORAL, Três Cachoeiras
+LITORAL, Três Forquilhas
+LITORAL,Xangri-lá
+EXTREMO OESTE,Alegrete
+EXTREMO OESTE, Barra do Quaraí
+EXTREMO OESTE, Capão do Cipó
+EXTREMO OESTE, Itacurubi
+EXTREMO OESTE, Itaqui
+EXTREMO OESTE, Jaguari
+EXTREMO OESTE, Maçambará
+EXTREMO OESTE, Manoel Viana
+EXTREMO OESTE, Mata
+EXTREMO OESTE, Nova Esperança do Sul
+EXTREMO OESTE, Santiago
+EXTREMO OESTE, São Borja
+EXTREMO OESTE, São Francisco de Assis
+EXTREMO OESTE, São Vicente do Sul
+EXTREMO OESTE, Unistalda
+EXTREMO OESTE,Uruguaiana
+MISSÕES,Ajuricaba
+MISSÕES, Augusto Pestana
+MISSÕES, Bossoroca
+MISSÕES, Bozano
+MISSÕES, Caibaté
+MISSÕES, Catuípe
+MISSÕES, Cerro Largo
+MISSÕES, Coronel Barros
+MISSÕES, Dezesseis de Novembro
+MISSÕES, Entre-Ijuís
+MISSÕES, Eugênio de Castro
+MISSÕES, Garruchos
+MISSÕES, Giruá
+MISSÕES, Guarani das Missões
+MISSÕES, Ijuí
+MISSÕES, Jóia
+MISSÕES, Mato Queimado
+MISSÕES, Nova Ramada
+MISSÕES, Pirapó
+MISSÕES, Porto Xavier
+MISSÕES, Rolador
+MISSÕES, Roque Gonzales
+MISSÕES, Salvador das Missões
+MISSÕES, Santo Ângelo
+MISSÕES, Santo Antônio das Missões
+MISSÕES, São Luiz Gonzaga
+MISSÕES, São Miguel das Missões
+MISSÕES, São Nicolau
+MISSÕES, São Paulo das Missões
+MISSÕES, São Pedro do Butiá
+MISSÕES, Senador Salgado Filho
+MISSÕES, Sete de Setembro
+MISSÕES, Ubiretama 
+MISSÕES,Vitória das Missões
+HORTÊNCIAS,Cambará do Sul
+HORTÊNCIAS, Canela
+HORTÊNCIAS, Gramado
+HORTÊNCIAS, Igrejinha
+HORTÊNCIAS, Nova Petrópolis
+HORTÊNCIAS, Picada Café
+HORTÊNCIAS, Riozinho
+HORTÊNCIAS, Rolante
+HORTÊNCIAS, São Francisco de Paula
+HORTÊNCIAS, Taquara 
+HORTÊNCIAS,Três Coroas
+VALE DO CAÍ,Alto Feliz
+VALE DO CAÍ, Barão
+VALE DO CAÍ, Bom Princípio
+VALE DO CAÍ, Brochier
+VALE DO CAÍ, Feliz
+VALE DO CAÍ, Harmonia
+VALE DO CAÍ, Linha Nova
+VALE DO CAÍ, Maratá
+VALE DO CAÍ, Montenegro
+VALE DO CAÍ, Pareci Novo
+VALE DO CAÍ, Salvador do Sul
+VALE DO CAÍ, São José do Hortêncio
+VALE DO CAÍ, São José do Sul
+VALE DO CAÍ, São Pedro da Serra
+VALE DO CAÍ, São Sebastião do Caí
+VALE DO CAÍ, São Vendelino
+VALE DO CAÍ, Triunfo
+VALE DO CAÍ, Tupandi 
+VALE DO CAÍ,Vale Real
+VALE DO RIO PARDO,Arroio do Tigre
+VALE DO RIO PARDO, Boqueirão do Leão
+VALE DO RIO PARDO, Candelária
+VALE DO RIO PARDO, Encruzilhada do Sul
+VALE DO RIO PARDO, Estrela Velha
+VALE DO RIO PARDO, Gramado Xavier
+VALE DO RIO PARDO, Herveiras
+VALE DO RIO PARDO, Ibarama
+VALE DO RIO PARDO, Lagoa Bonita do Sul
+VALE DO RIO PARDO, Lagoão
+VALE DO RIO PARDO, Mato Leitão
+VALE DO RIO PARDO, Pantano Grande
+VALE DO RIO PARDO, Passa Sete
+VALE DO RIO PARDO, Passo do Sobrado
+VALE DO RIO PARDO, Rio Pardo
+VALE DO RIO PARDO, Santa Cruz do Sul
+VALE DO RIO PARDO, Segredo
+VALE DO RIO PARDO, Sinimbú
+VALE DO RIO PARDO, Sobradinho
+VALE DO RIO PARDO, Tunas
+VALE DO RIO PARDO, Vale do Sol
+VALE DO RIO PARDO, Vale Verde
+VALE DO RIO PARDO, Venâncio Aires
+VALE DO RIO PARDO,Vera Cruz
+VALE DO TAQUARI,Arroio do Meio
+VALE DO TAQUARI, Bom Retiro do Sul
+VALE DO TAQUARI, Canudos do Vale
+VALE DO TAQUARI, Capitão
+VALE DO TAQUARI, Colina
+VALE DO TAQUARI, Coqueiro Baixo
+VALE DO TAQUARI, Cruzeiro do Sul
+VALE DO TAQUARI, Doutor Ricardo
+VALE DO TAQUARI, Encantado
+VALE DO TAQUARI, Estrela
+VALE DO TAQUARI, Fazenda Vilanova
+VALE DO TAQUARI, Forquetinha
+VALE DO TAQUARI, Imigrante
+VALE DO TAQUARI, Lajeado
+VALE DO TAQUARI, Marquês de Souza
+VALE DO TAQUARI, Muçum
+VALE DO TAQUARI, Nova Bréscia
+VALE DO TAQUARI, Paverama
+VALE DO TAQUARI, Poço das Antas
+VALE DO TAQUARI, Pouso Novo
+VALE DO TAQUARI, Progresso
+VALE DO TAQUARI, Relvado
+VALE DO TAQUARI, Roca Sales
+VALE DO TAQUARI, Santa Clara do Sul
+VALE DO TAQUARI, Sério
+VALE DO TAQUARI, Tabaí
+VALE DO TAQUARI, Taquari
+VALE DO TAQUARI, Teutônia
+VALE DO TAQUARI, Travesseiro
+VALE DO TAQUARI, Vespasiano Corrêa 
+VALE DO TAQUARI,Westfalia
+ALTO JACUÍ, Alpestre
+ALTO JACUÍ, Ametista do Sul
+ALTO JACUÍ, Boa Vista das Missões
+ALTO JACUÍ, Boa Vista do Cadeado
+ALTO JACUÍ, Boa Vista do Incra
+ALTO JACUÍ, Caiçara
+ALTO JACUÍ, Cerro Grande
+ALTO JACUÍ, Condor
+ALTO JACUÍ, Cristal do Sul
+ALTO JACUÍ, Cruz Alta
+ALTO JACUÍ, Dois Irmãos das Missões
+ALTO JACUÍ, Erval Seco
+ALTO JACUÍ, Fortaleza dos Valos
+ALTO JACUÍ, Frederico Westphalen
+ALTO JACUÍ, Ibirubá
+ALTO JACUÍ, Iraí
+ALTO JACUÍ, Jaboticaba
+ALTO JACUÍ, Jacuizinho
+ALTO JACUÍ, Lajeado do Bugre
+ALTO JACUÍ, Novo Barreiro
+ALTO JACUÍ, Novo Tiradentes
+ALTO JACUÍ, Palmeira das Missões
+ALTO JACUÍ, Palmitinho
+ALTO JACUÍ, Panambi
+ALTO JACUÍ, Pejuçara
+ALTO JACUÍ, Pinhal
+ALTO JACUÍ, Pinheirinho do Vale
+ALTO JACUÍ, Planalto
+ALTO JACUÍ, Quinze de Novembro
+ALTO JACUÍ, Rodeio Bonito
+ALTO JACUÍ, Sagrada Família
+ALTO JACUÍ, Saldanha Marinho
+ALTO JACUÍ, Salto do Jacuí
+ALTO JACUÍ, Santa Bárbara do Sul
+ALTO JACUÍ, São José das Missões
+ALTO JACUÍ, São Pedro das Missões
+ALTO JACUÍ, Seberi
+ALTO JACUÍ, Selbach
+ALTO JACUÍ, Taquaruçu do Sul
+ALTO JACUÍ, Vicente Dutra
+ALTO JACUÍ, Vista Alegre
+DELTA DO JACUÍ,Alvorada
+DELTA DO JACUÍ, Cachoeirinha
+DELTA DO JACUÍ, Glorinha
+DELTA DO JACUÍ, Gravataí
+DELTA DO JACUÍ,Viamão
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,

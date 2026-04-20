@@ -1,0 +1,47 @@
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° Choque*
+Data: 26/01/26
+* OF de SV: TEN PM CORDEIRO
+* Tel: (55) 98427-3001
+
+EQUIPES E EMPREGO
+
+1. MISSÃO: CVLI / URUGUAIANA
+* Cmt : SGT PM JAMES
+* Tel: (55)  99603-2100
+* Efetivo: 02 Equipes (08 PMs)  
+* Horário: 13h às 19h
+
+2. MISSÃO: CVLI / URUGUAIANA 
+* Cmt: SGT PM DIAS
+* Tel: (55) 99616-9079
+* Efetivo: 02 Equipes (8 PMs) 
+* Horário: 19h às 01h
+
+3. MISSÃO: OPERAÇÃO GOLFINHO
+* Cmt: CAP PM SCRAMIN
+* Efetivo: 07 Equipes (27 PMs)  
+* Local: Torres / Arroio do Sal
+
+4. MISSÃO: CVLI / ITAQUI
+* Cmt: TEN PM HENRIQUE
+* Tel: (53) 98447-2055
+* Efetivo: 02 Equipes (08 PMs) 
+* Horário: 13h às 21h
+
+QUADRO DE MEIOS
+
+1. Efetivo Total: 52
+1.1 Oficial: 03
+1.2 Sgt: 06
+1.3 Sd: 43
+2. VTRs: 13
+3. Efetivo Motorizado: 52
+4. Armas de Condução Elétrica Empregadas: 13
+5. Armas Portáteis Empregadas: 52
+6. Armas Longas Empregadas: 36
+7. Local de Atuação: Uruguaiana, Itaqui, Torres e Arroio do Sal
+8. 8. Missões/Osv: Nº 0045/P3/CPChq/2026 
+9. Animais Empregados: 00

@@ -1,0 +1,50 @@
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° Choque*
+
+* DATA: 14 de fevereiro de 2026
+* OF de SV: CAP PM DOUGLAS BORGES (69) 99940-9148
+
+1. MISSÃO: PRONTI / URUGUAIANA
+* Cmt: SD PM LILIANE (55) 99939-8169
+* Efetivo: 01 Equipes (02 PMs)
+* Horário: 13h às 19h
+
+2. MISSÃO: PRONTI / URUGUAIANA
+* Cmt: SGT PM BUSTAMANTE (55) 98418-8484
+* Efetivo: 01 Equipes (03 PMs)
+* Horário: 19h às 01h
+
+3. MISSÃO: OPERAÇÃO GOLFINHO
+* Cmt: CAP PM SCRAMIN
+* Efetivo: 07 Equipes (27 PMs)
+* Local: Torres / Arroio do Sal
+
+4.  MISSÃO: CVLI - ITAQUI
+* Cmt: SGT PM DIAS (53) 99616-9079
+* Efetivo: 01 Equipes (04 PMs)
+* Horário: 19h às 01h
+
+5.  MISSÃO: CARNAVAL - DOM PEDRITO
+* Cmt: TEN PM HENRIQUE (53) 98447-2055
+* Efetivo: 02 Equipes (08 PMs)
+* Horário: 19h às 01h
+
+6.  MISSÃO: CARNAVAL - SÃO BORJA
+* Cmt: SGT PM MONTANHA (55) 9956-7675
+* Efetivo: 02 Equipes (08 PMs)
+* Horário: 19h às 01h
+
+1. Efetivo Total: 56
+1.1 Oficial: 03
+1.2 Sgt: 06
+1.3 Sd: 47
+2. VTRs: 14
+3. Efetivo Motorizado: 50
+4. Armas de Condução Elétrica Empregadas: 14
+5. Armas Portáteis Empregadas: 56
+6. Armas Longas Empregadas: 42
+7. Local de Atuação: Uruguaiana, São Borja, Dom Pedrito, Itaqui, Torres e Arroio do Sal
+8. 8. Missões/Osv: Nº 0045/P3/CPChq/2026, Carnaval
+9. Animais Empregados: 01

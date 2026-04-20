@@ -1,0 +1,5162 @@
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1°BPChq*
+Previsão do dia 01/04/2026
+
+Oficial Supervisor CPChq  CAP PM AMARAL (55) 99996-3661
+COPOM: Qso Funcional (51) 98437-6940
+SD PM KOKOVICH
+Horário: 07:00 às 19:00
+SD PM MARIO SERGIO
+Horário: 19:00 às 07:00
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM NISHIMURA (53) 98407-2808
+Equipes: 06 (23 PMs)
+Missão: Evento Futebol (Inter X São Paulo) – Área do 1ºBPM
+Horário: 15:00 às 23:00
+
+RESERVA I
+Cmt: TEN PM RUDSON (51) 99943-3258
+Equipes: 05 (19 PMs)
+Missão: Evento Futebol (Inter X São Paulo) – Área do 1ºBPM
+Horário: 15:00 às 23:00
+
+PATRES MATUTINA
+Cmt: TEN PM GARCIA (51) 98480-4005
+Equipes: 04 (16 PMs)
+Missão: MBA – Área do CPC
+Horário: 05:15 às --:--
+
+PATRES MATUTINA
+Cmt: TEN PM DANILDO (51) 99856-9978
+Equipes: 04 (16 PMs)
+Missão: MBA – Área do 2º BPM (Pântano Grande)
+Horário: 04:45 às --:--
+
+PATRES VESPERTINA
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 05 (20 PMs)
+Missão: PTM, Combate aos CVLIs – Área do 20º BPM
+Horário: 16:00 às 22:00
+
+
+CANIL I
+Cmt: SGT PM FREITAS (51) 99906-8661
+Equipes: 01 (6 PMs)
+Missão: Evento Futebol (Inter X São Paulo) – Área do 1ºBPM
+Horário: 15:00 às 23:00
+
+CANIL II
+Cmt: SGT PM FREITAS (51) 99906-8661
+Equipes: 04 (18 PMs)
+Missão: Varredura Guns N Roses– Área do 1º BPM
+Horário: 11:00 às --:--
+
+CANIL III
+Cmt: SD PM MEZANDRI
+Equipes: 01 (03 PMs)
+Missão: Prontidão e Operação Escola Segura 
+Horário: 08:00 às 08:00
+
+BATEDORES
+Cmt: TEN PM RODRIGUES (51) 99156-7477
+Equipes: 16 (16 PMs)
+Missão: Escolta Guns N Roses e Evento Futebol (Inter X São Paulo) – Área do 1ºBPM
+Horário: 12:00 às 00:00
+
+OPERAÇÃO ESCOLA SEGURA
+Cmt: SGT PM LEMOS (51) 9262-0946
+Equipes: 01 (04 PMs)
+Missão: Operação Escola Segura 
+Horário: 06:30 às 12:30
+
+Turno:2/3 e 4/1
+1. Efetivo Total: 141
+1.1 Oficial: 5
+1.2 Sgt: 31		
+1.3 SD: 105
+2. VTRs:  31 + 16 MOTOS 
+3. Efetivo Motorizado: 141
+4. Armas de Condução Elétrica Empregadas: 31
+5. Armas Portáteis Empregadas: 141
+6. Armas Longas Empregadas: 115
+7. Local de Atuação: CRPMC /CRPM-VRP 
+8. Missões/Osv:  PRONTIDÃO / CVLI / PTM /FUTEBOL/OPERAÇÃO ESCOLA SEGURA/MBA/ESCOLTA SHOW/EXPOSIÇÃO
+9. Animais Empregados:  24 cães
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2°BPChq*
+2°/3° T - SANTA MARIA
+2° Choque
+Cmt: 1° Sgt PM Kulmann (55) 99946-6614
+Equipes: 07 (25 PMs)
+Missão: PTM - CVLI
+Hora de emprego: 07h às 19h
+
+4°/1° T - SANTA MARIA
+2° Choque
+Cmt: 1° Ten PM Machado  (55) 99174-2135
+Equipes: 04 (14 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 19h às 07h
+
+1.Efetivo Total: 39
+1.1. Oficial: 01
+1.2. Sgt: 08
+1.3. Sd: 30
+2. VTRs: 11
+3. Efetivo Motorizado: 39
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas de Porte Empregadas: 39
+6. Armas Longas Empregadas: 39
+7. Local de Atuação: SANTA MARIA
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria)
+9. Animais Empregados: 02
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3°BPChq*
+OF SA  - OF SA 23T-  Ten PM Siqueira 54991723368
+OF SA  - OF SA 41T-  Ten PM Rudinei 54991521460
+
+Cmt: Ten PM Siqueira 54991723368
+Equipe: 04 (16 PM)
+Missão: CVLI Passo Fundo
+Horário de emprego: 07hs às 19h
+
+Cmt: Ten PM Rudinei 54991521460
+Equipe: 03 (12 PM)
+Missão: CVLI Carazinho
+Horário de emprego: 19h às 07h
+
+1. Efetivo Total: 27
+1.1 Oficial: 02
+1.2 Sgt: 06
+1.3 Sd: 19
+2. VTRs: 07
+3. Efetivo Motorizado: 27
+4. Armas de Condução Elétrica Empregadas: 07
+5. Armas Portáteis Empregadas: 27
+6. Armas Longas Empregadas: 34
+7. Local de Atuação: Passo Fundo e Carazinho
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°BPChq*
+1º TURNO
+Aux. de SV: Sd PM Oliveira 54 98162-2732
+Equipes  (2 PMs)
+Missão: Guarda ao Batalhão.
+Data: 01/04/2026
+Hora de emprego: 01:30 as 07:30
+Locais de atuação: Caxias do Sul
+_
+
+23º TURNO
+Of. de SV: Sgt PM Petini 054 999579389
+Aux. de SV: Sgt PM Stein 054 991630190
+Equipes: 03 (16PMs)
+Missão: Guarda Batalhão, Patrulhamento Tático Motorizado/CVLI 
+Data: 01/04/2026
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul
+_
+ 
+34 TURNO
+Of de SV :Ten Derquis (54)996135222
+Aux de SV:  2° SGT Zorzi (54)991478118
+Equipes: 05 (18 PMs )
+Missão: Guarda / CVLI
+Data: 01/04/2026
+Hora de emprego: 14:00 as 02:00 
+Locais de atuação: Caxias do Sul
+
+1. Efetivo Total: 50
+1.1. Oficial: 02
+1.2. Sgt: 12
+1.3. Sd: 36
+2. VTRs: 11
+3. Efetivo Motorizado: 42
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas de Porte Empregadas: 50
+6. Armas Longas Empregadas: 47
+7. Local de Atuação: Caxias do Sul
+8. Missões: Guarda, CVLI
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5°BPChq*
+Efetivo de 2°e 3° turnos:
+
+Cmt: Ten Cel PM Anderson  53 98468-1595
+Equipe: 07 (27PM)
+Missão:  Apoio a Policia Civil cumprimento de MBA - Pelotas
+Horário de emprego: 05hs 
+
+Cmt: 2° SGT Nicolas -  53 9 8459-9930
+Equipe: 02 (6PM)
+Missão: Patrulha Rural (Piratini)
+Horário de emprego: 07hs as 19h
+
+Efetivo de 4° e 1° turnos:
+
+Cmt: 1°SGT Marlon 53 98419-0266
+Equipe: 02 (6PM)
+Missão: Patrulha Rural (Piratini)
+Horário de emprego: 19hs as 07h
+
+1. Efetivo Total: 42
+   1.1 Oficial: 04
+   1.2 Sgt: 18
+   1.3 Sd: 20
+2. VTRs:11
+3. Efetivo Motorizado: 40
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas Portáteis Empregadas: 42
+6. Armas Longas Empregadas: 40
+7. Local de Atuação: Pelotas, Piratini
+8. Missões/Osv: OSv nº 032/P3/26, OSv nº 034/P3/26. OSv nº 035/P3/26.
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° Choque*
+* OF de SV: CAP DOUGLAS BORGES 
+* Tel: (69) 9940-9148
+
+1. MISSÃO: CVLI / URUGUAIANA  
+     Cmt: TEN PM SARAIVA 
+* Tel: (55) 9711-4104
+* Efetivo: 04 Equipes (14 PMs)  
+* Horário: 07h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: CVLI / URUGUAIANA 
+* Cmt: SGT PM RIET
+* Tel: (55) 9177-4507
+* Efetivo: 02 Equipes (07 PMs)  
+* Horário: 19h às 01h 
+
+1. Efetivo Total: 21
+1.1 Oficial: 04
+1.2 Sgt: 03
+1.3 Sd: 14
+2. VTRs: 06
+3. Efetivo Motorizado: 21
+4. Armas de Condução Elétrica Empregadas: 06
+5. Armas Portáteis Empregadas: 21
+6. Armas Longas Empregadas: 18
+7. Local de Atuação: Uruguaiana/ 
+8. 8. Missões/Osv: PMT
+9. Animais Empregados: 01
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+OF de SV: 1º TEN PM OLIVEIRA 55999214585
+MOT OF SV: XXX
+VTR: XXX
+Data: 01/04/2026
+
+Cmt:  1º TEN PM CASANOVA 51997006325
+Equipe: 01 (17)
+Missão: ORD SV 0150/P3/RBG – FUTEBOL INTERNACIONAL X SÃO PAULO
+Horário: DAS 13H00MIN AS 01H00MIN;
+1º TEN PM: 01
+2°SGT PM: 02
+SD PM: 14
+TOTAL:17 ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: 2º SGT PM ANTONIO 55991634747
+Equipe: 01 (01)
+Missão: POLICIAMENTO MONTADO
+Horário: 07:00h às 16:00h
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt: 2º SGT PM GARIM 55984717741
+Equipe: 01 (10)
+Missão: SV DE CAVALARIÇA/MANUTENÇÃO DO QTL
+Horário: 06:00h às 18:00h
+2º SGT PM: 03
+SD PM: 07
+TOTAL: 10 ME
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: SD PM SCHUSTER 54 9986-6471
+Equipe: 01 (04)
+Missão: ORD SV 138/POLOST MONTADO 3RPMON
+Horário: DAS 08H00MIN ÀS 20H00MIN;
+2º SGT PM: 00
+SD PM: 04
+TOTAL: 04 ME
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: 2º SGT PM PIRES 54981495556
+Equipe: 01 (03)
+Missão: POLICIAMENTO MONTADO
+Horário: 08:00h ÀS 12:00h
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM COLLARES 53 8100-2566
+Equipe: 01 (05)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 04
+TOTAL: 05ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA  51981377784
+Equipe: 01 (05)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 05
+TOTAL: 05 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM VIANA 51 9706-9117
+Equipe: 01 (03 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM LENHART 51995892125
+Equipe: 01 (03PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+Efetivo Total:54
+1.1 OFICIAL: 02
+1.2 SGT:08
+1.3 SD: 44
+2. VTRs: 04
+3. Efetivo Motorizado: 05
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas Portáteis Empregadas: 54
+6. Armas Longas Empregadas: 00
+7. Local de Atuação: Porto Alegre/Santa Maria/S. Do Livramento/Passo Fundo/Caxias do Sul
+8. Missões: ORD SV 138/POLOST MONTADO 3RPMON, ORD SV 001/ POLICIAMENTO MONTADO
+9. Animais Empregados: 25 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 02/04/2026*
+
+Oficial Supervisor CPChq CAP PM DAAL’ AGNOL (54) 99931-4411
+COPOM: Qso Funcional (51) 98437-6940
+SD PM GLASENAP
+Horário: 06:00 às 18:00
+SD PM KOKOVICH
+Horário: 18:00 às 06:00
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM BATISTA (51) 98542-3634
+Equipes: 05 (20 PM’s)
+PTM e Combate aos CVLIs - Área do 19º BPM
+Horário: 20:00 às 02:00
+
+PATRES MATUTINA
+Cmt: TEM PM GARCIA (55) 98480-4005
+Equipes: 04 (15 PM’s)
+Missão: PTM e Combate aos CVLIs - Área do 1º BPM
+Horário: 10:00 às 16:00
+
+PATRES VESPERTINA I
+Cmt: SGT PM PEREIRA (51) 99861-1903 
+Equipes: 04 (16 PM’s)
+Missão:  PTM e Combate aos CVLIs - Área do 20º BPM
+Horário: 16:00 às 22:00
+
+
+CANIL I
+Cmt: SGT PM MACHADO (51) 98485-5824
+Equipes: 01 (3 PM’s)
+Missão: Prontidão
+Horário: 08:00 às 08:00
+
+CANIL II
+Cmt: SGT PM MACHADO (51) 98485-5824
+Equipes: 04 (14 PM’s)
+Missão: Prontidão, Combate aos CVLIs - Área do 1º BPM 
+Horário: 18:00 às 00:00
+
+PELOTÃO MOTOS
+Cmt:  SGT PM MAYER (51) 98490-0050
+Equipe: 10 (10 PM’s) 
+Missão: Prontidão
+Horário: 08:00 às 20:00
+
+OPERAÇÃO ESCOLA SEGURA I
+Cmt: SGT PM DERNARDIN (51) 98330-9351
+Equipes: 01 (04 PMs)
+Missão: Operação Escola Segura 
+Horário: 06:30 às 12:30
+
+OPERAÇÃO ESCOLA SEGURA II
+Cmt: SGT PM MACHADO (51) 98485-5824
+Equipes: 01 (04 PMs)
+Missão: Operação Escola Segura 
+Horário: 12:30 às 18:30
+
+
+APOIO CRPM-L (PATRES)
+Cmt: Cmt: TEN PM DANILDO (51) 98480-4005
+Equipes: 06 (24 PMs)
+Missão: PTM, Combate aos CVLIs – Área do 42º BPM e 8ºBPM
+Horário: --:-- às --:--
+
+Data: 02/04/2026
+Turno:2/3 e 4/1
+1. Efetivo Total: 110
+   1.1 Oficial: 03	
+1.2 Sgt: 20		
+   1.3 SD: 87
+2. VTRs:  24 viaturas + 10 motocicletas
+3. Efetivo Motorizado: 110
+4. Armas de Condução Elétrica Empregadas: 27
+5. Armas Portáteis Empregadas:110
+6. Armas Longas Empregadas: 91
+7. Local de Atuação: CRPMC/CRPML
+8. Missões/Osv:  RESERVA DE OCD/CVLI/PRONTIDÃO
+9. Animais Empregados: 14 cães
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 02/04/2026*
+
+2°/3° T - SANTA MARIA
+2° Choque
+Cmt: 1° Ten PM Andrea (55) 99703-4733
+Equipes: 04 (16 PMs)
+Missão: PTM - CVLI - ANGICO
+Hora de emprego: 07h às 19h
+
+4°/1° T - SANTA MARIA
+2° Choque
+Cmt: 1° Sgt PM kulmann (55) 99946-6614
+Equipes: 06 (21 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 19h às 07h
+
+1.Efetivo Total: 37
+1.1. Oficial: 01
+1.2. Sgt: 05
+1.3. Sd: 31
+2. VTRs: 10
+3. Efetivo Motorizado: 37
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 37
+6. Armas Longas Empregadas: 37
+7. Local de Atuação: SANTA MARIA, SILVEIRA MARTINS, IVORA.
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria) / OSV-057/P3/2BPCHQ/2026 (SANTA MARIA, SILVEIRA MARTINS, IVORA)
+9. Animais Empregados: 02
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 02/04/2026*
+
+OF SA  - OF SA 23T-  Ten. PM Edijacson  54991054748
+OF SA  - OF SA 41T-  Ten. PM Siqueira 54991723368
+
+Cmt: Ten. PM Edijacson 54991054748
+Equipe: 05 (19 PM)
+Missão: Op. Angico em Passo Fundo, Mato Castelhano, Coxilha, Carazinho
+Horário de emprego: 07hs às 19h
+
+Cmt: Ten. PM Siqueira 54991723368
+Equipe: 03 (12 PM)
+Missão: CVLI Passo Fundo
+Horário de emprego: 19h às 07h
+
+1. Efetivo Total: 31
+1.1 Oficial: 02
+1.2 Sgt: 08
+1.3 Sd: 21
+2. VTRs: 08
+3. Efetivo Motorizado: 31
+4. Armas de Condução Elétrica Empregadas: 08
+5. Armas Portáteis Empregadas: 31
+6. Armas Longas Empregadas: 39
+7. Local de Atuação: Passo Fundo, Carazinho, Mato Castelhano e Coxilha
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025
+9. Animais Empregados: 01
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 02/04/2026*
+
+02 PMs)
+Missão: Guarda ao Batalhão.
+Data: 02/04/2026
+Hora de emprego: 01:30 as 07:30 
+Locais de atuação: Caxias do Sul
+
+23º TURNO
+Of. de SV: Ten PM Ansinello 54 996652767
+Aux. de SV: Sgt PM Schuller 54 99694-1980
+Equipes: 05 (20 PMs)
+Missão: Guarda ao Batalhão e Op. Angico
+Data: 02/04/2026
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul, Flores da Cunha e Nova Pádua.
+
+34º TURNO
+Of. de SV: Sgt PM Petini 054 999579389
+Aux. de SV: Sgt PM Stein 054 991630190
+Equipes: 05 (20 PMs)
+Missão: Guarda Batalhão, Patrulhamento Tático Motorizado/CVLI 
+Data: 02/04/2026
+Hora de emprego: 14:00 às 02:00.
+Locais de atuação: Farroupilha
+
+1. Efetivo Total: 44
+1.1. Oficial: 1
+1.2. Sgt: 6
+1.3. Sd: 37
+2. VTRs: 10
+3. Efetivo Motorizado: 38
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 44
+6. Armas Longas Empregadas: 50
+7. Local de Atuação: Caxias do Sul, Farroupilha, Flores da Cunha, Nova Pádua.
+8. Missões: Guarda do Batalhão, Patrulhamento Tático Motorizado, CVLI
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 02/04/2026*
+
+OF de SV: 
+Data: 02/04/2026
+
+Efetivo de 2° e 3º turnos
+
+Cmt: SGT PM Jonnhy 54 98104-6601
+Equipe: 01 (04PM) 
+Missão: ANGICO – Pelotas
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Borges 53 98152-2646
+Equipe: 01 (04PM) 
+Missão: ANGICO – Morro Redondo
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Edgar 55 99961-5385
+Equipe: 01 (04PM) 
+Missão: ANGICO –Arroio do Padre
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Pablo 53 98111-4491
+Equipe: 02 (08PM) 
+Missão: Policiamento Rural Comunitário –Canguçu
+Horário de emprego: 07hs as 19hs
+
+Efetivo de 4° e 1º turnos
+
+Cmt: TEN PM Rodrigo 53 98417-5709
+Equipe: 05 (20PM) 
+Missão: FESTMAR – Rio Grande
+Horário de emprego: 19hs as 07hs
+
+Cmt: SGT PM Martins 53 99101-1521
+Equipe: 02 (08PM) 
+Missão: Policiamento Rural Comunitário –Canguçu
+Horário de emprego: 19hs as 07hs
+
+1. Efetivo Total: 48
+ 1.1 Oficial: 01
+ 1.2 Sgt: 16
+ 1.3 Sd: 31
+2. VTRs: 12
+3. Efetivo Motorizado: 48
+4. Armas de Condução Elétrica Empregadas: 12
+5. Armas Portáteis Empregadas: 12
+6. Armas Longas Empregadas: 48
+7. Local de Atuação: Pelotas, Morro Redondo, Arroio do Padre, Canguçu, Rio Grande
+8. Missões/Osv: OSv n° 032/P3/5°BPCHQ/26, OSv n° 036/P3/5°BPCHQ/25, OSv n° 037/P3/5°BPCHQ/25
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6°BPChq*
+*Previsão do dia 02/04/2026*
+
+INFORMAÇÕES GERAIS
+* DATA: 02 de abril de 2026  
+* OF de SV: TEN PM MARCIO 
+* Tel: (55) 99731-3143
+
+EQUIPES E EMPREGO
+
+1. MISSÃO: CVLI / URUGUAIANA  
+     Cmt: TEN PM SARAIVA 
+* Tel: (55) 9711-4104
+* Efetivo: 05 Equipes (20 PMs)  
+* Horário: 07h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: CVLI / URUGUAIANA 
+* Cmt: SGT PM MONTANHA
+* Tel: (55) 99956-7675
+* Efetivo: 04 Equipes (16 PMs)  
+* Horário: 19h às 01h 
+                                                                                                                                                                                                                                                                   
+QUADRO DE MEIOS
+
+1. Efetivo Total: 36
+1.1 Oficial: 04
+1.2 Sgt: 02
+1.3 Sd: 30
+2. VTRs: 09
+3. Efetivo Motorizado: 36
+4. Armas de Condução Elétrica Empregadas: 09
+5. Armas Portáteis Empregadas: 36
+6. Armas Longas Empregadas: 27
+7. Local de Atuação: Uruguaiana
+8. 8. Missões/Osv: PMT
+9. Animais Empregados: 01
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+*Previsão do dia 02/04/2026*
+
+OF de SV: CAP PM BERETTA 51 983522556 
+MOT OF SV: XXX
+VTR: XXX
+Data: 02/04/2026
+
+Cmt:  2ºSGT PM VEIGA 51 8544-5901 
+Equipe: 01 (09)
+Missão: ORD SV 164/P3/RBG – POLICIAMENTO MONTADO 
+Horário: DAS 09H00MIN AS 21H00MIN;
+2°SGT PM: 01
+SD PM: 08
+TOTAL:09 ME
+
+Cmt:  SD PM MENDONÇA 55 984542867 
+Equipe: 01 (05)
+Missão: ORD SV Nº 157/P3 – RBG – PASSEIO A CAVALO MONTENEGRO  
+Horário: DAS 05H00MIN AS 17H00MIN;
+2°SGT PM: 00
+SD PM: 05
+TOTAL:05 ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: 2º SGT PM ANTONIO 55991634747
+Equipe: 01 (01)
+Missão: POLICIAMENTO MONTADO
+Horário: 07:00h às 19:00h
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt: SD PM BIDART 
+Equipe: 01 (04)
+Missão: ORD SV Nº 001/POLICIAMENTO MONTADO 
+Horário: 07:00h às 19:00h
+2º SGT PM: 00
+SD PM: 04
+TOTAL: 04 ME
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: SD PM SCHUSTER 54 9986-6471
+Equipe: 01 (02)
+Missão: ORD SV N°159/P3-RBG/2026 – VIAGEM PARA PORTO ALEGR
+Horário: DAS 06H00MIN ÀS 18H00MIN;
+2º SGT PM: 00
+SD PM: 02
+TOTAL: 02 ME
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: 2º SGT PM PIRES 54981495556
+Equipe: 01 (01)
+Missão: PERMANÊNCIA 
+Horário: 07:00h ÀS 19:00h
+2º SGT PM: 01
+SD PM: 00
+TOTAL: 01ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM COLLARES 53 8100-2566
+Equipe: 01 (05)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 04
+TOTAL: 05ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA  51981377784
+Equipe: 01 (05)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 05
+TOTAL: 05 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM VIANA 51 9706-9117
+Equipe: 01 (03 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM LENHART 51995892125
+Equipe: 01 (03PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03ME
+
+Efetivo Total:41
+1.1 OFICIAL: 01
+1.2 SGT:04
+1.3 SD: 36
+2. VTRs: 04
+3. Efetivo Motorizado: 05
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas Portáteis Empregadas: 54
+6. Armas Longas Empregadas: 00
+7. Local de Atuação: Porto Alegre/Santa Maria/S. Do Livramento/Passo Fundo/Caxias do Sul
+8. Missões: ORD SV 164/P3/RBG – POLICIAMENTO MONTADO, ORD SV 001/ POLICIAMENTO MONTADO, ORD SV Nº 157/P3 – RBG – PASSEIO A CAVALO MONTENEGRO, ORD SV Nº 001/POLICIAMENTO MONTADO, ORD SV N°159/P3-RBG/2026 – VIAGEM PARA PORTO ALEGRE
+9. Animais Empregados: 15 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1°BPChq*
+Previsão do dia 03/04/2026
+
+Oficial Supervisor CPChq 
+CAP PM DALL’AGNOL (54) 99931-4411
+
+COPOM: Qso Funcional (51) 98437-6940
+SD PM PAULO
+Horário: 07:00 às 19:00
+SD PM GLASENAPP
+Horário: 19:00 às 07:00
+
+PELOTÃO PRONTIDÃO
+Cmt: TEN PM RUDSON (51) 99943-3258
+Equipes: 05 (20 PM’s)
+Missão: Evento Igreja Universal - Área do 11ºBPM
+Horário: 10:30 às – 
+
+CANIL
+Cmt: SD PM GONZALEZ (51) 99591-5013
+Equipes: 01 (02PMs)
+Missão:  Prontidão de Faro  
+Horário: 08:00 às – 08:00
+
+PATRES MATUTINA
+Cmt: TEN PM GARCIA (51) 98480-4005
+Equipes: 04 (15 PM’s)
+Missão: Evento Igreja Universal - Área do 11ºBPM
+Horário: 10:30 às -
+
+_ APOIO CRPM-L (PATRES)_
+Cmt: Cmt: TEN PM DANILDO (51) 99856-9978
+Equipes: 06 (24 PMs)
+Missão: PTM, Combate aos CVLIs – Área do 42º BPM
+Horário: 19:00 às 03:00
+
+Turno: 2/3 e 4/1
+1. Efetivo Total: 62
+1.1 Oficial:03
+1.2 Sgt: 13
+1.3 SD: 46
+2. VTRs: 16 + 12 Motos
+3. Efetivo Motorizado: 62
+4. Armas de Condução Elétrica Empregadas: 16
+5. Armas Portáteis Empregadas: 62
+6. Armas Longas Empregadas: 57
+7. Local de Atuação: CPC 11ºBPM, 19BPM– DJ 42ºBPM 
+8. Missões/Osv: PRONTIDÃO / CVLI / PTM / OPERAÇÃO LITORAL
+9. Animais Empregados: 02 cães
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2°BPChq*
+2°/3° T - SANTA MARIA
+Cmt: 1° Sgt PM Mendonça  Qso :  (55) 99683-8625
+Equipes: 04(16 PMs)       
+Missão: Op Angico - PTM - CVLI
+Data: 03/04/26
+Hora de emprego: 07h às 19h
+
+--------------------------------------------
+
+4°/1° T - SANTA MARIA
+2° Choque
+Cmt: 1° Ten PM Andrea (55) 99703-4733
+Equipes: 04 (15) PMs)
+Missão: PTM - CVLI 
+Hora de emprego: 19h às 7h
+
+----------------------------------------------
+
+1.Efetivo Total: 31
+1.1. Oficial: 01
+1.2. Sgt: 07
+1.3. Sd: 23
+2. VTRs: 08
+3. Efetivo Motorizado: 28
+4. Armas de Condução Elétrica Empregadas: 28
+5. Armas de Porte Empregadas: 28
+6. Armas Longas Empregadas: 28
+7. Local de Atuação: SANTA MARIA, SILVEIRA MARTINS, IVORA.
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria) / OSV-057/P3/2BPCHQ/2026 (SANTA MARIA, SILVEIRA MARTINS, IVORA)
+9. Animais Empregados: 02
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3°BPChq*
+OF SA  - OF SA 23T-  Ten. PM Arus  54-99172-3368
+OF SA  - OF SA 41T-  Ten. PM Edijacson 54-99105-4748
+
+Cmt: Ten. PM Arus 54-99172-3368
+Equipe: 03 (12 PM)
+Missão: Op. Angico em Passo Fundo,Mato Castelhano, Coxilha
+Horário de emprego: 07hs às 19h
+
+Cmt: Ten. PM Edijacson 54-99105-4748
+Equipe: 03 (12 PM)
+Missão: CVLI Passo Fundo
+Horário de emprego: 19h às 07h
+
+1. Efetivo Total: 24
+1.1 Oficial: 02
+1.2 Sgt: 04
+1.3 Sd: 18
+2. VTRs: 06
+3. Efetivo Motorizado: 24
+4. Armas de Condução Elétrica Empregadas: 06
+5. Armas Portáteis Empregadas: 24
+6. Armas Longas Empregadas: 30
+7. Local de Atuação: Passo Fundo, Mato Castelhano e Coxilha
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°BPChq*
+1º TURNO
+
+Of de SV: 00
+Aux de SV: 00
+Equipes: 02 ME
+Missão: Guarda do Batalhão 
+Data:  03/04/2026 
+Hora de emprego: 01:30 às 07:30
+Locais de atuação: Caxias do Sul
+
+23 TURNO
+
+Of de SV: Ten PM Motta
+Aux de SV: Sgt PM Maciel
+Equipes: 05 (18 Pms)
+Missão: Guarda BTL, Op Angico  
+Data: 03/04/2026 
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul, Flores da Cunha e Nova Pádua  
+
+
+34 TURNO
+
+Of de SV: Ten PM Ansinello
+Aux de SV: Sgt  PM Augusto
+Equipes: 05 (18 Pms)
+Missão: Guarda, CVLI
+Data:  03/04/2026 
+Hora de emprego: 14:00 às 02:00
+Locais de atuação: Carlos Barbosa, Garibaldi e Carlos Barbosa
+
+
+1. Efetivo Total: 43
+1.1. Oficial: 02
+1.2. Sgt: 03
+1.3. Sd: 38
+2. VTRs: 10
+3. Efetivo Motorizado: 36
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 43
+6. Armas Longas Empregadas: 42
+7. Local de Atuação: Caxias do Sul, Flores da Cunha e Nova Pádua, Carlos Barbosa, Garibaldi, e Carlos Barbosa.
+8. Missões: Guarda ao Batalhão, Prontidão, Patrulhamento Tático Motorizado,  CVLI, Pol ost.
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5°BPChq*
+Efetivo de 2°e 3° turnos:
+
+Cmt: 1°Sgt PM Pablo 53 98111-4491
+Equipe: 04 (16PM)
+Missão: Rural Canguçu
+Horário de emprego: 06hs as 14hs/ 14hs as 22hs/ 22hs as 06hs
+
+ Cmt: 1°Sgt PM Marlon 53 98459-5715
+Equipe: 03 (11PM)
+Missão: CVLI Rio Grande
+Horário de emprego: 07hs as 19hs
+
+Efetivo de 4° e 1° turnos:
+
+Cmt: 2ºSgt PM Johnny 54 98104-6601
+Equipe: 02 (06PM)
+Missão: CVLI Rio Grande
+Horário de emprego: 07hs as 19hs
+
+1. Efetivo Total: 37
+   1.1 Oficial: 01
+   1.2 Sgt: 13
+   1.3 Sd: 23
+2. VTRs: 09
+3. Efetivo Motorizado: 33
+4. Armas de Condução Elétrica Empregadas: 09
+5. Armas Portáteis Empregadas: 37
+6. Armas Longas Empregadas: 35
+7. Local de Atuação: Rio Grande, Canguçu
+8. Missões/Osv: OSv nº 032/P3/26, OSv nº 036/P3/26, OSv nº 037/P3/26.
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° Choque*
+* OF de SV: TEN PM HENRIQUE 
+* Tel: (53) 984472055
+
+1. MISSÃO: CVLI / URUGUAIANA  
+     Cmt: SGT PM LUIZ PIRES
+* Tel: (55) 981484355
+* Efetivo: 03 Equipes (10 PMs)  
+* Horário: 07h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: CVLI / URUGUAIANA 
+* Cmt: SGT PM MONTANHA
+* Tel: (55) 999567675
+* Efetivo: 03 Equipes (10 PMs)  
+* Horário: 19h às 01h 
+                                                                                                                                                                                                                                                                  
+1. Efetivo Total: 21
+1.1 Oficial: 01
+1.2 Sgt: 04
+1.3 Sd: 16
+2. VTRs: 06
+3. Efetivo Motorizado: 20
+4. Armas de Condução Elétrica Empregadas: 06
+5. Armas Portáteis Empregadas: 21
+6. Armas Longas Empregadas: 18
+7. Local de Atuação: Uruguaiana/ 
+8. 8. Missões/Osv: PMT
+9. Animais Empregados: 01
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+OF de SV: CAP PM ROCHA 51 982162584 
+MOT OF SV: XXX
+VTR: XXX
+Data: 03/04/2026
+
+Cmt: 2ºSGT PM VAGNER 55 99660288 
+Equipe: 01 (9)
+Missão: ORD SV Nº 158/" A FAMILIA AO PÉ DA CRUZ " - CPC APOIO AO 11ºBPM 
+Horário:QTL: 08h:00min - PREL / EMB: 09h:30min - LOCAL: 10h30min - INSTRUÇÃO APÓS RETORNO EVENTO - INSTRUTOR 2° SGT PM VAGNER - LIB:20h:00min
+2°SGT PM: 01
+SD PM: 08
+TOTAL: 09ME
+
+Cmt: 2°SGT PM FERREIRA 
+Equipe: 01 (09)
+Missão: ORD SV 160/ " PROCISSÃO DO MORRO DA CRUZ " - CPC - APOIO AO 19º BPM
+Horário: 09h:00min - INSTRUÇÃO 09:30h as 10:30h - INSTRUTOR SD PM BARBOSA - PREL/DESL 13h:00min - LOCAL: 14h00 ORDEM DE SERVIÇO Nº 160/P3-RBG/2026
+LIB:21h:00min
+2° SGT PM: 01
+SD PM: 08
+TOTAL: 09 ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: SD PM PABLO 55 99170-9474 
+Equipe: 01 (01)
+Missão: SV DE CAVALARIÇA 
+Horário: QTL07h:00min, LIB19h:00min 
+2º SGT PM: 00
+SD PM: 01
+TOTAL: 01ME
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt: 2°SGT PM GARIM 55 8471-7741
+Equipe: 01 (01)
+Missão: SV CAVALARIÇA 
+Horário: DAS 06H00MIN ÀS 18H00MIN 
+2º SGT PM: 01
+SD PM: 00
+TOTAL: 01ME
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: SD PM ZORZAN 54 9245-9130
+Equipe: 01 (01)
+Missão: PERMANÊNCIA 
+Horário: DAS 07H ÀS 19H 
+2º SGT PM: 00
+SD PM: 01
+TOTAL: 01ME
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: 2°SGT PM DEON 54 91736607 
+Equipe: 01 (03)
+Missão: ORD SV 001/ POLICIAMENTO MONTADO 
+Horário: DAS 08H00MIN ÀS 20H00MIN 
+2ºSGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM ACACIO 51 8408-4537
+Equipe: 01 (05)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 04
+TOTAL: 05ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA 51 8137-7784
+Equipe: 01 (05)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 05
+TOTAL: 05 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: 2°SGT PM SOUTO 51 8557-1438 
+Equipe: 01 (03 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM CADUM 51 9507-6647
+Equipe: 01 (03PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03ME
+
+Efetivo Total:41
+1.1 OFICIAL: 01
+1.2 SGT:06
+1.3 SD: 35
+2. VTRs: 7
+3. Efetivo Motorizado: 06
+4. Armas de Condução Elétrica Empregadas: 06
+5. Armas Portáteis Empregadas: 41
+6. Armas Longas Empregadas: 03
+7. Local de Atuação: Porto Alegre/Santa Maria/S. Do Livramento/Passo Fundo/Caxias do Sul/Uruguaiana/Charqueadas
+8. Missões:  ORD SV Nº 158/" A FAMILIA AO PÉ DA CRUZ " - CPC APOIO AO 11ºBPM, ORD SV 160/ " PROCISSÃO DO MORRO DA CRUZ " - CPC - APOIO AO 19º BPM, ORD SV 001/ POLICIAMENTO MONTADO 
+9. Animais Empregados: 15 CAVALOS
+10.
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 04/04/2026*
+
+Oficial Supervisor CPChq CAP PM DALL’AGNOL (54) 99931 - 4411
+COPOM: Qso Funcional (51) 98437-6940
+SD PM GILVANI
+Horário: 06:00 às 18:00
+SD PM PAULO
+Horário: 18:00 às 06:00
+
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM TACIANO (51) 99896-8666
+Equipes: 05 (20 PM’s)
+Missão: Prontidão, Reserva de OCD e Combate aos CVLIs – Área do 19º BPM
+Horário: 20:00 às 02:00
+
+RESERVA I
+Cmt: TEN PM RENATO (55) 99645-6325
+Equipes: 05 (19 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 24º BPM
+Horário: 16:00 às 00:00
+
+CANIL I
+Cmt: SD PM LITRAN (51) 98539-6819
+Equipes: 01 (03 PM’s)
+Missão:  Prontidão de Faro
+Horário: 08:00 às 08:00
+
+OPERAÇÃO LITORAL
+Cmt: TEN PM DANILDO (51) 99856-9978
+Equipes: 06 (24 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 8º BPM e 42º BPM
+Horário: 19:00 às 03:00
+
+Turno:2/3 e 4/1
+1. Efetivo Total: 66
+   1.1 Oficial: 03	
+1.2 Sgt: 12		
+   1.3 SD: 51
+2. VTRs:   17
+3. Efetivo Motorizado: 66
+4. Armas de Condução Elétrica Empregadas: 17
+5. Armas Portáteis Empregadas: 66
+6. Armas Longas Empregadas: 61
+7. Local de Atuação: CRPMC/CRPM LITORAL
+8. Missões/Osv:  RESERVA DE OCD/PRONTIDÃO/CVLI/PTM
+9. Animais Empregados:  03 cães
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 04/04/2026*
+
+2°/3° T - SANTA MARIA
+Cmt: 1° Sgt PM Rafael  Qso :  (55) 99681-2375
+Equipes: 03(12 PMs)       
+Missão: Op Angico - PTM - CVLI
+Hora de emprego: 07h às 19h
+
+4°/1° T - SANTA MARIA
+Cmt: 1° Sgt PM Mendonça  Qso :  (55) 99683-8625
+Equipes: 04 (14) PMs)
+Missão: PTM - CVLI 
+Hora de emprego: 19h às 7h
+
+1.Efetivo Total: 26
+1.1. Oficial: 0
+1.2. Sgt: 07
+1.3. Sd: 19
+2. VTRs: 07
+3. Efetivo Motorizado: 26
+4. Armas de Condução Elétrica Empregadas: 07
+5. Armas de Porte Empregadas: 26
+6. Armas Longas Empregadas: 26
+7. Local de Atuação: SANTA MARIA, SILVEIRA MARTINS, IVORA.
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria) / OSV-057/P3/2BPCHQ/2026 (SANTA MARIA, SILVEIRA MARTINS, IVORA)
+9. Animais Empregados: 0
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 04/04/2026*
+
+OF SV - TEN PM Arus 54-99954-2319
+
+
+Cmt:  SGT PM Scaglia 54981476081
+Equipe: 03 (12 PM)
+Missão: OP Angico Passo Fundo, Mato Castelhano e Coxilha
+Horário de emprego: 19hs às 07h
+
+Cmt: Sgt PM Carlos 54-99900-1509
+Equipe: 03 (12 PM)
+Missão:CVLI Passo Fundo
+Horário de emprego: 19h às 07h
+
+1. Efetivo Total: 25
+1.1 Oficial: 01
+1.2 Sgt: 04
+1.3 Sd: 20
+2. VTRs: 06
+3. Efetivo Motorizado: 24
+4. Armas de Condução Elétrica Empregadas: 06
+5. Armas Portáteis Empregadas: 25
+6. Armas Longas Empregadas: 30
+7. Local de Atuação: Passo Fundo, Coxilha, Mato Castelhano 
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025, OSv 0124/SCmt-G/2026
+9. Animais Empregados:00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 04/04/2026*
+
+1º TURNO
+
+Of de SV: 00
+Aux de SV: 00
+Equipes: 02 ME
+Missão: Guarda do Batalhão 
+Data:  04/04/2026 
+Hora de emprego: 01:30 às 07:30
+Locais de atuação: Caxias do Sul
+
+23 TURNO
+
+ Of de SV: Ten Derquis (54)996135222
+Aux de SV:  2° SGT Zorzi (54)991478118
+Equipes: 05 (23 PMs )
+Missão: Guarda / OP. Ângico 
+Data: 04/04/2026
+Hora de emprego: 07:30 às 19:30 
+Locais de atuação: Caxias do Sul, Flores da Cunha, Nova Pádua 
+
+34 TURNO
+
+ Of de SV: Ten PM Da Motta 54 981133544
+Aux de SV: Sgt PM Maciel 55 99944 2832
+Equipes: 05 (20 PMs)
+Missão: Guarda BTL, CVLI
+Data: 04/04/2026 
+Hora de emprego: 14h às 02h
+Locais de atuação: Caxias do Sul.
+
+1. Efetivo Total: 45
+1.1. Oficial: 02
+1.2. Sgt: 07
+1.3. Sd: 36
+2. VTRs: 10
+3. Efetivo Motorizado: 40
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 45
+6. Armas Longas Empregadas: 41
+7. Local de Atuação: Caxias do Sul, Flores da Cunha, Nova Pádua, Garibaldi e Carlos Barbosa.
+8. Missões: Guarda ao Batalhão, Operação Ângico, Patrulhamento Tático Motorizado, CVLI, Pol ost.
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 04/04/2026*
+
+Efetivo de 2° e 3º turnos:
+
+Cmt: 2°Sgt PM Nicolas 53 98459-9930
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural (Canguçu)
+Horário de emprego: 06hs as 14hs
+
+Cmt: 1ºSgt PM Marlon 53 98459-5715
+Equipe: 03 (13PM)
+Missão: Angico (Pelotas, Morro Redondo e Arroio do Padre)
+Horário de emprego: 07hs as 19h
+
+Cmt: 2°Sgt PM Carrion 51 99737-5222
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural (Canguçu)
+Horário de emprego: 10hs as 18hs
+
+Efetivo de 4° e 1º turnos:
+
+Cmt: 1°Sgt PM Pablo 53 98111-4491
+Equipe: 02 (08PM)
+Missão: Patrulhamento Rural (Canguçu)
+Horário de emprego: 18hs as 00hs
+
+Cmt: 2ºSgt PM Rodrigues 53 99159-6262
+Equipe: 01 (05PM)
+Missão: CVLI (Pelotas)
+Horário de emprego: 19hs as 07h
+
+1. Efetivo Total: 34
+ 1.1 Oficiais: 00
+ 1.2 Sgt: 13
+ 1.3 Sd: 21
+2. VTRs: 08
+3. Efetivo Motorizado: 32
+4. Armas de Condução Elétrica Empregadas: 08
+5. Armas Portáteis Empregadas: 34
+6. Armas Longas Empregadas: 33
+7. Local de Atuação: Pelotas, Morro Redondo, Arroio do Padre e Canguçu.
+8. Missões/Osv: OSv.nº 036/P3/26, OSv.nº 037/P3/26, OSv.nº 039/P3/26.
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 04/04/2026*
+
+ OF de SV: TEN PM CORDEIRO
+ Tel: (55) 98427-3001
+
+1. MISSÃO: CVLI / URUGUAIANA  
+     Cmt: SGT PM ROSA
+ Tel: (55)  98494-7225
+ Efetivo: 01Equipes (04 PMs)  
+ Horário: 07h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: CVLI / URUGUAIANA 
+ Cmt: SGT PM LUIZ PIRES
+ Tel: (55)  98148-4355
+ Efetivo: 02 Equipes (07 PMs)  
+ Horário: 19h às 07h 
+
+   2. MISSÃO: EVENTO QUARAÍ 
+ Cmt:  TEN PM SARAIVA
+ Tel: (55) 9711-4104
+ Efetivo: 03 Equipes (12 PMs)  
+ Horário: A DEFINIR 
+                                                                                                                                                                                                                                                                                                  
+1. Efetivo Total: 24
+1.1 Oficial: 02
+1.2 Sgt: 03
+1.3 Sd: 19
+2. VTRs: 06
+3. Efetivo Motorizado: 24
+4. Armas de Condução Elétrica Empregadas: 06
+5. Armas Portáteis Empregadas: 24
+6. Armas Longas Empregadas: 16
+7. Local de Atuação: Uruguaiana/Quaraí 
+8. 8. Missões/Osv: PMT
+9. Animais Empregados: 01
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+*Previsão do dia 04/04/2026*
+
+OF de SV: CAP PM ROCHA 51 982162584 
+
+Cmt:  2° SGT PM FERREIRA 
+Equipe: 01 Equipe (10 PM)
+Missão: POLICIAMENTO MONTADO 
+Horário: QTL: 07h:00min - INSTRUÇÃO DAS 07:30h as 08:30h - INSTRUTOR SD PM MARQUES - PREL / EMB: 10h:00min - LOCAL: 11h00 – REC: 17h00 LIB:19h:00min 
+2º SGT PM: 01
+SD PM: 09
+TOTAL: 10 ME
+
+Cmt: 2° SGT PM FERREIRA 
+Equipe: 01 Equipe (03 PM)
+Missão: POLICIAMENTO MONTADO 
+Horário: QTL: 13h:00min - PREL / EMB: 14h:00min - LOCAL: 15h00 – REC: 21h00 LIB:23h:00min 
+2º SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+
+1º Esq - 4° Pel – Santa Maria
+*Cmt:*SD PM ANDERSON 
+Equipe: 01 Equipe (03PM) 
+Missão: SV DE CAVALARIÇA 
+Horário:  QTL 07h:00min - PREL/DESL 12h:30min - LOCAL 12h:40min REC 18h:30min - LIB 19h:00min 
+2º SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME  
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt:  SGT PM OLIVEIRA
+Equipe: 06 PM
+Missão: POLICIAMENTO MONTADO
+Horário: 07:00 AS 19:00
+2º SGT PM: 01
+SD PM: 05
+TOTAL: 06
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: 2ºSGT PM TAYLAN 
+Equipe: 03 PM
+Missão:  POLICIAMENTO MONTADO 
+*Horário:*QTL: 13H (INSTRUÇÃO/MANUTENÇÃO NAS DEPENDÊNCIAS) PREL/DESLC: 17H LOCAL: 18H REC: 00H LIB: 01H 
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: SD PM MAGIO 
+Equipe: 01 Equipes (01 PM)
+Missão: PERMANÊNCIA 
+Horário: das 07:00 as 19:00
+2º SGT PM: 01
+SD PM: 00
+TOTAL: 01 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: 2° SGT PM SOUTO 
+Equipe: 01 Equipe (03 PM) 
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM CADUM  
+Equipe: 01 Equipe (03 PM)
+Horário: 18:00h às 06:00h
+1° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM ROMÁRIO 
+Equipe: 01 Equipe (06 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 05
+TOTAL: 06 ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA 
+Equipe: 01 Equipe (06 PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 06
+TOTAL: 06 ME
+
+
+Efetivo Total: 45
+1.1 OFICIAL: 01
+1.2 SGT: 6
+1.3 SD: 38
+2. VTRs: 03
+3. Efetivo Motorizado: 03
+4. Armas de Condução Elétrica Empregadas: 02
+5. Armas Portáteis Empregadas: 45
+6. Armas Longas Empregadas: 00
+7. Local de Atuação: Porto Alegre/ Santa Maria/ S. Do Livramento/ Caxias do Sul/ Passo Fundo
+8. Missões: ORDEM DE SERVIÇO Nº 001/P3-RBG/2026,ORD SV N°138/P3 – RBG –POLICIAMENTO MONTADO – CRPO-PLANALTO/3° RPMON ,ORDEM DE SERVIÇO Nº 155/P3-RBG/2026 ORDEM DE SERVIÇO Nº 165/P3-RBG/2026 
+9. Animais Empregados: 21 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 05/04/2026*
+
+Oficial Supervisor CPChq CAP PM DALL’AGNOL (54) 99931 - 4411
+COPOM: Qso Funcional (51) 98437-6940
+SD PM MARIO SERGIO
+Horário: 06:00 às 18:00
+SD PM GILVANI
+Horário: 18:00 às 06:00
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM JAKSON MEDEIROS (51) 99307-3994
+Equipes: 05 (20 PM’s)
+Missão: Prontidão, Reserva de OCD e Futebol (Grêmio x Remo) – Área do 11º BPM
+Horário: 15:00 às 23:00
+
+RESERVA I
+Cmt: TEN PM NISHIMURA (53)98407-2808
+Equipes: 06 (23 PM’s)
+Missão: Futebol (Grêmio x Remo) – Área do 11º BPM
+Horário: 16:00 às 00:00
+
+CANIL I
+Cmt: SGT MACHADO (51) 98485-5824
+Equipes: 03 (10 PM’s)
+Missão: Futebol (Grêmio x Remo) – Área do 11º BPM
+Horário: 16:00 às 00:00
+Missão:  Prontidão de Faro
+Horário: 08:00 às 08:00
+
+BATEDORES
+Cmt: SGT LUIS (51) 98027-3630
+Equipes: 10 (10 PMs)
+Missão: Escolta e Futebol (Grêmio x Remo) – Área do 11º BPM
+Horário: 15:00 às 23:00
+
+OPERAÇÃO LITORAL
+Cmt: TEN PM DANILDO (51) 99856-9978
+Equipes: 06 (24 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 8º BPM e 42º BPM
+Horário: 19:00 às 03:00
+
+Data: 05/04/2026
+Turno:2/3 e 4/1
+1. Efetivo Total: 75
+   1.1 Oficial: 03	
+1.2 Sgt: 17		
+   1.3 SD: 55
+2. VTRs:   18 + 08 motos
+3. Efetivo Motorizado: 75
+4. Armas de Condução Elétrica Empregadas: 18
+5. Armas Portáteis Empregadas: 18
+6. Armas Longas Empregadas: 59
+7. Local de Atuação: CRPMC/CRPM LITORAL
+8. Missões/Osv:  RESERVA DE OCD/PRONTIDÃO/CVLI/PTM
+9. Animais Empregados:  03 cães
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 05/04/2026*
+
+2° Choque
+Cmt: 1° Sgt PM Mendonça  Qso :  (55) 99683-8625
+Equipes: 04(14 PMs)       
+
+Missão: CVLI
+Data: 04/04/26
+Hora de emprego: 19h às 07h
+
+VTR/EQUIPE: 14600 Santa Maria
+CMT:  1º SGT PM Mendonça
+Id Func: 2915162
+Qso: (55) 99683-8625
+MOT: SD PM Freitas
+PTR 3: SD PM PELLENS
+PTR 4: 
+
+VTR/EQUIPE: 14617  
+CMT:  2° SGT PM Trindade
+Id Func: 2783452
+Qso: (55) 99730-8563
+MOT: Sd PM Cruz
+PTR 3: Sd PM Motta
+PTR 4: 
+
+VTR/EQUIPE: 15174 
+CMT:  2° SGT PM Scoti
+Id Func: 3161579
+Qso: (51) 99562-3218 
+MOT: Sd PM Devicares 
+PTR 3: Sd PM Alexsander
+PTR 4: Sd PM Sanches
+
+*VTR/EQUIPE: * 13103
+CMT:   SD PM Michele
+Id Func: 
+Qso: 55 
+MOT: SD PM Lopes 
+PTR 3: SD PM Silva 
+PTR 4:  SD PM Nunes
+
+  1.Efetivo Total: 14
+     1.1. Oficial: 00
+     1.2. Sgt: 03
+     1.3.  Sd: 11
+   2. VTRs: 04
+3. Efetivo Motorizado: 14
+4. Armas de Condução Elétrica Empregadas: 04
+5. Armas de Porte Empregadas: 14
+6. Armas Longas, Empregadas: 14
+7. Local de Atuação:  Santa Maria 
+8. Missões:  PTR
+9. Animais  Empregadas: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 05/04/2026*
+
+OF SA  - TEN PM Arus 54 99954-2319
+
+Cmt:  SGT PM Mesavila 54 99932-8054
+Equipe: 03 (12 PM)
+Missão: OP Angico Passo Fundo, Mato Castelhano e Coxilha
+Horário de emprego: 19hs às 07h
+
+Cmt: SGT PM Scaglia 54 98147-6081
+Equipe: 02 (08 PM)
+Missão: CVLI Passo Fundo
+Horário de emprego: 19h às 07h
+
+1. Efetivo Total: 20
+1.1 Oficial: 00
+1.2 Sgt: 04
+1.3 Sd: 20
+2. VTRs: 05
+3. Efetivo Motorizado: 20
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas Portáteis Empregadas: 20
+6. Armas Longas Empregadas: 25
+7. Local de Atuação: Passo Fundo, Coxilha, Mato Castelhano 
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025, OSv 0124/SCmt-G/2026
+9. Animais Empregados:00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 02/04/2026*
+
+1º TURNO
+
+Of de SV: 00
+Aux de SV: 00
+Equipes: 02 ME’s
+Missão: Guarda do Batalhão 
+Data: 05/04/2026 
+Hora de emprego: 01:30 às 07:30
+Locais de atuação: Caxias do Sul
+
+23 TURNO
+
+ Of de SV: Ten Derquis (54)996135222
+Aux de SV:  2° SGT Zorzi (54)991478118
+Equipes: 05 (19PMs)
+Missão: Guarda / OP. Ângico 
+Data: 05/04/2026
+Hora de emprego: 07:30 às 19:30 
+Locais de atuação: Caxias do Sul, Flores da Cunha, Nova Pádua 
+
+4 TURNO
+
+ Of de SV: 00
+Aux de SV: 00
+Equipes: 02 ME’s;
+Missão: Guarda BTL; 
+Data: 05/04/2026; 
+Hora de emprego: 19:30 às 01:30
+Locais de atuação: Caxias do Sul.
+
+1. Efetivo Total: 29
+1.1. Oficial: 01
+1.2. Sgt: 05
+1.3. Sd: 19
+2. VTRs: 05
+3. Efetivo Motorizado: 19
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas de Porte Empregadas: 25
+6. Armas Longas Empregadas: 22
+7. Local de Atuação: Caxias do Sul, Flores da Cunha, Nova Pádua.
+8. Missões: Guarda ao Batalhão, Operação Ângico, Patrulhamento Tático Motorizado, CVLI, Pol ost.
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 05/04/2026*
+
+OF de SV: 
+Data: 05/04/2026
+
+Efetivo de 2° e 3º turnos:
+
+Cmt: 2°Sgt PM Nicolas 53 98459-9930
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural (Canguçu)
+Horário de emprego: 06hs as 14hs
+
+Cmt: 1°Sgt PM Marlon 53 98459-5715
+Equipe: 04 (16PM)
+Missão: CVLI SVP
+Horário de emprego: 07hs
+
+Cmt: 1ºSgt PM Cristine 51 98223-1040
+Equipe: 03 (11PM)
+Missão: Angico (Pelotas, Morro Redondo e Arroio do Padre)
+Horário de emprego: 07hs as 19h
+
+Cmt: 2°Sgt PM Carrion 51 99737-5222
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural (Canguçu)
+Horário de emprego: 10hs as 18hs
+
+Cmt: 2°Sgt PM Johnny 51 99737-5222
+Equipe: 01 (09PM)
+Missão: Futebol
+Horário de emprego: 11:30hs as 19:30hs
+
+Efetivo de 4° e 1º turnos:
+
+Cmt: 1°Sgt PM Pablo 53 98111-4491
+Equipe: 02 (08PM)
+Missão: Patrulhamento Rural (Canguçu)
+Horário de emprego: 18hs as 00hs
+
+1. Efetivo Total: 52
+ 1.1 Oficiais: 00
+ 1.2 Sgt: 22
+ 1.3 Sd: 30
+2. VTRs: 12
+3. Efetivo Motorizado: 52
+4. Armas de Condução Elétrica Empregadas: 08
+5. Armas Portáteis Empregadas: 52
+6. Armas Longas Empregadas: 49
+7. Local de Atuação: Pelotas, Morro Redondo, Arroio do Padre, Canguçu e Santa Vitoria do Palmar 
+8. Missões/Osv: OSv.nº 036/P3/26, OSv.nº 037/P3/26, OSv.nº 039/P3/26. OSv.nº 043/P3/26, OSv.nº 047/P3/26
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6°BPChq*
+*Previsão do dia 05/04/2026*
+
+INFORMAÇÕES GERAIS
+* DATA: 05 de abril de 2026  
+* OF de SV: TEN PM SARAIVA
+* Tel: (55) 99711-4104
+
+EQUIPES E EMPREGO
+
+1. MISSÃO: PRONT / URUGUAIANA  
+     Cmt: SD PM PACHECO
+* Tel: (55)  99666-5926
+* Efetivo: 01Equipes (02PMs)  
+* Horário: 07h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: CVLI / URUGUAIANA 
+* Cmt: SGT PM ROSA
+* Tel: (51)  98494-7225
+* Efetivo: 01 Equipes (05 PMs)  
+* Horário: 19h às 07h 
+                                                                                                                                                                                                                                                                                                
+QUADRO DE MEIOS
+
+1. Efetivo Total: 13
+1.1 Oficial: 01
+1.2 Sgt: 02
+1.3 Sd: 10
+2. VTRs: 02
+3. Efetivo Motorizado: 05
+4. Armas de Condução Elétrica Empregadas: 02
+5. Armas Portáteis Empregadas: 12
+6. Armas Longas Empregadas: 03
+7. Local de Atuação: Uruguaiana
+8. 8. Missões/Osv: PMT
+9. Animais Empregados: 01
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+*Previsão do dia 05/04/2026*
+
+OF de SV: CAP PM ROCHA 51 982162584 
+MOT OF SV: *
+VTR: **
+Data: 05/04/2026
+
+Cmt:  CAP PM ROCHA 51 982162584 
+Equipe: 01 Equipe (13 PM)
+Missão: FUTEBOL GRÊMIO X REMO
+Horário: QTL: 15h:00min  - LIB:03h:00min 
+CAP PM: 01
+2º SGT PM: 01
+SD PM: 11
+TOTAL: 13 ME
+
+Cmt: 2° SGT PM SOUTO 
+Equipe: 01 Equipe (09 PM)
+Missão: SHOW ROGÉRIO REIS - 18ºBPM
+Horário: QTL: 15h:00min - LIB:03h:00min 
+2º SGT PM: 01
+SD PM: 08
+TOTAL: 09 ME
+
+
+1º Esq - 4° Pel – Santa Maria
+*Cmt:*SD PM ANDERSON 
+Equipe: 01 Equipe (03PM) 
+Missão: POLICIAMENTO MONTADO
+Horário:  QTL 07h:00min - PREL/DESL 12h:30min - LOCAL 12h:40min REC 18h:30min - LIB 19h:00min 
+2º SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME  
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt:  SGT PM OLIVEIRA
+Equipe: 06 PM
+Missão: POLICIAMENTO MONTADO
+Horário: 07:00 AS 19:00
+2º SGT PM: 01
+SD PM: 05
+TOTAL: 06
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: 2ºSGT PM TAYLAN 
+Equipe: 03 PM
+Missão:  POLICIAMENTO MONTADO 
+*Horário:*QTL: 13H (INSTRUÇÃO/MANUTENÇÃO NAS DEPENDÊNCIAS) PREL/DESLC: 17H LOCAL: 18H REC: 00H LIB: 01H 
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: SD PM BASTOS 
+Equipe: 01 Equipes (01 PM)
+Missão: PERMANÊNCIA 
+Horário: das 07:00 as 19:00
+2º SGT PM: 01
+SD PM: 00
+TOTAL: 01 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM ROLINO
+Equipe: 01 Equipe (03 PM) 
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM CADUM  
+Equipe: 01 Equipe (03 PM)
+Horário: 18:00h às 06:00h
+1° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM ROMÁRIO 5198577649
+Equipe: 01 Equipe (06 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 05
+TOTAL: 06 ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA 51981377784
+Equipe: 01 Equipe (06 PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 06
+TOTAL: 06 ME
+
+Efetivo Total: 53
+1.1 OFICIAL: 01
+1.2 SGT: 5
+1.3 SD: 47
+2. VTRs: 03
+3. Efetivo Motorizado: 05
+4. Armas de Condução Elétrica Empregadas: 04
+5. Armas Portáteis Empregadas: 53
+6. Armas Longas Empregadas: 00
+7. Local de Atuação: Porto Alegre/ Santa Maria/ S. Do Livramento/ Caxias do Sul/ Passo Fundo
+8. Missões: ORDEM DE SERVIÇO Nº 001/P3-RBG/2026,ORD SV N°138/P3 – RBG –POLICIAMENTO MONTADO – CRPO-PLANALTO/3° RPMON ,ORDEM DE SERVIÇO Nº 163/P3-RBG/2026 ORDEM DE SERVIÇO Nº 161/P3-RBG/2026 
+9. Animais Empregados: 29 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1°BPChq*
+Previsão do dia 06/04/2026
+
+Oficial Supervisor CPChq CAP PM BARCELOS (55) 99647-3353
+COPOM: Qso Funcional (51) 98437-6940
+SD PM KOKOVICH
+Horário: 06:00 às 18:00
+SD PM MARIO SERGIO
+Horário: 18:00 às 06:00
+
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM RENATO (55) 99645-6325
+Equipes: 05 (20 PM’s)
+Missão: Prontidão, Reserva de OCD e CVLI Área do 9ºBPM/11ºBPM 
+Horário: 20:00 às 02:00
+
+CANIL I
+Cmt: SGT PM FREITAS (53) 99906-8661
+Equipes: 04 (13 PM’s)
+Missão: CVLI Área do 1ºBPM 
+Horário: 18:00 às 00:00
+
+CANIL II
+Cmt: SD PM GONÇALVES (51) 99351-9664
+Equipes: 01 (03 PM’s)
+
+Missão: Prontidão 
+Horário: 08:00 às 08:00
+
+BATEDORES
+Cmt: SGT PM DANTAS (51) 98446-7540
+
+Equipes: 10 (10 PMs)
+Missão: Prontidão
+Horário: 08:00 às 20:00
+
+PATRES MATUTINA
+Cmt: SGT PM MEDRICK (51) 99819-5154
+Equipes: 04 (15 PM’s)
+Missão: CVLI Área do 19ºBPM 
+Horário: 09:00 às 17:00
+
+PATRES VESPERTINA
+Cmt: SGT PM MEDRICK (51) 99819-5154
+Equipes: 03 (12 PM’s)
+Missão: CVLI Área do 19ºBPM 
+Horário: 17:00 às 22:00
+
+OPERAÇÃO ESCOLA SEGURA I
+Cmt: SGT PM DERNARDIN (51) 98330-9351
+Equipes: 01 (04 PMs)
+Missão: Operação Escola Segura 
+Horário: 06:30 às 12:30
+
+OPERAÇÃO ESCOLA SEGURA II
+Cmt: SGT PM MACHADO (51) 98485-5824
+Equipes: 01 (04 PMs)
+Missão: Operação Escola Segura 
+Horário: 12:30 às 18:30
+
+
+DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS
+	
+Data: 06/04/2026
+Turno:2/3 e 4/1
+1. Efetivo Total: 69
+   1.1 Oficial: 01	
+1.2 Sgt: 13		
+   1.3 SD: 55
+2. VTRs:  14 + 10 motos
+3. Efetivo Motorizado: 69
+4. Armas de Condução Elétrica Empregadas: 15
+5. Armas Portáteis Empregadas: 69
+6. Armas Longas Empregadas: 51
+7. Local de Atuação: CRPMC
+8. Missões/Osv:  RESERVA DE OCD/PRONTIDÃO/CVLI/PTM
+9. Animais Empregados:  13 cães
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2°BPChq*
+2°/3° T - SANTA MARIA
+Cmt:  1° Ten PM Andrea (55) 99703-4733
+Equipes: 06 (21 PMs)       
+Missão: Op Angico - PTM - CVLI
+Hora de emprego: 07h às 19h
+
+--------------------------------------------
+
+3° T - SANTA MARIA
+Cmt:  1° Sgt PM Menezes (55) 99119-9964
+Equipes: 01 (03 PMs)       
+Missão: PTM - CVLI
+Hora de emprego: 13h às 19h
+
+--------------------------------------------
+4°/1° T - SANTA MARIA
+2° Choque
+Cmt: 1° Sgt PM kulmann (55) 99946-6614
+Equipes: 06 (21) PMs
+Missão: PTM - CVLI 
+Hora de emprego: 19h às 7h
+
+----------------------------------------------
+
+1.Efetivo Total: 45
+1.1. Oficial: 01
+1.2. Sgt: 06
+1.3. Sd: 38
+2. VTRs: 13
+3. Efetivo Motorizado: 45
+4. Armas de Condução Elétrica Empregadas: 13
+5. Armas de Porte Empregadas: 45
+6. Armas Longas Empregadas: 13
+7. Local de Atuação: SANTA MARIA, SILVEIRA MARTINS, IVORA.
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria) / OSV-057/P3/2BPCHQ/2026 (SANTA MARIA, SILVEIRA MARTINS, IVORA)
+9. Animais Empregados: 02
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3°BPChq*
+OF SA 23T - Ten PM Edjacson 54991054748
+OF SA 23T - Ten PM Siqueira 54991723368
+
+
+Cmt: Ten PM Edjacson 54991054748
+Equipe: 03 (12 PM)
+Missão: OP Angico Passo Fundo, Mato Castelhano e Coxilha
+Horário de emprego: 07hs às 19h
+
+Cmt: Ten PM Siqueira 54991723368
+Equipe: 03 (12 PM)
+Missão: CVLI Passo Fundo
+Horário de emprego: 19h às 07h
+
+Cmt: Ten PM Rudinei 54991521460
+Equipe: 05 (20 PM)
+Missão: Operação XAPARI - IBAMA
+Horário de emprego: deslocamento Três Passos
+
+1. Efetivo Total: 44
+1.1 Oficial: 03
+1.2 Sgt: 07
+1.3 Sd: 34
+2. VTRs: 11
+3. Efetivo Motorizado: 44
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas Portáteis Empregadas: 44
+6. Armas Longas Empregadas: 55
+7. Local de Atuação: Passo Fundo, Coxilha, Mato Castelhano, Três Passos
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025, OSv 0124/SCmt-G/2026
+9. Animais Empregados:00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°BPChq*
+1º TURNO
+
+Of de SV: 00
+Aux de SV: 00
+Equipes: 02 ME’s
+Missão: Guarda do Batalhão 
+Data: 06/04/2026 
+Hora de emprego: 01:30 às 07:30
+Locais de atuação: Caxias do Sul
+
+23 TURNO
+
+ Of de SV: Ten Ansinello 54 996652767
+Aux de SV:  2° SGT Augusto (54) 996808036
+Equipes: 05 (20PMs)
+Missão: Guarda / OP. Ângico 
+Data: 06/04/2026
+Hora de emprego: 07:30 às 19:30 
+Locais de atuação: Caxias do Sul, Flores da Cunha, Nova Pádua 
+
+34 TURNO
+
+ Of de SV: Sgt Deivid 54 985044334
+Aux de SV: Sgt Petini 54 999579389
+Equipes: 06 equipes, 24 ME’s;
+Missão: Guarda BTL; Patrulhamento Tático Motorizado/CVLI 
+Data: 06/04/2026; 
+Hora de emprego: 14:00 às 02:00
+Locais de atuação: Caxias do Sul.
+
+1. Efetivo Total: 46
+1.1. Oficial: 02
+1.2. Sgt: 05
+1.3. Sd: 39
+2. VTRs: 11
+3. Efetivo Motorizado: 44
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas de Porte Empregadas: 46
+6. Armas Longas Empregadas: 53
+7. Local de Atuação: Caxias do Sul, Flores da Cunha, Nova Pádua.
+8. Missões: Guarda ao Batalhão, Operação Ângico, Patrulhamento Tático Motorizado, CVLI, Pol ost.
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5°BPChq*
+Efetivo de 2° e 3º turnos
+
+Cmt: SGT PM Pablo 54 98111-4491
+Equipe: 01 (04PM) 
+Missão: ANGICO – Pelotas
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Borges 53 98152-2646
+Equipe: 01 (04PM) 
+Missão: ANGICO – Morro Redondo
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Martins 55 99101-1521
+Equipe: 01 (04PM) 
+Missão: ANGICO –Arroio do Padre
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Velasques 55 98102-5834
+Equipe: 01 (03PM) 
+Missão: Patrulha Escolar
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Marlon 54 98459-5715
+Equipe: 02 (08PM) 
+Missão: Policiamento Comunitário Rural – Santa Vitória do Palmar
+Horário de emprego: 07hs as 19hs
+
+
+Efetivo de 4° e 1º turnos
+
+Cmt: SGT PM Nicolas 53 98459-9930
+Equipe: 02 (06PM) 
+Missão: CVLI Pelotas
+Horário de emprego: 19hs as 07hs
+
+Cmt: SGT PM Vitola 54 98118-8373
+Equipe: 02 (08PM) 
+Missão: Policiamento Comunitário Rural – Santa Vitória do Palmar
+Horário de emprego: 19hs as 07hs
+
+1. Efetivo Total: 37
+ 1.1 Oficial: 00
+ 1.2 Sgt: 10
+ 1.3 Sd: 27
+2. VTRs: 10
+3. Efetivo Motorizado: 35
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas Portáteis Empregadas: 37
+6. Armas Longas Empregadas: 35
+7. Local de Atuação: Pelotas, Morro Redondo, Arroio do Padre, Santa Vitória do Palmar
+8. Missões/Osv: OSv n° 039/P3/5°BPCHQ/26, OSv n° 036/P3/5°BPCHQ/25, OSv n° 037/P3/5°BPCHQ/25
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° Choque*
+* OF de SV: CAP PM DOUGLAS BORGES
+* Tel: (69) 999409148
+
+1. MISSÃO: CVLI/URUGUAIANA  
+     Cmt: SGT PM MONTANHA
+* Tel: (55) 999567675
+* Efetivo: 03 Equipes (10 PMs)  
+* Horário: 13h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: OP RIB/URUGUAIANA 
+* Cmt: SGT PM SAULO
+* Tel: (55) 996850125
+* Efetivo: 01 Equipe (06 PMs)  
+* Horário: 07h às 19h
+
+3. MISSÃO: CVLI/URUGUAIANA  
+     Cmt: SD PM ORLANDO
+* Tel: (51) 997897687
+* Efetivo: 02 Equipes (06 PMs)  
+* Horário: 19h às 01h 
+
+1. Efetivo Total: 22
+1.1 Oficial: 01
+1.2 Sgt: 03
+1.3 Sd: 18
+2. VTRs: 06
+3. Efetivo Motorizado: 21
+4. Armas de Condução Elétrica Empregadas: 06
+5. Armas Portáteis Empregadas: 22
+6. Armas Longas Empregadas: 12
+7. Local de Atuação: Uruguaiana
+8. 8. Missões/Osv: PTM e OP RIB
+9. Animais Empregados: 01
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+OF de SV: CAP BM ROCHA 51 8216-2584
+MOT OF SV: XXX
+VTR: XXX
+Data: 06/04/2026
+
+Cmt:  2°SGT PM VEIGA 51 8544-5901
+Equipe: 01 (09)
+Missão: ORD SV 164/ POLICIAMENTO MONTADO ESCOLAS
+Horário: QTL:07h00 PREL/EMB: 07h30 LOCAL: 08h00 REC: 13h00  15H LIB: 19h00 
+2°SGT PM: 01
+SD PM: 08
+TOTAL:09ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: 2°SGT PM ANTÔNIO 55 9163-4747
+Equipe: 01 (03)
+Missão: ORD SV 151/POLOST MONTADO PARQUES
+Horário: QTL 07h:00m PREL/DESL 12h:30m LOCAL 12h:40m REC 18h:30m LIB 19h:00m
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt: SD PM BIDART 51 98563-8532
+Equipe: 01 (03)
+Missão: ORD SV 001/POLOST MONTADO L DIVISÓRIA ÁREA CENTRAL
+Horário: QTL 07h PREL/DESL 08:00h LOCAL 08:00h REC 14:00h LIB 19:30h
+2º SGT PM: 00
+SD PM: 03
+TOTAL: 03ME
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: SD PM SCHUSTER 54 9986-6471
+Equipe: 01 (04)
+Missão: ORD SV 138/POLOST MONTADO 3RPMON
+Horário: QTL: 08H PREL/DESLC: 12:30H LOCAL: 13H REC: 19H LIB: 20H 
+2º SGT PM: 00
+SD PM: 04
+TOTAL: 04ME
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: SD PM MAGIO 54 9997-5887
+Equipe: 01 (03)
+Missão: ORD SV 001/POLOST MONTADO CENTRO
+Horário: QTL: 08h PREL/DESL: 13h REC: 19h LIB: 20h 
+2º SGT PM: 00
+SD PM: 03
+TOTAL: 03ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM COLLARES 53 8100-2566
+Equipe: 01 (05)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 04
+TOTAL: 05ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA 51 8137-7784
+Equipe: 01 (05)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 05
+TOTAL: 05 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM JOSIANE 51 9937-6207
+Equipe: 01 (03 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM LENHART 51 9589-2125
+Equipe: 01 (03PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+Efetivo Total:40
+1.1 OFICIAL: 01
+1.2 SGT:03
+1.3 SD: 36
+2. VTRs: 02
+3. Efetivo Motorizado: 03
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas Portáteis Empregadas: 40
+6. Armas Longas Empregadas: 01
+7. Local de Atuação: Porto Alegre/Santa Maria/S. Do Livramento/Passo Fundo/Caxias do Sul
+8. Missões: ORD SV 138/POLOST MONTADO 3RPMON, ORD SV 001/POLOST MONTADO CENTRO, ORD SV 164/ POLICIAMENTO MONTADO ESCOLAS, ORD SV 151/POLOST MONTADO PARQUES, ORD SV 001/POLOST MONTADO L DIVISÓRIA ÁREA CENTRAL
+9. Animais Empregados: 19 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 07/04/2026*
+
+Oficial Superior CPChq 
+MAJ PM BELAVER (51) 99969-8877
+
+COPOM: Qso Funcional (51) 98437-6940
+SD PM GLASENAP
+Horário: 07:00 às 19:00
+SD PM KOKOVICH
+Horário: 19:00 às 07:00
+
+PELOTÃO PRONTIDÃO
+Cmt: TEN PM NISHIMURA (53) 98407-2808
+Equipes: 05 (20 PM’s)
+Missão: Prontidão, Reserva de OCD e Combate aos CVLIs - Área do 20ºBPM
+Horário: 20:00 às 02:00
+
+CANIL I
+Cmt: SD PM SAVIONEK (51) 98539-0859
+Equipes: 01 (03PMs)
+Missão:  Prontidão de Faro  
+Horário: 08:00 às 08:00
+
+CANIL II
+Cmt: SGT PM FREITAS (53) 99906-8661
+Equipes: 03 (11 PMs)
+Missão:  PTM, Combate aos CVLIs – Área do 21°BPM
+Horário: 18:00 às – 00:00
+
+BATEDORES
+Cmt: TEN PM RODRIGUES FERREIRA (51) 99156-7477
+Equipes: 10 (10 PM’s)
+Missão: Prontidão de Escolta 
+Horário: 08:00 às 20:00
+
+PATRES MATUTINA
+Cmt: TEM PM DANILDO (51) 99856-9978
+Equipes: 06 (24 PM’s) 
+Missão: PTM, Combate aos CVLIs – Área do 1° BPM
+Horário: 11:00 às 17:00
+
+PATRES VESPERTINA
+Cmt: TEM PM DANILDO (51) 99856-9978
+Equipes: 03 (12 PMs) 
+Missão: PTM, Combate aos CVLIs – Área do 19° BPM
+Horário: 17:00 às 22:00
+
+PATRES VESPERTINA
+Cmt: SGT PM MÉDRICK (51) 99819-5154
+Equipes: 05 (19 PMs) 
+Missão: PTM, Combate aos CVLIs – Área do 21° BPM
+Horário: 15:00 às 23:00
+
+_ APOIO CRPM-L (PATRES)_
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 03 (12 PMs)
+Missão: PTM, Combate aos CVLIs – Área do 8º BPM
+Horário: - às -
+
+OPERAÇÃO ESCOLA SEGURA I
+Cmt: SGT PM CRISTIANE (51) 98400-2454
+Equipes: 01 (03 PMs)
+Missão: Operação Escola Segura 
+Horário: 06:30 às 12:30
+
+OPERAÇÃO ESCOLA SEGURA II
+Cmt: SD PM SCHNEIDER (51) 98162-7610
+Equipes: 01 (03 PMs)
+Missão: Operação Escola Segura 
+Horário: 12:30 às 18:30
+
+Turno: 2/3 e 4/1
+1. Efetivo Total: 104
+1.1 Oficial:03
+1.2 Sgt: 18
+1.3 SD: 83
+2. VTRs: 25 + 10 Motos
+3. Efetivo Motorizado: 104
+4. Armas de Condução Elétrica Empregadas: 25
+5. Armas Portáteis Empregadas: 104
+6. Armas Longas Empregadas: 78
+7. Local de Atuação: CPC 1ºBPM, 19BPM, 20ºBPM, 21ºBPM – Litoral 8ºBPM 
+8. Missões/Osv: PRONTIDÃO / CVLI / PTM / OP. LITORAL/OP. ESCOLA SEGURA
+9. Animais Empregados: 14 cães
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 07/04/2026*
+
+2°/3° T - SANTA MARIA/SILVEIRA MARTINS/IVORÁ
+Cmt: 1° Sgt PM Rafael (55) 99681-2375
+Equipes: 04 (15 PMs)
+Missão: Op. Angico (OSV - 057)
+Hora de emprego: 07h às 19h
+
+2° T - SANTA MARIA
+Cmt: 1° Sgt PM Racki (55) 99946-6614
+Equipes: 01 (03 PMs)
+Missão: Op Escola Segura (OSV - 053)
+Hora de emprego: 07h às 19h
+
+2°/3° T - SÃO GABRIEL
+Cmt: Sd PM Bittencourt (55) 99946-6614
+Equipes: 01 (03 PMs)
+Missão: Ação Integrada EB - Canil (OSV - 055)
+Hora de emprego: 07h às 19h
+
+4° T - SANTA MARIA
+Cmt: 1° Sgt PM Menezes  (55) 99119-9964
+Equipes: 01 (04 PMs)
+Missão: Patrulhamento Tático com Cães
+Hora de emprego: 19h às 01h
+
+4°/1° T - SANTA MARIA
+Cmt: 1° Ten PM Andrea (55) 99703-4733
+Equipes: 04 (16 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 19h às 07h
+
+1.Efetivo Total: 41
+1.1. Oficial: 01
+1.2. Sgt: 07
+1.3. Sd: 33
+2. VTRs: 11
+3. Efetivo Motorizado: 41
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas de Porte Empregadas: 41
+6. Armas Longas Empregadas: 41
+7. Local de Atuação: SANTA MARIA, SILVEIRA MARTINS, IVORÁ, SÃO GABRIEL
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria), OSV-057/P3/2BPCHQ/2026 (Op Angico Fase LVII), OSV-055/P3/2BPCHQ/2026 (Ação Integrada EB - Canil), OSV-053/P3/2BPCHQ/2026 (Op Escola Segura)
+9. Animais Empregados: 06
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 07/04/2026*
+
+OF SA 23T - Ten PM Arus  54-99954-2319
+OF SA 23T - Ten PM Edijackson 54-99105-4748
+
+Cmt: Ten PM Arus 54-99954-2319
+Equipe: 03 (12 PM)
+Missão: OP Angico Passo Fundo, Mato Castelhano e Coxilha
+Horário de emprego: 07hs às 19h
+
+Cmt: Ten PM Edijackson 54-99105-4748
+Equipe: 02 (08 PM)
+Missão: CVLI Passo Fundo e Carazinho
+Horário de emprego: 19h às 07h
+
+Cmt: Ten PM Rudinei 54-99152-1460
+Equipe: 05 (20 PM)
+Missão: Operação XAPARI - IBAMA
+Horário de emprego: A combinar
+
+1. Efetivo Total: 40
+1.1 Oficial: 03
+1.2 Sgt: 07
+1.3 Sd: 30
+2. VTRs: 10
+3. Efetivo Motorizado: 40
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas Portáteis Empregadas: 40
+6. Armas Longas Empregadas: 50
+7. Local de Atuação: Passo Fundo, Carazinho, Coxilha, Mato Castelhano, Três Passos
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025, OSv 0124/SCmt-G/2026
+9. Animais Empregados:00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 07/04/2026*
+
+Sd. PM Mânica 54981105700
+Equipes:  (03 PMs)
+Missão: Guarda Batalhão.
+Hora de emprego: 01:30 às 07:30.
+Locais de atuação: Caxias do Sul
+
+23º TURNO
+Of. de SV: Ten. PM Motta 54981133544
+Aux. de SV: Sgt PM Kener 51999562470
+Equipes: 05 (20 PMs)
+Missão: Guarda Batalhão, OP. Angico.
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul, Flores da Cunha e Nova Pádua.
+
+34º TURNO 
+Of. de SV: Ten PM Ansinello 54 996652767
+Aux. de SV: Sgt PM Schuller 54 996941980
+Equipes: 04 (17 PMs)
+Missão: Guarda Batalhão, CVLI
+Hora de emprego: 14:00 às 02:00
+Locais de atuação: Bento Gonçalves, Carlos Barbosa e Garibaldi
+
+1. Efetivo Total: 45
+1.1. Oficial: 02
+1.2. Sgt: 5
+1.3. Sd: 38
+2. VTRs: 9
+3. Efetivo Motorizado: 37
+4. Armas de Condução Elétrica Empregadas: 9
+5. Armas de Porte Empregadas: 45
+6. Armas Longas Empregadas: 42
+7. Local de Atuação: Caxias do Sul, Flores da Cunha, Nova Pádua, Bento Gonçalves, Carlos Barbosa e  Garibaldi.
+8. Missões: Guarda do Batalhão, Patrulhamento Tático Motorizado, CVLI e Angico.
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 07/04/2026*	
+
+Efetivo de 2°e 3° turnos:
+
+Cmt: 1°Ten PM Rodrigo 53 98417-5709
+Equipe: 03 (12PM)
+Missão: Angico Pelotas, Morro Redondo, Arroio do Padre
+Horário de emprego: 07hs as 19hs
+
+Cmt: 1°Sgt PM Marlon 53 98459-5715
+Equipe: 04 (16PM)
+Missão: Patrulhamento Rural Santa Vitória do Palmar
+Horário de emprego: 24hs
+
+Cmt: 2°Sgt PM Carrion 51 99737-5222
+Equipe: 01 (03PM)
+Missão: Fecha Quartel Pelotas
+Horário de emprego: 07hs as 19hs
+
+Efetivo de 4° e 1° turnos:
+
+Cmt: 1°Sgt PM Pablo 53 98111-4491
+Equipe: 02 (06PM)
+Missão: CVLI Pelotas
+Horário de emprego: 19hs as 07hs
+
+1. Efetivo Total: 41
+   1.1 Oficial: 01
+   1.2 Sgt: 13
+   1.3 Sd: 27
+2. VTRs: 10
+3. Efetivo Motorizado: 37
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas Portáteis Empregadas: 41
+6. Armas Longas Empregadas: 39
+7. Local de Atuação: Pelotas, Morro Redondo, Arroio do Padre, Santa Vitória do Palmar
+8. Missões/Osv: OSv nº 033/P3/26, OSv nº 037/P3/26, OSv nº 039/P3/26, OSv nº 047/P3/26
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 07/04/2026*
+
+OF de SV: TEN PM MARCIO
+ Tel: (55)  9731-3143
+
+MISSÃO: CVLI/URUGUAIANA  
+Cmt: SGT PM LUIZ PIRES
+Tel: (55) 8148-4355
+ Efetivo: 05 Equipes (15 PMs)  
+ Horário: 13h às 19h                                                                                                                                                                                                                                                                                      
+
+MISSÃO: OP RIB/URUGUAIANA 
+Cmt: SGT PM SAULO
+Tel: (55) 996850125
+Efetivo: 02 Equipe (06 PMs)  
+ Horário: 07h às 19h
+
+MISSÃO: CVLI/URUGUAIANA  
+ Cmt: SGT PM MONTANHA
+ Tel: (55)  9956-7675
+ Efetivo: 03 Equipes (10 PMs)  
+ Horário: 19h às 01h 
+
+1. Efetivo Total: 32
+1.1 Oficial: 01
+1.2 Sgt: 04
+1.3 Sd: 27
+2. VTRs: 10
+3. Efetivo Motorizado: 32
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas Portáteis Empregadas: 32
+6. Armas Longas Empregadas: 24
+7. Local de Atuação: Uruguaiana
+8. 8. Missões/Osv: PTM e OP RIB
+9. Animais Empregados: 01
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+*Previsão do dia 07/04/2026*
+
+OF de SV: CAP PM ROTTA 51 9564-7223
+
+Cmt:  2°SGT PM VEIGA 51 8544-5901
+Equipe: 01 (09)
+Missão: ORD SV 164/ POLICIAMENTO MONTADO ESCOLAS
+Horário: DAS 09H00MIN ÀS 21H00MIN 
+2°SGT PM: 01
+SD PM: 08
+TOTAL:09ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: 2°SGT PM ANTÔNIO 55 9163-4747
+Equipe: 01 (02)
+Missão: AUX CAVALARIÇO 
+Horário:  DAS 07h:00m ÀS 19H:00m
+2º SGT PM: 01
+SD PM: 01
+TOTAL: 02ME
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt: SD PM BIDART 51 98563-8532
+Equipe: 01 (03)
+Missão: SV DE CAVALARIÇO 
+Horário: DAS 06H00MIN ÀS 18H00MIN 
+2º SGT PM: 00
+SD PM: 01
+TOTAL: 01ME
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: SD PM SCHUSTER 54 9986-6471
+Equipe: 01 (04)
+Missão: ORD SV 138/POLOST MONTADO 3RPMON
+Horário: QTL: 08H PREL/DESLC: 12:30H LOCAL: 13H REC: 19H LIB: 20H 
+2º SGT PM: 00
+SD PM: 03
+TOTAL: 03ME
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: 2º SGT PM PIRES 54 8149-5556 
+Equipe: 01 (03)
+Missão: ORD SV 001/POLOST MONTADO CENTRO
+Horário: QTL: 08h PREL/DESL: 13h REC: 19h LIB: 20h 
+2º SGT PM: 02
+SD PM: 01
+TOTAL: 03ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM COLLARES 53 8100-2566
+Equipe: 01 (05)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 04
+TOTAL: 05ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA 51 8137-7784
+Equipe: 01 (05)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 05
+TOTAL: 05 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM JOSIANE 51 9937-6207
+Equipe: 01 (03 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: 2º SGT PM VERONICA 51 9273-3309 
+Equipe: 01 (03PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+Efetivo Total:35
+1.1 OFICIAL: 01
+1.2 SGT:06
+1.3 SD: 28
+2. VTRs: 04
+3. Efetivo Motorizado: 03
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas Portáteis Empregadas: 35
+6. Armas Longas Empregadas: 01
+7. Local de Atuação: Porto Alegre/Santa Maria/S. Do Livramento/Passo Fundo/Caxias do Sul
+8. Missões: ORD SV 138/POLOST MONTADO 3RPMON, ORD SV 001/POLOST MONTADO CENTRO, ORD SV 164/ POLICIAMENTO MONTADO ESCOLAS
+9. Animais Empregados: 12 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 08/04/2026*
+
+Oficial Superior CPChq MAJ PM BOSCARDIN (54) 99969 - 3391
+COPOM: Qso Funcional (51) 98437-6940
+SD PM PAULO
+Horário: 06:00 às 18:00
+SD PM GLASENAP
+Horário: 18:00 às 06:00
+
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM BATISTA (51) 98542-3634
+Equipes: 06 (22 PM’s)
+Missão: Prontidão, Reserva de OCD, Instrução Centralizada e Combate aos CVLIs – Área do 21º BPM
+Horário: 20:00 às 02:00
+
+RESERVA I
+Cmt: TEN PM TACIANO (51) 99896-8666
+Equipes: (21 PM’s)
+Missão: Instrução Centralizada
+Horário: 08:00 às 18:00
+
+RESERVA II
+Cmt: TEN PM RENATO (55) 99645-6325
+Equipes: (21 PM’s)
+Missão: Instrução Centralizada
+Horário: 08:00 às 18:00
+
+PATRES MATUTINA
+Cmt: SGT PM MÉDRICK (51) 99819-5154
+Equipes: 05 (19 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 19º BPM
+Horário: 10:00 às 16:00
+
+PATRES VESPERTINA
+Cmt: TEN PM DANILDO (51) 99856-9978
+Equipes: 05 (21 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 20º BPM 
+Horário: 16:00 às 22:00
+
+PATRES VESPERTINA
+Cmt: SGT PM FÉO (51) 98108-0300
+Equipes: 03 (12 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 1º BPM
+Horário: 17:00 às 22:00
+
+CANIL I
+Cmt: SD PM MANICA (51) 98284-1736
+Equipes: 01 (03 PM’s)
+Missão: Prontidão de Faro
+Horário: 07:00 às 07:00
+
+BATEDORES
+Cmt: TEN PM RODRIGUES (51) 99156-7477
+Equipes: 17 (17 PMs)
+Missão: Prontidão
+Horário: 08:00 às 20:00
+
+OPERAÇÃO LITORAL
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 03 (12 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 8º BPM(Mostardas)
+Horário: 13:00 às 00:00
+
+OPERAÇÃO ESCOLA SEGURA I
+Cmt: SGT PM SEVERO (51) 98058-6342
+Equipes: 01 (03 PM’s)
+Missão: Operação Fecha Quartel - Escola Segura 
+Horário: 06:30 às 12:30
+
+OPERAÇÃO ESCOLA SEGURA II
+Cmt: SD PM ÁLVARO (51) 99297 - 3153
+Equipes: 01 (03 PM’s)
+Missão: Operação Fecha Quartel - Escola Segura
+Horário: 12:30 às 18:30
+
+Data: 08/04/2026
+Turno:2/3 e 4/1
+1. Efetivo Total: 154
+   1.1 Oficial: 05	
+1.2 Sgt: 30		
+   1.3 SD: 119
+2. VTRs:   25 + 12 motocicletas
+3. Efetivo Motorizado: 112
+4. Armas de Condução Elétrica Empregadas: 25
+5. Armas Portáteis Empregadas: 154
+6. Armas Longas Empregadas: 95
+7. Local de Atuação: CRPMC/CRPM LITORAL
+8. Missões/Osv:  RESERVA DE OCD/PRONTIDÃO/CVLI/PTM/ESCOLA SEGURA/INSTRUÇÃO
+9. Animais Empregados:  03 cães
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 08/04/2026*
+
+Cmt: 1° TEN ANDRÉA Qso :  (55)  99703-4733
+Equipes: 04 (15 PMs)
+Missão: Patrulhamento Tático Motorizado 
+Data: 07/04/26 (TER)
+Hora de emprego: 19:00 às 07:00
+
+Local de atuação: Santa Maria
+ 
+VTR/EQUIPE: 14610
+CMT: 1° TEN PM ANDREA  id func 2458888 
+QSO: 55 99703-4733
+MOT: SD PM CARLOS 
+PTR 3: SD PM C. CORRÊA 
+PTR 4: SD PM ARMANINI 
+
+VTR/EQUIPE: 13099
+CMT:  1º SGT PM ZANIN Qso: 991577457, id func 2783436
+MOT: SD PM LAMPERT 
+PTR 3: SD PM ROGER 
+PTR 4: SD PM YAGO
+
+VTR/EQUIPE: 15178 
+CMT: SD PM VINICIUS func 2971852
+Qso: (55) 99715-6715
+MOT: SD PM MICHEL
+PTR 3: SD PM MARCELO
+PTR 4: SD PM BOCK
+
+ VTR/EQUIPE: 13097 
+CMT: SD PM LORENSI func 2969017
+Qso: (55)  99990-1982
+MOT: SD PM ALLES 
+PTR 3: SD PM MULLER 
+PTR 4: SD PM 
+
+  1.Efetivo Total: 15
+     1.1. Oficial: 01
+     1.2. Sgt: 01
+     1.3.  SD: 13
+   2. VTRs: 04
+3. Efetivo Motorizado: 15
+4. Armas de Condução Elétrica Empregadas: 04
+5. Armas de Porte Empregadas: 15
+6. Armas Longas, Empregadas: 15
+7. Local de Atuação: Santa Maria
+8. Missões:  PTR 
+9. Animais Empregadas
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 08/04/2026*
+
+OF SA 23T -  Cap PM Viganó 54996174666
+OF SA 41T - Ten PM Arus  54-99954-2319
+
+
+Cmt: Sgt PM Ivo 54 991771026
+Equipe: 04 (11 PM)
+Missão: OP Angico Passo Fundo, Mato Castelhano e Coxilha
+Horário de emprego: 07hs às 19h
+
+Cmt: Ten PM Arus 54-99954-2319
+Equipe: 02 (08 PM)
+Missão: CVLI Passo Fundo e Carazinho
+Horário de emprego: 19h às 07h
+
+Cmt: Ten PM Rudinei 54-99152-1460
+Equipe: 05 (20 PM)
+Missão: Operação XAPARI - IBAMA em Três Passos
+Horário de emprego: 06hs as 18hs
+
+1. Efetivo Total: 44
+1.1 Oficial: 03
+1.2 Sgt: 06
+1.3 Sd: 35
+2. VTRs: 11
+3. Efetivo Motorizado: 40
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas Portáteis Empregadas: 44
+6. Armas Longas Empregadas: 55
+7. Local de Atuação: Passo Fundo,Carazinho, Coxilha, Mato Castelhano, Três Passos
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025, OSv 0124/SCmt-G/2026, Osv0235/P3/CPChq/2026
+9. Animais Empregados:00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 08/04/2026*
+
+1º TURNO
+
+Sd PM Jaime 
+Equipes: (02 PMs)
+Missão: Guarda do Batalhão
+Data: 08/04/2026
+Hora de emprego: 01:30 às 07:30.
+Locais de atuação: Caxias do Sul
+
+23º TURNO
+
+Of. de SV: Ten. PM Motta 54981133544
+Aux. de SV: 
+Equipes: 01 (04 PMs)
+Missão: Operação Angico
+Data: 08/04/2026
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul.
+
+
+34º TURNO
+
+Of. de SV: Ten Derquis (54)996135222
+Aux. de SV: 2° Sgt Zorzi (54)991478118
+Equipes: 06  (22 PMs)
+Missão: Evento Desportivo
+Data: 08/04/2026
+Hora de emprego: 14:00 às 02:00.
+Locais de atuação: Caxias do Sul,
+4º TURNO
+
+Aux. de SV: Sgt PM Kener 51 99956-2470
+Equipes: 05 (20 PMs)
+Missão: Diária
+Data: 08/04/2026
+Hora de emprego: 18:00 às 02:00
+Locais de atuação: Igrejinha
+
+1. Efetivo Total: 100
+1.1. Oficial: 03
+1.2. Sgt: 21
+1.3. Sd: 76
+2. VTRs: 24
+3. Efetivo Motorizado: 92
+4. Armas de Condução Elétrica Empregadas: 24
+5. Armas de Porte Empregadas: 100
+6. Armas Longas Empregadas: 71
+7. Local de Atuação: Caxias do Sul e Igrejinha.
+8. Missões: Guarda ao Batalhão, Policiamento Praça Desportiva e Diária Igrejinha.
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 08/04/2026*
+
+OF de SV: 
+Data: 08/04/2026
+
+Efetivo de 2° e 3º turnos:
+
+Cmt: 2ºSgt PM Velasques 53 98102-5834
+Equipe: 01 (03PM)
+Missão: Fecha quartel (Pelotas)
+Horário de emprego: 06:30s as 18:30h
+
+Cmt: 1ºSgt PM Pablo 53 98111-4491
+Equipe: 03 (12PM)
+Missão: Angico (Pelotas, Morro Redondo e Arroio do Padre)
+Horário de emprego: 07hs as 19h
+
+Cmt: 2°Sgt PM Germano 53 99194-4816
+Equipe: 04 (16PM)
+Missão: Patrulhamento Rural (Jaguarão)
+Horário de emprego: 24hs
+
+Cmt: 1°Sgt PM Marlon 53 98459-5715
+Equipe: 04 (16PM)
+Missão: Patrulhamento Rural (Santa Vitória do Palmar)
+Horário de emprego: Retorno
+
+Efetivo de 4° e 1º turnos:
+
+1. Efetivo Total: 47
+ 1.1 Oficiais: 00
+ 1.2 Sgt: 17
+ 1.3 Sd: 30
+2. VTRs: 12
+3. Efetivo Motorizado: 47
+4. Armas de Condução Elétrica Empregadas: 12
+5. Armas Portáteis Empregadas: 47
+6. Armas Longas Empregadas: 47
+7. Local de Atuação: Pelotas, Morro Redondo, Arroio do Padre e Jaguarão.
+8. Missões/Osv: OSv.nº 033/P3/26, OSv.nº 037/P3/26, OSv.nº 039/P3/26.
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6°BPChq*
+*Previsão do dia 08/04/2026*
+
+INFORMAÇÕES GERAIS
+* DATA: 08 de abril de 2026  
+* OF de SV: TEN PM CORDEIRO
+* Tel: (55)  984273001
+
+EQUIPES E EMPREGO
+
+1. MISSÃO: CVLI/URUGUAIANA  
+     Cmt: TEN PM SARAIVA
+* Tel: (55) 997114104
+* Efetivo: 05 Equipes (17 PMs)  
+* Horário: 13h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: OP RIB/URUGUAIANA 
+* Cmt: SGT PM SAULO
+* Tel: (55) 996850125
+* Efetivo: 02 Equipe (06 PMs)  
+* Horário: 07h às 19h
+
+3. MISSÃO: CVLI/URUGUAIANA  
+     Cmt: SGT PM LUIZ PIRES
+* Tel: (55) 8148-4355
+* Efetivo: 03 Equipes (12 PMs)  
+* Horário: 19h às 01h 
+
+QUADRO DE MEIOS
+
+1. Efetivo Total: 35
+1.1 Oficial: 02
+1.2 Sgt: 04
+1.3 Sd: 29
+2. VTRs: 10
+3. Efetivo Motorizado: 35
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas Portáteis Empregadas: 35
+6. Armas Longas Empregadas: 24
+7. Local de Atuação: Uruguaiana
+8. 8. Missões/Osv: PTM e OP RIB
+9. Animais Empregados: 01
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+*Previsão do dia 08/04/2026*
+
+OF de SV: CAP PM GIACOMELLI 55 8425-8355
+MOT OF SV: *
+VTR: **
+Data: 08/04/2026
+
+Cmt: 2° SGT PM SOUTO 
+Equipe: 01 Equipe (06 PM)
+Missão: POLICIAMENTO MONTADO 
+Horário: QTL: 09h:00min - PREL/DESL 13h:00min - LOCAL: 14h00min - 20h:00min LIB:21h:00min 
+2º SGT PM: 01
+SD PM: 05
+TOTAL: 06 ME
+
+Cmt: 2° SGT PM FERREIRA 
+Equipe: 01 Equipe (04 PM)
+Missão: 16º RODEIO INTERNACIONAL E 27º RODEIO CRIOULO DE CAPÃO DA CANOA 
+Horário: EM QTL: 12h:00min DESL: 14h:00min 
+2º SGT PM: 01
+SD PM: 03
+TOTAL: 04 ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: SD PM RAFAEL 
+Equipe: 01 Equipe (04PM) 
+Missão: SV DE CAVALARIÇA 
+*Horário:*Das 07h:00min as 19h:00min 
+2º SGT PM: 00
+SD PM: 04
+TOTAL: 04 ME  
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt:  SGT PM OLIVEIRA
+Equipe: 03 PM
+Missão: PERMANÊNCIA
+Horário: 07:00 AS 15:00
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: 2ºSGT PM TAYLAN 
+Equipe: 03 PM
+Missão:  POLICIAMENTO MONTADO 
+Horário: QTL: 08H (INSTRUÇÃO/MANUTENÇÃO NAS DEPENDÊNCIAS) PREL/DESLC: 12:30H LOCAL: 13H REC: 19H LIB: 20H 
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: 2° SGT PM PIRES  
+Equipe: 01 Equipes (06 PM)
+Missão: EVENTO FUTEBOL CAXIAS x JUVENTUDE 
+Horário: QTL: 10h30 PREL DESL: 14h30 LOCAL: 15h30 LIB: 22h30 
+2º SGT PM: 02
+SD PM: 04
+TOTAL: 06
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM BERGER 
+Equipe: 01 Equipe (03 PM) 
+Horário: 06:00h às 18:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM CADUM  
+Equipe: 01 Equipe (03 PM)
+Horário: 18:00h às 06:00h
+1° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PME ACACIO 
+Equipe: 01 Equipe (06 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 05
+TOTAL: 06 ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PME SILVA 
+Equipe: 01 Equipe (06 PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 01
+SD PM: 05
+TOTAL: 06 ME
+
+Efetivo Total: 46
+1.1 OFICIAL: 01
+1.2 SGT: 8
+1.3 SD: 37
+2. VTRs: 03
+3. Efetivo Motorizado: 03
+4. Armas de Condução Elétrica Empregadas: 02
+5. Armas Portáteis Empregadas: 46
+6. Armas Longas Empregadas: 00
+7. Local de Atuação: Porto Alegre/ Santa Maria/ S. Do Livramento/ Caxias do Sul/ Passo Fundo
+8. Missões: ORDEM DE SERVIÇO Nº 001/P3-RBG/2026,ORD SV N°138/P3 – RBG –POLICIAMENTO MONTADO – CRPO-PLANALTO/3° RPMON ,ORDEM DE SERVIÇO Nº 164/P3-RBG/2026 ,ORDEM DE SERVIÇO Nº 171/P3-RBG/2026 ,ORD SV N°169/P3-RBG/2026 – EVENTO FUTEBOL CAXIAS x JUVENTUDE 
+9. Animais Empregados: 16 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1°BPChq*
+Previsão do dia 10/04/2026
+
+Oficial Superior CPChq MAJ PM NICOLOSO
+COPOM: Qso Funcional (51) 99737-5550
+SD PM MARIO SERGIO
+Horário: 06:00 às 18:00
+SD PM GIlVANI
+Horário: 18:00 às 06:00
+
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM TACIANO (51) 99896-8666
+Equipes: 05 (20 PM’s)
+Missão: Prontidão, Reserva de OCD e Combate aos CVLIs – Área do 9º BPM
+Horário: 22:00 às 04:00
+
+
+PELOTÃO RESERVA I
+Cmt: TEN PM RENATO (55) 99645-6325
+Equipes: 05 (20 PM’s)
+Missão: MBA
+Horário: 04:00 às 02:00
+
+
+CANIL I
+Cmt: : SGT PM MACHADO (51) 98485-5824
+Equipes: 01 (03 PM’s)
+Missão: Prontidão de Faro
+Horário: 08:00 às 08:00
+
+CANIL II
+Cmt: SGT PM MACHADO (51) 98485-5824
+Equipes: 03 (12 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 18º BPM
+Horário: 19:00 às 01:00
+
+
+BATEDORES
+Cmt: TEM PM RODRIGUES	(51) 99156-7477
+Equipes: 11 (11 PMs)
+Missão: Prontidão
+Horário: 08:00 às 20:00
+
+OPERAÇÃO LITORAL
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 03 (12 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 8º BPM(Mostardas)
+Horário: 13:00 às 00:00
+
+OPERAÇÃO ESCOLA SEGURA I
+Cmt: SGT PM FERRAREZE (51) 99786-1595
+Equipes: 01 (03 PM’s)
+Missão: Operação Fecha Quartel - Escola Segura 
+Horário: 06:30 às 12:30
+
+OPERAÇÃO ESCOLA SEGURA II
+Cmt: SGT PM DANTAS (51) 98446 - 7540
+Equipes: 01 (03 PM’s)
+Missão: Operação Fecha Quartel - Escola Segura
+Horário: 12:30 às 18:30
+
+
+DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS
+	
+Data: 10/04/2026
+Turno:2/3 e 4/1
+1. Efetivo Total: 84
+   1.1 Oficial: 03	
+1.2 Sgt: 17		
+   1.3 SD: 64
+2. VTRs:   23 + 10 motocicletas
+3. Efetivo Motorizado: 84
+4. Armas de Condução Elétrica Empregadas: 23
+5. Armas Portáteis Empregadas: 84
+6. Armas Longas Empregadas: 
+7. Local de Atuação: CRPMC/CRPM LITORAL
+8. Missões/Osv:  RESERVA DE OCD/PRONTIDÃO/CVLI/PTM/ESCOLA SEGURA
+9. Animais Empregados:  14 cães
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2°BPChq*
+2°/3° T - SANTA MARIA/SILVEIRA MARTINS/IVORÁ
+2° Choque
+Cmt: 1° Ten PM Andrea (55) 99703-4733
+Equipes: 05 (18 PMs)
+Missão: Op. Angico (OSV - 057)
+Hora de emprego: 07h às 19h
+
+--------------------------------------------
+
+2° T - SANTA MARIA
+2° Choque
+Cmt: 1° Ten PM Flávia (55) 99154-2955
+Equipes: 01 (03 PMs)
+Missão: Op Escola Segura (OSV - 053)
+Hora de emprego: 07h às 13h
+
+--------------------------------------------
+
+2°/3° T - SANTA MARIA
+2° Choque
+Cmt: 1° Sgt PM Menezes (55) 99119-9964
+Equipes: 01 (04 PMs)
+Missão: PTM - Canil
+Hora de emprego: 07h às 19h
+
+----------------------------------------------
+
+4°/1° T - SANTA MARIA
+2° Choque
+Cmt: 1° Sgt PM Kulmann (55) 99946-6614
+Equipes: 05 (18 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 19h às 07h
+
+----------------------------------------------
+
+1.Efetivo Total: 43
+1.1. Oficial: 02
+1.2. Sgt: 07
+1.3. Sd: 34
+2. VTRs: 12
+3. Efetivo Motorizado: 43
+4. Armas de Condução Elétrica Empregadas: 12
+5. Armas de Porte Empregadas: 43
+6. Armas Longas Empregadas: 43
+7. Local de Atuação: SANTA MARIA, SILVEIRA MARTINS, IVORÁ
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria), OSV-057/P3/2BPCHQ/2026 (Op Angico Fase LVII), OSV-053/P3/2BPCHQ/2026 (Op Escola Segura)
+9. Animais Empregados: 02
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3°BPChq*
+OF SA 23T -  Ten PM Edjacson 54991054748
+OF SA  41T - Ten PM Siqueira 54991723368
+
+
+Cmt:  Ten PM Edjacson 54991054748
+Equipe: 04 (15 PM)
+Missão: OP Angico Passo Fundo, Mato Castelhano e Coxilha
+Horário de emprego: 07hs às 19h
+
+Cmt: Sgt PM Volmiro 54981481943
+Equipe: 03 (11 PM)
+Missão: CVLI Marau
+Horário de emprego: 17h às 05h
+
+Cmt: Ten PM Rudinei 54991521460
+Equipe: 05 (20 PM)
+Missão: regresso Passo Fundo
+Horário de emprego: 
+
+1. Efetivo Total: 47
+1.1 Oficial: 03
+1.2 Sgt: 08
+1.3 Sd: 36
+2. VTRs: 12
+3. Efetivo Motorizado: 47
+4. Armas de Condução Elétrica Empregadas: 12
+5. Armas Portáteis Empregadas: 47
+6. Armas Longas Empregadas: 60
+7. Local de Atuação: Passo Fundo,Carazinho, Marau, Coxilha, Mato Castelhano, Três Passos
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025, OSv 0124/SCmt-G/2026, Osv0235/P3/CPChq/2026, OSv 244/P3/CPChq/2026
+9. Animais Empregados:00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°BPChq*
+1º TURNO
+Sd PM Gabriel
+Equipes: (02 PMs)
+Missão: Guarda ao Batalhão.
+Data: 10/04/2026
+Hora de emprego: 01:30 as 07:30 
+Locais de atuação: Caxias do Sul
+_
+
+23º TURNO
+Of. de SV: Ten PM Ansinello 54 996652767
+Aux. de SV: Sgt PM Schuller 54 99694-1980
+Equipes: 05 (18 PMs)
+Missão: Guarda ao Batalhão e Op. Angico
+Data: 10/04/2026
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul, Flores da Cunha e Nova Pádua.
+_
+
+34º TURNO
+Of. de SV: Sgt PM Stein 054 991630190
+Aux. de SV: Sgt PM Vargas 054 981581646
+Equipes: 03 (14 PMs)
+Missão: Guarda do Batalhão, Patrulhamento Tático Motorizado/CVLI
+Data: 10/04/2026
+Hora de emprego: 14:00 às 02:00.
+Locais de atuação: Bento Gonçalves, Garibaldi, Carlos Barbosa
+_
+
+4º TURNO
+Aux. de SV: Sgt PM Kener 51 99956-2470
+Equipes: 05 (20 PMs)
+Missão: Diária
+Data: 10/04/2026
+Hora de emprego: 18:00 às 02:00
+Locais de atuação: Igrejinha
+
+
+
+1. Efetivo Total: 76
+1.1. Oficial: 2
+1.2. Sgt: 11
+1.3. Sd: 61
+2. VTRs: 18
+3. Efetivo Motorizado: 68
+4. Armas de Condução Elétrica Empregadas: 18
+5. Armas de Porte Empregadas: 76
+6. Armas Longas Empregadas: 88
+7. Local de Atuação: Caxias do Sul, Farroupilha, Flores da Cunha, Nova Pádua, Bento Gonçalves, Garibaldi, Carlos Barbosa e Igrejinha.
+8. Missões: Guarda do Batalhão, Patrulhamento Tático Motorizado, CVLI
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5°BPChq*
+Efetivo de 2° e 3º turnos
+
+Cmt: SGT PM Pablo 54 98111-4491
+Equipe: 01 (04PM) 
+Missão: ANGICO – Pelotas
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Borges 53 98152-2646
+Equipe: 01 (04PM) 
+Missão: ANGICO – Morro Redondo
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Vitola 54 98459-9930
+Equipe: 01 (04PM) 
+Missão: ANGICO –Arroio do Padre
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Johnny 54 98104-6601
+Equipe: 01 (03PM) 
+Missão: Escola Segura
+Horário de emprego: 07hs as 19hs
+
+Cmt: SGT PM Nicolas 54 98459-9930
+Equipe: 02 (08PM) 
+Missão: Policiamento Comunitário Rural – Arroio Grande e Herval
+Horário de emprego: 07hs as 19hs
+
+
+Efetivo de 4° e 1º turnos
+
+
+Cmt: SGT PM Rochel 53 98484-2722
+Equipe: 02 (08PM) 
+Missão: Policiamento Comunitário Rural – Arroio Grande e Herval
+Horário de emprego: 19hs as 07hs
+
+1. Efetivo Total: 31
+ 1.1 Oficial: 00
+ 1.2 Sgt: 14
+ 1.3 Sd: 27
+2. VTRs: 08
+3. Efetivo Motorizado: 31
+4. Armas de Condução Elétrica Empregadas: 08
+5. Armas Portáteis Empregadas: 31
+6. Armas Longas Empregadas: 33
+7. Local de Atuação: Pelotas, Morro Redondo, Arroio do Padre, Arroio Grande, Herval
+8. Missões/Osv: OSv n° 039/P3/5°BPCHQ/26, OSv n° 049/P3/5°BPCHQ/26, OSv n° 037/P3/5°BPCHQ/26, 033/P3/5°BPCHQ/26
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° Choque*
+* OF de SV: TEN PM CORDEIRO
+* Tel: (55)  984273001
+
+1. MISSÃO: CVLI/URUGUAIANA  
+     Cmt: TEN PM MARCIO
+* Tel: (55) 99731-3143
+* Efetivo: 05 Equipes (17 PMs)  
+* Horário: 13h às 19h                                                                                                                                                                                                                                                                                      
+
+2. MISSÃO: CVLI/URUGUAIANA  
+     Cmt: TEN PM CORDEIRO
+* Tel: (55)  984273001
+* Efetivo: 06 Equipes (24 PMs)  
+* Horário: 19h às 01h 
+
+1. Efetivo Total: 41
+1.1 Oficial: 02
+1.2 Sgt: 04
+1.3 Sd: 35
+2. VTRs: 11
+3. Efetivo Motorizado: 36
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas Portáteis Empregadas: 41
+6. Armas Longas Empregadas: 33
+7. Local de Atuação: Uruguaiana
+8. 8. Missões/Osv: PTM e OP RIB
+9. Animais Empregados: 01
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+OF de SV: CAP PM ALANOR 51 9250-7847
+MOT OF SV: XXX
+VTR: XXX
+Data: 10/04/2026
+
+Cmt: 2°SGT PM VEIGA 51 8544-5901
+Equipe: 01 (09)
+Missão: ORD SV 183/POLOST MONTADOAPOIO 17BPM 
+Horário: QTL: 07h00 PREL/EMB: 08h30 LOCAL: 10h00 REC: 15h00 LIB: 19h00 
+2°SGT PM: 01
+SD PM: 08
+TOTAL: 09ME
+
+Cmt: 2⁰SGT PM FERREIRA 51 9947-4920
+Equipe: 01 Equipe (08)
+Missão: Rodeio Int de Capão da Canoa
+Horário: Emprego evento
+2⁰SGT PM:01
+SD PM: 07
+TOTAL: 08 ME
+
+
+
+Cmt: 2°SGT PM GARIM 55 8471-7741
+Equipe: 01 (06)
+Missão: ORD SV 182/APOIO RODEIO INT DE SÃO GABRIEL
+Horário: DESL 101400ABR2026 RETORNO 13ABR2026 
+2° SGT PM: 01
+SD PM:05
+TOTAL: 06 ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: 2°SGT PM ANTÔNIO 55 9163-4747
+Equipe: 01 (03)
+Missão: ORD SV 174/POLOST MONTADO CENTRO PARQUES
+Horário: QTL 07h:00mPREL/DESL 12h:30m LOCAL 12h:40m REC 18h:30m LIB 19h:00m 
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt: 2°SGT PM OLIVEIRA 55 9901-1483 
+Equipe: 01 (01)
+Missão:  SV DE CAVALARIÇA
+Horário: 07:00h às 15:00h
+2º SGT PM: 01
+SD PM: 00
+TOTAL: 01ME
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: SD PM SCHUSTER 
+Equipe: 01 (04)
+Missão: ORD SV 172/POLOST MONTADO APOIO 3°RPMON 
+Horário: QTL: 08H PREL/DESLC: 12:30H LOCAL: 13H REC: 19H LIB: 20H  
+2º SGT PM: 00
+SD PM: 04
+TOTAL: 04ME
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: SD PM JOEL 54 8129-3942
+Equipe: 01 (01)
+Missão: SV CAVALARIÇA
+Horário:QTL: 07h 19h LIB: 19h 
+2º SGT PM: 00
+SD PM: 01
+TOTAL: 01ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM COLLARES 53 8100-2566
+Equipe: 01 (05)
+Horário: 06:00h às 18:00h
+2° SGT PM: 02
+SD PM: 03
+TOTAL: 05ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA 51 8137-7784
+Equipe: 01 (06)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 06
+TOTAL: 06 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM JOSIANE 51 9937-6207
+Equipe: 01 (03 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: 2°SGT PM VERÔNICA 51 9273-3309
+Equipe: 01 (03PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+Efetivo Total:50
+1.1 OFICIAL: 01
+1.2 SGT:08
+1.3 SD: 41
+2. VTRs:6
+3. Efetivo Motorizado: 03
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas Portáteis Empregadas: 50
+6. Armas Longas Empregadas: 01
+7. Local de Atuação: Porto Alegre/Santa Maria/S. Do Livramento/Passo Fundo/Caxias do Sul/São Gabriel/Gravataí/Capão da Canoa
+8. Missões: ORD SV 174/POLOST MONTADO CENTRO PARQUES,  ORD SV 172/POLOST MONTADO APOIO 3°RPMON,  ORD SV 183/POLOST MONTADOAPOIO 17BPM, ORD SV 182/APOIO RODEIO INT DE SÃO GABRIEL/RODEIO INT CAPÃO DA CANOA 
+9. Animais Empregados: 25 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 11/04/2026*
+
+Oficial Superior CPChq 
+MAJ PM NICOLOSO (51) 99737-5550
+
+COPOM: Qso Funcional (51) 98437-6940
+SD PM KOKOVICH
+Horário: 06:00 às 18:00
+SD PM MARIO SERGIO
+Horário: 18:00 às 06:00
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM JAKSON MEDEIROS (51) 99307-3994
+Equipes: 05 (20 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+PELOTÃO RESERVA I
+Cmt: TEN PM NISHIMURA (51) 99152-3735
+Equipes: 01 (21 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+PELOTÃO RESERVA II
+Cmt: TEN PM RUDSON (51) 99943-3258
+Equipes: 06 (24 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+PELOTÃO RESERVA III
+Cmt: TEN PM RENATO (55) 99645-6325
+Equipes: 05 (20 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+PELOTÃO RESERVA IV
+Cmt: TEN PM BATISTA (51)98542-3634
+Equipes: 06 (22 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+CANIL
+Cmt: SGT PM MACHADO (51) 98485-5824
+Equipes: 06 (22 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+PELOTÃO DE MOTOS
+Cmt: TEN PM RODRIGUES FERREIRA (51) 99156-7477
+Equipes: 19 (19 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 14:00 às 02:00
+
+PATRES I
+Cmt: CAP PM AMARAL (55) 99996-3661
+Equipes: 06 (22 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+PATRES II
+Cmt: TEN PM DANILDO (51) 99856-9978
+Equipes: 06 (22 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+ESTADO MAIOR
+Cmt: SGT PM RICARDO MARQUES (51) 99885-8021
+Equipes: 03 (25 PM’s)
+Missão: Evento Futebol Internacional x Grêmio - Área do 1º BPM
+Horário: 13:00 às 02:00
+
+OPERAÇÃO LITORAL
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 03 (12 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 8º BPM (Mostardas)
+Horário: 15:00 às 00:00
+
+Data: 11/04/2026
+Turno:2/3 e 4/1
+1. Efetivo Total: 193
+   1.1 Oficial: 08	
+1.2 Sgt: 38		
+   1.3 SD: 147
+2. VTRs:   35 + 19 motocicletas
+3. Efetivo Motorizado: 123
+4. Armas de Condução Elétrica Empregadas: 35
+5. Armas Portáteis Empregadas: 123
+6. Armas Longas Empregadas: 141
+7. Local de Atuação: CRPMC/CRPM LITORAL
+8. Missões/Osv:  RESERVA DE OCD/PRONTIDÃO/CVLI/PTM/EVENTO FUTEBOL
+9. Animais Empregados: 22 cães
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 11/04/2026*
+
+2°/3° T - SANTA MARIA
+2° Choque
+Cmt: 1° Sgt PM Mendonça  55 9 9683-8625
+Equipes: 04 (14 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 07h às 19h
+
+4°/1° T - SANTA MARIA
+2° Choque
+Cmt: 1º SGT PM ZANIN  55 9 91577457
+Equipes: 05 (17 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 19h às 07h
+
+1.Efetivo Total: 31
+1.1. Oficial: 00
+1.2. Sgt: 05
+1.3. Sd: 26
+2. VTRs: 09
+3. Efetivo Motorizado: 31
+4. Armas de Condução Elétrica Empregadas: 09
+5. Armas de Porte Empregadas: 31
+6. Armas Longas Empregadas: 31
+7. Local de Atuação: SANTA MARIA
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria)
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 11/04/2026*
+
+OF SA-  Ten PM Edjacson 54991054748
+
+Cmt:  Cap PM Braun 54-99371-4114
+Equipe: 04 (16 PM)
+Missão: OP Marau
+Horário de emprego: 04:00
+
+Cmt: Ten PM Edijackson 54991054748
+Equipe: 03 (11 PM)
+Missão: CVLI Marau
+Horário de emprego: 18:00 as 02:00
+
+1. Efetivo Total: 27
+1.1 Oficial: 02
+1.2 Sgt: 06
+1.3 Sd: 19
+2. VTRs: 07
+3. Efetivo Motorizado: 27
+4. Armas de Condução Elétrica Empregadas: 07
+5. Armas Portáteis Empregadas: 27
+6. Armas Longas Empregadas: 34
+7. Local de Atuação: Passo Fundo,Marau,
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025,Osv0235/P3/CPChq/2026, OSv 244/P3/CPChq/2026
+9. Animais Empregados:02
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 11/04/2026*
+
+1º TURNO
+Sd. PM Sd Pinheiro
+Equipes:  (02PMs)
+Missão: Guarda Batalhão.
+Data: 11/04/2026
+Hora de emprego: 01:30 às 07:30.
+Locais de atuação: Caxias do Sul
+
+23º TURNO
+Of. de SV: Ten. PM Motta 54981133544
+Aux. de SV: 
+Equipes: 0 (4 PMs)
+Missão: Guarda Batalhão.
+Data: 11/04/2026
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul.
+
+34º TURNO 
+Of. de SV: Ten PM Ansinello 54 996652767
+Aux. de SV: Sgt PM Schuller 54 996941980
+Equipes: 05 (21 PMs)
+Missão: Guarda Batalhão, Policiamento Praça Desportiva.
+Data: 11/04/2026
+Hora de emprego: 13:00 às 01:00
+Locais de atuação: Caxias do Sul.
+
+4º TURNO
+Aux. de SV: Sgt PM Kener 51 99956-2470
+Equipes: 05 (20 PMs)
+Missão: Diária
+Data: 10/04/2026
+Hora de emprego: 18:00 às 02:00
+Locais de atuação: Igrejinha
+
+
+1. Efetivo Total: 50
+1.1. Oficial: 02
+1.2. Sgt: 5
+1.3. Sd: 43
+2. VTRs: 10
+3. Efetivo Motorizado: 41
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 50
+6. Armas Longas Empregadas: 53
+7. Local de Atuação: Caxias do Sul e Igrejinha.
+8. Missões: Guarda do Batalhão, Policiamento em Praça Desportiva.
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 11/04/2026*
+
+Efetivo de 2°e 3° turnos:
+
+Cmt: 2°Sgt PM Rodrigues 53 99159-6262
+Equipe: 02 (08PM)
+Missão: CVLI Pelotas
+Horário de emprego: 07hs as 19hs
+
+Cmt: 2°Sgt PM Nicolas 53 98459-9930
+Equipe: 04 (16PM)
+Missão: Rural Arroio Grande
+Horário de emprego: 06hs as 00hs
+
+Efetivo de 4° e 1° turnos:
+
+Cmt: 1°Sgt PM Pablo 53 98111-4491
+Equipe: 02 (06PM)
+Missão: CVLI Pelotas
+Horário de emprego: 19hs as 07hs
+
+1. Efetivo Total: 30
+   1.1 Oficial: 0
+   1.2 Sgt: 10
+   1.3 Sd: 20
+2. VTRs: 08
+3. Efetivo Motorizado: 30
+4. Armas de Condução Elétrica Empregadas: 08
+5. Armas Portáteis Empregadas: 45
+6. Armas Longas Empregadas: 31
+7. Local de Atuação: Pelotas, Arroio Grande
+8. Missões/Osv:  OSv nº 040/P3/26, OSv nº 049/P3/26, OSv nº 052/P3/26
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 11/04/2026*
+
+
+* OF de SV: TEN SARAIVA 
+* Tel: (55) 9711-4104
+
+EQUIPES E EMPREGO
+
+1. MISSÃO: CVLI / URUGUAIANA  
+     Cmt: SGT PM DIAS
+* Tel: (55) 99616-9079
+* Efetivo: 03 Equipes (10 PMs)  
+* Horário: 07h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: CVLI / URUGUAIANA 
+* Cmt: SGT PM MELLO
+* Tel: (55) 99600-7405
+* Efetivo: 02 Equipes (08 PMs)  
+* Horário: 19h às 01h       
+
+QUADRO DE MEIOS
+
+1. Efetivo Total: 19
+1.1 Oficial: 01
+1.2 Sgt: 02
+1.3 Sd: 16
+2. VTRs: 05
+3. Efetivo Motorizado: 18
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas Portáteis Empregadas: 19
+6. Armas Longas Empregadas: 15
+7. Local de Atuação: Uruguaiana
+8. 8. Missões/Osv: PMT
+9. Animais Empregados: 01
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+*Previsão do dia 11/04/2026*
+
+OF de SV: CAP PM ALANOR 51 9250-7847
+MOT OF SV: XXX
+VTR: XXX
+Data: 11/04/2026
+
+Cmt: TCEL VOLKER  51 9683-8580
+Equipe: 08 (46)
+Missão: ORD SV Nº 179/P3 – RBG – INTERNACIONAL X GRÊMIO
+Horário: QTL: 14h00 PREL/EMB: 15h00 LOCAL: 16h30 LIB: 02h00 
+OF: 08
+2°SGT PM: 05
+SD PM: 32
+TOTAL: 46ME
+
+Cmt: 2⁰SGT PM FERREIRA 51 9947-4920
+Equipe: 01 Equipe (08)
+Missão: Rodeio Int de Capão da Canoa
+Horário: Emprego evento
+2⁰SGT PM:01
+SD PM: 07
+TOTAL: 08 ME
+
+Cmt: 2°SGT PM GARIM 55 8471-7741
+Equipe: 01 (06)
+Missão: ORD SV 182/APOIO RODEIO INT DE SÃO GABRIEL
+Horário: DESL 101400ABR2026 RETORNO 13ABR2026 
+2° SGT PM: 01
+SD PM:05
+TOTAL: 06 ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: 2°SGT PM ANTÔNIO 55 9163-4747
+Equipe: 01 (03)
+Missão: ORD SV 174/POLOST MONTADO CENTRO PARQUES
+Horário: QTL 07h:00mPREL/DESL 12h:30m LOCAL 12h:40m REC 18h:30m LIB 19h:00m 
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt: SD PM FRANKLIN 
+Equipe: 01 (01)
+Missão:  SV DE CAVALARIÇA
+Horário: 07:00h às 15:00h
+2º SGT PM: 01
+SD PM: 00
+TOTAL: 01ME
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt:2ºSGT PM TAYLAN 54 9177-2019 
+Equipe: 01 (06)
+Missão: ORD SV 170/VIAGEM A NOVA SANTA RITA
+Horário: QTL: 12h PREL/DESLC: 13h LOCAL: 16h REC: 21h LIB: 00h  
+2º SGT PM: 01
+SD PM: 05
+TOTAL: 06ME
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: 2º SGT PM PIRES 54 8149-5556 
+Equipe: 01 (05) 
+Missão:ORD SV N°176/P3-RBG/2026 – EVENTO FUTEBOL JUVENTUDE x GOIÁS
+Horário:QTL: 09h00 PREL DESL: 13h00 LOCAL: 13h30 LIB: 21h00
+2º SGT PM: 01
+SD PM: 04
+TOTAL: 05ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM COLLARES 53 8100-2566
+Equipe: 01 (05)
+Horário: 06:00h às 18:00h
+2° SGT PM: 02
+SD PM: 03
+TOTAL: 05ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA 51 8137-7784
+Equipe: 01 (06)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 06
+TOTAL: 06 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: 2ºSGT PM SOUTO 51 8557-1438 
+Equipe: 01 (03 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM LENHART 51 9589-2125 
+Equipe: 01 (03PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03ME
+
+Efetivo Total:92
+1.1 OFICIAL: 08
+1.2 SGT:12
+1.3 SD: 72
+2. VTRs:6
+3. Efetivo Motorizado: 03
+4. Armas de Condução Elétrica Empregadas: 08
+5. Armas Portáteis Empregadas: 91
+6. Armas Longas Empregadas: 01
+7. Local de Atuação: Porto Alegre/Santa Maria/S. Do Livramento/Passo Fundo/Caxias do Sul/São Gabriel/Gravataí/Capão da Canoa
+8. Missões: ORD SV Nº 179/P3 – RBG – INTERNACIONAL X GRÊMIO,  ORD SV 172/POLOST MONTADO APOIO 3°RPMON,  ORD SV 183/POLOST MONTADOAPOIO 17BPM, ORD SV 182/APOIO RODEIO INT DE SÃO GABRIEL/RODEIO INT CAPÃO DA CANOA ORD SV 170/VIAGEM A NOVA SANTA RITA
+9. Animais Empregados: 65 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*COMANDO DE POLÍCIA DE CHOQUE*
+*1º BATALHÃO DE POLÍCIA DE CHOQUE*
+
+*Previsão do dia 13/04/2026*
+
+*Oficial Superior CPChq*
+CAP PM DALL’ AGNOL (54) 99931-4411
+
+*COPOM:* Qso Funcional (51) 98437-6940
+SD PM PAULO
+Horário: 06:00 às 18:00
+SD PM GLASENAP
+Horário: 18:00 às 06:00
+
+PELOTÃO DE PRONTIDÃO
+Cmt: TEN PM TEN PM NISHIMURA (53) 984072808
+Equipes: 06 (24 PM’s)
+Missão: Prontidão, Reserva de OCD e Combate aos CVLIs – Área do 19º BPM 
+Horário: 20:00 às 02:00
+
+CANIL I
+Cmt: SGT PM SGT FREITAS (53) 999068661
+Equipes: 01 (03 PM’s)
+Missão: Prontidão
+Horário: 08:00 às 08:00
+Missão: Operação Fecha Quartel
+Horário: 06:00 às 18:00
+
+CANIL II
+Cmt: SGT PM SGT FREITAS (53) 999068661
+Equipes: 05 (17 PM’s)
+Missão: Combate aos CVLIs – Área do 9º BPM e Área do 11º BPM
+Horário: 18:00 às 00:00
+
+PELOTÃO DE MOTOS
+Cmt: SGT PM SGT LUIS (51) 980273630
+Equipes: 07 (07 PM’s)
+Missão: Prontidão
+Horário: 08:00 às 20:00
+
+PATRES I
+Cmt: SGT PM SGT MÉDRICK (51) 998195154
+Equipes: 04 (16 PM’s)
+Missão: Combate aos CVLIs – Área do 20º BPM
+Horário: 10:00 às 16:00
+
+PATRES II
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 05 (20 PM’s)
+Missão: Combate aos CVLIs – Área do 1º BPM
+Horário: 16:00 às 22:00
+
+PATRES HE
+Cmt: SGT PM SGT MÉDRICK (51) 998195154
+Equipes: 03 (12 PM’s)
+Missão: Combate aos CVLIs – Área do 11º BPM
+Horário: 17:00 às 21:00
+
+ESTADO MAIOR
+Cmt: SGT PM SEVERO (51) 98058-6342
+Equipes: 01 (3 PM’s)
+Missão: Operação Fecha Quartel
+Horário: 06:00 às 18:00
+
+Data: 13/04/2026
+Turno:2/3 e 4/1
+1. Efetivo Total: 102
+   1.1 Oficial: 02	
+1.2 Sgt: 23		
+   1.3 SD: 77
+2. VTRs:   26 + 07 motocicletas
+3. Efetivo Motorizado: 102
+4. Armas de Condução Elétrica Empregadas: 26
+5. Armas Portáteis Empregadas: 102
+6. Armas Longas Empregadas: 92
+7. Local de Atuação: CRPMC
+8. Missões/Osv:  RESERVA DE OCD/PRONTIDÃO/CVLI/PTM/OPERAÇÃO FECHA QUARTEL
+9. Animais Empregados: 20 cães
+
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2° BATALHÃO DE POLÍCIA DE CHOQUE*
+*PREVISÃO DE EFETIVO - 13/04/26 (SEG)*
+
+2°/3° T - SANTA MARIA
+2° Choque
+Cmt: 1° Sgt PM Kulmann  (55) 9 9946-6614
+Equipes: 06 (22 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 07h às 19h
+
+----------------------------------------------
+
+*4°/1° T - SANTA MARIA*
+2° Choque
+Cmt: 1° Ten PM Machado  (55) 9 9174-2135
+Equipes: 04 (15 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 19h às 07h
+
+----------------------------------------------
+
+1.Efetivo Total: 37
+1.1. Oficial: 01
+1.2. Sgt: 07
+1.3. Sd: 29
+2. VTRs: 10
+3. Efetivo Motorizado: 37
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 37
+6. Armas Longas Empregadas: 37
+7. Local de Atuação: SANTA MARIA
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria)
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 13/04/2026*
+
+OF SA 23T- Ten PM Siqueira* 54991723368
+OF SA 41T- Ten PM Edjacson 54991054748
+
+
+Cmt:  Ten PM Siqueira 54991723368
+Equipe: 04 (16 PM)
+Missão: CVLI PASSO FUNDO
+Horário de emprego: 07hs às 19hs
+
+Cmt: Ten PM Edijackson 54991054748
+Equipe: 03 (12 PM)
+Missão: CVLI Marau
+Horário de emprego: 18:00 as 02:00
+
+1. Efetivo Total: 28
+1.1 Oficial: 02
+1.2 Sgt: 06
+1.3 Sd: 20
+2. VTRs: 07
+3. Efetivo Motorizado: 28
+4. Armas de Condução Elétrica Empregadas: 07
+5. Armas Portáteis Empregadas: 28
+6. Armas Longas Empregadas: 35
+7. Local de Atuação: Passo Fundo,Marau,
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025,Osv0235/P3/CPChq/2026, OSv 244/P3/CPChq/2026
+9. Animais Empregados:02
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4° BATALHÃO DE POLICIA DE CHOQUE*
+*PREVISÃO DO DIA 13/04/2026*
+
+1º TURNO
+Sd. PM Possa (54) 999905542
+Equipes: 0 (02PMs)
+Missão: Guarda Batalhão.
+Data: 13/04/2026
+Hora de emprego: 01:30 às 07:30.
+Locais de atuação: Caxias do Sul
+_
+
+23º TURNO
+Of. de SV: Sgt PM Petini (54) 999579389
+Aux. de SV: Sgt PM Stein (54) 991630190
+Equipes: 04 (15 PMs)
+Missão: Guarda Batalhão, Patrulhamento tático Motorizado/ CVLI
+Data: 13/04/2026
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul.
+_
+
+3º TURNO
+Of. de SV: Sgt PM Cardoso (51) 981205836 
+Aux. de SV: Sgt PM (54) 991898962
+Equipes: 04 (17 PMs)
+Missão: Policiamento Motorizado
+Data: 13/04/2026
+Hora de emprego: 14:00 às 20:00
+Locais de atuação: Caxias do Sul, Bento Gonçalves, Carlos Barbosa e Garibaldi.
+__
+
+4º TURNO
+Aux. de SV: Sd PM Senna (54) 981296311
+Equipes: 00 (02 PMs)
+Missão: Guarda do Batalhão
+Data: 13/04/2026
+Hora de emprego: 19:30 às 07:00
+Locais de atuação: Caxias do Sul
+
+1. Efetivo Total: 38
+1.1. Oficial: 00
+1.2. Sgt:07
+1.3. Sd: 31
+2. VTRs:08
+3. Efetivo Motorizado: 32
+4. Armas de Condução Elétrica Empregadas: 08
+5. Armas de Porte Empregadas: 38
+6. Armas Longas Empregadas: 37
+7. Local de Atuação: Caxias do sul, Bento Gonçalves, Garibaldi, Carlos Barbosa
+8. Missões: Guarda do Batalhão, Patrulhamento Tático motorizado.
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 13/04/2026*
+
+Efetivo de 2° e 3º turnos:
+
+Cmt: 2°Sgt PM Velasques 53 98102-5834
+Equipe: 01 (03PM)
+Missão: Patrulhamento Escolar
+Horário de emprego: 6:30hs às 18:30hs
+
+Cmt: 2°Sgt PM Germano 53 99194-4816
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural Pedro Osório
+Horário de emprego: 06hs às 14hs
+
+Cmt: 2°Sgt PM Nicolas 53 98459-9930
+Equipe: 02 (08PM)
+Missão: CVLI Pelotas
+Horário de emprego: 07hs às 19hs
+
+Cmt: 2°Sgt PM Vitola 53 98118-8373
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural Pedro Osório
+Horário de emprego: 10hs às 18hs
+
+Efetivo de 4° e 1º turnos:
+
+Cmt: 2°Sgt PM Medina 53 99966-7434
+Equipe: 02 (08PM)
+Missão: Patrulhamento Rural Pedro Osório
+Horário de emprego: 16hs às 00hs
+
+Cmt: 1°Sgt PM Marlon 53 98459-5715
+Equipe: 04 (14PM)
+Missão: CVLI Pelotas
+Horário de emprego: 19hs às 07hs
+
+1. Efetivo Total: 45
+ 1.1 Oficiais: 00
+ 1.2 Sgt: 12
+ 1.3 Sd: 33
+2. VTRs:11
+3. Efetivo Motorizado: 41
+4. Armas de Condução Elétrica Empregadas: 11
+5. Armas Portáteis Empregadas: 45
+6. Armas Longas Empregadas: 41
+7. Local de Atuação: Pelotas, Pedro Osório. 
+8. Missões/Osv: OSv.nº 033/P3/26, OSv.nº 040/P3/26, OSv.nº 051/P3/26,
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6°BPChq*
+*Previsão do dia 13/04/2026*
+
+INFORMAÇÕES GERAIS
+* DATA: 13 de abril de 2026  
+* OF de SV: TEN PM MARCIO
+* Tel: (55) 99731-3143
+
+EQUIPES E EMPREGO
+
+1. MISSÃO: CVLI/URUGUAIANA  
+     Cmt: TEN CORDEIRO
+* Tel: (55) 98427-3001
+* Efetivo: 02 Equipes (08 PMs)  
+* Horário: 13h às 19h                                                                                                                                                                                                                                                                                      
+
+
+2. MISSÃO: CVLI/URUGUAIANA  
+     Cmt: SGT PM ROSA
+* Tel: (51) 9984-7225
+* Efetivo: 02 Equipes (08 PMs)  
+* Horário: 19h às 01h 
+                                                                                                                                3. MISSÃO: OPERAÇÕES RIBEIRINHAS/ITAQUI 
+     Cmt: TEN SARAIVA
+* Tel: (55) 99711-4104
+* Efetivo: 02 Equipes (05 PMs)  
+* Horário: A definir 
+
+QUADRO DE MEIOS
+
+1. Efetivo Total: 25
+1.1 Oficial: 03
+1.2 Sgt: 03
+1.3 Sd: 19
+2. VTRs: 06
+3. Efetivo Motorizado: 21
+4. Armas de Condução Elétrica Empregadas: 06
+5. Armas Portáteis Empregadas: 21
+6. Armas Longas Empregadas: 18
+7. Local de Atuação: Uruguaiana / Itaqui
+8. 8. Missões/Osv: PTM / Operações Ribeirinhas
+9. Animais Empregados: 01
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+*Previsão do dia 13/04/2026*
+
+OF de SV: 1º TEN BARENHO 53992417070
+MOT OF SV: SD PM BORGES
+VTR: 15171
+Data: 13/04/2026
+
+Cmt: SD PM ROLINO 
+Equipe: 01 Equipe (09 PM)
+Missão: POLICIAMENTO MONTADO 17º BPM
+Horário: 07h:00min -19h:00min
+2º SGT PM: 00
+SD PM: 09
+TOTAL: 09 ME
+
+Cmt: 2° SGT PM FERREIRA 5199474920
+Equipe: 01 Equipe (04 PM)
+Missão: 16º RODEIO INTERNACIONAL E 27º RODEIO CRIOULO DE CAPÃO DA CANOA 
+Horário: EM QTL: 12h:00min DESL: 14h:00min 
+2º SGT PM: 01
+SD PM: 06
+TOTAL: 07 ME
+
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: SD PM RAFAEL 69993725715
+Equipe: 01 Equipe (03PM) 
+Missão: POLICIAMENTO MONTADO
+*Horário:*Das 07h:00min as 19h:00min 
+2º SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME  
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt:  2º SGT GARIM
+Equipe: 06 PM
+Missão: POLICIAMENTO MONTADO RODEIO INTERNACIONAL DE SÃO GABRIEL
+Horário: 07:00 AS 19:00
+2º SGT PM: 01
+SD PM: 05
+TOTAL: 06
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: 2ºSGT PM TAYLAN 54991772019
+Equipe: 03 PM
+Missão:  POLICIAMENTO MONTADO 
+Horário: QTL: 08H (INSTRUÇÃO/MANUTENÇÃO NAS DEPENDÊNCIAS) PREL/DESLC: 12:30H LOCAL: 13H REC: 19H LIB: 20H 
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: SD PM MAGIO 
+Equipe: 01 Equipes (01 PM)
+Missão: PERMANENCIA 
+Horário: QTL: 07h00  LIB: 19h00 
+2º SGT PM: 00
+SD PM: 01
+TOTAL: 01
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: 2º SGT PM SOUTO 55996386689
+Equipe: 01 Equipe (03 PM) 
+Horário: 06:00h às 18:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM CADUM  51995076647
+Equipe: 01 Equipe (03 PM)
+Horário: 18:00h às 06:00h
+1° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PME ACACIO 51984084537
+Equipe: 01 Equipe (06 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 05
+TOTAL: 06 ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PME SILVA 51996542394
+Equipe: 01 Equipe (06 PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 01
+SD PM: 05
+TOTAL: 06 ME
+
+
+Efetivo Total: 49
+1.1 OFICIAL: 01
+1.2 SGT: 6
+1.3 SD: 42
+2. VTRs: 05
+3. Efetivo Motorizado: 06
+4. Armas de Condução Elétrica Empregadas: 02
+5. Armas Portáteis Empregadas: 49
+6. Armas Longas Empregadas: 00
+7. Local de Atuação: Porto Alegre/ Santa Maria/ S. Do Livramento/ Caxias do Sul/ Passo Fundo
+8. Missões: ORDEM DE SERVIÇO Nº 001/P3-RBG/2026,ORD SV N°138/P3 – RBG –POLICIAMENTO MONTADO – CRPO-PLANALTO/3° RPMON ,ORDEM DE SERVIÇO Nº 171/P3-RBG/2026 ,ORDEM DE SERVIÇO Nº 183/P3-RBG/2026
+9. Animais Empregados: 25 CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1°BPChq*
+Previsão do dia 14/04/2026
+
+Oficial Supervisor CPChq 
+CAP PM PETY (51) 98911-8675
+
+COPOM: Qso Funcional (51) 98437-6940
+SD PM GILVANI
+Horário: 07:00 às 19:00
+SD PM PAULO
+Horário: 19:00 às 07:00
+
+PELOTÃO PRONTIDÃO
+Cmt: TEN PM BATISTA (51) 98542-3634
+Equipes: 06 (21 PM’s)
+Missão: Evento Futebol Grêmio x Deportivo Riestra - Área do 11ºBPM
+Horário: 15:00 às 23:00
+
+RESERVA I
+Cmt: TEN PM TACIANO (51) 99896-8666
+Equipes: 04 (16 PM’s)
+Missão: Evento Futebol Grêmio x Deportivo Riestra - Área do 11ºBPM
+Horário: 15:00 às 23:00
+
+CANIL
+Cmt: SGT PM MACHADO (51) 98485-5824
+Equipes: 03 (10 PMs)
+Missão: Evento Futebol Grêmio x Deportivo Riestra - Área do 11ºBPM
+Horário: 15:00 às 23:00
+
+BATEDORES
+Cmt: TEN PM RODRIGUES FERREIRA (51) 99156-7477
+Equipes: 10 (10 PM’s)
+Missão: Escolta BACEN 
+Horário: 10:00 às – 
+Missão: Evento Futebol Grêmio x Deportivo Riestra - Área do 11ºBPM
+Horário: 15:00 às 23:00
+
+PATRES I
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 04 (16 PM’s)
+Missão: Combate aos CVLIs – Área do 11° BPM
+Horário: 09:00 às – 17:00
+
+PATRES II
+Cmt: SGT PM BRITO (51) 98063-1973
+Equipes: 03 (12 PMs)
+Missão: Escolta BACEN – Área do 11° BPM
+Horário: 08:00 às -16:00
+
+PATRES III
+Cmt: TEN PM DANILDO (51) 99856-9978
+Equipes: 04 (15 PMs)
+Missão: Escolta BACEN – Área do 11° BPM
+Horário: 08:00 às 16:00 
+Missão: Combate aos CVLIs – Área do 1º BPM
+Horário: 17:00 às 21:00
+
+OPERAÇÃO ESCOLA SEGURA I
+Cmt: SGT PM RAMOS (51) 99943-7310
+Equipes: 01 (03 PMs)
+Missão: Operação Escola Segura 
+Horário: 06:30 às 12:30
+
+OPERAÇÃO ESCOLA SEGURA II
+Cmt: SD PM AVILA (51) 99742-0508
+Equipes: 01 (03 PMs)
+Missão: Operação Escola Segura 
+Horário: 12:30 às 18:30
+
+Turno: 2/3 e 4/1
+1. Efetivo Total: 105
+1.1 Oficial:04
+1.2 Sgt: 19
+1.3 SD: 82
+2. VTRs: 26 + 10 Motos
+3. Efetivo Motorizado: 105
+4. Armas de Condução Elétrica Empregadas: 26
+5. Armas Portáteis Empregadas: 105
+6. Armas Longas Empregadas: 95
+7. Local de Atuação: CPC 1ºBPM, 11ºBPM
+8. Missões/Osv: PRONTIDÃO / CVLI / PTM / ESCOLTA/EVENTO FUTEBOL
+9. Animais Empregados: 10 cães
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2°BPChq*
+2°/3° T - SANTA MARIA
+2° Choque
+Cmt: 1° Ten PM Andrea  (55) 9 9703-4733
+Equipes: 05 (19 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 07h às 19h
+
+----------------------------------------------
+
+4°/1° T - SANTA MARIA
+2° Choque
+Cmt: 1° Sgt PM Kulmann  (55) 9 9946-6614
+Equipes: 05 (18 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 19h às 07h
+
+----------------------------------------------
+
+1.Efetivo Total: 37
+1.1. Oficial: 01
+1.2. Sgt: 04
+1.3. Sd: 32
+2. VTRs: 10
+3. Efetivo Motorizado: 37
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 37
+6. Armas Longas Empregadas: 37
+7. Local de Atuação: SANTA MARIA
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria)
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3°BPChq*
+OF SA 23T-Ten PM Edjacson 54991054748
+ OF SA 41T- Ten PM Siqueira 54991723368
+
+
+Cmt:  Ten PM Siqueira 54991723368
+Equipe: 01 (34 PM)
+Missão: Instrução OCD
+Horário de emprego: 07h às 19h
+
+Cmt: SGT Jocenan 54 98121-2253
+Equipe: 01 (04 PM)
+Missão: CVLI Passo Fundo
+Horário de emprego: 19h às 07h
+
+1. Efetivo Total: 38
+1.1 Oficial: 02
+1.2 Sgt: 10
+1.3 Sd: 26
+2. VTRs: 01
+3. Efetivo Motorizado: 04
+4. Armas de Condução Elétrica Empregadas: 01
+5. Armas Portáteis Empregadas: 38
+6. Armas Longas Empregadas: 05
+7. Local de Atuação: Passo Fundo
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025,Osv0235/P3/CPChq/2026
+9. Animais Empregados:03
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°BPChq*
+1º TURNO
+Sd PM Senna
+Equipes: (02 PMs)
+Missão: Guarda ao Batalhão.
+Data: 14/04/2026
+Hora de emprego: 01:30 as 07:30 
+Locais de atuação: Caxias do Sul
+_
+
+23º TURNO
+Of. de SV: Sgt PM Augusto 5499680-8036
+Aux. de SV: Sgt PM Marques 5199826-2664
+Equipes: 04 (16 PMs)
+Missão: Guarda ao Batalhão e CVLI
+Data: 14/04/2026
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul.
+_
+
+34º TURNO
+Of. de SV: Sgt PM Petini 054 999579389
+Aux. de SV: Sgt PM Stein 054 991630190
+Equipes: 04 (18 PMs)
+Missão: Guarda do Batalhão, Patrulhamento Tático Motorizado/CVLI
+Data: 14/04/2026
+Hora de emprego: 14:00 às 02:00.
+Locais de atuação: Bento Gonçalves, Garibaldi, Carlos Barbosa
+_
+
+
+1. Efetivo Total: 38
+1.1. Oficial: 0
+1.2. Sgt: 5
+1.3. Sd: 33
+2. VTRs: 8
+3. Efetivo Motorizado: 31
+4. Armas de Condução Elétrica Empregadas: 8
+5. Armas de Porte Empregadas: 38
+6. Armas Longas Empregadas: 41
+7. Local de Atuação: Caxias do Sul, Bento Gonçalves, Garibaldi, Carlos Barbosa.
+8. Missões: Guarda do Batalhão, Patrulhamento Tático Motorizado, CVLI
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5°BPChq*
+Efetivo de 2° e 3º turnos:
+
+Cmt: 1°Sgt PM Marlon 53 98459-5715
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural Vila da Quinta
+Horário de emprego: 06hs às 14hs
+
+Cmt: 2°Sgt PM Jussanan 53 99919-0992
+Equipe: 01 (02PM)
+Missão: Patrulhamento Escolar (Pelotas)
+Horário de emprego: 06:30hs ás 18:30hs
+
+Cmt: 1ºSgt PM Pablo 53 98111-4491
+Equipe: 02 (07PM)
+Missão: CVLI (Pelotas)
+Horário de emprego: 07hs as 19h
+
+Cmt: 2°Sgt PM Carrion 51 99737-5222
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural Vila da Quinta
+Horário de emprego: 10hs às 18hs
+
+Efetivo de 4° e 1º turnos:
+
+Cmt: 2°Sgt PM Alex 53 99108-9783
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural Vila da Quinta
+Horário de emprego: 18hs às 02hs
+
+Cmt: 2ºSgt PM Nicolas 53 98459-9930
+Equipe: 02 (09PM)
+Missão: CVLI (Pelotas)
+Horário de emprego: 19hs as 07h
+
+Cmt: 2°Sgt PM Monteiro 53 99957-9395
+Equipe: 01 (04PM)
+Missão: Patrulhamento Rural Vila da Quinta
+Horário de emprego: 00hs às 06hs
+
+1. Efetivo Total: 34
+ 1.1 Oficiais: 00
+ 1.2 Sgt: 12
+ 1.3 Sd: 22
+2. VTRs: 09
+3. Efetivo Motorizado: 32
+4. Armas de Condução Elétrica Empregadas: 09
+5. Armas Portáteis Empregadas: 34
+6. Armas Longas Empregadas: 33
+7. Local de Atuação: Pelotas, Rio Grande
+8. Missões/Osv: OSv.nº 033/P3/26, OSv.nº 040/P3/26, OSv.nº 052/P3/26.
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° Choque*
+* OF de SV: CAP DOUGLAS BORGES 
+* Tel: (69) 9940-9148
+
+1. MISSÃO: CVLI / URUGUAIANA  
+     Cmt: SGT PM MONTANHA
+* Tel: (55) 9956-7675
+* Efetivo: 03 Equipes (09 PMs)  
+* Horário: 07h às 19h                                                                                                                                                                                                                                                                                      
+
+    2. MISSÃO: CVLI / URUGUAIANA 
+* Cmt: SGT PM DIAS
+* Tel: (55) 9616-9079
+* Efetivo: 02 Equipes (06 PMs)  
+* Horário: 19h às 01h
+
+    3.MISSÃO: OP MARQUÊS DO HERVAL
+* CMT: TEN PM SARAIVA
+* TEL:(55) 9711-4104
+EFETIVO: 02 EQUIPES (05 PMs)
+* HORARIO: A DEFINIR       
+
+1. Efetivo Total: 20
+1.1 Oficial: 02
+1.2 Sgt: 03
+1.3 Sd: 17
+2. VTRs: 07
+3. Efetivo Motorizado: 20
+4. Armas de Condução Elétrica Empregadas: 07
+5. Armas Portáteis Empregadas: 20
+6. Armas Longas Empregadas: 15
+7. Local de Atuação: Uruguaiana
+8. 8. Missões/Osv: PMT
+9. Animais Empregados: 01
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+OF de SV: CAP PM ALANOR 51 9250-7847
+MOT OF SV: XXX
+VTR: XXX
+Data: 14/04/2026
+
+Cmt: CAP PM ALANOR 51 9250-7847
+Equipe: 01 (15)
+Missão: ORD SV 186/FUTEBOL GRÊMIO X RIESTRA 
+Horário: QTL: 12h:00min - PREL/DESL 15h:00min - LOCAL: 16h30min - LIB:00h:00min 
+CAP PM: 01
+2°SGT PM: 01
+SD PM: 13
+TOTAL: 15ME
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: 2°SGT PM CUNHA 55 9191-0168
+Equipe: 01 (04)
+Missão: ORD SV 174/POLOST MONTADO CENTRO PARQUES
+Horário: QTL 07h:00mPREL/DESL 12h:30m LOCAL 12h:40m REC 18h:30m LIB 19h:00m 
+2º SGT PM: 01
+SD PM: 03
+TOTAL: 04ME
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt: 2°SGT PM OLIVEIRA 55 9901-1483 
+Equipe: 01 (01)
+Missão:  SV DE CAVALARIÇA
+Horário: 06:00h às 12:00h
+2º SGT PM: 01
+SD PM: 00
+TOTAL: 01ME
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: 2°SGT PM TAYLAN  54 9177-2019
+Equipe: 01 (03)
+Missão: ORD SV 172/POLOST MONTADO APOIO 3°RPMON 
+Horário: QTL: 08H PREL/DESLC: 12:30H LOCAL: 13H REC: 19H LIB: 20H  
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: 2°SGT PM DEON 54 9173-6607
+Equipe: 01 (03)
+Missão: ORD SV 173/POLOST MONTADO ÁREA CENTRAL
+Horário: QTL: 08h (MANUTENÇÃO) PREL DESL: 13h REC: 19h LIB: 20h 
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM ACACIO 51 8408-4537
+Equipe: 01 (06)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 05
+TOTAL: 06ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM SILVA 51 9654-2394
+Equipe: 01 (05)
+Horário: 18:00h às 06:00h
+2° SGT PM: 01
+SD PM: 04
+TOTAL: 05 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: 2°SGT PM SOUTO 55 99638-6689
+Equipe: 01 (03 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM CADUM  51 99507-6647
+Equipe: 01 (03PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03ME
+
+Efetivo Total:43
+1.1 OFICIAL: 01
+1.2 SGT:08
+1.3 SD: 34
+2. VTRs:03
+3. Efetivo Motorizado: 03
+4. Armas de Condução Elétrica Empregadas: 05
+5. Armas Portáteis Empregadas: 43
+6. Armas Longas Empregadas: 01
+7. Local de Atuação: Porto Alegre/Santa Maria/S. Do Livramento/Passo Fundo/Caxias do Sul
+8. Missões: ORD SV 174/POLOST MONTADO CENTRO PARQUES, ORD SV 186/FUTEBOL GRÊMIO X RIESTRA,  ORD SV 172/POLOST MONTADO APOIO 3°RPMON, ORD SV 173/POLOST MONTADO ÁREA CENTRAL
+9. Animais Empregados: 21CAVALOS
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*1° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 15/04/2026*
+
+Oficial Supervisor CPChq 
+CAP PM SBARDELOTTO (54) 99119-5995
+
+COPOM: Qso Funcional (51) 98437-6940
+SD PM MARIO SÉRGIO
+Horário: 07:00 às 19:00
+SD PM GILVANI
+Horário: 19:00 às 07:00
+
+PELOTÃO PRONTIDÃO
+Cmt: TEN PM RUDSON (51) 9943-3258
+Equipes: 06 (22 PM’s)
+Missão: Prontidão, PTM e Combate a CVLI Área do 19º BPM
+Horário: 20:00 às 02:00
+
+RESERVA I
+Cmt: TEN PM JAKSON MEDEIROS (51) 9307-3994
+Equipes: 05 (19 PM’s)
+Missão: PTM e Combate a CVLI Área do 1º BPM 
+Horário: 16:00 às 00:00
+
+CANIL
+Cmt: SD PM SAVIONEK (51) 985390859
+Equipes: 01 (03 PMs)
+Missão: Prontidão de Faro
+Horário: 08:00 às 08:00
+
+BATEDORES
+Cmt: TEN PM RODRIGUES FERREIRA (51) 99156-7477
+Equipes: 17 (17 PM’s)
+Missão: Prontidão 
+Horário: 08:00 às 20:00
+
+3ª CIA 
+Cmt: CAP PM RIBEIRO (51) 99294-9980
+Equipes: 50 PM’s
+Missão: Instrução Centralizada 
+Horário: 08:30 às 17:30
+
+PATRES I
+Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 04 (16 PM’s)
+Missão: PTM e Combate aos CVLIs – Área do 20° BPM
+Horário: 09:00 às – 17:00
+
+PATRES II
+Cmt: SGT PM BRITO (51) 98063-1973
+Equipes: 03 (12 PMs)
+Missão: PTM e Combate aos CVLIs – Área do 1° BPM
+Horário: 07:00 às 15:00
+
+PATRES III
+Cmt: TEN PM DANILDO (51) 99856-9978
+Equipes: 04 (16 PMs)
+Missão: PTM e Combate aos CVLIs – Área do 1° BPM
+Horário: 11:00 às - 19:00
+
+PATRES HE
+Cmt: Cmt: SGT PM PEREIRA (51) 99861-1903
+Equipes: 03 (12 PMs)
+Missão: PTM e Combate aos CVLIs – Área do 20° BPM
+Horário: 17:00 às - 22:00
+
+OPERAÇÃO ESCOLA SEGURA I
+Cmt: SGT PM LEMOS (51) 99262-0946
+Equipes: 01 (03 PMs)
+Missão: Operação Escola Segura
+Horário: 06:30 às 18:30
+
+Turno: 2/3 e 4/1
+1. Efetivo Total: 120
+1.1 Oficial:04
+1.2 Sgt: 24
+1.3 SD: 92
+2. VTRs: 25 + 18 Motos
+3. Efetivo Motorizado: 120
+4. Armas de Condução Elétrica Empregadas: 26
+5. Armas Portáteis Empregadas: 120
+6. Armas Longas Empregadas: 75
+7. Local de Atuação: 19ºBPM, 20ºBPM, 21 ºBPM, 1 ºBPM, 11 ºBPM
+8. Missões/Osv: PRONTIDÃO / CVLI / PTM
+9. Animais Empregados: 03 cães
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*2° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 15/04/2026*
+
+2°/3° T - SANTA MARIA
+Cmt: 1° Sgt PM Mendonça  55 9 9683-8625
+Equipes: 05 (18 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 07h às 19h
+
+2° T - SANTA MARIA
+Cmt: 2° Sgt PM Pezzi (55) 99165-7029
+Equipes: 01 (03 PMs)
+Missão: Op Escola Segura (OSV - 053)
+Hora de emprego: 07h às 13h
+
+4°/1° T - SANTA MARIA
+Cmt: 1° Ten PM Andrea  (55) 99703-4733
+Equipes: 04 (15 PMs)
+Missão: Patrulhamento Tático Motorizado
+Hora de emprego: 19h às 07h
+
+1.Efetivo Total: 36
+1.1. Oficial: 01
+1.2. Sgt: 08
+1.3. Sd: 27
+2. VTRs: 10
+3. Efetivo Motorizado: 36
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 36
+6. Armas Longas Empregadas: 36
+7. Local de Atuação: SANTA MARIA
+8. Missões: OSV-001/P3/2BPCHQ/2026 (CVLI-Sta Maria), OSV-053/P3/2BPCHQ/2026 (Op Escola Segura)
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*3° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 15/04/2026*
+
+OF SA 23T- Ten PM Arus 54999542319
+ OF SA 41T- Ten PM Edijacson 54991054748
+
+Cmt:  Ten PM Arus 54999542319
+Equipe: 01 (34 PM)
+Missão: Instrução OCD
+Horário de emprego: 07h às 19h
+
+Cmt: 1° SGT PM Volmiro 54981481943
+Equipe: 02 (08 PM)
+Missão: CVLI Passo Fundo
+Horário de emprego: 19h às 07h
+
+1. Efetivo Total: 42
+1.1 Oficial: 02
+1.2 Sgt: 05
+1.3 Sd: 35
+2. VTRs: 02
+3. Efetivo Motorizado: 08
+4. Armas de Condução Elétrica Empregadas: 02
+5. Armas Portáteis Empregadas: 42
+6. Armas Longas Empregadas: 10
+7. Local de Atuação: Passo Fundo
+8. 8. Missões/Osv: OSv 0342/P3/CPCHQ/2025, OSv 0407/P3/CPCHQ/2025, OSV instrução 023/P3/3ºBPCHQ/202
+9. Animais Empregados: 03
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 15/04/2026*
+
+1º TURNO
+Sd. PM Moura 54 996281237
+Equipes:  (03PMs)
+Missão: Guarda Batalhão.
+Hora de emprego: 01:30 às 07:30.
+Locais de atuação: Caxias do Sul
+
+23º TURNO
+Of. de SV: Ten. PM Motta 54981133544
+Aux. de SV: Sgt PM Kener 51999562470
+Equipes: 05 (20 PMs)
+Missão: Guarda Batalhão e Patrulhamento tático motorizado.
+Hora de emprego: 07:30 às 19:30
+Locais de atuação: Caxias do Sul.
+
+34º TURNO 
+Of. de SV: Ten PM Ansinello 54 996652767
+Aux. de SV: Sgt PM Schuller 54 996941980
+Equipes: 05 (18 PMs)
+Missão: Guarda Batalhão, Policiamento Praça Desportiva.
+Hora de emprego: 14:00 às 02:00
+Locais de atuação: Bento Gonçalves.
+
+1. Efetivo Total: 46
+1.1. Oficial: 02
+1.2. Sgt: 6
+1.3. Sd: 38
+2. VTRs: 10
+3. Efetivo Motorizado: 38
+4. Armas de Condução Elétrica Empregadas: 10
+5. Armas de Porte Empregadas: 47
+6. Armas Longas Empregadas: 49
+7. Local de Atuação: Caxias do Sul e Bento Gonçalves.
+8. Missões: Guarda do Batalhão, Policiamento tático motorizado e Policiamento em Praça Desportiva.
+9. Animais Empregados: 00
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*5° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 15/04/2026*
+
+Efetivo de 2°e 3° turnos:
+
+Cmt: 1°Ten PM Rodrigo 53 98417-5709
+Equipe: 02 (07PM)
+Missão: CVLI Pelotas
+Horário de emprego: 07hs as 19hs
+
+Cmt: 2°Sgt PM Velasques 53 98102-5834
+Equipe: 01 (03PM)
+Missão: Fecha Quartel Escola segura Pelotas
+Horário de emprego: 07hs as 19hs
+
+Cmt: 1°Sgt PM Marlon 53 98459-5715
+Equipe: 02 (08PM)
+Missão: Rural Rio Grande
+Horário de emprego: 06hs as 18hs
+
+Efetivo de 4° e 1° turnos:
+
+Cmt: 1°Sgt PM Pablo 53 98111-4491
+Equipe: 02 (08PM)
+Missão: CVLI Pelotas
+Horário de emprego: 19hs as 07hs
+
+Cmt: 1°Sgt PM Marlon 53 98459-5715
+Equipe: 02 (08PM)
+Missão: Rural Rio Grande
+Horário de emprego: 18hs as 06hs
+1. Efetivo Total: 39
+ 1.1 Oficial: 01
+ 1.2 Sgt: 13
+ 1.3 Sd: 25
+2. VTRs: 09
+3. Efetivo Motorizado: 34
+4. Armas de Condução Elétrica Empregadas: 09
+5. Armas Portáteis Empregadas: 39
+6. Armas Longas Empregadas: 36
+7. Local de Atuação: Pelotas, Rio Grande
+8. Missões/Osv: OSv nº 033/P3/26, OSv nº 040/P3/26, OSv nº 052/P3/26, OSv nº 062/P3/26.
+9. Animais Empregados: 00
+
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*6° BATALHÃO DE POLICIA DE CHOQUE*
+*Previsão do dia 15/04/2026*
+
+ OF de SV: TEN CORDEIRO 
+Tel: (55) 984273001
+
+MISSÃO: CVLI / URUGUAIANA  
+ Cmt: SGT LUIZ PIRES
+ Tel: (55) 981484355
+ Efetivo: 03 Equipes (10 PMs)  
+ Horário: 07h às 19h                                                                                                                                                                                                                                                                                      
+
+ MISSÃO: CVLI / URUGUAIANA 
+ Cmt: SGT PM MONTANHA
+ Tel: (55) 999567675
+ Efetivo: 03 Equipes (09 PMs)  
+ Horário: 19h às 01h
+
+ MISSÃO: OP MARQUÊS DO HERVAL
+ CMT: TEN PM SARAIVA
+ TEL: (55) 9711-4104
+EFETIVO: 02 EQUIPES (05 PMs)
+ HORARIO: A DEFINIR       
+
+1. Efetivo Total: 25
+1.1 Oficial: 02
+1.2 Sgt: 03
+1.3 Sd: 20
+2. VTRs: 08
+3. Efetivo Motorizado: 24
+4. Armas de Condução Elétrica Empregadas: 08
+5. Armas Portáteis Empregadas: 24
+6. Armas Longas Empregadas: 16
+7. Local de Atuação: Uruguaiana / Itaqui
+8. 8. Missões/Osv: PMT
+9. Animais Empregados: 01
+
+*DADOS PARA PLANILHA DE COMANDO E CONTROLE DE MEIOS OPERACIONAIS*
+*BRIGADA MILITAR*
+*CPChq*
+*4°RPMon*
+*Previsão do dia 15/04/2026*
+
+OF de SV: 1º TEN PM CASANOVA 51 9700-6325 
+MOT OF SV:  SD PM VITOR
+VTR: 1571
+
+Cmt: 2° SGT PM VEIGA  
+Equipe: 01 Equipe (09 PM)
+Missão: ORD SV N⁰001/POLICIAMENTO MONTADO 
+Horário: DAS 09H00MIN ÀS 21H00MIN 
+2º SGT PM: 01
+SD PM: 08
+TOTAL: 09 ME
+
+
+1º Esq - 4° Pel – Santa Maria
+Cmt: 2º SGT PM ANTONIO 55 9163-4747 
+Equipe: 01 Equipe (04PM) 
+Missão:  POLICIAMENTO MONTADO 
+*Horário:*Das 07h:00min as 19h:00min 
+2º SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME  
+
+1º Esq – 5°Pel - S. do Livramento
+Cmt:  SD PM SANTIAGO 
+Equipe: 01 PM
+Missão: SV DE CAVALARIÇA 
+Horário: 06H00MIN ÀS 18H00MIN 
+2º SGT PM: 00
+SD PM: 01
+TOTAL: 01
+
+2º Esq – 4°Pel - Passo Fundo
+Cmt: 2ºSGT PM TAYLAN 54 9177-2019 
+Equipe: 06 PM
+Missão:  NOTA SV N°035/P3 – INSTRUÇÃO DE OPERAÇÕES DE CONTROLE DE DISTÚRBIO 
+PREL/DESLC: 12:30H LOCAL: 13H REC: 19H LIB: 20H 
+2º SGT PM: 01
+SD PM: 05
+TOTAL: 06
+
+2º Esq - 5º Pel - Caxias do Sul
+Cmt: 2° SGT PM PIRES  54 8149-5556 
+Equipe: 01 Equipes (04 PM)
+Missão: ORD SV Nº 185 JUVENTUDE X CHAPECOENSE 
+Horário: DAS 15H00 ÀS 03H00
+2º SGT PM: 01
+SD PM: 03
+TOTAL: 04
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: SD PM FEIX 51 9307-7688 
+Equipe: 01 Equipe (03 PM) 
+Horário: 06:00h às 18:00h
+2° SGT PM: 00
+SD PM: 03
+TOTAL: 03 ME
+
+GDA/CUSTÓDIA DE PRESO
+Cmt: 2° SGT PM VERONICA 51 9273-3309 
+Equipe: 01 Equipe (03 PM)
+Horário: 18:00h às 06:00h
+1° SGT PM: 01
+SD PM: 02
+TOTAL: 03 ME
+
+3° Esq - Palácio Piratini
+Cmt: 2°SGT PM COLLARES 53 8100-2566 
+Equipe: 01 Equipe (06 PM)
+Horário: 06:00h às 18:00h
+2° SGT PM: 01
+SD PM: 05
+TOTAL: 06 ME
+
+3° Esq - Palácio Piratini
+Cmt: SD PM SOUZA 51 8137-7784 
+Equipe: 01 Equipe (06 PM)
+Horário: 18:00h às 06:00h
+2° SGT PM: 00
+SD PM: 06
+TOTAL: 06 ME
+
+
+Efetivo Total: 43
+1.1 OFICIAL: 01
+1.2 SGT: 6
+1.3 SD: 36
+2. VTRs: 03
+3. Efetivo Motorizado: 03
+4. Armas de Condução Elétrica Empregadas: 02
+5. Armas Portáteis Empregadas: 445
+6. Armas Longas Empregadas: 00
+7. Local de Atuação: Porto Alegre/ Santa Maria/ S. Do Livramento/ Caxias do Sul/ Passo Fundo
+8. Missões: ORD SV N⁰001/POLICIAMENTO MONTADO , NOTA SV N°035/P3 – INSTRUÇÃO DE OPERAÇÕES DE CONTROLE DE DISTÚRBIO, ORD SV Nº 185 JUVENTUDE X CHAPECOENSE
+9. Animais Empregados: 19 CAVALOS
+10.

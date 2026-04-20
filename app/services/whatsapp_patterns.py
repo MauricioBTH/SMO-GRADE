@@ -9,9 +9,9 @@ import re
 # ---------------------------------------------------------------------------
 
 RE_UNIDADE = re.compile(
-    r"\*?\s*(\d+[°º]?\s*(?:BATAL[HÃA]+O\s+DE\s+POLI[CÇ]IA\s+DE\s+CHOQUE"
+    r"\*?\s*(\d+[°º]?\s*(?:BATAL[HÃA]+O\s+DE\s+POL[IÍ][CÇ]IA\s+DE\s+CHOQUE"
     r"|BPChq|RPMon|BATALHAO\s+DE\s+POLICIA\s+DE\s+CHOQUE"
-    r"|REGIMENTO\s+DE\s+POLI[CÇ]?[IA]*\s+MONTADA"
+    r"|REGIMENTO\s+DE\s+POL[IÍ][CÇ]?[IA]*\s+MONTADA"
     r"|Choque))\s*\*?",
     re.IGNORECASE,
 )
@@ -151,7 +151,8 @@ RE_HHMM = re.compile(r"(\d{1,2})\s*[hH:]\s*(\d{0,2})")
 
 UNIDADE_MAP: dict[str, str] = {}
 for _n in range(1, 7):
-    for _suf in ("BATALHÃO DE POLICIA DE CHOQUE", "BATALHAO DE POLICIA DE CHOQUE",
+    for _suf in ("BATALHÃO DE POLÍCIA DE CHOQUE", "BATALHÃO DE POLICIA DE CHOQUE",
+                 "BATALHAO DE POLÍCIA DE CHOQUE", "BATALHAO DE POLICIA DE CHOQUE",
                  "BPChq", "CHOQUE"):
         UNIDADE_MAP[f"{_n} {_suf}".upper()] = f"{_n} BPChq"
         UNIDADE_MAP[f"{_n}° {_suf}".upper()] = f"{_n} BPChq"

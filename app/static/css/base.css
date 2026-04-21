@@ -16,6 +16,18 @@
   --cor-canil: #0F6E56;
   --cor-batedores: #185FA5;
   --cor-operacao: #993C1D;
+
+  --dark-bg: #0d0d0d;
+  --dark-panel: #1a1a1a;
+  --dark-panel-alt: #141414;
+  --border-subtle: rgba(87, 87, 90, 0.3);
+  --border-muted: rgba(87, 87, 90, 0.4);
+  --gold-soft: rgba(247, 185, 0, 0.1);
+  --gold-border: rgba(247, 185, 0, 0.3);
+  --gold-hover: #e5ab00;
+  --status-success: #22c55e;
+  --status-error: #ef4444;
+  --status-warning: #f87171;
 }
 
 body {
@@ -23,4 +35,163 @@ body {
   background: var(--bg);
   color: var(--text-dark);
   min-height: 100vh;
+}
+
+/* ===== APP HEADER ===== */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px 10px;
+  background: var(--dark-bg);
+}
+
+.app-header__brand h1 {
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.app-header__ccmo {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.6px;
+  margin-top: 2px;
+}
+
+/* ===== USER CHIP (dropdown via <details>) ===== */
+.user-chip {
+  position: relative;
+}
+
+.user-chip > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--dark-panel);
+  list-style: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.user-chip > summary::-webkit-details-marker { display: none; }
+.user-chip > summary::marker { content: ''; }
+
+.user-chip > summary:hover {
+  border-color: var(--gold-border);
+  background: var(--dark-panel-alt);
+}
+
+.user-chip[open] > summary {
+  border-color: var(--gold-border);
+}
+
+.user-chip__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.user-chip__nome {
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.user-chip__role {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.user-chip__menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  min-width: 180px;
+  background: var(--dark-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 60;
+}
+
+.user-chip__menu a,
+.user-chip__menu button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: 0;
+  color: var(--white);
+  font-size: 0.82rem;
+  text-align: left;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s, color 0.12s;
+}
+
+.user-chip__menu a:hover,
+.user-chip__menu button:hover {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.user-chip__menu form { margin: 0; }
+
+/* ===== APP NAV (icon-only) ===== */
+.app-nav {
+  display: flex;
+  gap: 4px;
+  padding: 6px 32px 10px;
+  background: var(--dark-bg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.app-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.app-nav a:hover {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.app-nav a.ativo {
+  background: var(--gold-soft);
+  color: var(--gold);
+  border-color: var(--gold-border);
+}
+
+.app-nav svg {
+  width: 20px;
+  height: 20px;
 }

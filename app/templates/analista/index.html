@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/slides.css') }}">
 {% endblock %}
 
+{% block header %}{% include "_components/header.html" %}{% endblock %}
+{% block nav %}{% include "_components/nav.html" %}{% endblock %}
+
 {% block content %}
 <div class="analista-wrapper">
 

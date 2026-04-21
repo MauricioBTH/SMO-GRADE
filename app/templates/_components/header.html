@@ -1,0 +1,21 @@
+<header class="app-header">
+  <div class="app-header__brand">
+    <h1>Brigada Militar &middot; CPChq</h1>
+    <p class="app-header__ccmo">Comando e Controle de Meios Operacionais - CCMO</p>
+  </div>
+  <div class="app-header__user">
+    <details class="user-chip">
+      <summary>
+        <span class="user-chip__avatar">{{ current_user.nome[:2]|upper }}</span>
+        <span class="user-chip__nome">{{ current_user.nome }}</span>
+        <span class="user-chip__role">{{ current_user.role|replace('_', ' ')|upper }}</span>
+      </summary>
+      <div class="user-chip__menu">
+        <a href="{{ url_for('auth.trocar_senha') }}">Trocar senha</a>
+        <form method="POST" action="{{ url_for('auth.logout') }}">
+          <button type="submit">Sair</button>
+        </form>
+      </div>
+    </details>
+  </div>
+</header>

@@ -148,3 +148,45 @@ def logout() -> Response:
     session.clear()
     flash("Sessao encerrada", "info")
     return redirect(url_for("auth.login"))
+
+
+@auth_bp.route("/trocar-senha", methods=["GET", "POST"])
+@login_required
+def trocar_senha() -> Response | tuple[str, int] | str:
+    if request.method == "GET":
+        return render_template(
+            "auth/trocar_senha.html", senha_min_len=user_service.SENHA_MIN_LEN
+        )
+
+    senha_atual: str = request.form.get("senha_atual") or ""
+    senha_nova: str = request.form.get("senha_nova") or ""
+    senha_conf: str = request.form.get("senha_conf") or ""
+
+    if not senha_atual or not senha_nova or not senha_conf:
+        flash("Preencha todos os campos", "error")
+        return render_template(
+            "auth/trocar_senha.html", senha_min_len=user_service.SENHA_MIN_LEN
+        ), 400
+
+    if user_service.verificar_senha(current_user.email, senha_atual) is None:
+        flash("Senha atual incorreta", "error")
+        return render_template(
+            "auth/trocar_senha.html", senha_min_len=user_service.SENHA_MIN_LEN
+        ), 401
+
+    if senha_nova != senha_conf:
+        flash("Nova senha e confirmacao nao conferem", "error")
+        return render_template(
+            "auth/trocar_senha.html", senha_min_len=user_service.SENHA_MIN_LEN
+        ), 400
+
+    try:
+        user_service.alterar_senha(current_user.id, senha_nova)
+    except ValueError as exc:
+        flash(str(exc), "error")
+        return render_template(
+            "auth/trocar_senha.html", senha_min_len=user_service.SENHA_MIN_LEN
+        ), 400
+
+    flash("Senha alterada com sucesso", "info")
+    return redirect(url_for("operador.index"))

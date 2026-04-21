@@ -9,8 +9,9 @@
 {% block content %}
 <div class="auth-wrap">
   <form class="auth-card" method="POST" action="{{ url_for('auth.login_2fa') }}" novalidate>
-    <h1>Verificacao em dois fatores</h1>
-    <h2>Codigo do aplicativo</h2>
+    <h1>Brigada Militar &middot; CPChq</h1>
+    <p class="auth-subtitle">Comando e Controle de Meios Operacionais - CCMO</p>
+    <h2>Verificacao em dois fatores</h2>
 
     {% with mensagens = get_flashed_messages(with_categories=true) %}
       {% for categoria, msg in mensagens %}

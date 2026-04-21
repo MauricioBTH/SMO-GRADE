@@ -6,7 +6,7 @@
   justify-content: flex-start;
   min-height: 100vh;
   padding: 80px 20px 40px;
-  background: #0d0d0d;
+  background: var(--dark-bg);
   position: relative;
 }
 
@@ -41,7 +41,7 @@
 
 .upload-box {
   width: 280px;
-  border: 2px dashed rgba(247,185,0,0.3);
+  border: 2px dashed var(--gold-border);
   border-radius: 16px;
   padding: 40px;
   text-align: center;
@@ -96,15 +96,15 @@
 .upload-status.error {
   display: block;
   background: rgba(153, 60, 29, 0.2);
-  color: #f87171;
+  color: var(--status-warning);
   border: 1px solid rgba(153, 60, 29, 0.4);
 }
 
 .upload-status.loading {
   display: block;
-  background: rgba(247, 185, 0, 0.1);
+  background: var(--gold-soft);
   color: var(--gold);
-  border: 1px solid rgba(247, 185, 0, 0.3);
+  border: 1px solid var(--gold-border);
 }
 
 /* ===== BOTAO WHATSAPP ===== */
@@ -126,7 +126,7 @@
 }
 
 .btn-whatsapp:hover {
-  background: rgba(247, 185, 0, 0.1);
+  background: var(--gold-soft);
   border-color: var(--gold);
 }
 
@@ -137,7 +137,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 60px 20px 40px;
-  background: #0d0d0d;
+  background: var(--dark-bg);
 }
 
 #whatsapp-screen h1 {
@@ -163,7 +163,7 @@
   max-width: 700px;
   min-height: 280px;
   padding: 16px;
-  background: #1a1a1a;
+  background: var(--dark-panel);
   color: var(--white);
   border: 1px solid rgba(247, 185, 0, 0.2);
   border-radius: 12px;
@@ -202,7 +202,7 @@
 }
 
 .btn-primario:hover {
-  background: #e5ab00;
+  background: var(--gold-hover);
 }
 
 .btn-primario:disabled {
@@ -216,19 +216,19 @@
 }
 
 .btn-primario.btn-success {
-  background: #22c55e;
+  background: var(--status-success);
   color: #000;
 }
 
 .btn-primario.btn-error {
-  background: #ef4444;
+  background: var(--status-error);
   color: #fff;
 }
 
 .btn-secundario {
   background: transparent;
   color: var(--text-muted);
-  border: 1px solid rgba(87, 87, 90, 0.4);
+  border: 1px solid var(--border-muted);
 }
 
 .btn-secundario:hover {
@@ -253,7 +253,7 @@
 }
 
 .modal-box {
-  background: #1a1a1a;
+  background: var(--dark-panel);
   border: 1px solid rgba(247, 185, 0, 0.25);
   border-radius: 16px;
   padding: 32px;
@@ -305,7 +305,7 @@
   gap: 12px;
   justify-content: center;
   padding: 14px 20px;
-  background: linear-gradient(transparent, #0d0d0d 30%);
+  background: linear-gradient(transparent, var(--dark-bg) 30%);
   width: 100%;
   max-width: 800px;
   z-index: 40;
@@ -318,7 +318,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 60px 20px 80px;
-  background: #0d0d0d;
+  background: var(--dark-bg);
 }
 
 #preview-screen h1 {
@@ -347,8 +347,8 @@
 .aviso-item {
   padding: 8px 16px;
   margin-bottom: 8px;
-  background: rgba(247, 185, 0, 0.1);
-  border: 1px solid rgba(247, 185, 0, 0.3);
+  background: var(--gold-soft);
+  border: 1px solid var(--gold-border);
   border-radius: 8px;
   color: var(--gold);
   font-size: 0.8rem;
@@ -391,7 +391,7 @@
   padding: 4px 12px;
   background: rgba(247, 185, 0, 0.15);
   color: var(--gold);
-  border: 1px solid rgba(247, 185, 0, 0.3);
+  border: 1px solid var(--gold-border);
   border-radius: 6px;
   font-size: 0.7rem;
   font-weight: 600;
@@ -425,9 +425,9 @@
 .preview-field input,
 .preview-field select {
   padding: 8px 10px;
-  background: #1a1a1a;
+  background: var(--dark-panel);
   color: var(--white);
-  border: 1px solid rgba(87, 87, 90, 0.4);
+  border: 1px solid var(--border-muted);
   border-radius: 6px;
   font-size: 0.8rem;
   font-family: inherit;
@@ -443,8 +443,8 @@
 }
 
 .fracao-form {
-  background: #141414;
-  border: 1px solid rgba(87, 87, 90, 0.3);
+  background: var(--dark-panel-alt);
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 16px;
   margin-bottom: 12px;
@@ -467,7 +467,7 @@
 .btn-remover {
   background: none;
   border: none;
-  color: #f87171;
+  color: var(--status-warning);
   font-size: 0.7rem;
   cursor: pointer;
   padding: 4px 8px;
@@ -475,7 +475,7 @@
 }
 
 .btn-remover:hover {
-  color: #ef4444;
+  color: var(--status-error);
 }
 
 .fracao-form .preview-grid {

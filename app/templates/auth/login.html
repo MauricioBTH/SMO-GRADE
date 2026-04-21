@@ -10,7 +10,7 @@
 <div class="auth-wrap">
   <form class="auth-card" method="POST" action="{{ url_for('auth.login') }}" novalidate>
     <h1>Brigada Militar &middot; CPChq</h1>
-    <h2>Acesso ao SMO</h2>
+    <p class="auth-subtitle">Comando e Controle de Meios Operacionais - CCMO</p>
 
     {% with mensagens = get_flashed_messages(with_categories=true) %}
       {% for categoria, msg in mensagens %}

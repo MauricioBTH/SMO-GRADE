@@ -1,0 +1,50 @@
+<nav class="app-nav">
+  <a href="{{ url_for('operador.index') }}" title="Parser"
+     class="{% if request.endpoint == 'operador.index' %}ativo{% endif %}">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="16" y1="13" x2="8" y2="13"/>
+      <line x1="16" y1="17" x2="8" y2="17"/>
+    </svg>
+  </a>
+  {% if current_user.eh_gestor() %}
+    <a href="{{ url_for('analista.analista') }}" title="Painel do Analista"
+       class="{% if request.endpoint == 'analista.analista' %}ativo{% endif %}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="20" x2="12" y2="10"/>
+        <line x1="18" y1="20" x2="18" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="16"/>
+      </svg>
+    </a>
+    <a href="{{ url_for('admin_catalogos.listar_missoes_view') }}" title="Missoes"
+       class="{% if request.endpoint == 'admin_catalogos.listar_missoes_view' %}ativo{% endif %}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+        <line x1="4" y1="22" x2="4" y2="15"/>
+      </svg>
+    </a>
+    <a href="{{ url_for('admin_catalogos.listar_municipios_view') }}" title="Municipios"
+       class="{% if request.endpoint == 'admin_catalogos.listar_municipios_view' %}ativo{% endif %}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+    </a>
+    <a href="{{ url_for('admin_catalogos.listar_triagem_view') }}" title="Triagem de missoes"
+       class="{% if request.endpoint == 'admin_catalogos.listar_triagem_view' %}ativo{% endif %}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+      </svg>
+    </a>
+    <a href="{{ url_for('admin.listar_usuarios') }}" title="Usuarios"
+       class="{% if request.endpoint == 'admin.listar_usuarios' %}ativo{% endif %}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    </a>
+  {% endif %}
+</nav>

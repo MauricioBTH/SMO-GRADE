@@ -4,42 +4,51 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: var(--bg);
+  background: var(--dark-bg);
 }
 
 .auth-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 32px 36px;
+  background: var(--dark-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 36px 40px;
   width: 100%;
   max-width: 420px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
 }
 
 .auth-card h1 {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--text-muted);
+  letter-spacing: 2px;
+  color: var(--gold);
   margin-bottom: 4px;
 }
 
+.auth-subtitle {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.6px;
+  margin-bottom: 28px;
+}
+
 .auth-card h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--navy);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--white);
   margin-bottom: 24px;
 }
 
 .auth-card label {
   display: block;
-  font-size: 0.75rem;
+  text-align: left;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
   color: var(--text-muted);
   margin-bottom: 6px;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 .auth-card input[type="email"],
@@ -47,12 +56,12 @@
 .auth-card input[type="text"] {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #d9d9d9;
+  background: var(--dark-panel-alt);
+  border: 1px solid var(--border-muted);
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-family: inherit;
-  background: var(--white);
-  color: var(--text-dark);
+  color: var(--white);
   outline: none;
   transition: border-color 0.15s;
 }
@@ -62,44 +71,47 @@
 }
 
 .auth-card button[type="submit"] {
-  margin-top: 22px;
+  margin-top: 24px;
   width: 100%;
-  padding: 11px 14px;
-  background: var(--navy);
-  color: var(--white);
+  padding: 12px 14px;
+  background: var(--gold);
+  color: #000;
   border: 0;
-  border-radius: 8px;
-  font-size: 0.95rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.4px;
   cursor: pointer;
   transition: background 0.15s;
+  font-family: inherit;
 }
 
 .auth-card button[type="submit"]:hover {
-  background: var(--gold);
-  color: var(--navy);
+  background: var(--gold-hover);
 }
 
 .auth-flash {
   margin: 12px 0 0;
   padding: 10px 12px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  text-align: left;
 }
 
 .auth-flash.error {
-  background: #fde8e8;
-  color: #9b1c1c;
+  background: rgba(153, 60, 29, 0.2);
+  color: var(--status-warning);
+  border: 1px solid rgba(153, 60, 29, 0.4);
 }
 
 .auth-flash.info {
-  background: #eef5ff;
-  color: #1c4b9b;
+  background: var(--gold-soft);
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
 }
 
 .auth-totp-code {
-  letter-spacing: 6px;
+  letter-spacing: 8px;
   text-align: center;
   font-size: 1.3rem;
   font-family: 'Menlo', 'Consolas', monospace;
@@ -110,25 +122,27 @@
   margin: 18px auto 12px;
   width: 220px;
   height: 220px;
-  border: 1px solid #eee;
-  border-radius: 8px;
+  background: var(--white);
+  padding: 8px;
+  border-radius: 10px;
 }
 
 .auth-secret-manual {
   text-align: center;
   font-family: 'Menlo', 'Consolas', monospace;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  background: var(--bg);
-  padding: 8px 10px;
-  border-radius: 6px;
+  background: var(--dark-panel-alt);
+  border: 1px solid var(--border-subtle);
+  padding: 10px 12px;
+  border-radius: 8px;
   word-break: break-all;
   margin-bottom: 8px;
 }
 
 .auth-help {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  margin-top: 10px;
+  margin-top: 12px;
   line-height: 1.5;
 }

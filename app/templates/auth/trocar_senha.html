@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Trocar senha - SMO-GRADE{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="auth-wrap">
+  <form class="auth-card" method="POST" action="{{ url_for('auth.trocar_senha') }}" novalidate>
+    <h1>Brigada Militar &middot; CPChq</h1>
+    <p class="auth-subtitle">Comando e Controle de Meios Operacionais - CCMO</p>
+    <h2>Trocar senha</h2>
+
+    {% with mensagens = get_flashed_messages(with_categories=true) %}
+      {% for categoria, msg in mensagens %}
+        <div class="auth-flash {{ categoria }}">{{ msg }}</div>
+      {% endfor %}
+    {% endwith %}
+
+    <label for="senha_atual">Senha atual</label>
+    <input id="senha_atual" name="senha_atual" type="password" autocomplete="current-password" required>
+
+    <label for="senha_nova">Nova senha</label>
+    <input id="senha_nova" name="senha_nova" type="password" autocomplete="new-password" minlength="{{ senha_min_len }}" required>
+
+    <label for="senha_conf">Confirmar nova senha</label>
+    <input id="senha_conf" name="senha_conf" type="password" autocomplete="new-password" minlength="{{ senha_min_len }}" required>
+
+    <button type="submit">Alterar senha</button>
+    <p class="auth-help">
+      A nova senha deve ter pelo menos {{ senha_min_len }} caracteres,
+      uma letra maiuscula e um caractere especial.
+    </p>
+  </form>
+</div>
+{% endblock %}

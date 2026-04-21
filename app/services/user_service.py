@@ -1,6 +1,7 @@
 """CRUD tipado para smo.usuarios e helpers de senha/TOTP."""
 from __future__ import annotations
 
+import re
 from datetime import datetime
 from typing import TypedDict, cast
 
@@ -9,7 +10,8 @@ import bcrypt
 from app.models.database import get_connection
 from app.models.user import ROLES_VALIDOS, UNIDADES_VALIDAS, Role, User
 
-SENHA_MIN_LEN: int = 10
+SENHA_MIN_LEN: int = 8
+_SENHA_ESPECIAL_RE = re.compile(r"[^A-Za-z0-9]")
 
 
 class UsuarioCreate(TypedDict, total=False):
@@ -51,6 +53,10 @@ def _hash_senha(senha: str) -> str:
 def _validar_senha(senha: str) -> None:
     if len(senha) < SENHA_MIN_LEN:
         raise ValueError(f"Senha deve ter pelo menos {SENHA_MIN_LEN} caracteres")
+    if not any(c.isupper() for c in senha):
+        raise ValueError("Senha deve ter pelo menos uma letra maiuscula")
+    if not _SENHA_ESPECIAL_RE.search(senha):
+        raise ValueError("Senha deve ter pelo menos um caractere especial")
 
 
 def _validar_payload_create(payload: UsuarioCreate) -> None:

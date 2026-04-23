@@ -13,6 +13,7 @@
 {% block content %}
 <!-- TELA DE UPLOAD -->
 <div id="upload-screen">
+  {% include "_components/hoje_chip.html" %}
   <h1>Brigada Militar - Comando de Pol&iacute;cia de Choque</h1>
   <h2>Comando e Controle</h2>
   <button class="btn-whatsapp" id="btn-whatsapp">
@@ -23,6 +24,7 @@
 
 <!-- TELA COLA TEXTO WHATSAPP -->
 <div id="whatsapp-screen" style="display:none">
+  {% include "_components/hoje_chip.html" %}
   <h1>Brigada Militar - Comando de Pol&iacute;cia de Choque</h1>
   <h2>Colar Texto do WhatsApp</h2>
   <textarea id="whatsapp-texto" placeholder="Cole aqui o texto recebido por WhatsApp (1 ou mais unidades)..." rows="14"></textarea>
@@ -35,29 +37,17 @@
 
 <!-- TELA PREVIEW EDITAVEL -->
 <div id="preview-screen" style="display:none">
+  {% include "_components/hoje_chip.html" %}
   <h1>Brigada Militar - Comando de Pol&iacute;cia de Choque</h1>
   <h2>Preview &mdash; Revisar e Confirmar</h2>
+  <!-- Card de data detectada (Fase 6.5.a — preenchido por preview_data_check.js) -->
+  <div id="preview-data-detectada"></div>
   <div id="preview-avisos"></div>
   <div id="preview-tabs" class="preview-tabs"></div>
   <div id="preview-tab-content"></div>
   <div class="preview-action-bar">
     <button class="btn-secundario" id="btn-voltar-texto">Voltar ao Texto</button>
     <button class="btn-primario" id="btn-confirmar">Confirmar e Salvar</button>
-  </div>
-</div>
-
-<!-- MODAL CONFIRMACAO -->
-<div id="modal-overlay" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-icon">
-      <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-    </div>
-    <div class="modal-title" id="modal-title">Confirmar</div>
-    <div class="modal-msg" id="modal-msg">Deseja salvar os dados de todas as unidades?</div>
-    <div class="modal-actions">
-      <button class="btn-secundario" id="modal-cancelar">Cancelar</button>
-      <button class="btn-primario" id="modal-confirmar">Salvar</button>
-    </div>
   </div>
 </div>
 
@@ -84,5 +74,7 @@
 <script src="{{ url_for('static', filename='js/render_cards.js') }}"></script>
 <script src="{{ url_for('static', filename='js/export_png.js') }}"></script>
 <script src="{{ url_for('static', filename='js/preview_missoes.js') }}"></script>
+<script src="{{ url_for('static', filename='js/preview_data_check.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modal_confirmar_salvar.js') }}"></script>
 <script src="{{ url_for('static', filename='js/operador.js') }}"></script>
 {% endblock %}

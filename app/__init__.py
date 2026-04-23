@@ -40,6 +40,7 @@ def create_app() -> Flask:
     from app.routes.analista import analista_bp
     from app.routes.api import api_bp
     from app.routes.api_catalogos import api_catalogos_bp
+    from app.routes.api_uploads import api_uploads_bp
     from app.routes.auth import auth_bp
     from app.routes.operador import operador_bp
 
@@ -50,5 +51,6 @@ def create_app() -> Flask:
     flask_app.register_blueprint(analista_bp)
     flask_app.register_blueprint(api_bp, url_prefix="/api")
     flask_app.register_blueprint(api_catalogos_bp, url_prefix="/api")
+    flask_app.register_blueprint(api_uploads_bp, url_prefix="/api")
 
     return flask_app

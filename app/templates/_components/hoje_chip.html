@@ -1,0 +1,22 @@
+{#
+  Chip "hoje" server-side (Fase 6.5.a).
+  Variáveis esperadas no contexto:
+    - hoje_dia_semana: 'quinta-feira'
+    - hoje_data: '24/04/2026'
+  Server-side evita drift de timezone do cliente.
+#}
+<div class="hoje-chip" aria-label="Data de hoje">
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+    <line x1="16" y1="2" x2="16" y2="6"/>
+    <line x1="8" y1="2" x2="8" y2="6"/>
+    <line x1="3" y1="10" x2="21" y2="10"/>
+  </svg>
+  <span class="hoje-chip__label">Hoje:</span>
+  <span class="hoje-chip__valor">
+    <span class="hoje-chip__dow">{{ hoje_dia_semana }}</span>,
+    <span class="hoje-chip__data"
+          data-hoje="{{ hoje_data }}">{{ hoje_data }}</span>
+  </span>
+</div>

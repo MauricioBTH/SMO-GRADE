@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Histórico — {{ unidade }} — {{ data }} — CPChq{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+{% endblock %}
+
+{% block header %}{% include "_components/header.html" %}{% endblock %}
+{% block nav %}{% include "_components/nav.html" %}{% endblock %}
+
+{% block content %}
+<div class="historico-screen">
+  {% include "_components/hoje_chip.html" %}
+  <h1>Histórico de uploads</h1>
+  <h2>
+    <span class="historico-unidade">{{ unidade }}</span>
+    <span class="historico-sep">—</span>
+    <span class="historico-data">{{ data }}</span>
+  </h2>
+
+  <div id="historico-status" class="historico-status" role="status" aria-live="polite">
+    Carregando…
+  </div>
+
+  <table class="historico-tabela" id="historico-tabela" hidden>
+    <thead>
+      <tr>
+        <th scope="col">Hora</th>
+        <th scope="col">Usuário</th>
+        <th scope="col">Status</th>
+        <th scope="col">Origem</th>
+        <th scope="col">Frações</th>
+        <th scope="col">Ação</th>
+      </tr>
+    </thead>
+    <tbody id="historico-tbody"></tbody>
+  </table>
+
+  <div class="historico-voltar">
+    <a href="{{ url_for('operador.operador') }}" class="btn-secundario">Voltar ao painel</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  window.HISTORICO_CTX = {
+    unidade: {{ unidade | tojson }},
+    data: {{ data | tojson }}
+  };
+</script>
+<script src="{{ url_for('static', filename='js/historico_uploads.js') }}"></script>
+{% endblock %}

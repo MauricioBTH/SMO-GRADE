@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 
 from flask import Blueprint, current_app, jsonify, request
-from flask_login import login_required
+from flask_login import current_user, login_required
 from werkzeug.utils import secure_filename
 
 from app.auth.decorators import role_required
@@ -84,8 +84,12 @@ def upload_xlsx() -> tuple:
     salvo_no_banco: bool = False
     if _db_configurado():
         try:
-            save_fracoes(fracoes)
-            save_cabecalho(cabecalho)
+            save_fracoes(
+                fracoes, usuario_id=current_user.id, origem="xlsx",
+            )
+            save_cabecalho(
+                cabecalho, usuario_id=current_user.id, origem="xlsx",
+            )
             salvo_no_banco = True
         except Exception as exc:
             logger.warning("Erro ao salvar no banco: %s", exc)
@@ -151,6 +155,16 @@ def salvar_texto() -> tuple:
 
     fracoes_raw = body.get("fracoes", [])
     cabecalhos_raw = body.get("cabecalhos", [])
+    # Fase 6.5.b: texto original (cru do WhatsApp) opcional, guardado para
+    # auditoria/reprocessamento via /api/uploads/<id>/texto.
+    texto_original_raw = body.get("texto_original")
+    texto_original: str | None = (
+        texto_original_raw.strip()
+        if isinstance(texto_original_raw, str) and texto_original_raw.strip()
+        else None
+    )
+    if texto_original and len(texto_original) > 50_000:
+        return jsonify({"erro": "texto_original excede 50 000 caracteres"}), 400
 
     if not fracoes_raw:
         return jsonify({"erro": "Nenhuma fracao enviada"}), 400
@@ -173,8 +187,18 @@ def salvar_texto() -> tuple:
     salvo_no_banco: bool = False
     if _db_configurado():
         try:
-            save_fracoes(fracoes)
-            save_cabecalho(cabecalho)
+            save_fracoes(
+                fracoes,
+                usuario_id=current_user.id,
+                texto_original=texto_original,
+                origem="whatsapp",
+            )
+            save_cabecalho(
+                cabecalho,
+                usuario_id=current_user.id,
+                texto_original=texto_original,
+                origem="whatsapp",
+            )
             salvo_no_banco = True
         except Exception as exc:
             logger.warning("Erro ao salvar no banco: %s", exc)

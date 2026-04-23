@@ -165,6 +165,12 @@
   var previewTabAtiva = 0;
 
   function montarPreview(avisos) {
+    // Card de data detectada (Fase 6.5.a) — render logo acima dos avisos
+    var dataEl = document.getElementById('preview-data-detectada');
+    if (dataEl && window.PreviewDataCheck) {
+      window.PreviewDataCheck.render(dataEl, previewCabecalhos);
+    }
+
     // Avisos
     var avisosEl = document.getElementById('preview-avisos');
     avisosEl.innerHTML = '';
@@ -370,24 +376,14 @@
 
   var btnConfirmar = document.getElementById('btn-confirmar');
   var btnConfirmarTexto = btnConfirmar.textContent;
-  var modalOverlay = document.getElementById('modal-overlay');
-  var modalBtnOk = document.getElementById('modal-confirmar');
-  var modalBtnCancel = document.getElementById('modal-cancelar');
 
-  function fecharModal() { modalOverlay.classList.remove('active'); }
-
-  btnConfirmar.addEventListener('click', function () {
-    modalOverlay.classList.add('active');
-  });
-
-  modalBtnCancel.addEventListener('click', fecharModal);
-  modalOverlay.addEventListener('click', function (e) {
-    if (e.target === modalOverlay) fecharModal();
-  });
-
-  modalBtnOk.addEventListener('click', function () {
-    fecharModal();
+  function executarSalvar() {
     var dados = coletarPreview();
+    // Fase 6.5.b: envia o texto cru pro backend guardar em smo.uploads.texto_original.
+    var txtEl = document.getElementById('whatsapp-texto');
+    if (txtEl && txtEl.value) {
+      dados.texto_original = txtEl.value;
+    }
 
     btnConfirmar.disabled = true;
     btnConfirmar.textContent = 'Salvando...';
@@ -421,6 +417,72 @@
         btnConfirmar.classList.add('btn-error');
         setTimeout(function () { btnConfirmar.classList.remove('btn-error'); }, 2000);
       });
+  }
+
+  btnConfirmar.addEventListener('click', function () {
+    // Antes de abrir o modal de confirmação, re-salva tab ativa e re-avalia
+    // o card de data — pode ter sido editado nos inputs do preview.
+    salvarTabAtual();
+    var dataEl = document.getElementById('preview-data-detectada');
+    if (dataEl && window.PreviewDataCheck) {
+      window.PreviewDataCheck.render(dataEl, previewCabecalhos);
+      if (window.PreviewDataCheck.bloqueiaSalvar(dataEl)) {
+        mostrarToast('Informe a data antes de salvar.', 'erro');
+        return;
+      }
+    }
+    var dataCheckInfo = window.PreviewDataCheck
+      ? window.PreviewDataCheck.infoDataUnica(previewCabecalhos) : null;
+    if (!window.ModalConfirmarSalvar) {
+      executarSalvar();
+      return;
+    }
+
+    // Prefetch /api/uploads/existente enquanto o botao fica "Verificando...".
+    // Motivo: conexao nova Supabase = ~1s; abrir modal antes e preencher
+    // depois cria delay visivel irritante. Aguardar aqui com feedback no
+    // proprio botao e mais limpo — modal abre com tudo pronto.
+    var btnTextoOrig = btnConfirmar.textContent;
+    btnConfirmar.disabled = true;
+    btnConfirmar.classList.add('btn-loading');
+    btnConfirmar.textContent = 'Verificando...';
+
+    var paresUnicos = {};
+    (previewCabecalhos || []).forEach(function (c) {
+      if (c.unidade && c.data) paresUnicos[c.unidade] = c.data;
+    });
+    (previewFracoes || []).forEach(function (f) {
+      if (f.unidade && f.data && !paresUnicos[f.unidade]) {
+        paresUnicos[f.unidade] = f.data;
+      }
+    });
+    var unis = Object.keys(paresUnicos);
+
+    var fetchExistente;
+    if (unis.length === 1) {
+      var u = unis[0], d = paresUnicos[u];
+      var url = '/api/uploads/existente?unidade=' + encodeURIComponent(u) +
+                '&data=' + encodeURIComponent(d);
+      fetchExistente = fetch(url, { credentials: 'same-origin' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (x) { return (x && x.existe) ? x : null; })
+        .catch(function () { return null; });
+    } else {
+      fetchExistente = Promise.resolve(null);  // multi-unidade: sem bloco
+    }
+
+    fetchExistente.then(function (existenteData) {
+      btnConfirmar.disabled = false;
+      btnConfirmar.classList.remove('btn-loading');
+      btnConfirmar.textContent = btnTextoOrig;
+      window.ModalConfirmarSalvar.abrir({
+        cabecalhos: previewCabecalhos,
+        fracoes: previewFracoes,
+        dataCheck: dataCheckInfo,
+        existenteData: existenteData,
+        onConfirmar: executarSalvar,
+      });
+    });
   });
 
   // ---------- PAINEL ----------

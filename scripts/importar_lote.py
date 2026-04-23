@@ -13,9 +13,24 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from app import create_app
 from app.services.whatsapp_parser import parse_texto_whatsapp
 from app.services.db_service import save_fracoes, save_cabecalho
+from app.services.user_service import get_by_email
 
 
-def importar_arquivo(caminho: str) -> dict:
+_SISTEMA_EMAIL = "sistema@smo.local"
+
+
+def _sistema_id() -> str:
+    """Fase 6.5.b: importacao em lote grava uploads via usuario sistema."""
+    user = get_by_email(_SISTEMA_EMAIL)
+    if user is None:
+        raise RuntimeError(
+            f"Usuario sistema ({_SISTEMA_EMAIL}) nao encontrado — "
+            "rode migration 008 antes."
+        )
+    return user.id
+
+
+def importar_arquivo(caminho: str, usuario_id: str) -> dict:
     """Parseia um .txt e insere no banco. Retorna relatório."""
     nome = os.path.basename(caminho)
     print(f"\n{'='*60}")
@@ -81,8 +96,12 @@ def importar_arquivo(caminho: str) -> dict:
 
     # Inserir no banco
     print(f"\n  INSERINDO NO BANCO...")
-    inserted_cab = save_cabecalho(cab_validos)
-    inserted_frac = save_fracoes(frac_validos)
+    inserted_cab = save_cabecalho(
+        cab_validos, usuario_id=usuario_id, origem="backfill"
+    )
+    inserted_frac = save_fracoes(
+        frac_validos, usuario_id=usuario_id, origem="backfill"
+    )
     print(f"    Cabecalhos inseridos: {inserted_cab}")
     print(f"    Fracoes inseridas:    {inserted_frac}")
 
@@ -111,10 +130,11 @@ def main():
 
     app = create_app()
     with app.app_context():
+        usuario_id = _sistema_id()
         relatorios = []
         for arq in arquivos:
             try:
-                rel = importar_arquivo(arq)
+                rel = importar_arquivo(arq, usuario_id)
                 relatorios.append(rel)
             except Exception as e:
                 print(f"\n  ERRO ao importar {arq}: {e}")

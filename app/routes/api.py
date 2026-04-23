@@ -31,6 +31,7 @@ from app.services.db_service import (
     save_fracoes,
 )
 from app.services.whatsapp_parser import calcular_horario_emprego, parse_texto_whatsapp
+from app.services import catalogo_service
 
 api_bp = Blueprint("api", __name__)
 logger = logging.getLogger(__name__)
@@ -140,7 +141,9 @@ def parse_texto() -> tuple:
 @role_required(["gestor", "operador_arei"])
 def salvar_texto() -> tuple:
     """Fase 5 - Salva fracoes/cabecalho editados do preview no banco."""
-    from app.validators.xlsx_validator import validate_cabecalho, validate_fracoes
+    from app.validators.xlsx_validator import (
+        validar_vertices_n_n, validate_cabecalho, validate_fracoes,
+    )
 
     body = request.get_json(silent=True)
     if not body:
@@ -155,6 +158,15 @@ def salvar_texto() -> tuple:
     try:
         fracoes = validate_fracoes(fracoes_raw)
         cabecalho = validate_cabecalho(cabecalhos_raw)
+        # Indice municipio_id -> crpm_sigla para aferir POA no validador N:N.
+        muni_index: dict[str, str] = {}
+        if _db_configurado():
+            try:
+                for m in catalogo_service.listar_municipios(limite=2000):
+                    muni_index[m.id] = m.crpm_sigla
+            except Exception as exc:
+                logger.warning("Indice municipios/crpm indisponivel: %s", exc)
+        validar_vertices_n_n(fracoes, municipios_index=muni_index)
     except ValueError as exc:
         return jsonify({"erro": str(exc)}), 422
 
@@ -170,6 +182,7 @@ def salvar_texto() -> tuple:
     fracoes_out: list[dict] = [dict(f) for f in fracoes]
     cabecalho_out: list[dict] = [dict(c) for c in cabecalho]
     calcular_horario_emprego(cabecalho_out, fracoes_out)
+    _hidratar_bpm_codigos(fracoes_out)
 
     return jsonify({
         "sucesso": True,
@@ -179,6 +192,30 @@ def salvar_texto() -> tuple:
         "total_cabecalho": len(cabecalho),
         "salvo_no_banco": salvo_no_banco,
     }), 200
+
+
+def _hidratar_bpm_codigos(fracoes: list[dict]) -> None:
+    """Preenche `missao.bpm_codigos` (plural, Fase 6.4) a partir de `bpm_ids`.
+
+    O preview envia so os UUIDs; o painel do analista precisa dos codigos pra
+    renderizar chips/labels. Ignora ids nao resolvidos no cache silenciosamente
+    — hidratacao e best-effort (defense in depth para rollouts parciais).
+    """
+    if not _db_configurado():
+        return
+    try:
+        from app.services import bpm_service
+        bpms = {b.id: b.codigo for b in bpm_service.listar_bpms()}
+    except Exception as exc:
+        logger.warning("Nao foi possivel hidratar BPMs: %s", exc)
+        return
+    for fr in fracoes:
+        for m in fr.get("missoes") or []:
+            if m.get("bpm_codigos"):
+                continue
+            ids: list[str] = list(m.get("bpm_ids") or [])
+            codigos: list[str] = [bpms[i] for i in ids if i in bpms]
+            m["bpm_codigos"] = codigos
 
 
 @api_bp.route("/analista/filtros", methods=["GET"])
@@ -325,3 +362,7 @@ def analista_fracoes_analytics() -> tuple:
     except Exception as exc:
         logger.error("Erro ao calcular analytics fracoes: %s", exc)
         return jsonify({"erro": "Erro ao calcular analytics de fracoes"}), 500
+
+
+# Catalogos + analytics 6.2/6.3 extraidos para app/routes/api_catalogos.py
+# (mantem este arquivo <= 500 LOC). Blueprint registrado em app/__init__.py.

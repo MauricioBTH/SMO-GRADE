@@ -102,6 +102,65 @@ RE_EQUIPES = re.compile(
     re.IGNORECASE,
 )
 RE_MISSAO = re.compile(r"Miss[ãa]o\s*:\s*(.+)", re.IGNORECASE)
+RE_OSV = re.compile(r"OSv\s*:\s*(.+)", re.IGNORECASE)
+RE_MUNICIPIO = re.compile(
+    r"Munic[ií]pio\s*:\s*(.+)", re.IGNORECASE
+)
+
+# ---------------------------------------------------------------------------
+# Fase 6.3 — grammar canonica N:N (Missao K + Municipio + BPM opcional)
+# Fase 6.4 — o trecho de BPM passa a aceitar 1..N BPMs em 8 variantes; a
+# extracao e conversao em lista canonica ficam com bpm_service.parse_lista_bpms.
+# ---------------------------------------------------------------------------
+
+# Tokens do trecho de BPM: com BPM ("20 BPM", "20° BPM") ou so numero ("20", "20°").
+_PAT_BPM_TOKEN_COM_BPM: str = r"\d{1,3}[°º]?\s*BPM"
+_PAT_BPM_TOKEN_SO_NUM:  str = r"\d{1,3}[°º]?"
+# Separadores aceitos: virgula/ponto-virgula/barra com whitespace opcional, ou ' e '.
+_PAT_BPM_SEP: str = r"(?:\s*[,;/]\s*|\s+e\s+)"
+# Alternativa A — BPM aparece em todos os tokens ("20 BPM, 1 BPM", "20 BPM e 1 BPM").
+_PAT_BPM_ALL: str = (
+    rf"{_PAT_BPM_TOKEN_COM_BPM}"
+    rf"(?:{_PAT_BPM_SEP}{_PAT_BPM_TOKEN_COM_BPM})*"
+)
+# Alternativa B — BPM aparece so no ultimo token ("20° e 1° BPM", "20/1 BPM").
+_PAT_BPM_TAIL: str = (
+    rf"{_PAT_BPM_TOKEN_SO_NUM}"
+    rf"(?:{_PAT_BPM_SEP}{_PAT_BPM_TOKEN_SO_NUM})*"
+    rf"\s*BPM"
+)
+# Trecho completo: A ou B. Parenteses externos opcionais no uso abaixo.
+_PAT_BPM_TRECHO: str = rf"(?:{_PAT_BPM_ALL}|{_PAT_BPM_TAIL})"
+
+RE_MISSAO_MUNICIPIO = re.compile(
+    rf"^\s*Miss[ãa]o\s+(?P<ordem>\d+)\s*:\s*"
+    rf"(?P<missao>.+?)\s+"
+    rf"Munic[ií]pio\s*:\s*"
+    rf"(?P<municipio>.+?)"
+    rf"(?:\s*\(?\s*(?P<bpm>{_PAT_BPM_TRECHO})\s*\)?)?\s*$",
+    re.IGNORECASE,
+)
+
+# Fallback: 'Missao K: <nome>' sem municipio na linha — tipico de missoes
+# em quartel (Prontidao/Pernoite) ou casos onde operador escreve so o nome.
+RE_MISSAO_ORDEM_SIMPLES = re.compile(
+    r"^\s*Miss[ãa]o\s+(?P<ordem>\d+)\s*:\s*(?P<missao>.+?)\s*$",
+    re.IGNORECASE,
+)
+
+RE_EQUIPES_EFETIVO = re.compile(
+    r"^\s*Equipes?\s*:\s*(?P<n>\d+)\s*\(\s*(?P<efetivo>\d+)\s*PMs?\s*\)",
+    re.IGNORECASE,
+)
+
+# Heuristica: missao cujo nome comeca com esses tokens -> em quartel (sem BPM).
+RE_EM_QUARTEL = re.compile(
+    r"^\s*(prontid[ãa]o|pernoite|aquartelado|em\s+quartel)",
+    re.IGNORECASE,
+)
+
+# Normaliza captura de BPM "20° BPM", "1  BPM", etc. -> "20 BPM"
+RE_BPM_NUMERO = re.compile(r"(\d{1,2})", re.ASCII)
 RE_HORARIO = re.compile(
     r"Hor[áa]rio\s*(?:de\s+emprego)?\s*:\s*(.+)", re.IGNORECASE
 )

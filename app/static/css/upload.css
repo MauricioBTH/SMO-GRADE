@@ -4,19 +4,38 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
-  padding: 80px 20px 40px;
+  min-height: calc(100vh - var(--app-chrome-h));
+  padding: 56px 20px 24px;
   background: var(--dark-bg);
   position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 #upload-screen::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 200px;
-  background: linear-gradient(180deg, rgba(247,185,0,0.08) 0%, transparent 100%);
+  height: 180px;
+  background: linear-gradient(180deg, rgba(247,185,0,0.06) 0%, transparent 100%);
   pointer-events: none;
+  z-index: 0;
+}
+
+#upload-screen::after {
+  content: '';
+  flex: 1 1 auto;
+  align-self: stretch;
+  margin-top: 24px;
+  background: url('/static/logos/logo-CPChq.png') center center / contain no-repeat;
+  opacity: 0.09;
+  pointer-events: none;
+  min-height: 240px;
+}
+
+#upload-screen > * {
+  position: relative;
+  z-index: 1;
 }
 
 #upload-screen h1 {
@@ -26,8 +45,7 @@
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 4px;
-  position: relative;
+  margin-bottom: 6px;
 }
 
 #upload-screen h2 {
@@ -36,45 +54,7 @@
   font-weight: 300;
   text-align: center;
   margin-bottom: 40px;
-  position: relative;
 }
-
-.upload-box {
-  width: 280px;
-  border: 2px dashed var(--gold-border);
-  border-radius: 16px;
-  padding: 40px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.25s;
-  position: relative;
-}
-
-.upload-box:hover {
-  border-color: var(--gold);
-  background: rgba(247,185,0,0.04);
-}
-
-.upload-box svg {
-  width: 48px;
-  height: 48px;
-  fill: var(--gold);
-  margin-bottom: 12px;
-}
-
-.upload-box p {
-  color: var(--white);
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.upload-box span {
-  color: var(--text-muted);
-  font-size: 0.75rem;
-}
-
-#file-input { display: none; }
 
 /* Upload status */
 .upload-status {
@@ -111,23 +91,38 @@
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 16px;
-  padding: 12px 24px;
-  background: transparent;
-  color: var(--gold);
-  border: 1px solid rgba(247, 185, 0, 0.4);
+  gap: 10px;
+  padding: 11px 26px;
+  background: var(--gold);
+  color: #0a0a0a;
+  border: 1px solid var(--gold);
   border-radius: 10px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
   font-family: inherit;
+  box-shadow: 0 6px 18px rgba(247, 185, 0, 0.16),
+              0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
-.btn-whatsapp:hover {
-  background: var(--gold-soft);
-  border-color: var(--gold);
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  background: var(--gold-hover, #ffc829);
+  transform: translateY(-1px);
+  box-shadow: 0 9px 22px rgba(247, 185, 0, 0.26),
+              0 1px 3px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.btn-whatsapp:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(247, 185, 0, 0.18);
+}
+
+.btn-whatsapp svg {
+  fill: #0a0a0a;
 }
 
 /* ===== TELA COLA TEXTO ===== */
@@ -135,8 +130,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  padding: 60px 20px 40px;
+  min-height: calc(100vh - var(--app-chrome-h));
+  padding: 40px 20px;
   background: var(--dark-bg);
 }
 
@@ -316,8 +311,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  padding: 60px 20px 80px;
+  min-height: calc(100vh - var(--app-chrome-h));
+  padding: 40px 20px 80px;
   background: var(--dark-bg);
 }
 
@@ -465,19 +460,347 @@
 }
 
 .btn-remover {
-  background: none;
-  border: none;
+  background: transparent;
+  border: 1px solid transparent;
   color: var(--status-warning);
-  font-size: 0.7rem;
   cursor: pointer;
-  padding: 4px 8px;
-  font-family: inherit;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
 }
 
-.btn-remover:hover {
+.btn-remover:hover,
+.btn-remover:focus-visible {
+  background: rgba(255, 80, 80, 0.12);
+  border-color: rgba(255, 80, 80, 0.4);
   color: var(--status-error);
+  outline: none;
+}
+
+.btn-remover svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.btn-adicionar {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--gold);
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.btn-adicionar:hover,
+.btn-adicionar:focus-visible {
+  background: rgba(247, 185, 0, 0.15);
+  border-color: var(--gold-border);
+  outline: none;
+}
+
+.btn-adicionar svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.btn-adicionar.missao-add {
+  align-self: flex-end;
+  margin-top: 2px;
 }
 
 .fracao-form .preview-grid {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
+
+/* Fase 6.3 — lista de vertices N:N no preview */
+.missoes-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 14px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.missoes-title::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 12px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.missoes-vertices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.missao-vertice {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  padding: 12px 44px 12px 12px;
+  background: var(--dark-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  align-items: flex-end;
+}
+
+.missao-vertice .preview-field { flex: 1 1 140px; }
+.missao-vertice .preview-field-wide { flex: 2 1 220px; }
+.missao-vertice .preview-field-check {
+  flex: 0 0 auto;
+  min-width: 112px;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 11px;
+}
+
+.missao-vertice .preview-field-check label {
+  order: 2;
+  margin: 0;
+  cursor: pointer;
+}
+
+.missao-vertice .preview-field-check input[type="checkbox"] {
+  order: 1;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border-muted);
+  background: var(--dark-panel);
+  accent-color: var(--gold);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.missao-vertice-remover {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* Combobox municipio (Fase 6.3) */
+.municipio-combo {
+  position: relative;
+  width: 100%;
+}
+
+.municipio-combo-input {
+  width: 100%;
+  padding: 8px 10px;
+  background: var(--dark-panel);
+  color: var(--white);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-family: inherit;
+}
+
+.municipio-combo-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.municipio-combo-list {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  max-height: 220px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: var(--dark-panel);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  display: none;
+}
+
+.municipio-combo-list.aberta {
+  display: block;
+}
+
+.municipio-combo-item {
+  padding: 7px 10px;
+  color: var(--white);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.municipio-combo-item:hover {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.municipio-combo-vazio {
+  padding: 7px 10px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* Chip-picker BPM (Fase 6.4 — N:N BPMs por missao) */
+.bpm-chips {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 36px;
+  padding: 4px 6px;
+  background: var(--dark-panel);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+}
+
+.bpm-chips.desabilitado {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.bpm-chips-selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.bpm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px 2px 8px;
+  background: var(--gold-soft);
+  color: var(--gold);
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.bpm-chip-remover {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0 2px;
+  color: inherit;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.bpm-chip-remover:hover {
+  color: var(--white);
+}
+
+.bpm-picker-input {
+  flex: 1 1 80px;
+  min-width: 80px;
+  padding: 4px 4px;
+  background: transparent;
+  color: var(--white);
+  border: 0;
+  font-size: 0.8rem;
+  font-family: inherit;
+}
+
+.bpm-picker-input:focus {
+  outline: none;
+}
+
+.bpm-picker-list {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  max-height: 180px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: var(--dark-panel);
+  border: 1px solid var(--border-muted);
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  display: none;
+}
+
+.bpm-picker-list.aberta {
+  display: block;
+}
+
+.bpm-picker-item {
+  padding: 7px 10px;
+  color: var(--white);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.bpm-picker-item:hover {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.bpm-picker-vazio {
+  padding: 7px 10px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* Fase 6.3 — saude catalogacao */
+.saude-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 8px 0 20px;
+}
+.saude-card {
+  background: var(--surface-2, #1a1d22);
+  border: 1px solid var(--border, #2c3036);
+  border-radius: 6px;
+  padding: 12px 14px;
+  text-align: center;
+}
+.saude-valor {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent, #F7B900);
+}
+.saude-label { font-size: 11px; color: #888; margin-top: 4px; }

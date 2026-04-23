@@ -2,7 +2,7 @@ import re
 from typing import TypedDict
 
 
-class FracaoRow(TypedDict):
+class _FracaoBase(TypedDict):
     unidade: str
     data: str
     turno: str
@@ -14,6 +14,34 @@ class FracaoRow(TypedDict):
     horario_inicio: str
     horario_fim: str
     missao: str
+
+
+class MissaoVertice(TypedDict, total=False):
+    """Vertice de smo.fracao_missoes (Fase 6.3). Um bloco canonico emite N
+    desses. A lista ordenada vive em `FracaoRow.missoes`.
+
+    Fase 6.4: BPMs passam a ser lista (um vertice em POA pode cobrir N BPMs).
+    Lista vazia = sem BPM (caso geral: em_quartel=True ou municipio fora de POA).
+    """
+    ordem: int
+    missao_nome_raw: str
+    municipio_nome_raw: str
+    bpm_raws: list[str]
+    em_quartel: bool
+    # Resolvidos pelo enriquecedor (whatsapp_catalogo):
+    missao_id: str | None
+    municipio_id: str | None
+    bpm_ids: list[str]
+
+
+class FracaoRow(_FracaoBase, total=False):
+    # Campos catalogados (Fase 6.2) — opcionais; podem ser None.
+    missao_id: str | None
+    osv: str | None
+    municipio_id: str | None
+    municipio_nome_raw: str | None
+    # Fase 6.3 — N vertices (canonico). Nao-canonico: lista de 1 item derivado.
+    missoes: list[MissaoVertice]
 
 
 class CabecalhoRow(TypedDict):
@@ -115,7 +143,7 @@ def validate_fracoes(rows: list[dict]) -> list[FracaoRow]:
         if not unidade:
             raise ValueError(f"Linha {idx + 2}: unidade vazia")
 
-        validated.append(FracaoRow(
+        fr: FracaoRow = FracaoRow(
             unidade=unidade,
             data=sanitize_text(row.get("data", "")),
             turno=sanitize_text(row.get("turno", "")),
@@ -127,9 +155,119 @@ def validate_fracoes(rows: list[dict]) -> list[FracaoRow]:
             horario_inicio=sanitize_text(row.get("horario_inicio", "")),
             horario_fim=sanitize_text(row.get("horario_fim", "")),
             missao=sanitize_text(row.get("missao", "")),
-        ))
+        )
+        # Campos catalogados (Fase 6.2) — repassados sem ressanitizar ids
+        # porque vem do preview ja validados no backend anterior.
+        for key in ("missao_id", "osv", "municipio_id", "municipio_nome_raw"):
+            if key in row and row[key] is not None:
+                fr[key] = row[key] if key.endswith("_id") else sanitize_text(row[key])
+
+        # Vertices (Fase 6.3). Se a chave existe, normaliza; caso contrario,
+        # save_fracoes trata como lista vazia (compat com XLSX legado).
+        if "missoes" in row and isinstance(row["missoes"], list):
+            fr["missoes"] = _normalizar_vertices(row["missoes"])
+
+        validated.append(fr)
 
     return validated
+
+
+def _normalizar_vertices(raw: list[dict]) -> list[MissaoVertice]:
+    """Sanitiza strings e coage tipos nos vertices vindos do preview JSON.
+    Renumeracao final da `ordem` fica com db_service._inserir_vertices.
+
+    Fase 6.4: aceita bpm_raws/bpm_ids (plural, canonico) e, por compat com
+    payload legado de 6.3, tambem aceita bpm_raw/bpm_id singulares — ambos
+    sao normalizados para lista. em_quartel=True zera bpm_ids.
+    """
+    out: list[MissaoVertice] = []
+    for i, v in enumerate(raw):
+        if not isinstance(v, dict):
+            continue
+        em_q: bool = bool(v.get("em_quartel", False))
+        out.append(MissaoVertice(
+            ordem=safe_int(v.get("ordem", i + 1)),
+            missao_nome_raw=sanitize_text(v.get("missao_nome_raw", "") or ""),
+            municipio_nome_raw=sanitize_text(v.get("municipio_nome_raw", "") or ""),
+            bpm_raws=_coagir_bpm_raws(v),
+            em_quartel=em_q,
+            missao_id=v.get("missao_id") or None,
+            municipio_id=v.get("municipio_id") or None,
+            bpm_ids=[] if em_q else _coagir_bpm_ids(v),
+        ))
+    return out
+
+
+def _coagir_bpm_raws(v: dict) -> list[str]:
+    """Extrai e sanitiza bpm_raws do payload, tolerando a forma singular (6.3)."""
+    crus = v.get("bpm_raws")
+    if isinstance(crus, list):
+        return [sanitize_text(str(x)) for x in crus if x]
+    singular = v.get("bpm_raw")
+    if singular:
+        return [sanitize_text(str(singular))]
+    return []
+
+
+def _coagir_bpm_ids(v: dict) -> list[str]:
+    """Extrai bpm_ids do payload, tolerando a forma singular (6.3).
+    Ids vindos do catalogo sao UUIDs ja validados — apenas dedup preservando ordem."""
+    crus = v.get("bpm_ids")
+    lista: list[str] = []
+    if isinstance(crus, list):
+        lista = [str(x) for x in crus if x]
+    else:
+        singular = v.get("bpm_id")
+        if singular:
+            lista = [str(singular)]
+    vistos: set[str] = set()
+    saida: list[str] = []
+    for x in lista:
+        if x in vistos:
+            continue
+        vistos.add(x)
+        saida.append(x)
+    return saida
+
+
+def validar_vertices_n_n(
+    fracoes: list[FracaoRow], poa_crpm_sigla: str = "CPC",
+    municipios_index: dict[str, str] | None = None,
+) -> list[str]:
+    """Regra 6.3/6.4 pre-save: cada fracao deve ter >=1 vertice com municipio_id;
+    se POA e nao em_quartel, exige ao menos 1 BPM (lista nao-vazia). Levanta
+    ValueError com mensagens agregadas. `municipios_index`:
+    {municipio_id: crpm_sigla} (injetavel p/ teste). Retorna lista de avisos
+    informativos (nao bloqueantes) — erros levantam.
+    """
+    erros: list[str] = []
+    avisos: list[str] = []
+    for fr in fracoes:
+        titulo: str = fr.get("fracao") or fr.get("comandante") or "fracao"
+        vertices: list[MissaoVertice] = fr.get("missoes") or []
+        if not vertices:
+            erros.append(f"[{titulo}] sem missoes no preview.")
+            continue
+        for v in vertices:
+            if not v.get("municipio_id"):
+                erros.append(
+                    f"[{titulo}] missao '{v.get('missao_nome_raw', '?')}' "
+                    f"sem municipio no catalogo."
+                )
+                continue
+            if municipios_index is not None and not v.get("em_quartel", False):
+                sigla: str = (municipios_index.get(
+                    v["municipio_id"] or "", ""
+                ) or "").upper()
+                bpm_ids: list[str] = v.get("bpm_ids") or []
+                if sigla == poa_crpm_sigla.upper() and not bpm_ids:
+                    erros.append(
+                        f"[{titulo}] missao '{v.get('missao_nome_raw', '?')}' "
+                        f"em Porto Alegre exige BPM (ou marcar 'em quartel')."
+                    )
+    if erros:
+        raise ValueError(" | ".join(erros))
+    return avisos
 
 
 def validate_cabecalho(rows: list[dict]) -> list[CabecalhoRow]:

@@ -2,7 +2,7 @@
 *BRIGADA MILITAR*
 *CPChq*
 *1°BPChq*
-Previsão do dia 12/04/2026
+Previsão do dia 23/04/2026
 
 Oficial Superior CPChq MAJ PM NICOLOSO (51) 99737 - 5550
 COPOM: Qso Funcional (51) 98437-6940
@@ -11,30 +11,28 @@ Horário: 06:00 às 18:00
 SD PM KOKOVICH
 Horário: 18:00 às 06:00
 
+PELOTÃO ALFA
+Cmt: TEN SILVA (51) 99999-9999
+Equipes: 5 (20 PMs)
+Missão 1: Prontidão 
+Missão 2: Patrulhamento tático motorizado: Porto Alegre (19 BPM)
+Missão 3: Apoio a Evento Município: Canoas
+Horário: 08h às 08:00
 
-PELOTÃO DE PRONTIDÃO
-Cmt: TEN PM RENATO (55) 99645 - 6325
-Equipes: 05 (20 PM’s)
-Missão: Prontidão, Reserva de OCD e Combate aos CVLIs – Área do 20º BPM
-Horário: 20:00 às 02:00
+PELOTÃO BRAVO
+Cmt: TEN BESSIAS (51) 99999-9876
+Equipes: 6 (24 PMs)
+Missão 1: Patrulhamento tático motorizado: Porto Alegre (1 BPM)
+Missão 2: GRENAL: Porto Alegre 11BPM
+Horário: 07:30 às 13:30
 
-RESERVA I
-Cmt: TEN PM BATISTA (51) 98542 - 3634
-Equipes: 05 (19 PM’s)
-Missão: Eleições Municipais - Área do 26ºBPM ( Cachoeirinha)
-Horário: 16:00 às 00:00
+PELOTÃO CHARLIE
+Cmt: TEN EPITÁFIO (51) 99999-1234
+Equipes: 4 (16 PMs)
+Missão 1: Patrulhamento tático motorizado: Porto Alegre (89 BPM)
+Missão 2: MANIFESTAÇÃO SOCIAL PALÁCIO PIRATINI: Porto Alegre 9º BPM
+Horário: 15:00 às 21:00
 
-CANIL I
-Cmt: SD PM MANICA (51) 98284-1736
-Equipes: 01 (03 PM’s)
-Missão: Prontidão de Faro
-Horário: 08:00 às 08:00
-
-OPERAÇÃO LITORAL
-Cmt: SGT PM PEREIRA (51) 99861-1903
-Equipes: 03 (12 PM’s)
-Missão: Retorno
-Horário: -- às –
 
 Turno:2/3 e 4/1
 1. Efetivo Total: 42

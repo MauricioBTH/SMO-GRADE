@@ -69,7 +69,10 @@ class TestNavRoleGate:
             assert "/admin/catalogos/triagem-missoes" in body
             assert "/admin/usuarios" in body
 
-    def test_arei_nao_ve_links_admin(self, monkeypatch):
+    def test_arei_nao_recebe_nav(self, monkeypatch):
+        """Operador AREI so tem acesso ao parser, entao a nav inteira e
+        suprimida — evita barra vazia ou link auto-referente para a pagina
+        atual (decisao de UX 2026-04-23)."""
         app = _app_com_endpoint_nav()
         arei = _make_user(role="operador_arei", unidade="1 BPChq")
         monkeypatch.setattr(
@@ -83,7 +86,7 @@ class TestNavRoleGate:
             resp = client.get("/_teste/nav")
             assert resp.status_code == 200
             body = resp.data.decode("utf-8")
-            assert 'href="/"' in body  # parser continua visivel
+            assert "app-nav" not in body
             assert "/analista" not in body
             assert "/admin/catalogos/missoes" not in body
             assert "/admin/catalogos/municipios" not in body

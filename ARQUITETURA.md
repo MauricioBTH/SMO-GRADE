@@ -2,7 +2,7 @@
 
 Documento de arquitetura consolidado. Fonte única da verdade para decisões técnicas e de produto do sistema.
 
-Atualizado: 2026-04-19
+Atualizado: 2026-04-22
 
 ---
 
@@ -39,7 +39,7 @@ Banco de Dados (SMO) → Comandante (cards e análises)
 
 Cada camada adiciona variação ao texto original. O **Operador Regional (AREI)** é a última camada humana antes do banco — e por isso concentra a responsabilidade de normalização no preview do app.
 
-Com a Fase 6, o Operador Local (ALEI) passa a ter a opção de submeter via formulário web direto, eliminando a renormalização no regional para essas unidades.
+Decisão de 2026-04-22: ALEI permanece como **papel militar** (organiza o texto na unidade antes de enviar via WhatsApp) mas **não interage com o SMO**. AREI é o único operador do sistema; não haverá form ALEI multi-unidade.
 
 ---
 
@@ -48,10 +48,9 @@ Com a Fase 6, o Operador Local (ALEI) passa a ter a opção de submeter via form
 | Role | Permissões |
 |---|---|
 | **Gestor** | Acesso total, edição de qualquer dado, auditoria, gestão de usuários |
-| **Operador AREI** | Cria missão nova no catálogo, **funde duplicatas**, edita dados de qualquer unidade local, supervisiona preview |
-| **Operador ALEI** | Insere/edita dados **apenas da sua unidade**, pode criar missão nova (mas não funde duplicatas) |
+| **Operador AREI** | Único ponto de entrada de dados. Cola texto WhatsApp, edita campos do parser, resolve município/BPM no preview, cria missão nova no catálogo, funde duplicatas, edita dados de qualquer unidade |
 
-Cada `Operador ALEI` é amarrado à sua unidade (ex.: `1°BPChq`) via campo `usuarios.unidade`. Middleware bloqueia submissão cross-unidade.
+ALEI não tem role no sistema (decisão 2026-04-22).
 
 ---
 
@@ -169,7 +168,6 @@ Scripts SQL numerados em `migrations/NNN_descricao.sql`, idempotentes, aplicáve
 
 - Usuário + senha (bcrypt)
 - **2FA TOTP obrigatório** para Gestor e Operador AREI
-- 2FA opcional para Operador ALEI (reduz fricção na ponta)
 - Sessão expira em 8h
 - Rate limit: 5 tentativas de login / min / IP
 
@@ -197,38 +195,18 @@ Nunca quebrar `/api/v1/*` sem bumpar para `/api/v2/*`.
 
 ## 9. Fluxos de UI
 
-### 9.1 Operador ALEI (form web direto)
+### 9.1 Operador AREI (fluxo padrão único)
 
-1. Login no navegador do PC da mesa da intel local
-2. Dashboard da unidade com histórico de escalas
-3. Botão "+ Nova Previsão" → seleciona data
-4. Preenche **cabeçalho** (campos numéricos validados)
-5. Adiciona **frações** uma a uma:
-   - Cmt + telefone
-   - Equipes + PMs
-   - Missão (combobox com busca no catálogo, botão "+ Criar nova" se ausente)
-   - OSv (texto opcional)
-   - Município (dropdown da área da unidade)
-   - Horário início/fim
-6. **Preview** em tempo real do texto WhatsApp formatado
-7. Submete → banco recebe dado estruturado + sistema gera texto WhatsApp pronto para copiar
-8. ALEI cola o texto gerado no grupo WhatsApp da cadeia (pro regional/Cmdo), como antes
+AREI é o único ponto de entrada de dados no SMO — modelo definitivo desde 2026-04-22:
 
-O **benefício líquido** pro ALEI é gerar o texto WhatsApp sem erro em 30% do tempo. Adoção acontece por atração, não imposição.
+1. Operador cola texto WhatsApp recebido em `/importar-texto`
+2. Parser extrai frações e campos brutos; emite 1 vértice em `fracao_missoes` por missão do bloco
+3. Preview permite **edição de todos os campos**; dropdowns obrigatórios para `municipio_id` e `bpm_id` (quando POA e `em_quartel = false`)
+4. Toggle `em_quartel` por missão (parser infere para Prontidão; operador confirma/override)
+5. Operador pode **adicionar/remover blocos de missão** (parser pode ter juntado/partido errado)
+6. Submete → banco recebe estruturado; `missao_id` fica NULL até triagem
 
-### 9.2 Operador AREI (preview de normalização)
-
-Para unidades que ainda submetem via WhatsApp cru (transição):
-
-1. Operador cola texto WhatsApp recebido no preview
-2. Parser extrai frações e campos brutos
-3. Para cada fração, sistema sugere:
-   - Missão (match fuzzy, verde/amarelo/vermelho)
-   - Município (dropdown pré-selecionado quando inferível do texto)
-4. Operador confirma/corrige/cria novo
-5. Submete → banco recebe estruturado
-
-Com adoção crescente do form ALEI, AREI tende a virar supervisor de exceções, não digitador primário.
+Catalogação de missão (preencher `missao_id`) acontece assíncrona em `/admin/catalogos/triagem-missoes` pelo Gestor. Parser no preview **não sugere** missões via fuzzy — decisão 2026-04-21.
 
 ---
 
@@ -285,16 +263,16 @@ SMO permanece autônomo no curto prazo. Será fundido ao sistema Grade (stack Re
 - Flask rodando **localmente** no PC do operador regional (`localhost:5000`)
 - DB no **Supabase free tier** (projeto `nrjpjftblrrmvyjptefr`), já ativo e funcional
 - Custo atual: **R$0**
-- Limitação: só o PC do regional acessa o app; ALEI não tem como preencher form remoto
+- Limitação: só o PC do regional acessa o app; gestor/comando não conseguem consultar remotamente
 
 ### 12.1 Infra-alvo oficial (sem verba) — Oracle Cloud Free Tier
 
-Arquitetura alvo para habilitar acesso de ALEI/AREI/Gestor via internet, mantendo custo zero:
+Arquitetura alvo para habilitar acesso de AREI/Gestor via internet, mantendo custo zero:
 
 ```
-ALEI (PC intel local)   ──┐
-AREI (PC intel regional) ├──HTTPS──► Oracle Free VPS ────► Supabase (DB)
-Gestor (qualquer PC)     ──┘         (Flask + nginx)       (free tier)
+AREI (PC intel regional) ──┐
+Gestor (qualquer PC)       ├──HTTPS──► Oracle Free VPS ────► Supabase (DB)
+Comando (qualquer PC)      ──┘          (Flask + nginx)       (free tier)
 ```
 
 - **Oracle Cloud Always Free**: 4 OCPU ARM + 24 GB RAM ou 2 x86 micro, permanente
@@ -340,7 +318,10 @@ Cada request do usuário faz: **browser → Oracle (São Paulo) → Supabase (EU
 | 3 | Concluída | Cards analíticos formato slide |
 | 4 | Concluída | Projeções pandas/numpy, 86 testes pytest |
 | 5 | Concluída | Entrada via texto WhatsApp (operador regional) |
-| **6** | **Próxima** | Matriz nova (Missão/OSv/Município), catálogo curado, roles, form ALEI, hooks de portabilidade |
+| **6** | **Próxima** | Matriz nova (Missão/OSv/Município), catálogo curado, roles, hooks de portabilidade |
+| 6.2.5 | Superseded | Triagem de missões pendentes (absorvida pela 6.3 em 2026-04-22) |
+| 6.3 | Planejada | **Modelo N:N fração↔missões + catálogo `smo.bpms` + preview resolve município/BPM + triagem + 3 camadas analíticas** (ver `PROMPT_FASE6_3.md`) |
+| 6.4 | Planejada | Deploy Oracle Cloud Free + hardening remoto (AREI-central é definitivo; form ALEI multi-unidade descartado em 2026-04-22) |
 | 6.5 | Planejada | Hardening militar: audit_log robusto, assets locais, scripts backup, docs de deploy |
 | 7+ | Futura | Bot WhatsApp (só se Fase 6 mostrar adoção <60% da ponta). **Sem PWA no SMO** — mobilidade será atendida pelo app mobile do sistema Grade no futuro. |
 | Fusão | Indefinida | Integração com sistema Grade — aguarda momento político e maturidade do Grade |
@@ -349,9 +330,10 @@ Cada request do usuário faz: **browser → Oracle (São Paulo) → Supabase (EU
 
 - **Entrega 6.1** (~1 semana) — **executada no PC local (como hoje)**: migrations + schema `smo` + auth + roles funcionando. Demo pro chefe no próprio PC do regional.
 - **Entrega 6.2** (~1,5 semana) — **ainda local**: matriz nova + parser atualizado + catálogo curado + preview AREI + charts novos. Demo pro chefe segue no PC do regional.
-- **Entrega 6.3** (~1 semana) — **sobe para Oracle Free**: form web ALEI + tela gestão de catálogo + deploy hardening. Esta entrega **exige infra exposta** e é o evento que justifica (ou dispensa) pedido de verba.
+- **Entrega 6.3** (~1,5 semana) — **ainda local**: modelo N:N fração↔missões + catálogo `smo.bpms` + preview resolve município/BPM + triagem de missões + 3 camadas de dashboard. Ver `PROMPT_FASE6_3.md`.
+- **Entrega 6.4** (~1 semana) — **sobe para Oracle Free**: deploy hardening + acesso remoto para AREI/Gestor + tela de gestão de catálogo. Esta entrega **exige infra exposta** e é o evento que justifica (ou dispensa) pedido de verba. **Sem form ALEI** — modelo AREI-central é definitivo desde 2026-04-22.
 
-Racional do corte: 6.1 e 6.2 iteram rápido sem atrito de deploy; 6.3 marca o momento de ir ao ar, virando "lançamento" pras locais e argumento concreto para verba.
+Racional do corte: 6.1 e 6.2 iteram rápido sem atrito de deploy; 6.4 marca o momento de ir ao ar, virando "lançamento" pro comando e argumento concreto para verba.
 
 ---
 
@@ -381,7 +363,7 @@ Proposto. **Rejeitado** — serverless inadequado para Flask + parsing pesado, e
 
 ### 14.7 Reescrever fluxo como script CLI local diário
 
-Proposto como alternativa de custo zero (`python app.py` no terminal, sem web). **Rejeitado** — elimina o form ALEI, exige presença física no PC do regional, e é passo atrás em relação ao Flask local atual. Modelo atual (Flask local + Supabase) já cobre o cenário sem verba; Oracle Free cobre o cenário com acesso remoto.
+Proposto como alternativa de custo zero (`python app.py` no terminal, sem web). **Rejeitado** — exige presença física no PC do regional e elimina qualquer acesso remoto do gestor/comando; é passo atrás em relação ao Flask local atual. Modelo atual (Flask local + Supabase) já cobre o cenário sem verba; Oracle Free cobre o cenário com acesso remoto.
 
 ### 14.6 Remover campo `Missões/Osv` do cabeçalho
 

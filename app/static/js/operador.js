@@ -12,6 +12,28 @@
   var previewCabecalhos = [];
   var previewFracoes = [];
 
+  // ---------- TOAST ----------
+
+  /** Feedback transitorio no topo-direita. Tipos: 'erro' | 'ok' | 'info'. */
+  function mostrarToast(mensagem, tipo) {
+    var container = document.getElementById('toast-container');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'toast-container';
+      container.className = 'toast-container';
+      document.body.appendChild(container);
+    }
+    var t = document.createElement('div');
+    t.className = 'toast toast-' + (tipo || 'info');
+    t.textContent = mensagem;
+    t.setAttribute('role', 'alert');
+    container.appendChild(t);
+    setTimeout(function () {
+      t.classList.add('toast-sair');
+      setTimeout(function () { if (t.parentNode) t.remove(); }, 220);
+    }, 5500);
+  }
+
   /** Recalcula layout ao redimensionar */
   window.addEventListener('resize', function () {
     if (unidadeAtiva) {
@@ -29,44 +51,6 @@
     document.getElementById('btn-gerar-wrapper').style.display =
       id === 'panel-screen' && unidadeAtiva ? 'flex' : 'none';
   }
-
-  // ---------- UPLOAD XLSX ----------
-
-  document.getElementById('file-input').addEventListener('change', function (e) {
-    var file = e.target.files[0];
-    if (!file) return;
-    e.target.value = '';
-
-    var statusEl = document.getElementById('upload-status');
-    statusEl.className = 'upload-status loading';
-    statusEl.textContent = 'Processando...';
-
-    var formData = new FormData();
-    formData.append('file', file);
-
-    fetch('/api/upload', { method: 'POST', body: formData })
-      .then(function (resp) {
-        return resp.json().then(function (data) { return { ok: resp.ok, data: data }; });
-      })
-      .then(function (result) {
-        if (!result.ok) throw new Error(result.data.erro || 'Erro desconhecido');
-
-        dadosFracoes = result.data.fracoes;
-        dadosCabecalho = result.data.cabecalho;
-
-        if (dadosFracoes.length === 0) throw new Error('Nenhum dado encontrado na aba "fracoes".');
-
-        var salvoMsg = result.data.salvo_no_banco ? ' | Salvo no banco' : ' | Modo offline';
-        statusEl.className = 'upload-status success';
-        statusEl.textContent = result.data.total_fracoes + ' fracoes carregadas' + salvoMsg;
-
-        irParaPainel();
-      })
-      .catch(function (err) {
-        statusEl.className = 'upload-status error';
-        statusEl.textContent = 'Erro: ' + err.message;
-      });
-  });
 
   // ---------- WHATSAPP TEXTO ----------
 
@@ -112,8 +96,14 @@
           ? result.data.total_cabecalhos + ' unidades, ' : '';
         statusEl.textContent = cabMsg + result.data.total_fracoes + ' fracoes identificadas';
 
-        montarPreview(result.data.avisos);
-        mostrarTela('preview-screen');
+        // Catalogos para dropdowns de vertices (municipios + BPMs).
+        var boot = window.PreviewMissoes
+          ? window.PreviewMissoes.carregarCatalogos()
+          : Promise.resolve();
+        boot.then(function () {
+          montarPreview(result.data.avisos);
+          mostrarTela('preview-screen');
+        });
       })
       .catch(function (err) {
         statusEl.className = 'upload-status error';
@@ -147,6 +137,7 @@
     { key: 'missoes_osv', label: 'Missoes/OSV', wide: true },
   ];
 
+  // Missao saiu daqui (Fase 6.3): agora e lista N via PreviewMissoes.
   var CAMPOS_FRACAO = [
     { key: 'fracao', label: 'Fracao' },
     { key: 'comandante', label: 'Comandante' },
@@ -155,7 +146,6 @@
     { key: 'pms', label: 'PMs', tipo: 'number' },
     { key: 'horario_inicio', label: 'Inicio' },
     { key: 'horario_fim', label: 'Fim' },
-    { key: 'missao', label: 'Missao' },
   ];
 
   function criarCampo(campo, valor) {
@@ -221,11 +211,18 @@
     container.querySelectorAll('.fracao-form').forEach(function (form) {
       var fIdx = parseInt(form.getAttribute('data-fracao-idx'), 10);
       var f = previewFracoes[fIdx];
-      if (f) {
-        form.querySelectorAll('input').forEach(function (inp) {
+      if (!f) return;
+      // Campos simples — evita percorrer inputs aninhados dos vertices.
+      var grid = form.querySelector(':scope > .preview-grid');
+      if (grid) {
+        grid.querySelectorAll('input').forEach(function (inp) {
           var key = inp.getAttribute('data-key');
           f[key] = inp.type === 'number' ? parseInt(inp.value, 10) || 0 : inp.value;
         });
+      }
+      var vWrap = form.querySelector('.missoes-vertices');
+      if (vWrap && window.PreviewMissoes) {
+        f.missoes = window.PreviewMissoes.coletarVertices(vWrap);
       }
     });
   }
@@ -279,7 +276,8 @@
       previewFracoes.push({
         unidade: unidade, data: cab.data || '', turno: cab.turno || '',
         fracao: '', comandante: '', telefone: '',
-        equipes: 0, pms: 0, horario_inicio: '', horario_fim: '', missao: '',
+        equipes: 0, pms: 0, horario_inicio: '', horario_fim: '',
+        missao: '', missoes: [],
       });
       renderizarPreviewTab(previewTabAtiva);
     });
@@ -300,15 +298,15 @@
       var title = document.createElement('span');
       title.className = 'fracao-form-title';
       title.textContent = 'Fracao ' + numFrac + (f.fracao ? ' — ' + f.fracao : '');
-      var btnRem = document.createElement('button');
-      btnRem.className = 'btn-remover';
-      btnRem.textContent = 'Remover';
-      (function (removeIdx) {
-        btnRem.addEventListener('click', function () {
-          previewFracoes.splice(removeIdx, 1);
-          renderizarPreviewTab(previewTabAtiva);
-        });
-      })(fIdx);
+      var btnRem = window.PreviewMissoes.criarBotaoRemover(
+        'Remover fracao ' + numFrac,
+        (function (removeIdx) {
+          return function () {
+            previewFracoes.splice(removeIdx, 1);
+            renderizarPreviewTab(previewTabAtiva);
+          };
+        })(fIdx)
+      );
       header.appendChild(title);
       header.appendChild(btnRem);
       form.appendChild(header);
@@ -319,6 +317,19 @@
         fGrid.appendChild(criarCampo(c, f[c.key]));
       });
       form.appendChild(fGrid);
+
+      var missoesWrap = document.createElement('div');
+      missoesWrap.className = 'missoes-vertices';
+      missoesWrap.setAttribute('data-fracao-idx', fIdx);
+      var mTitle = document.createElement('h4');
+      mTitle.className = 'missoes-title';
+      mTitle.textContent = 'Missoes';
+      form.appendChild(mTitle);
+      form.appendChild(missoesWrap);
+      if (window.PreviewMissoes) {
+        window.PreviewMissoes.renderizarVertices(missoesWrap, f);
+      }
+
       secFrac.appendChild(form);
     });
 
@@ -347,6 +358,10 @@
     var fracoes = previewFracoes.map(function (f) {
       var out = { unidade: f.unidade || '', data: f.data || '', turno: f.turno || '' };
       CAMPOS_FRACAO.forEach(function (campo) { out[campo.key] = f[campo.key]; });
+      // missao legado espelha a 1a missao — mantido p/ backcompat com 6.2.
+      var primeira = (f.missoes && f.missoes[0]) || null;
+      out.missao = primeira ? primeira.missao_nome_raw : (f.missao || '');
+      out.missoes = f.missoes || [];
       return out;
     });
 
@@ -399,6 +414,7 @@
         setTimeout(function () { irParaPainel(); }, 600);
       })
       .catch(function (err) {
+        mostrarToast(err.message || 'Erro ao salvar', 'erro');
         btnConfirmar.textContent = btnConfirmarTexto;
         btnConfirmar.disabled = false;
         btnConfirmar.classList.remove('btn-loading');

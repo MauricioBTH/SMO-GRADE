@@ -199,6 +199,12 @@
   background: #F7F7F7;
   border-radius: 6px;
   border-left: 3px solid #D4D4D4;
+  margin-top: 4px;
+}
+
+.fracao-missao-meta {
+  color: #6a6a6a;
+  font-weight: 400;
 }
 
 /* ===== CARD FOOTER ===== */

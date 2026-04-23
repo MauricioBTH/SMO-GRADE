@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+
+{% block title %}Triagem de Missoes - SMO-GRADE{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+<style>
+  .admin-wrap { max-width: 1180px; margin: 24px auto; padding: 0 16px; }
+  .admin-header { display: flex; justify-content: space-between;
+                  align-items: baseline; margin-bottom: 18px; }
+  .admin-header h1 { font-size: 1.4rem; color: var(--navy); }
+  .admin-nav a {
+    color: var(--text-muted); text-decoration: none; margin-right: 12px;
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 1px;
+  }
+  .admin-nav a.active { color: var(--navy); font-weight: 700; }
+  .triagem-resumo {
+    background: var(--white); padding: 10px 14px; margin-bottom: 12px;
+    border-radius: var(--radius); font-size: 0.85rem; color: var(--text-muted);
+  }
+  table.admin-table {
+    width: 100%; border-collapse: collapse; background: var(--white);
+    border-radius: var(--radius); overflow: hidden;
+  }
+  .admin-table th, .admin-table td {
+    padding: 10px 12px; text-align: left; font-size: 0.88rem;
+    border-bottom: 1px solid #eee; vertical-align: top;
+  }
+  .admin-table th {
+    background: var(--bg); font-weight: 600; color: var(--text-muted);
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.8px;
+  }
+  .triagem-texto {
+    max-width: 520px; overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap; display: block;
+  }
+  .triagem-freq { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .triagem-actions button {
+    padding: 5px 10px; font-size: 0.78rem; border: 1px solid #d9d9d9;
+    background: var(--white); border-radius: 5px; cursor: pointer;
+    margin: 2px 4px 2px 0;
+  }
+  .triagem-actions button.primary { background: var(--navy); color: var(--white); border: 0; }
+  .triagem-actions .score { color: var(--text-muted); font-size: 0.72rem; margin-left: 3px; }
+  .triagem-sem-cand { color: var(--text-muted); font-style: italic; font-size: 0.82rem; }
+  .paginacao { margin-top: 14px; display: flex; gap: 8px; justify-content: center; }
+  .paginacao a, .paginacao span {
+    padding: 6px 12px; font-size: 0.82rem; border-radius: 5px;
+    background: var(--white); color: var(--navy); text-decoration: none;
+    border: 1px solid #d9d9d9;
+  }
+  .paginacao span.atual { background: var(--navy); color: var(--white); border: 0; }
+  .paginacao a.disabled { opacity: 0.4; pointer-events: none; }
+  .flash { padding: 8px 12px; margin-bottom: 10px; border-radius: 6px; }
+  .flash.error { background: #fde8e8; color: #9b1c1c; }
+  .flash.info  { background: #eef5ff; color: #1c4b9b; }
+  dialog.modal {
+    border: 0; border-radius: var(--radius); padding: 22px;
+    max-width: 460px; width: 92%;
+  }
+  dialog.modal::backdrop { background: rgba(0,0,0,0.35); }
+  dialog.modal h2 { font-size: 1.05rem; margin-bottom: 10px; color: var(--navy); }
+  dialog.modal p.ctx {
+    background: var(--bg); padding: 8px 10px; border-radius: 5px;
+    font-size: 0.82rem; margin-bottom: 12px; word-break: break-word;
+  }
+  dialog.modal input, dialog.modal textarea {
+    padding: 8px 10px; border: 1px solid #d9d9d9; border-radius: 6px;
+    width: 100%; margin-bottom: 8px; font-family: inherit;
+  }
+  dialog.modal .modal-acoes { display: flex; gap: 8px; justify-content: flex-end; }
+  dialog.modal button {
+    padding: 8px 16px; border-radius: 6px; border: 1px solid #d9d9d9;
+    background: var(--white); cursor: pointer;
+  }
+  dialog.modal button.primary { background: var(--navy); color: var(--white); border: 0; }
+  #banner-undo {
+    position: fixed; top: 14px; right: 14px; z-index: 1000;
+    background: #1c4b9b; color: var(--white); padding: 12px 16px;
+    border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    display: none; align-items: center; gap: 14px;
+    font-size: 0.88rem; min-width: 320px; max-width: 420px;
+  }
+  #banner-undo.visivel { display: flex; }
+  #banner-undo .msg { flex: 1; }
+  #banner-undo button {
+    background: var(--white); color: #1c4b9b; border: 0;
+    padding: 6px 14px; border-radius: 5px; cursor: pointer;
+    font-weight: 600; font-size: 0.82rem;
+  }
+  #banner-undo .timer {
+    font-variant-numeric: tabular-nums; opacity: 0.75; font-size: 0.78rem;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-wrap">
+  <div class="admin-header">
+    <h1>Triagem de Missoes</h1>
+    <nav class="admin-nav">
+      <a href="{{ url_for('admin_catalogos.listar_missoes_view') }}">Missoes</a>
+      <a class="active" href="{{ url_for('admin_catalogos.listar_triagem_view') }}">Triagem</a>
+      <a href="{{ url_for('admin_catalogos.listar_municipios_view') }}">Municipios</a>
+      <a href="{{ url_for('admin_catalogos.listar_crpms_view') }}">CRPMs</a>
+      <a href="{{ url_for('admin.listar_usuarios') }}">Usuarios</a>
+    </nav>
+  </div>
+
+  {% with mensagens = get_flashed_messages(with_categories=true) %}
+    {% for categoria, msg in mensagens %}
+      <div class="flash {{ categoria }}">{{ msg }}</div>
+    {% endfor %}
+  {% endwith %}
+
+  <div class="triagem-resumo">
+    <strong>{{ total }}</strong> texto(s) distinto(s) pendente(s) —
+    ordenados por frequencia (maior impacto primeiro).
+  </div>
+
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th style="width:48%">Texto</th>
+        <th style="width:8%">Fracoes</th>
+        <th style="width:44%">Candidatos</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in itens %}
+        <tr>
+          <td>
+            <span class="triagem-texto" title="{{ item.texto }}">{{ item.texto }}</span>
+          </td>
+          <td class="triagem-freq">{{ item.freq }}</td>
+          <td class="triagem-actions">
+            {% for c in item.candidatos %}
+              <button type="button" class="primary"
+                      onclick='aplicar({{ item.texto|tojson }}, {{ c.missao_id|tojson }})'>
+                Aplicar {{ c.nome }}
+                <span class="score">({{ c.score }})</span>
+              </button>
+            {% else %}
+              <span class="triagem-sem-cand">Nenhum candidato acima do corte.</span>
+            {% endfor %}
+            <button type="button"
+                    onclick='abrirModal({{ item.texto|tojson }})'>
+              + Nova
+            </button>
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="3" style="text-align:center;color:var(--text-muted);">
+          Nenhum texto pendente. Todas as fracoes estao catalogadas.
+        </td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if total_paginas > 1 %}
+    <div class="paginacao">
+      {% if pagina > 1 %}
+        <a href="?pagina={{ pagina - 1 }}">← anterior</a>
+      {% else %}
+        <a class="disabled">← anterior</a>
+      {% endif %}
+      <span class="atual">{{ pagina }} / {{ total_paginas }}</span>
+      {% if pagina < total_paginas %}
+        <a href="?pagina={{ pagina + 1 }}">proxima →</a>
+      {% else %}
+        <a class="disabled">proxima →</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
+<div id="banner-undo" role="status" aria-live="polite">
+  <span class="msg" id="banner-msg"></span>
+  <span class="timer" id="banner-timer"></span>
+  <button type="button" onclick="desfazerUltima()">Desfazer</button>
+</div>
+
+<dialog class="modal" id="modal-nova">
+  <form id="form-nova" onsubmit="event.preventDefault(); criar(this);">
+    <h2>Cadastrar nova missao</h2>
+    <p class="ctx">Texto: <span id="modal-texto"></span></p>
+    <input type="hidden" name="texto" id="modal-input-texto">
+    <input type="text" name="nome" required maxlength="{{ max_nome_len }}"
+           placeholder="Nome (sera normalizado em caixa alta, sem acentos)">
+    <textarea name="descricao" rows="2" maxlength="{{ max_descricao_len }}"
+              placeholder="Descricao (opcional)"></textarea>
+    <div class="modal-acoes">
+      <button type="button" onclick="fecharModal()">Cancelar</button>
+      <button type="submit" class="primary">Cadastrar e aplicar</button>
+    </div>
+  </form>
+</dialog>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  window.SMO_TRIAGEM = {
+    aplicarUrl: "{{ url_for('admin_catalogos.aplicar_triagem_view') }}",
+    novaUrl: "{{ url_for('admin_catalogos.criar_triagem_view') }}",
+    desfazerUrl: "{{ url_for('admin_catalogos.desfazer_triagem_view') }}"
+  };
+</script>
+<script src="{{ url_for('static', filename='js/triagem_missoes.js') }}"></script>
+{% endblock %}

@@ -257,6 +257,68 @@
           </table>
         </div>
 
+        <!-- Saude catalogacao (Fase 6.3) -->
+        <h2 class="section-title">Saude da Catalogacao
+          <span class="info-icon" data-tooltip="% de vertices (linhas da tabela N:N smo.fracao_missoes) vinculados ao catalogo. 'Municipio' deve tender a 100% (obrigatorio no preview 6.3); 'Missao' avanca conforme a triagem humana classifica os textos pendentes.">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </span>
+        </h2>
+        <div id="saude-catalogacao" class="saude-grid"></div>
+
+        <!-- Camada deterministica: Top 10 Missoes -->
+        <h2 class="section-title">Top 10 Missoes — Camada Deterministica (Catalogo)
+          <span class="info-icon" data-tooltip="Camada 1/3 (Fase 6.3): agrupa vertices por missao_id quando disponivel. Linhas sem id aparecem como 'SEM CATALOGO: <texto>'. Ordenado por total de PMs empregados.">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </span>
+        </h2>
+        <div class="ranking-table-wrapper">
+          <table class="tabela-dados" id="tabela-por-missao">
+            <thead>
+              <tr>
+                <th>#</th><th>Missao</th><th>Fracoes</th>
+                <th>Equipes</th><th>PMs</th><th>Unidades</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-por-missao-body"></tbody>
+          </table>
+        </div>
+
+        <!-- Camada normalizada (Fase 6.3) -->
+        <h2 class="section-title">Variantes Textuais — Camada Normalizada
+          <span class="info-icon" data-tooltip="Camada 2/3 (Fase 6.3): agrupa missao_nome_raw por forma canonica (NFD + uppercase). Chaves com muitos textos distintos indicam padronizacao pendente no catalogo. % mostra quanto daquele grupo ja tem missao_id.">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </span>
+        </h2>
+        <div class="ranking-table-wrapper">
+          <table class="tabela-dados" id="tabela-normalizado">
+            <thead>
+              <tr>
+                <th>#</th><th>Chave</th><th>Variantes</th>
+                <th>Vertices</th><th>PMs</th><th>% Catalogado</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-normalizado-body"></tbody>
+          </table>
+        </div>
+
+        <!-- Top 10 Municipios (Fase 6.2) -->
+        <h2 class="section-title">Top 10 Municipios
+          <span class="info-icon" data-tooltip="Municipios onde as fracoes foram empregadas, agregados via catalogo smo.municipios (com CRPM). Linhas sem match aparecem como 'SEM CATALOGO'.">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </span>
+        </h2>
+        <div class="ranking-table-wrapper">
+          <table class="tabela-dados" id="tabela-por-municipio">
+            <thead>
+              <tr>
+                <th>#</th><th>Municipio</th><th>CRPM</th>
+                <th>Fracoes</th><th>Equipes</th><th>PMs</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-por-municipio-body"></tbody>
+          </table>
+        </div>
+
       </section>
     </div>
 

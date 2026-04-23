@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Catalogo de Missoes - SMO-GRADE{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+<style>
+  .admin-wrap { max-width: 1080px; margin: 24px auto; padding: 0 16px; }
+  .admin-header { display: flex; justify-content: space-between;
+                  align-items: baseline; margin-bottom: 18px; }
+  .admin-header h1 { font-size: 1.4rem; color: var(--navy); }
+  .admin-nav a {
+    color: var(--text-muted); text-decoration: none; margin-right: 12px;
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 1px;
+  }
+  .admin-nav a.active { color: var(--navy); font-weight: 700; }
+  .admin-filtros {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
+    background: var(--white); padding: 12px; border-radius: var(--radius);
+  }
+  .admin-filtros input, .admin-filtros button {
+    padding: 6px 10px; border: 1px solid #d9d9d9; border-radius: 6px;
+    font-family: inherit;
+  }
+  .admin-filtros button { background: var(--navy); color: var(--white); border: 0; }
+  table.admin-table {
+    width: 100%; border-collapse: collapse; background: var(--white);
+    border-radius: var(--radius); overflow: hidden;
+  }
+  .admin-table th, .admin-table td {
+    padding: 10px 12px; text-align: left; font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+  }
+  .admin-table th {
+    background: var(--bg); font-weight: 600; color: var(--text-muted);
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.8px;
+  }
+  .admin-table .inactive { opacity: 0.5; }
+  .admin-table form { display: inline; }
+  .admin-table button {
+    padding: 4px 10px; font-size: 0.78rem; border: 1px solid #d9d9d9;
+    background: var(--white); border-radius: 5px; cursor: pointer;
+  }
+  .admin-create {
+    margin-top: 22px; background: var(--white); padding: 16px;
+    border-radius: var(--radius);
+  }
+  .admin-create h2 { font-size: 1rem; margin-bottom: 12px; color: var(--navy); }
+  .admin-create input, .admin-create textarea {
+    padding: 8px 10px; border: 1px solid #d9d9d9; border-radius: 6px;
+    width: 100%; margin-bottom: 8px; font-family: inherit;
+  }
+  .admin-create button {
+    padding: 9px 18px; background: var(--navy); color: var(--white);
+    border: 0; border-radius: 6px; cursor: pointer;
+  }
+  .flash { padding: 8px 12px; margin-bottom: 10px; border-radius: 6px; }
+  .flash.error { background: #fde8e8; color: #9b1c1c; }
+  .flash.info  { background: #eef5ff; color: #1c4b9b; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-wrap">
+  <div class="admin-header">
+    <h1>Catalogo de Missoes</h1>
+    <nav class="admin-nav">
+      <a class="active" href="{{ url_for('admin_catalogos.listar_missoes_view') }}">Missoes</a>
+      <a href="{{ url_for('admin_catalogos.listar_municipios_view') }}">Municipios</a>
+      <a href="{{ url_for('admin_catalogos.listar_crpms_view') }}">CRPMs</a>
+      <a href="{{ url_for('admin.listar_usuarios') }}">Usuarios</a>
+    </nav>
+  </div>
+
+  {% with mensagens = get_flashed_messages(with_categories=true) %}
+    {% for categoria, msg in mensagens %}
+      <div class="flash {{ categoria }}">{{ msg }}</div>
+    {% endfor %}
+  {% endwith %}
+
+  <form class="admin-filtros" method="GET">
+    <input type="text" name="q" value="{{ q }}" placeholder="Buscar por nome">
+    <button type="submit">Filtrar</button>
+  </form>
+
+  <table class="admin-table">
+    <thead>
+      <tr><th>Nome</th><th>Descricao</th><th>Ativo</th><th>Acoes</th></tr>
+    </thead>
+    <tbody>
+      {% for m in missoes %}
+        <tr class="{{ '' if m.ativo else 'inactive' }}">
+          <td>{{ m.nome }}</td>
+          <td>{{ m.descricao or '-' }}</td>
+          <td>{{ 'Sim' if m.ativo else 'Nao' }}</td>
+          <td>
+            <form method="POST" action="{{ url_for('admin_catalogos.editar_missao_view', missao_id=m.id) }}">
+              <input type="hidden" name="ativo" value="{{ '0' if m.ativo else '1' }}">
+              <button type="submit">{{ 'Desativar' if m.ativo else 'Reativar' }}</button>
+            </form>
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="4" style="text-align:center;color:var(--text-muted);">Nenhuma missao</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="admin-create">
+    <h2>Criar missao</h2>
+    <form method="POST" action="{{ url_for('admin_catalogos.criar_missao_view') }}">
+      <input type="text" name="nome" placeholder="Nome (caixa alta sera aplicada)" required maxlength="200">
+      <textarea name="descricao" placeholder="Descricao (opcional)" rows="2" maxlength="500"></textarea>
+      <button type="submit">Criar</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

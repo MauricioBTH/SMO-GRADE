@@ -60,7 +60,110 @@
         renderizarTabelaFracoesFreq(data.fracoes_freq);
       })
       .catch(function () {});
+
+    var urlMis = '/api/analytics/por-missao?data_inicio=' + encodeURIComponent(di)
+               + '&data_fim=' + encodeURIComponent(df);
+    if (unidades) urlMis += '&unidades=' + encodeURIComponent(unidades);
+    fetch(urlMis)
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (!d.erro) renderizarPorMissao(d.por_missao || []); })
+      .catch(function () {});
+
+    var urlMun = '/api/analytics/por-municipio?data_inicio=' + encodeURIComponent(di)
+               + '&data_fim=' + encodeURIComponent(df);
+    if (unidades) urlMun += '&unidades=' + encodeURIComponent(unidades);
+    fetch(urlMun)
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (!d.erro) renderizarPorMunicipio(d.por_municipio || []); })
+      .catch(function () {});
+
+    var qs = 'data_inicio=' + encodeURIComponent(di)
+           + '&data_fim=' + encodeURIComponent(df)
+           + (unidades ? '&unidades=' + encodeURIComponent(unidades) : '');
+    fetch('/api/analytics/saude?' + qs)
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (!d.erro) renderizarSaude(d.saude || {}); })
+      .catch(function () {});
+    fetch('/api/analytics/normalizado?' + qs)
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (!d.erro) renderizarNormalizado(d.normalizado || []); })
+      .catch(function () {});
   };
+
+  /* ---------- Saude Catalogacao (Fase 6.3) ---------- */
+  function renderizarSaude(s) {
+    var el = document.getElementById('saude-catalogacao');
+    if (!el) return;
+    var total = s.total_vertices || 0;
+    el.innerHTML =
+      '<div class="saude-card">' +
+        '<div class="saude-valor">' + total + '</div>' +
+        '<div class="saude-label">vertices</div>' +
+      '</div>' +
+      '<div class="saude-card">' +
+        '<div class="saude-valor">' + (s.pct_municipio || 0) + '%</div>' +
+        '<div class="saude-label">com municipio (' + (s.com_municipio_id || 0) + ')</div>' +
+      '</div>' +
+      '<div class="saude-card">' +
+        '<div class="saude-valor">' + (s.pct_missao || 0) + '%</div>' +
+        '<div class="saude-label">com missao (' + (s.com_missao_id || 0) + ')</div>' +
+      '</div>';
+  }
+
+  /* ---------- Camada normalizada (Fase 6.3) ---------- */
+  function renderizarNormalizado(lista) {
+    var tbody = document.getElementById('tabela-normalizado-body');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    lista.slice(0, 10).forEach(function (r, i) {
+      var variantes = (r.textos_agrupados || []).join(', ');
+      var tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td>' + (i + 1) + '</td>' +
+        '<td>' + escapeHtml(r.chave_normalizada) + '</td>' +
+        '<td>' + escapeHtml(variantes) + '</td>' +
+        '<td>' + r.total_vertices + '</td>' +
+        '<td>' + r.total_pms + '</td>' +
+        '<td>' + r.pct_catalogado + '%</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  /* ---------- Top 10 Missoes (Fase 6.2) ---------- */
+  function renderizarPorMissao(lista) {
+    var tbody = document.getElementById('tabela-por-missao-body');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    lista.slice(0, 10).forEach(function (r, i) {
+      var tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td>' + (i + 1) + '</td>' +
+        '<td>' + escapeHtml(r.missao_nome) + '</td>' +
+        '<td>' + r.total_fracoes + '</td>' +
+        '<td>' + r.total_equipes + '</td>' +
+        '<td>' + r.total_pms + '</td>' +
+        '<td>' + escapeHtml((r.unidades || []).join(', ')) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  /* ---------- Top 10 Municipios (Fase 6.2) ---------- */
+  function renderizarPorMunicipio(lista) {
+    var tbody = document.getElementById('tabela-por-municipio-body');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    lista.slice(0, 10).forEach(function (r, i) {
+      var tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td>' + (i + 1) + '</td>' +
+        '<td>' + escapeHtml(r.municipio_nome) + '</td>' +
+        '<td>' + escapeHtml(r.crpm_sigla || '-') + '</td>' +
+        '<td>' + r.total_fracoes + '</td>' +
+        '<td>' + r.total_equipes + '</td>' +
+        '<td>' + r.total_pms + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
 
   /* ---------- Indicadores ---------- */
   function renderizarIndicadores(indicadores, tendencia) {

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Catalogo de CRPMs - SMO-GRADE{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+<style>
+  .admin-wrap { max-width: 1080px; margin: 24px auto; padding: 0 16px; }
+  .admin-header { display: flex; justify-content: space-between;
+                  align-items: baseline; margin-bottom: 18px; }
+  .admin-header h1 { font-size: 1.4rem; color: var(--navy); }
+  .admin-nav a {
+    color: var(--text-muted); text-decoration: none; margin-right: 12px;
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 1px;
+  }
+  .admin-nav a.active { color: var(--navy); font-weight: 700; }
+  table.admin-table {
+    width: 100%; border-collapse: collapse; background: var(--white);
+    border-radius: var(--radius); overflow: hidden;
+  }
+  .admin-table th, .admin-table td {
+    padding: 10px 12px; text-align: left; font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+  }
+  .admin-table th {
+    background: var(--bg); font-weight: 600; color: var(--text-muted);
+    text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.8px;
+  }
+  .info-box {
+    background: #eef5ff; color: #1c4b9b; padding: 10px 14px;
+    border-radius: 6px; margin-bottom: 14px; font-size: 0.85rem;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-wrap">
+  <div class="admin-header">
+    <h1>Catalogo de CRPMs</h1>
+    <nav class="admin-nav">
+      <a href="{{ url_for('admin_catalogos.listar_missoes_view') }}">Missoes</a>
+      <a href="{{ url_for('admin_catalogos.listar_municipios_view') }}">Municipios</a>
+      <a class="active" href="{{ url_for('admin_catalogos.listar_crpms_view') }}">CRPMs</a>
+      <a href="{{ url_for('admin.listar_usuarios') }}">Usuarios</a>
+    </nav>
+  </div>
+
+  <div class="info-box">
+    Lista normativa (21 CRPMs) — gerenciada somente via seed. UI e apenas de consulta.
+  </div>
+
+  <table class="admin-table">
+    <thead>
+      <tr><th>Ordem</th><th>Sigla</th><th>Nome</th><th>Sede</th><th>Ativo</th></tr>
+    </thead>
+    <tbody>
+      {% for c in crpms %}
+        <tr>
+          <td>{{ c.ordem }}</td>
+          <td>{{ c.sigla }}</td>
+          <td>{{ c.nome }}</td>
+          <td>{{ c.sede or '-' }}</td>
+          <td>{{ 'Sim' if c.ativo else 'Nao' }}</td>
+        </tr>
+      {% else %}
+        <tr><td colspan="5" style="text-align:center;color:var(--text-muted);">Nenhum CRPM</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

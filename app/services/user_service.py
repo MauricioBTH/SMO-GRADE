@@ -65,8 +65,6 @@ def _validar_payload_create(payload: UsuarioCreate) -> None:
             raise ValueError(f"Campo obrigatorio ausente: {campo}")
     if payload["role"] not in ROLES_VALIDOS:
         raise ValueError(f"Role invalido: {payload['role']}")
-    if payload["role"] == "operador_alei" and not payload.get("unidade"):
-        raise ValueError("Operador ALEI exige unidade vinculada")
     unidade = payload.get("unidade")
     if unidade and unidade not in UNIDADES_VALIDAS:
         raise ValueError(f"Unidade invalida: {unidade}")
@@ -177,10 +175,7 @@ def update(user_id: str, payload: UsuarioUpdate) -> User:
     if not campos:
         raise ValueError("Nada para atualizar")
 
-    role_final: Role | None = payload.get("role")
     unidade_final = payload.get("unidade") if "unidade" in payload else None
-    if role_final == "operador_alei" and "unidade" in payload and not unidade_final:
-        raise ValueError("Operador ALEI exige unidade vinculada")
     if unidade_final and unidade_final not in UNIDADES_VALIDAS:
         raise ValueError(f"Unidade invalida: {unidade_final}")
 

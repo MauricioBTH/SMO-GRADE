@@ -262,17 +262,6 @@ class TestUploadsRestaurar:
             resp = c.post("/api/uploads/up-antigo/restaurar")
             assert resp.status_code == 200
 
-    def test_alei_bloqueado(self, monkeypatch) -> None:
-        monkeypatch.setattr(
-            "app.services.upload_service.restaurar_upload",
-            lambda upload_id, usuario_id: _upload_fake(),
-        )
-        app = _app()
-        with app.test_client() as c:
-            _login(c, monkeypatch, _user(role="operador_alei", unidade="1 BPChq"))
-            resp = c.post("/api/uploads/up-antigo/restaurar")
-            assert resp.status_code == 403
-
     def test_valueerror_vira_400(self, monkeypatch) -> None:
         def _boom(_uid, _usr):
             raise ValueError("Este upload ja e o ativo desse dia")
@@ -315,13 +304,6 @@ class TestUploadsTexto:
         app = _app()
         with app.test_client() as c:
             _login(c, monkeypatch, _user(role="operador_arei", unidade="1 BPChq"))
-            resp = c.get("/api/uploads/up-1/texto")
-            assert resp.status_code == 403
-
-    def test_alei_bloqueado(self, monkeypatch) -> None:
-        app = _app()
-        with app.test_client() as c:
-            _login(c, monkeypatch, _user(role="operador_alei", unidade="1 BPChq"))
             resp = c.get("/api/uploads/up-1/texto")
             assert resp.status_code == 403
 

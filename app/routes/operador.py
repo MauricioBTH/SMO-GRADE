@@ -33,14 +33,14 @@ def index() -> str:
 
 @operador_bp.route("/operador")
 @login_required
-@role_required(["gestor", "operador_arei", "operador_alei"])
+@role_required(["gestor", "operador_arei"])
 def operador() -> str:
     return render_template("operador/index.html", **_contexto_hoje())
 
 
 @operador_bp.route("/operador/historico/<unidade>/<path:data>")
 @login_required
-@role_required(["gestor", "operador_arei", "operador_alei"])
+@role_required(["gestor", "operador_arei"])
 def historico(unidade: str, data: str) -> str:
     """Histórico de uploads versionados de uma (unidade, data). Dados via JS.
 

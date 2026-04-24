@@ -261,8 +261,8 @@ class TestRotasSeguranca:
 
         op = User(
             id="00000000-0000-0000-0000-000000000099",
-            nome="Op ALEI", email="op@teste.local",
-            role="operador_alei", unidade="1 BPChq",
+            nome="Op AREI", email="op@teste.local",
+            role="operador_arei", unidade="1 BPChq",
             totp_ativo=False, ativo=True,
         )
         monkeypatch.setattr(

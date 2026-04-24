@@ -172,16 +172,16 @@ class TestDoisFatores:
 
 class TestDecoradorRole:
 
-    def test_rota_gestor_nega_alei(self, app_factory, monkeypatch):
+    def test_rota_gestor_nega_arei(self, app_factory, monkeypatch):
         app = app_factory()
-        alei = _make_user(role="operador_alei", unidade="1 BPChq")
+        arei = _make_user(role="operador_arei", unidade="1 BPChq")
         monkeypatch.setattr(
             "app.services.user_service.get_by_id",
-            lambda uid: alei if uid == alei.id else None,
+            lambda uid: arei if uid == arei.id else None,
         )
         with app.test_client() as client:
             with client.session_transaction() as sess:
-                sess["_user_id"] = alei.id
+                sess["_user_id"] = arei.id
                 sess["_fresh"] = True
             resp = client.get("/admin/usuarios")
             assert resp.status_code == 403
@@ -212,93 +212,3 @@ class TestDecoradorRole:
             assert "/login" in resp.headers["Location"]
 
 
-# ---------- Decorador unidade_match ----------
-
-class TestUnidadeMatch:
-
-    def test_alei_outra_unidade_nega(self, app_factory, monkeypatch):
-        from flask import Blueprint
-        from flask_login import login_required
-
-        from app.auth.decorators import unidade_match_required
-
-        bp = Blueprint("teste_um", __name__)
-
-        @bp.route("/teste-unidade/<unidade>")
-        @login_required
-        @unidade_match_required
-        def _view(unidade: str) -> str:
-            return f"ok-{unidade}"
-
-        app = app_factory()
-        app.register_blueprint(bp)
-
-        alei = _make_user(role="operador_alei", unidade="1 BPChq")
-        monkeypatch.setattr(
-            "app.services.user_service.get_by_id",
-            lambda uid: alei if uid == alei.id else None,
-        )
-        with app.test_client() as client:
-            with client.session_transaction() as sess:
-                sess["_user_id"] = alei.id
-                sess["_fresh"] = True
-            resp = client.get("/teste-unidade/2 BPChq")
-            assert resp.status_code == 403
-
-    def test_alei_sua_unidade_permite(self, app_factory, monkeypatch):
-        from flask import Blueprint
-        from flask_login import login_required
-
-        from app.auth.decorators import unidade_match_required
-
-        bp = Blueprint("teste_um_ok", __name__)
-
-        @bp.route("/teste-unidade-ok/<unidade>")
-        @login_required
-        @unidade_match_required
-        def _view(unidade: str) -> str:
-            return f"ok-{unidade}"
-
-        app = app_factory()
-        app.register_blueprint(bp)
-
-        alei = _make_user(role="operador_alei", unidade="1 BPChq")
-        monkeypatch.setattr(
-            "app.services.user_service.get_by_id",
-            lambda uid: alei if uid == alei.id else None,
-        )
-        with app.test_client() as client:
-            with client.session_transaction() as sess:
-                sess["_user_id"] = alei.id
-                sess["_fresh"] = True
-            resp = client.get("/teste-unidade-ok/1 BPChq")
-            assert resp.status_code == 200
-
-    def test_gestor_passa_livre(self, app_factory, monkeypatch):
-        from flask import Blueprint
-        from flask_login import login_required
-
-        from app.auth.decorators import unidade_match_required
-
-        bp = Blueprint("teste_um_gestor", __name__)
-
-        @bp.route("/teste-gestor/<unidade>")
-        @login_required
-        @unidade_match_required
-        def _view(unidade: str) -> str:
-            return f"ok-{unidade}"
-
-        app = app_factory()
-        app.register_blueprint(bp)
-
-        gestor = _make_user(role="gestor")
-        monkeypatch.setattr(
-            "app.services.user_service.get_by_id",
-            lambda uid: gestor if uid == gestor.id else None,
-        )
-        with app.test_client() as client:
-            with client.session_transaction() as sess:
-                sess["_user_id"] = gestor.id
-                sess["_fresh"] = True
-            resp = client.get("/teste-gestor/qualquer")
-            assert resp.status_code == 200

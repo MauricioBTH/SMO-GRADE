@@ -13,18 +13,26 @@ from __future__ import annotations
 import re
 from typing import cast
 
+import psycopg2
+
 from app.models.database import get_connection
-from app.services.catalogo_types import Unidade
+from app.services.catalogo_types import Unidade, UnidadeCreate, UnidadeUpdate
 
 __all__ = [
     "Unidade",
+    "UnidadeCreate",
+    "UnidadeUpdate",
     "listar_unidades",
     "get_unidade",
     "lookup_unidade_por_nome",
     "normalizar_codigo_unidade",
     "get_nomes_validos",
     "invalidar_cache_nomes",
+    "criar_unidade",
+    "atualizar_unidade",
 ]
+
+_NOME_MAX_LEN: int = 60
 
 _cache_nomes_validos: frozenset[str] | None = None
 
@@ -112,6 +120,120 @@ def invalidar_cache_nomes() -> None:
     unidades (Admin UI) ou desativar uma."""
     global _cache_nomes_validos
     _cache_nomes_validos = None
+
+
+def criar_unidade(payload: UnidadeCreate) -> Unidade:
+    """Cria unidade ativa, normaliza o nome, valida duplicidade + sede.
+
+    Invalida o cache de get_nomes_validos. Levanta ValueError em caso de
+    input invalido ou nome_normalizado ja existente.
+    """
+    nome: str = (payload.get("nome") or "").strip()
+    municipio_sede_id: str = (payload.get("municipio_sede_id") or "").strip()
+    if not nome:
+        raise ValueError("Nome obrigatorio")
+    if len(nome) > _NOME_MAX_LEN:
+        raise ValueError(f"Nome excede {_NOME_MAX_LEN} caracteres")
+    if not municipio_sede_id:
+        raise ValueError("Municipio sede obrigatorio")
+    normalizado: str = normalizar_codigo_unidade(nome)
+    if not normalizado:
+        raise ValueError(
+            "Nome deve seguir o padrao '<numero> <sigla>' (ex: '7° BPChq')"
+        )
+
+    conn = get_connection()
+    try:
+        with conn.cursor() as cur:
+            try:
+                cur.execute(
+                    "INSERT INTO smo.unidades "
+                    "(nome, nome_normalizado, municipio_sede_id) "
+                    "VALUES (%s, %s, %s) "
+                    "RETURNING id, nome, nome_normalizado, "
+                    "municipio_sede_id, ativo",
+                    (nome, normalizado, municipio_sede_id),
+                )
+            except psycopg2.errors.UniqueViolation as exc:
+                conn.rollback()
+                raise ValueError(
+                    f"Unidade '{normalizado}' ja existe no catalogo"
+                ) from exc
+            except psycopg2.errors.ForeignKeyViolation as exc:
+                conn.rollback()
+                raise ValueError("Municipio sede invalido") from exc
+            row = cur.fetchone()
+            if row is None:
+                raise RuntimeError("INSERT smo.unidades nao retornou id")
+        conn.commit()
+    finally:
+        conn.close()
+    invalidar_cache_nomes()
+    return _row_to_unidade(dict(row))
+
+
+def atualizar_unidade(unidade_id: str, payload: UnidadeUpdate) -> Unidade:
+    """Atualiza nome/municipio_sede/ativo. Renormaliza se nome mudar.
+
+    Invalida o cache de get_nomes_validos. Levanta ValueError se nada
+    pra atualizar, unidade inexistente ou constraint violada.
+    """
+    campos: list[str] = []
+    valores: list[object] = []
+    if "nome" in payload:
+        novo_nome: str = (payload.get("nome") or "").strip()
+        if not novo_nome:
+            raise ValueError("Nome nao pode ser vazio")
+        if len(novo_nome) > _NOME_MAX_LEN:
+            raise ValueError(f"Nome excede {_NOME_MAX_LEN} caracteres")
+        normalizado: str = normalizar_codigo_unidade(novo_nome)
+        if not normalizado:
+            raise ValueError(
+                "Nome deve seguir o padrao '<numero> <sigla>'"
+            )
+        campos.append("nome = %s")
+        valores.append(novo_nome)
+        campos.append("nome_normalizado = %s")
+        valores.append(normalizado)
+    if "municipio_sede_id" in payload:
+        sede: str = (payload.get("municipio_sede_id") or "").strip()
+        if not sede:
+            raise ValueError("Municipio sede nao pode ser vazio")
+        campos.append("municipio_sede_id = %s")
+        valores.append(sede)
+    if "ativo" in payload:
+        campos.append("ativo = %s")
+        valores.append(bool(payload["ativo"]))
+    if not campos:
+        raise ValueError("Nada para atualizar")
+
+    valores.append(unidade_id)
+    conn = get_connection()
+    try:
+        with conn.cursor() as cur:
+            try:
+                cur.execute(
+                    f"UPDATE smo.unidades SET {', '.join(campos)} "
+                    "WHERE id = %s RETURNING id, nome, nome_normalizado, "
+                    "municipio_sede_id, ativo",
+                    tuple(valores),
+                )
+            except psycopg2.errors.UniqueViolation as exc:
+                conn.rollback()
+                raise ValueError(
+                    "Ja existe outra unidade com esse nome normalizado"
+                ) from exc
+            except psycopg2.errors.ForeignKeyViolation as exc:
+                conn.rollback()
+                raise ValueError("Municipio sede invalido") from exc
+            row = cur.fetchone()
+            if row is None:
+                raise ValueError("Unidade nao encontrada")
+        conn.commit()
+    finally:
+        conn.close()
+    invalidar_cache_nomes()
+    return _row_to_unidade(dict(row))
 
 
 def lookup_unidade_por_nome(raw: str) -> Unidade | None:

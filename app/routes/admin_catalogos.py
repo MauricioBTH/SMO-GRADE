@@ -10,9 +10,10 @@ from flask_login import login_required
 from werkzeug.wrappers.response import Response
 
 from app.auth.decorators import role_required
-from app.services import catalogo_service, triagem_missoes
+from app.services import catalogo_service, triagem_missoes, unidade_service
 from app.services.catalogo_types import (
     MissaoCreate, MissaoUpdate, MunicipioCreate, MunicipioUpdate,
+    UnidadeCreate, UnidadeUpdate,
 )
 from app.services.triagem_missoes import (
     MAX_DESCRICAO_LEN, MAX_NOME_LEN, MAX_TEXTO_LEN,
@@ -137,6 +138,68 @@ def editar_municipio_view(municipio_id: str) -> Response:
     except ValueError as exc:
         flash(str(exc), "error")
     return redirect(url_for("admin_catalogos.listar_municipios_view"))
+
+
+# ---------------------------------------------------------------------------
+# Unidades (BPChq / RPMon) — fonte de verdade pro dropdown de user.unidade
+# ---------------------------------------------------------------------------
+
+
+@admin_catalogos_bp.route("/unidades", methods=["GET"])
+@login_required
+@role_required(["gestor"])
+def listar_unidades_view() -> str:
+    itens = unidade_service.listar_unidades(somente_ativas=False)
+    municipios = catalogo_service.listar_municipios(somente_ativos=True, limite=1000)
+    sede_nome: dict[str, str] = {str(m.id): m.nome for m in municipios}
+    return render_template(
+        "admin/unidades.html",
+        unidades=itens,
+        municipios=municipios,
+        sede_nome=sede_nome,
+    )
+
+
+@admin_catalogos_bp.route("/unidades/criar", methods=["POST"])
+@login_required
+@role_required(["gestor"])
+def criar_unidade_view() -> Response:
+    payload: UnidadeCreate = {
+        "nome": (request.form.get("nome") or "").strip(),
+        "municipio_sede_id": (
+            request.form.get("municipio_sede_id") or ""
+        ).strip(),
+    }
+    try:
+        unidade_service.criar_unidade(payload)
+        flash("Unidade criada", "info")
+    except ValueError as exc:
+        flash(str(exc), "error")
+    return redirect(url_for("admin_catalogos.listar_unidades_view"))
+
+
+@admin_catalogos_bp.route("/unidades/<unidade_id>/editar", methods=["POST"])
+@login_required
+@role_required(["gestor"])
+def editar_unidade_view(unidade_id: str) -> Response:
+    payload: UnidadeUpdate = {}
+    if "nome" in request.form:
+        payload["nome"] = (request.form.get("nome") or "").strip()
+    if "municipio_sede_id" in request.form:
+        nova_sede = (request.form.get("municipio_sede_id") or "").strip()
+        if nova_sede:
+            payload["municipio_sede_id"] = nova_sede
+    ativo_raw: str = (request.form.get("ativo") or "").strip().lower()
+    if ativo_raw in ("1", "true", "sim"):
+        payload["ativo"] = True
+    elif ativo_raw in ("0", "false", "nao"):
+        payload["ativo"] = False
+    try:
+        unidade_service.atualizar_unidade(unidade_id, payload)
+        flash("Unidade atualizada", "info")
+    except ValueError as exc:
+        flash(str(exc), "error")
+    return redirect(url_for("admin_catalogos.listar_unidades_view"))
 
 
 # ---------------------------------------------------------------------------

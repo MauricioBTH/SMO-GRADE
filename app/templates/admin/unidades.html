@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Catalogo de Municipios - SMO-GRADE{% endblock %}
+{% block title %}Catalogo de Unidades - SMO-GRADE{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
@@ -14,15 +14,6 @@
     text-transform: uppercase; font-size: 0.72rem; letter-spacing: 1px;
   }
   .admin-nav a.active { color: var(--navy); font-weight: 700; }
-  .admin-filtros {
-    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
-    background: var(--white); padding: 12px; border-radius: var(--radius);
-  }
-  .admin-filtros input, .admin-filtros select, .admin-filtros button {
-    padding: 6px 10px; border: 1px solid #d9d9d9; border-radius: 6px;
-    font-family: inherit;
-  }
-  .admin-filtros button { background: var(--navy); color: var(--white); border: 0; }
   table.admin-table {
     width: 100%; border-collapse: collapse; background: var(--white);
     border-radius: var(--radius); overflow: hidden;
@@ -46,7 +37,7 @@
     border-radius: var(--radius);
   }
   .admin-create h2 { font-size: 1rem; margin-bottom: 12px; color: var(--navy); }
-  .admin-create .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; }
+  .admin-create .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }
   .admin-create input, .admin-create select {
     padding: 8px 10px; border: 1px solid #d9d9d9; border-radius: 6px;
     font-family: inherit;
@@ -54,6 +45,9 @@
   .admin-create button {
     margin-top: 12px; padding: 9px 18px; background: var(--navy);
     color: var(--white); border: 0; border-radius: 6px; cursor: pointer;
+  }
+  .admin-create .hint {
+    color: var(--text-muted); font-size: 0.78rem; margin-top: 6px;
   }
   .flash { padding: 8px 12px; margin-bottom: 10px; border-radius: 6px; }
   .flash.error { background: #fde8e8; color: #9b1c1c; }
@@ -64,11 +58,11 @@
 {% block content %}
 <div class="admin-wrap">
   <div class="admin-header">
-    <h1>Catalogo de Municipios</h1>
+    <h1>Catalogo de Unidades</h1>
     <nav class="admin-nav">
       <a href="{{ url_for('admin_catalogos.listar_missoes_view') }}">Missoes</a>
-      <a class="active" href="{{ url_for('admin_catalogos.listar_municipios_view') }}">Municipios</a>
-      <a href="{{ url_for('admin_catalogos.listar_unidades_view') }}">Unidades</a>
+      <a href="{{ url_for('admin_catalogos.listar_municipios_view') }}">Municipios</a>
+      <a class="active" href="{{ url_for('admin_catalogos.listar_unidades_view') }}">Unidades</a>
       <a href="{{ url_for('admin_catalogos.listar_crpms_view') }}">CRPMs</a>
       <a href="{{ url_for('admin.listar_usuarios') }}">Usuarios</a>
     </nav>
@@ -80,51 +74,47 @@
     {% endfor %}
   {% endwith %}
 
-  <form class="admin-filtros" method="GET">
-    <input type="text" name="q" value="{{ q }}" placeholder="Buscar por nome">
-    <select name="crpm">
-      <option value="">Todos CRPMs</option>
-      {% for c in crpms %}
-        <option value="{{ c.id }}" {% if crpm_sel == c.id %}selected{% endif %}>{{ c.sigla }}</option>
-      {% endfor %}
-    </select>
-    <button type="submit">Filtrar</button>
-  </form>
-
   <table class="admin-table">
     <thead>
-      <tr><th>Nome</th><th>CRPM</th><th>Ativo</th><th>Acoes</th></tr>
+      <tr>
+        <th>Nome</th><th>Normalizado</th><th>Sede</th><th>Ativo</th><th>Acoes</th>
+      </tr>
     </thead>
     <tbody>
-      {% for m in municipios %}
-        <tr class="{{ '' if m.ativo else 'inactive' }}">
-          <td>{{ m.nome }}</td>
-          <td>{{ m.crpm_sigla }}</td>
-          <td>{{ 'Sim' if m.ativo else 'Nao' }}</td>
+      {% for u in unidades %}
+        <tr class="{{ '' if u.ativo else 'inactive' }}">
+          <td>{{ u.nome }}</td>
+          <td>{{ u.nome_normalizado }}</td>
+          <td>{{ sede_nome.get(u.municipio_sede_id, '—') }}</td>
+          <td>{{ 'Sim' if u.ativo else 'Nao' }}</td>
           <td>
-            <form method="POST" action="{{ url_for('admin_catalogos.editar_municipio_view', municipio_id=m.id) }}">
-              <input type="hidden" name="ativo" value="{{ '0' if m.ativo else '1' }}">
-              <button type="submit">{{ 'Desativar' if m.ativo else 'Reativar' }}</button>
+            <form method="POST" action="{{ url_for('admin_catalogos.editar_unidade_view', unidade_id=u.id) }}">
+              <input type="hidden" name="ativo" value="{{ '0' if u.ativo else '1' }}">
+              <button type="submit">{{ 'Desativar' if u.ativo else 'Reativar' }}</button>
             </form>
           </td>
         </tr>
       {% else %}
-        <tr><td colspan="4" style="text-align:center;color:var(--text-muted);">Nenhum municipio</td></tr>
+        <tr><td colspan="5" style="text-align:center;color:var(--text-muted);">Nenhuma unidade</td></tr>
       {% endfor %}
     </tbody>
   </table>
 
   <div class="admin-create">
-    <h2>Criar municipio</h2>
-    <form method="POST" action="{{ url_for('admin_catalogos.criar_municipio_view') }}">
+    <h2>Criar unidade</h2>
+    <form method="POST" action="{{ url_for('admin_catalogos.criar_unidade_view') }}">
       <div class="grid">
-        <input type="text" name="nome" placeholder="Nome do municipio" required maxlength="200">
-        <select name="crpm_id" required>
-          <option value="">CRPM</option>
-          {% for c in crpms %}
-            <option value="{{ c.id }}">{{ c.sigla }} ({{ c.nome }})</option>
+        <input type="text" name="nome" placeholder="Ex: 7° BPChq" required maxlength="60">
+        <select name="municipio_sede_id" required>
+          <option value="">Municipio sede</option>
+          {% for m in municipios %}
+            <option value="{{ m.id }}">{{ m.nome }} ({{ m.crpm_sigla }})</option>
           {% endfor %}
         </select>
+      </div>
+      <div class="hint">
+        Nome deve seguir o padrao &lt;numero&gt; &lt;sigla&gt; (ex: "7° BPChq", "5° RPMon").
+        A sede define o municipio das missoes "em quartel" da unidade.
       </div>
       <button type="submit">Criar</button>
     </form>

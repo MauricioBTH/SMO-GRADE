@@ -78,6 +78,17 @@ class MunicipioUpdate(TypedDict, total=False):
     ativo: bool
 
 
+class UnidadeCreate(TypedDict, total=False):
+    nome: str
+    municipio_sede_id: str
+
+
+class UnidadeUpdate(TypedDict, total=False):
+    nome: str
+    municipio_sede_id: str
+    ativo: bool
+
+
 class CrpmCreate(TypedDict, total=False):
     sigla: str
     nome: str

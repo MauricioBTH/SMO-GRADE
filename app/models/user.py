@@ -12,10 +12,6 @@ ROLES_VALIDOS: Final[frozenset[Role]] = frozenset(
 )
 ROLES_COM_2FA_OBRIGATORIO: Final[frozenset[Role]] = ROLES_VALIDOS
 
-UNIDADES_VALIDAS: Final[frozenset[str]] = frozenset(
-    (f"{n} BPChq" for n in range(1, 7))
-)
-
 
 @dataclass(frozen=True)
 class User(UserMixin):

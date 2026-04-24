@@ -22,7 +22,11 @@ __all__ = [
     "get_unidade",
     "lookup_unidade_por_nome",
     "normalizar_codigo_unidade",
+    "get_nomes_validos",
+    "invalidar_cache_nomes",
 ]
+
+_cache_nomes_validos: frozenset[str] | None = None
 
 
 # Extrai primeiro digito (1-3) + sigla alfabetica. Tolera '°'/'º' e espacos
@@ -83,6 +87,31 @@ def get_unidade(unidade_id: str) -> Unidade | None:
             return _row_to_unidade(dict(row)) if row else None
     finally:
         conn.close()
+
+
+def get_nomes_validos() -> frozenset[str]:
+    """Conjunto de nomes de unidade aceitos pela aplicacao (cacheado).
+
+    Inclui o nome canonico do DB (ex: '1° BPChq') + variante sem '°'/'º'
+    (ex: '1 BPChq') pra tolerar dados historicos e texto WhatsApp sem grau.
+    Usado pela validacao de user.unidade (admin), validacao de rotas
+    (/operador/historico/<unidade>/<data>) e xlsx_validator.
+
+    Cache invalidado via invalidar_cache_nomes() apos mutacoes no catalogo.
+    """
+    global _cache_nomes_validos
+    if _cache_nomes_validos is None:
+        nomes: set[str] = {u.nome for u in listar_unidades(somente_ativas=True)}
+        nomes |= {n.replace("° ", " ").replace("º ", " ") for n in nomes}
+        _cache_nomes_validos = frozenset(nomes)
+    return _cache_nomes_validos
+
+
+def invalidar_cache_nomes() -> None:
+    """Limpa o cache de get_nomes_validos. Chamar apos criar/atualizar
+    unidades (Admin UI) ou desativar uma."""
+    global _cache_nomes_validos
+    _cache_nomes_validos = None
 
 
 def lookup_unidade_por_nome(raw: str) -> Unidade | None:

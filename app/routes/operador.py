@@ -6,7 +6,7 @@ from flask import Blueprint, abort, render_template
 from flask_login import login_required
 
 from app.auth.decorators import role_required
-from app.models.user import UNIDADES_VALIDAS
+from app.services.unidade_service import get_nomes_validos
 
 operador_bp = Blueprint("operador", __name__)
 
@@ -45,11 +45,12 @@ def historico(unidade: str, data: str) -> str:
     """Histórico de uploads versionados de uma (unidade, data). Dados via JS.
 
     Valida formato no path pra evitar rotas abusivas (XSS em template).
-    Unidade deve estar em UNIDADES_VALIDAS; data em dd/mm/yyyy (10 chars).
-    O converter `<path:data>` aceita `/` dentro do segmento — necessario pro
-    formato dd/mm/yyyy; por isso a validacao abaixo e rigida.
+    Unidade deve constar no catalogo smo.unidades (via get_nomes_validos);
+    data em dd/mm/yyyy (10 chars). O converter `<path:data>` aceita `/`
+    dentro do segmento — necessario pro formato dd/mm/yyyy; por isso a
+    validacao abaixo e rigida.
     """
-    if unidade not in UNIDADES_VALIDAS:
+    if unidade not in get_nomes_validos():
         abort(404)
     if (
         len(data) != 10 or data[2] != "/" or data[5] != "/"

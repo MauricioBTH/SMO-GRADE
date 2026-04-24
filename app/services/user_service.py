@@ -8,7 +8,8 @@ from typing import TypedDict, cast
 import bcrypt
 
 from app.models.database import get_connection
-from app.models.user import ROLES_VALIDOS, UNIDADES_VALIDAS, Role, User
+from app.models.user import ROLES_VALIDOS, Role, User
+from app.services.unidade_service import get_nomes_validos
 
 SENHA_MIN_LEN: int = 8
 _SENHA_ESPECIAL_RE = re.compile(r"[^A-Za-z0-9]")
@@ -66,7 +67,7 @@ def _validar_payload_create(payload: UsuarioCreate) -> None:
     if payload["role"] not in ROLES_VALIDOS:
         raise ValueError(f"Role invalido: {payload['role']}")
     unidade = payload.get("unidade")
-    if unidade and unidade not in UNIDADES_VALIDAS:
+    if unidade and unidade not in get_nomes_validos():
         raise ValueError(f"Unidade invalida: {unidade}")
 
 
@@ -176,7 +177,7 @@ def update(user_id: str, payload: UsuarioUpdate) -> User:
         raise ValueError("Nada para atualizar")
 
     unidade_final = payload.get("unidade") if "unidade" in payload else None
-    if unidade_final and unidade_final not in UNIDADES_VALIDAS:
+    if unidade_final and unidade_final not in get_nomes_validos():
         raise ValueError(f"Unidade invalida: {unidade_final}")
 
     valores.append(user_id)

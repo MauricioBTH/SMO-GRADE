@@ -73,16 +73,6 @@ class CabecalhoRow(TypedDict):
     missoes_osv: str
 
 
-UNIDADES_VALIDAS = frozenset({
-    "1 BPChq", "1º BPChq",
-    "2 BPChq", "2º BPChq",
-    "3 BPChq", "3º BPChq",
-    "4 BPChq", "4º BPChq",
-    "5 BPChq", "5º BPChq",
-    "6 BPChq", "6º BPChq",
-    "4 RPMon", "4º RPMon",
-})
-
 COLUNAS_FRACOES = frozenset({
     "unidade", "data", "turno", "fracao", "comandante",
     "telefone", "equipes", "pms", "horario_inicio", "horario_fim", "missao",

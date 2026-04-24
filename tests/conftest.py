@@ -5,6 +5,58 @@ import pytest
 
 from app import create_app
 from app.models.user import User
+from app.services.catalogo_types import Unidade
+
+
+# ---------- Catalogo de unidades (mock DB-free) ----------
+
+_UNIDADES_FAKE: list[Unidade] = [
+    Unidade(
+        id=f"00000000-0000-0000-0000-00000000010{n}",
+        nome=f"{n}° BPChq",
+        nome_normalizado=f"{n} BPCHQ",
+        municipio_sede_id=f"00000000-0000-0000-0000-00000000020{n}",
+        ativo=True,
+    )
+    for n in range(1, 7)
+] + [
+    Unidade(
+        id="00000000-0000-0000-0000-000000000107",
+        nome="4° RPMon",
+        nome_normalizado="4 RPMON",
+        municipio_sede_id="00000000-0000-0000-0000-000000000207",
+        ativo=True,
+    )
+]
+
+_NOMES_FAKE: frozenset[str] = frozenset(
+    {u.nome for u in _UNIDADES_FAKE}
+    | {u.nome.replace("° ", " ") for u in _UNIDADES_FAKE}
+)
+
+
+@pytest.fixture(autouse=True)
+def _mock_unidade_service(monkeypatch):
+    """Evita hit no DB de catalogo em qualquer teste que importe rotas/services
+    que dependem de unidade_service. Testes DB-integrados podem re-mockar."""
+    monkeypatch.setattr(
+        "app.services.unidade_service.listar_unidades",
+        lambda somente_ativas=True: list(_UNIDADES_FAKE),
+    )
+    monkeypatch.setattr(
+        "app.services.unidade_service.get_nomes_validos",
+        lambda: _NOMES_FAKE,
+    )
+    monkeypatch.setattr(
+        "app.services.user_service.get_nomes_validos",
+        lambda: _NOMES_FAKE,
+        raising=False,
+    )
+    monkeypatch.setattr(
+        "app.routes.operador.get_nomes_validos",
+        lambda: _NOMES_FAKE,
+        raising=False,
+    )
 
 
 # ---------- Dados mock: cabecalho ----------

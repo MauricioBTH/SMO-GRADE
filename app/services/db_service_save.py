@@ -106,9 +106,8 @@ def _inserir_vertices(
     antes de chegar aqui, mas a defesa adicional evita integrity error se
     alguem chamar save_fracoes direto (importar_lote, testes).
 
-    Fase 6.4: N:N BPMs. O 1o BPM vai como cache em smo.fracao_missoes.bpm_id
-    (DEPRECATED mas ainda lido por analytics legadas); os N BPMs vao para
-    smo.fracao_missao_bpms (fonte de verdade).
+    BPMs N:N vao integralmente para smo.fracao_missao_bpms (fonte de verdade).
+    em_quartel=TRUE zera bpm_ids.
     """
     ordem_seq: int = 0
     for m in missoes:
@@ -118,13 +117,12 @@ def _inserir_vertices(
         ordem_seq += 1
         em_quartel: bool = bool(m.get("em_quartel", False))
         bpm_ids: list[str] = [] if em_quartel else list(m.get("bpm_ids") or [])
-        cache_bpm_id: str | None = bpm_ids[0] if bpm_ids else None
         cur.execute(
             """
             INSERT INTO smo.fracao_missoes (
                 fracao_id, ordem, missao_id, missao_nome_raw,
-                municipio_id, bpm_id, em_quartel
-            ) VALUES (%s, %s, %s, %s, %s, %s, %s)
+                municipio_id, em_quartel
+            ) VALUES (%s, %s, %s, %s, %s, %s)
             RETURNING id
             """,
             (
@@ -133,7 +131,6 @@ def _inserir_vertices(
                 m.get("missao_id"),
                 m.get("missao_nome_raw") or "(sem missao)",
                 muni_id,
-                cache_bpm_id,
                 em_quartel,
             ),
         )

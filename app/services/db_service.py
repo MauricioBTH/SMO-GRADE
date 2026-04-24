@@ -94,10 +94,8 @@ def fetch_vertices_by_range(
     fracao (unidade/data/equipes/pms/horario_inicio) + joins de catalogo
     (missao_nome, municipio_nome, crpm_sigla, bpm_codigos[]).
 
-    Alimenta analytics 6.3/6.4: 3 camadas + saude catalogacao. Desde 6.4,
-    `bpm_codigos` e uma lista (N:N via smo.fracao_missao_bpms). O campo
-    singular `bpm_codigo` e mantido como cache do 1o BPM para analytics
-    legadas (DEPRECATED, remocao em 6.5).
+    Alimenta analytics 6.3/6.4: 3 camadas + saude catalogacao. `bpm_codigos`
+    vem de smo.fracao_missao_bpms (fonte unica de verdade, fase 6.4+).
     """
     conn = get_connection()
     try:
@@ -106,21 +104,19 @@ def fetch_vertices_by_range(
                 SELECT
                     fm.id AS fracao_missao_id,
                     fm.fracao_id, fm.ordem, fm.missao_id, fm.missao_nome_raw,
-                    fm.municipio_id, fm.bpm_id, fm.em_quartel,
+                    fm.municipio_id, fm.em_quartel,
                     f.unidade, f.data, f.turno, f.fracao, f.equipes, f.pms,
                     f.horario_inicio, f.horario_fim,
                     mi.nome AS missao_nome,
                     mu.nome AS municipio_nome,
                     mu.nome AS municipio_nome_raw,
                     cr.sigla AS crpm_sigla,
-                    bp.codigo AS bpm_codigo,
                     COALESCE(bpms_nn.codigos, ARRAY[]::text[]) AS bpm_codigos
                 FROM smo.fracao_missoes fm
                 JOIN smo.fracoes_atuais f  ON f.id = fm.fracao_id
                 LEFT JOIN smo.missoes mi    ON mi.id = fm.missao_id
                 LEFT JOIN smo.municipios mu ON mu.id = fm.municipio_id
                 LEFT JOIN smo.crpms cr      ON cr.id = mu.crpm_id
-                LEFT JOIN smo.bpms bp       ON bp.id = fm.bpm_id
                 LEFT JOIN LATERAL (
                     SELECT ARRAY_AGG(b2.codigo ORDER BY b2.numero) AS codigos
                       FROM smo.fracao_missao_bpms fmb
